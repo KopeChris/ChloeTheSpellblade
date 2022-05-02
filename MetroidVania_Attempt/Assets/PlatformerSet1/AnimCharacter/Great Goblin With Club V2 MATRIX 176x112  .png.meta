@@ -1,0 +1,3705 @@
+fileFormatVersion: 2
+guid: 36dfdaf9b1737c1469579f34a1128ff6
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 1620920404174171772
+    second: Great Goblin With Club V2 MATRIX 176x112  _0
+  - first:
+      213: 2009594617675613005
+    second: Great Goblin With Club V2 MATRIX 176x112  _1
+  - first:
+      213: 6736094252610134745
+    second: Great Goblin With Club V2 MATRIX 176x112  _2
+  - first:
+      213: 3667124112053081941
+    second: Great Goblin With Club V2 MATRIX 176x112  _3
+  - first:
+      213: -1213242146719448473
+    second: Great Goblin With Club V2 MATRIX 176x112  _4
+  - first:
+      213: -2736219711909739872
+    second: Great Goblin With Club V2 MATRIX 176x112  _5
+  - first:
+      213: -3885759046054745522
+    second: Great Goblin With Club V2 MATRIX 176x112  _6
+  - first:
+      213: -2533659047837604363
+    second: Great Goblin With Club V2 MATRIX 176x112  _7
+  - first:
+      213: 9201142574802116343
+    second: Great Goblin With Club V2 MATRIX 176x112  _8
+  - first:
+      213: -4053137089307150001
+    second: Great Goblin With Club V2 MATRIX 176x112  _9
+  - first:
+      213: 2136136960443590639
+    second: Great Goblin With Club V2 MATRIX 176x112  _10
+  - first:
+      213: 8345525304121741112
+    second: Great Goblin With Club V2 MATRIX 176x112  _11
+  - first:
+      213: 2064145901134263086
+    second: Great Goblin With Club V2 MATRIX 176x112  _12
+  - first:
+      213: 5933739858664655876
+    second: Great Goblin With Club V2 MATRIX 176x112  _13
+  - first:
+      213: 7071505987341827879
+    second: Great Goblin With Club V2 MATRIX 176x112  _14
+  - first:
+      213: -1051852566678884497
+    second: Great Goblin With Club V2 MATRIX 176x112  _15
+  - first:
+      213: 6003502216219291523
+    second: Great Goblin With Club V2 MATRIX 176x112  _16
+  - first:
+      213: 1483937915765791810
+    second: Great Goblin With Club V2 MATRIX 176x112  _17
+  - first:
+      213: -3141754045931941621
+    second: Great Goblin With Club V2 MATRIX 176x112  _18
+  - first:
+      213: -9060476501036068311
+    second: Great Goblin With Club V2 MATRIX 176x112  _19
+  - first:
+      213: 3170429194953524621
+    second: Great Goblin With Club V2 MATRIX 176x112  _20
+  - first:
+      213: -5398125713193801880
+    second: Great Goblin With Club V2 MATRIX 176x112  _21
+  - first:
+      213: 2735354147742565017
+    second: Great Goblin With Club V2 MATRIX 176x112  _22
+  - first:
+      213: -7209087016833393175
+    second: Great Goblin With Club V2 MATRIX 176x112  _23
+  - first:
+      213: 3709879311895350561
+    second: Great Goblin With Club V2 MATRIX 176x112  _24
+  - first:
+      213: 4034070293126845521
+    second: Great Goblin With Club V2 MATRIX 176x112  _25
+  - first:
+      213: -3349314016178789751
+    second: Great Goblin With Club V2 MATRIX 176x112  _26
+  - first:
+      213: -8895307901745313882
+    second: Great Goblin With Club V2 MATRIX 176x112  _27
+  - first:
+      213: -7233729976529582174
+    second: Great Goblin With Club V2 MATRIX 176x112  _28
+  - first:
+      213: 1458798259364027046
+    second: Great Goblin With Club V2 MATRIX 176x112  _29
+  - first:
+      213: 2625393981169244827
+    second: Great Goblin With Club V2 MATRIX 176x112  _30
+  - first:
+      213: -1563293490120755481
+    second: Great Goblin With Club V2 MATRIX 176x112  _31
+  - first:
+      213: -4799980288931214029
+    second: Great Goblin With Club V2 MATRIX 176x112  _32
+  - first:
+      213: 3017897820028503279
+    second: Great Goblin With Club V2 MATRIX 176x112  _33
+  - first:
+      213: 268258815894792930
+    second: Great Goblin With Club V2 MATRIX 176x112  _34
+  - first:
+      213: -3629210685229307899
+    second: Great Goblin With Club V2 MATRIX 176x112  _35
+  - first:
+      213: 4214555670938160462
+    second: Great Goblin With Club V2 MATRIX 176x112  _36
+  - first:
+      213: 6619994985611761447
+    second: Great Goblin With Club V2 MATRIX 176x112  _37
+  - first:
+      213: 9071544604147445846
+    second: Great Goblin With Club V2 MATRIX 176x112  _38
+  - first:
+      213: -6633334070348032682
+    second: Great Goblin With Club V2 MATRIX 176x112  _39
+  - first:
+      213: -7960654908101492296
+    second: Great Goblin With Club V2 MATRIX 176x112  _40
+  - first:
+      213: 8996606077166665749
+    second: Great Goblin With Club V2 MATRIX 176x112  _41
+  - first:
+      213: 9217470379686213694
+    second: Great Goblin With Club V2 MATRIX 176x112  _42
+  - first:
+      213: 6482533331822792338
+    second: Great Goblin With Club V2 MATRIX 176x112  _43
+  - first:
+      213: -8918139083008680196
+    second: Great Goblin With Club V2 MATRIX 176x112  _44
+  - first:
+      213: -3001280265620195972
+    second: Great Goblin With Club V2 MATRIX 176x112  _45
+  - first:
+      213: -3336382609414875948
+    second: Great Goblin With Club V2 MATRIX 176x112  _46
+  - first:
+      213: -1020117579940175362
+    second: Great Goblin With Club V2 MATRIX 176x112  _47
+  - first:
+      213: -2548321250173696700
+    second: Great Goblin With Club V2 MATRIX 176x112  _48
+  - first:
+      213: -3489553148522799472
+    second: Great Goblin With Club V2 MATRIX 176x112  _49
+  - first:
+      213: -4402590379264009483
+    second: Great Goblin With Club V2 MATRIX 176x112  _50
+  - first:
+      213: -256060684662434966
+    second: Great Goblin With Club V2 MATRIX 176x112  _51
+  - first:
+      213: -5453329963262269060
+    second: Great Goblin With Club V2 MATRIX 176x112  _52
+  - first:
+      213: 6239468701304037524
+    second: Great Goblin With Club V2 MATRIX 176x112  _53
+  - first:
+      213: 1376772069866798251
+    second: Great Goblin With Club V2 MATRIX 176x112  _54
+  - first:
+      213: -4070276397797943657
+    second: Great Goblin With Club V2 MATRIX 176x112  _55
+  - first:
+      213: -3545528705360825074
+    second: Great Goblin With Club V2 MATRIX 176x112  _56
+  - first:
+      213: 5805486007141894999
+    second: Great Goblin With Club V2 MATRIX 176x112  _57
+  - first:
+      213: -3199886518420978582
+    second: Great Goblin With Club V2 MATRIX 176x112  _58
+  - first:
+      213: -5323726089426770200
+    second: Great Goblin With Club V2 MATRIX 176x112  _59
+  - first:
+      213: -8063812815380130663
+    second: Great Goblin With Club V2 MATRIX 176x112  _60
+  - first:
+      213: 843100336032216466
+    second: Great Goblin With Club V2 MATRIX 176x112  _61
+  - first:
+      213: 1214788683826223000
+    second: Great Goblin With Club V2 MATRIX 176x112  _62
+  - first:
+      213: 8653059519718926005
+    second: Great Goblin With Club V2 MATRIX 176x112  _63
+  - first:
+      213: 1956285210006734195
+    second: Great Goblin With Club V2 MATRIX 176x112  _64
+  - first:
+      213: -998590444913237302
+    second: Great Goblin With Club V2 MATRIX 176x112  _65
+  - first:
+      213: 6317133771254099707
+    second: Great Goblin With Club V2 MATRIX 176x112  _66
+  - first:
+      213: 4170941444784427994
+    second: Great Goblin With Club V2 MATRIX 176x112  _67
+  - first:
+      213: -8680937163118542835
+    second: Great Goblin With Club V2 MATRIX 176x112  _68
+  - first:
+      213: 1172169480518726608
+    second: Great Goblin With Club V2 MATRIX 176x112  _69
+  - first:
+      213: -6017531147395943854
+    second: Great Goblin With Club V2 MATRIX 176x112  _70
+  - first:
+      213: -2362437121111274116
+    second: Great Goblin With Club V2 MATRIX 176x112  _71
+  - first:
+      213: 3770579352819376727
+    second: Great Goblin With Club V2 MATRIX 176x112  _72
+  - first:
+      213: -1312086722248441848
+    second: Great Goblin With Club V2 MATRIX 176x112  _73
+  - first:
+      213: 2957610700486281598
+    second: Great Goblin With Club V2 MATRIX 176x112  _74
+  - first:
+      213: -537744648044583397
+    second: Great Goblin With Club V2 MATRIX 176x112  _75
+  - first:
+      213: -4719390062438832508
+    second: Great Goblin With Club V2 MATRIX 176x112  _76
+  - first:
+      213: 6542433878722109214
+    second: Great Goblin With Club V2 MATRIX 176x112  _77
+  - first:
+      213: 5875232181784553945
+    second: Great Goblin With Club V2 MATRIX 176x112  _78
+  - first:
+      213: 6159036068353134618
+    second: Great Goblin With Club V2 MATRIX 176x112  _79
+  - first:
+      213: 3766538205201161362
+    second: Great Goblin With Club V2 MATRIX 176x112  _80
+  - first:
+      213: 3821908178192594244
+    second: Great Goblin With Club V2 MATRIX 176x112  _81
+  - first:
+      213: -994959901163878103
+    second: Great Goblin With Club V2 MATRIX 176x112  _82
+  - first:
+      213: -7739911984504082333
+    second: Great Goblin With Club V2 MATRIX 176x112  _83
+  - first:
+      213: -1453155897812214177
+    second: Great Goblin With Club V2 MATRIX 176x112  _84
+  - first:
+      213: -846442031231531912
+    second: Great Goblin With Club V2 MATRIX 176x112  _85
+  - first:
+      213: 2815642354881025959
+    second: Great Goblin With Club V2 MATRIX 176x112  _86
+  - first:
+      213: 8194898292594765708
+    second: Great Goblin With Club V2 MATRIX 176x112  _87
+  - first:
+      213: -8311761111914894941
+    second: Great Goblin With Club V2 MATRIX 176x112  _88
+  - first:
+      213: -2253353055585003539
+    second: Great Goblin With Club V2 MATRIX 176x112  _89
+  - first:
+      213: -4650820128026239299
+    second: Great Goblin With Club V2 MATRIX 176x112  _90
+  - first:
+      213: 1000526761746816487
+    second: Great Goblin With Club V2 MATRIX 176x112  _91
+  - first:
+      213: 7396222512777919720
+    second: Great Goblin With Club V2 MATRIX 176x112  _92
+  - first:
+      213: 3179735030817573181
+    second: Great Goblin With Club V2 MATRIX 176x112  _93
+  - first:
+      213: 314605460792674561
+    second: Great Goblin With Club V2 MATRIX 176x112  _94
+  - first:
+      213: -923264119682594119
+    second: Great Goblin With Club V2 MATRIX 176x112  _95
+  - first:
+      213: 8613912298355407242
+    second: Great Goblin With Club V2 MATRIX 176x112  _96
+  - first:
+      213: 6855957906614989132
+    second: Great Goblin With Club V2 MATRIX 176x112  _97
+  - first:
+      213: 1427918924994937840
+    second: Great Goblin With Club V2 MATRIX 176x112  _98
+  - first:
+      213: -7698432637312288078
+    second: Great Goblin With Club V2 MATRIX 176x112  _99
+  - first:
+      213: -8673669028763354601
+    second: Great Goblin With Club V2 MATRIX 176x112  _100
+  - first:
+      213: 8214582694528584185
+    second: Great Goblin With Club V2 MATRIX 176x112  _101
+  - first:
+      213: -3754385953468424138
+    second: Great Goblin With Club V2 MATRIX 176x112  _102
+  - first:
+      213: -5998001939606804691
+    second: Great Goblin With Club V2 MATRIX 176x112  _103
+  - first:
+      213: 3925341546006749922
+    second: Great Goblin With Club V2 MATRIX 176x112  _104
+  - first:
+      213: -7029093987793100700
+    second: Great Goblin With Club V2 MATRIX 176x112  _105
+  - first:
+      213: 6537690457974371428
+    second: Great Goblin With Club V2 MATRIX 176x112  _106
+  - first:
+      213: -684602758453969019
+    second: Great Goblin With Club V2 MATRIX 176x112  _107
+  - first:
+      213: -8759449965613593252
+    second: Great Goblin With Club V2 MATRIX 176x112  _108
+  - first:
+      213: 3662236738784560209
+    second: Great Goblin With Club V2 MATRIX 176x112  _109
+  - first:
+      213: -6673233737519351228
+    second: Great Goblin With Club V2 MATRIX 176x112  _110
+  - first:
+      213: 2425370782977046752
+    second: Great Goblin With Club V2 MATRIX 176x112  _111
+  - first:
+      213: 1386842823370154024
+    second: Great Goblin With Club V2 MATRIX 176x112  _112
+  - first:
+      213: 4688522112131890457
+    second: Great Goblin With Club V2 MATRIX 176x112  _113
+  - first:
+      213: 3956813635301719405
+    second: Great Goblin With Club V2 MATRIX 176x112  _114
+  - first:
+      213: 1194200785524429763
+    second: Great Goblin With Club V2 MATRIX 176x112  _115
+  - first:
+      213: -714457329221088423
+    second: Great Goblin With Club V2 MATRIX 176x112  _116
+  - first:
+      213: -3959554191191610781
+    second: Great Goblin With Club V2 MATRIX 176x112  _117
+  - first:
+      213: -2003861243646192481
+    second: Great Goblin With Club V2 MATRIX 176x112  _118
+  - first:
+      213: 3367624354797669076
+    second: Great Goblin With Club V2 MATRIX 176x112  _119
+  - first:
+      213: -6233818968944578032
+    second: Great Goblin With Club V2 MATRIX 176x112  _120
+  - first:
+      213: -8524799904263913879
+    second: Great Goblin With Club V2 MATRIX 176x112  _121
+  - first:
+      213: -5799311359270015806
+    second: Great Goblin With Club V2 MATRIX 176x112  _122
+  - first:
+      213: 2402239453389824733
+    second: Great Goblin With Club V2 MATRIX 176x112  _123
+  - first:
+      213: -6885805855077529178
+    second: Great Goblin With Club V2 MATRIX 176x112  _124
+  - first:
+      213: -1725436546490806203
+    second: Great Goblin With Club V2 MATRIX 176x112  _125
+  - first:
+      213: -4368714169733393002
+    second: Great Goblin With Club V2 MATRIX 176x112  _126
+  - first:
+      213: -232876481448384389
+    second: Great Goblin With Club V2 MATRIX 176x112  _127
+  - first:
+      213: -2789884077287054814
+    second: Great Goblin With Club V2 MATRIX 176x112  _128
+  - first:
+      213: -2445661654533877180
+    second: Great Goblin With Club V2 MATRIX 176x112  _129
+  - first:
+      213: -7383690252121177638
+    second: Great Goblin With Club V2 MATRIX 176x112  _130
+  - first:
+      213: -4317410200837131021
+    second: Great Goblin With Club V2 MATRIX 176x112  _131
+  - first:
+      213: -3314597717120227086
+    second: Great Goblin With Club V2 MATRIX 176x112  _132
+  - first:
+      213: 5270669127601945320
+    second: Great Goblin With Club V2 MATRIX 176x112  _133
+  - first:
+      213: -1026600856822934446
+    second: Great Goblin With Club V2 MATRIX 176x112  _134
+  - first:
+      213: -6756867535789640933
+    second: Great Goblin With Club V2 MATRIX 176x112  _135
+  - first:
+      213: -1550617104338060510
+    second: Great Goblin With Club V2 MATRIX 176x112  _136
+  - first:
+      213: -1256791101544951956
+    second: Great Goblin With Club V2 MATRIX 176x112  _137
+  - first:
+      213: 4678389395332949668
+    second: Great Goblin With Club V2 MATRIX 176x112  _138
+  - first:
+      213: -865117271101649392
+    second: Great Goblin With Club V2 MATRIX 176x112  _139
+  - first:
+      213: 8483333843591826184
+    second: Great Goblin With Club V2 MATRIX 176x112  _140
+  - first:
+      213: 7143466811553543019
+    second: Great Goblin With Club V2 MATRIX 176x112  _141
+  - first:
+      213: -5688095475410437029
+    second: Great Goblin With Club V2 MATRIX 176x112  _142
+  - first:
+      213: -9078367721836874683
+    second: Great Goblin With Club V2 MATRIX 176x112  _143
+  - first:
+      213: 3071365423374391812
+    second: Great Goblin With Club V2 MATRIX 176x112  _144
+  - first:
+      213: -2095984093744316822
+    second: Great Goblin With Club V2 MATRIX 176x112  _145
+  - first:
+      213: 6641947779665089269
+    second: Great Goblin With Club V2 MATRIX 176x112  _146
+  - first:
+      213: -8636564846734439417
+    second: Great Goblin With Club V2 MATRIX 176x112  _147
+  - first:
+      213: -4275729474812793834
+    second: Great Goblin With Club V2 MATRIX 176x112  _148
+  - first:
+      213: 4538687926250703829
+    second: Great Goblin With Club V2 MATRIX 176x112  _149
+  - first:
+      213: 5835169732919551976
+    second: Great Goblin With Club V2 MATRIX 176x112  _150
+  - first:
+      213: -8142428208652200906
+    second: Great Goblin With Club V2 MATRIX 176x112  _151
+  - first:
+      213: 125528049273811862
+    second: Great Goblin With Club V2 MATRIX 176x112  _152
+  - first:
+      213: 5685489857142945139
+    second: Great Goblin With Club V2 MATRIX 176x112  _153
+  - first:
+      213: 1277455652469002528
+    second: Great Goblin With Club V2 MATRIX 176x112  _154
+  - first:
+      213: 5460987430177348655
+    second: Great Goblin With Club V2 MATRIX 176x112  _155
+  - first:
+      213: -4894851363559325086
+    second: Great Goblin With Club V2 MATRIX 176x112  _156
+  - first:
+      213: -433876110624277133
+    second: Great Goblin With Club V2 MATRIX 176x112  _157
+  - first:
+      213: 1844646521158851415
+    second: Great Goblin With Club V2 MATRIX 176x112  _158
+  - first:
+      213: -3975449322684756427
+    second: Great Goblin With Club V2 MATRIX 176x112  _159
+  - first:
+      213: 3617352347732505734
+    second: Great Goblin With Club V2 MATRIX 176x112  _160
+  - first:
+      213: -1157710442497750995
+    second: Great Goblin With Club V2 MATRIX 176x112  _161
+  - first:
+      213: 8220203126994116687
+    second: Great Goblin With Club V2 MATRIX 176x112  _162
+  - first:
+      213: -3213232193588939680
+    second: Great Goblin With Club V2 MATRIX 176x112  _163
+  - first:
+      213: 1464657635846938660
+    second: Great Goblin With Club V2 MATRIX 176x112  _164
+  - first:
+      213: -1742627045095102915
+    second: Great Goblin With Club V2 MATRIX 176x112  _165
+  - first:
+      213: 5852760459198034621
+    second: Great Goblin With Club V2 MATRIX 176x112  _166
+  - first:
+      213: -6679585711605847779
+    second: Great Goblin With Club V2 MATRIX 176x112  _167
+  - first:
+      213: -7106093406995156489
+    second: Great Goblin With Club V2 MATRIX 176x112  _168
+  - first:
+      213: -300577528592339518
+    second: Great Goblin With Club V2 MATRIX 176x112  _169
+  - first:
+      213: -4586570964014475057
+    second: Great Goblin With Club V2 MATRIX 176x112  _170
+  - first:
+      213: 4596643383057440910
+    second: Great Goblin With Club V2 MATRIX 176x112  _171
+  - first:
+      213: 6719993300995660304
+    second: Great Goblin With Club V2 MATRIX 176x112  _172
+  - first:
+      213: -659286222557791108
+    second: Great Goblin With Club V2 MATRIX 176x112  _173
+  - first:
+      213: -6509755022061522462
+    second: Great Goblin With Club V2 MATRIX 176x112  _174
+  - first:
+      213: -8064578064789370472
+    second: Great Goblin With Club V2 MATRIX 176x112  _175
+  - first:
+      213: -910002039432322915
+    second: Great Goblin With Club V2 MATRIX 176x112  _176
+  - first:
+      213: -2672307177826870624
+    second: Great Goblin With Club V2 MATRIX 176x112  _177
+  - first:
+      213: 3941536423276832799
+    second: Great Goblin With Club V2 MATRIX 176x112  _178
+  - first:
+      213: -2478049326931220872
+    second: Great Goblin With Club V2 MATRIX 176x112  _179
+  - first:
+      213: 5666241655069871722
+    second: Great Goblin With Club V2 MATRIX 176x112  _180
+  - first:
+      213: 565056733554083885
+    second: Great Goblin With Club V2 MATRIX 176x112  _181
+  - first:
+      213: -5049769611229556537
+    second: Great Goblin With Club V2 MATRIX 176x112  _182
+  - first:
+      213: 6536298181528182545
+    second: Great Goblin With Club V2 MATRIX 176x112  _183
+  - first:
+      213: -1471880889209967677
+    second: Great Goblin With Club V2 MATRIX 176x112  _184
+  - first:
+      213: 2740882458375950829
+    second: Great Goblin With Club V2 MATRIX 176x112  _185
+  - first:
+      213: -9094061370450823202
+    second: Great Goblin With Club V2 MATRIX 176x112  _186
+  - first:
+      213: -8358055699152792164
+    second: Great Goblin With Club V2 MATRIX 176x112  _187
+  - first:
+      213: -715281762603132601
+    second: Great Goblin With Club V2 MATRIX 176x112  _188
+  - first:
+      213: 3854425164234537784
+    second: Great Goblin With Club V2 MATRIX 176x112  _189
+  - first:
+      213: -549137220943361328
+    second: Great Goblin With Club V2 MATRIX 176x112  _190
+  - first:
+      213: -4599541296560765153
+    second: Great Goblin With Club V2 MATRIX 176x112  _191
+  - first:
+      213: 261409423099132018
+    second: Great Goblin With Club V2 MATRIX 176x112  _192
+  - first:
+      213: 2009473856216790027
+    second: Great Goblin With Club V2 MATRIX 176x112  _193
+  - first:
+      213: 6471706958361993327
+    second: Great Goblin With Club V2 MATRIX 176x112  _194
+  - first:
+      213: 8615232559379117061
+    second: Great Goblin With Club V2 MATRIX 176x112  _195
+  - first:
+      213: 7606106459442518813
+    second: Great Goblin With Club V2 MATRIX 176x112  _196
+  - first:
+      213: 7646209542703453237
+    second: Great Goblin With Club V2 MATRIX 176x112  _197
+  - first:
+      213: 8569613068515717963
+    second: Great Goblin With Club V2 MATRIX 176x112  _198
+  - first:
+      213: 1283446762568488598
+    second: Great Goblin With Club V2 MATRIX 176x112  _199
+  - first:
+      213: -1578284130420075500
+    second: Great Goblin With Club V2 MATRIX 176x112  _200
+  - first:
+      213: 356710314955555954
+    second: Great Goblin With Club V2 MATRIX 176x112  _201
+  - first:
+      213: 8227509423265954988
+    second: Great Goblin With Club V2 MATRIX 176x112  _202
+  - first:
+      213: -6248396614063529970
+    second: Great Goblin With Club V2 MATRIX 176x112  _203
+  - first:
+      213: -3727023685865821349
+    second: Great Goblin With Club V2 MATRIX 176x112  _204
+  - first:
+      213: 4720611126557628297
+    second: Great Goblin With Club V2 MATRIX 176x112  _205
+  - first:
+      213: 425354075326190502
+    second: Great Goblin With Club V2 MATRIX 176x112  _206
+  - first:
+      213: 5894548593682116213
+    second: Great Goblin With Club V2 MATRIX 176x112  _207
+  - first:
+      213: -1004037846104608805
+    second: Great Goblin With Club V2 MATRIX 176x112  _208
+  - first:
+      213: 2920953699107206451
+    second: Great Goblin With Club V2 MATRIX 176x112  _209
+  - first:
+      213: 3465914483372033185
+    second: Great Goblin With Club V2 MATRIX 176x112  _210
+  - first:
+      213: -6238262910923135878
+    second: Great Goblin With Club V2 MATRIX 176x112  _211
+  - first:
+      213: 4247200003947749124
+    second: Great Goblin With Club V2 MATRIX 176x112  _212
+  - first:
+      213: 2046140997539511585
+    second: Great Goblin With Club V2 MATRIX 176x112  _213
+  - first:
+      213: -598938684721844599
+    second: Great Goblin With Club V2 MATRIX 176x112  _214
+  - first:
+      213: 2441999834811548864
+    second: Great Goblin With Club V2 MATRIX 176x112  _215
+  - first:
+      213: 1150283230703447323
+    second: Great Goblin With Club V2 MATRIX 176x112  _216
+  - first:
+      213: -6413501185092439667
+    second: Great Goblin With Club V2 MATRIX 176x112  _217
+  - first:
+      213: 8130277449336045599
+    second: Great Goblin With Club V2 MATRIX 176x112  _218
+  - first:
+      213: -8563133524680135508
+    second: Great Goblin With Club V2 MATRIX 176x112  _219
+  - first:
+      213: -3591976537027729031
+    second: Great Goblin With Club V2 MATRIX 176x112  _220
+  - first:
+      213: 2845128302820235883
+    second: Great Goblin With Club V2 MATRIX 176x112  _221
+  - first:
+      213: 5523946696607367437
+    second: Great Goblin With Club V2 MATRIX 176x112  _222
+  - first:
+      213: -112619805967769772
+    second: Great Goblin With Club V2 MATRIX 176x112  _223
+  - first:
+      213: -4453691060305127014
+    second: Great Goblin With Club V2 MATRIX 176x112  _224
+  - first:
+      213: 4059998136062091189
+    second: Great Goblin With Club V2 MATRIX 176x112  _225
+  - first:
+      213: -4332316598712498052
+    second: Great Goblin With Club V2 MATRIX 176x112  _226
+  - first:
+      213: -8126714722980931706
+    second: Great Goblin With Club V2 MATRIX 176x112  _227
+  - first:
+      213: 6440680412290296746
+    second: Great Goblin With Club V2 MATRIX 176x112  _228
+  - first:
+      213: -174240600659272204
+    second: Great Goblin With Club V2 MATRIX 176x112  _229
+  - first:
+      213: -8526301201728494925
+    second: Great Goblin With Club V2 MATRIX 176x112  _230
+  - first:
+      213: 3534526176973995021
+    second: Great Goblin With Club V2 MATRIX 176x112  _231
+  - first:
+      213: 6165361243264759605
+    second: Great Goblin With Club V2 MATRIX 176x112  _232
+  - first:
+      213: 6767222643218896654
+    second: Great Goblin With Club V2 MATRIX 176x112  _233
+  - first:
+      213: -4879352653565187737
+    second: Great Goblin With Club V2 MATRIX 176x112  _234
+  - first:
+      213: 2473299418925075049
+    second: Great Goblin With Club V2 MATRIX 176x112  _235
+  - first:
+      213: 5585701653142931296
+    second: Great Goblin With Club V2 MATRIX 176x112  _236
+  - first:
+      213: -668175597891956773
+    second: Great Goblin With Club V2 MATRIX 176x112  _237
+  - first:
+      213: -5218367882115804892
+    second: Great Goblin With Club V2 MATRIX 176x112  _238
+  - first:
+      213: -5718909031690165778
+    second: Great Goblin With Club V2 MATRIX 176x112  _239
+  - first:
+      213: -9070077567306826467
+    second: Great Goblin With Club V2 MATRIX 176x112  _240
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 0
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 8
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Great Goblin With Club V2 MATRIX 176x112  _0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1680
+        width: 176
+        height: 112
+      alignment: 9
+      pivot: {x: 0.75, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c7eebf3058aae7610800000000000000
+      internalID: 1620920404174171772
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Great Goblin With Club V2 MATRIX 176x112  _1
+      rect:
+        serializedVersion: 2
+        x: 176
+        y: 1680
+        width: 176
+        height: 112
+      alignment: 9
+      pivot: {x: 0.75, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d43871158a383eb10800000000000000
+      internalID: 2009594617675613005
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Great Goblin With Club V2 MATRIX 176x112  _2
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 1680
+        width: 176
+        height: 112
+      alignment: 9
+      pivot: {x: 0.75, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9d2a06c880a6b7d50800000000000000
+      internalID: 6736094252610134745
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Great Goblin With Club V2 MATRIX 176x112  _3
+      rect:
+        serializedVersion: 2
+        x: 528
+        y: 1680
+        width: 176
+        height: 112
+      alignment: 9
+      pivot: {x: 0.75, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 557913e53fd34e230800000000000000
+      internalID: 3667124112053081941
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Great Goblin With Club V2 MATRIX 176x112  _4
+      rect:
+        serializedVersion: 2
+        x: 704
+        y: 1680
+        width: 176
+        height: 112
+      alignment: 9
+      pivot: {x: 0.75, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 762414212b2b92fe0800000000000000
+      internalID: -1213242146719448473
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Great Goblin With Club V2 MATRIX 176x112  _5
+      rect:
+        serializedVersion: 2
+        x: 880
+        y: 1680
+        width: 176
+        height: 112
+      alignment: 9
+      pivot: {x: 0.75, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0a2c23c4baef60ad0800000000000000
+      internalID: -2736219711909739872
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Great Goblin With Club V2 MATRIX 176x112  _6
+      rect:
+        serializedVersion: 2
+        x: 1056
+        y: 1680
+        width: 176
+        height: 112
+      alignment: 9
+      pivot: {x: 0.75, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e4a65293cb2031ac0800000000000000
+      internalID: -3885759046054745522
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Great Goblin With Club V2 MATRIX 176x112  _7
+      rect:
+        serializedVersion: 2
+        x: 1232
+        y: 1680
+        width: 176
+        height: 112
+      alignment: 9
+      pivot: {x: 0.75, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5f56fa71582a6dcd0800000000000000
+      internalID: -2533659047837604363
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Great Goblin With Club V2 MATRIX 176x112  _8
+      rect:
+        serializedVersion: 2
+        x: 1408
+        y: 1680
+        width: 176
+        height: 112
+      alignment: 9
+      pivot: {x: 0.75, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7fe9dca0c6601bf70800000000000000
+      internalID: 9201142574802116343
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Great Goblin With Club V2 MATRIX 176x112  _9
+      rect:
+        serializedVersion: 2
+        x: 1584
+        y: 1680
+        width: 176
+        height: 112
+      alignment: 9
+      pivot: {x: 0.75, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f49f2edaa4d50c7c0800000000000000
+      internalID: -4053137089307150001
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Great Goblin With Club V2 MATRIX 176x112  _10
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1568
+        width: 176
+        height: 112
+      alignment: 9
+      pivot: {x: 0.75, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fe7a2de6f3515ad10800000000000000
+      internalID: 2136136960443590639
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Great Goblin With Club V2 MATRIX 176x112  _11
+      rect:
+        serializedVersion: 2
+        x: 176
+        y: 1568
+        width: 176
+        height: 112
+      alignment: 9
+      pivot: {x: 0.75, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 83fc5303c0341d370800000000000000
+      internalID: 8345525304121741112
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Great Goblin With Club V2 MATRIX 176x112  _12
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1456
+        width: 176
+        height: 112
+      alignment: 9
+      pivot: {x: 0.75, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e23bfa1c2c155ac10800000000000000
+      internalID: 2064145901134263086
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Great Goblin With Club V2 MATRIX 176x112  _13
+      rect:
+        serializedVersion: 2
+        x: 176
+        y: 1456
+        width: 176
+        height: 112
+      alignment: 9
+      pivot: {x: 0.75, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 40c884196f0e85250800000000000000
+      internalID: 5933739858664655876
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Great Goblin With Club V2 MATRIX 176x112  _14
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 1456
+        width: 176
+        height: 112
+      alignment: 9
+      pivot: {x: 0.75, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 72fbe82aa39032260800000000000000
+      internalID: 7071505987341827879
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Great Goblin With Club V2 MATRIX 176x112  _15
+      rect:
+        serializedVersion: 2
+        x: 528
+        y: 1456
+        width: 176
+        height: 112
+      alignment: 9
+      pivot: {x: 0.75, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f6fa50fd9a11761f0800000000000000
+      internalID: -1051852566678884497
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Great Goblin With Club V2 MATRIX 176x112  _16
+      rect:
+        serializedVersion: 2
+        x: 704
+        y: 1456
+        width: 176
+        height: 112
+      alignment: 9
+      pivot: {x: 0.75, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 38f650e2579b05350800000000000000
+      internalID: 6003502216219291523
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Great Goblin With Club V2 MATRIX 176x112  _17
+      rect:
+        serializedVersion: 2
+        x: 880
+        y: 1456
+        width: 176
+        height: 112
+      alignment: 9
+      pivot: {x: 0.75, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 24c14f11ca1089410800000000000000
+      internalID: 1483937915765791810
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Great Goblin With Club V2 MATRIX 176x112  _18
+      rect:
+        serializedVersion: 2
+        x: 1056
+        y: 1456
+        width: 176
+        height: 112
+      alignment: 9
+      pivot: {x: 0.75, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b019498475f3664d0800000000000000
+      internalID: -3141754045931941621
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Great Goblin With Club V2 MATRIX 176x112  _19
+      rect:
+        serializedVersion: 2
+        x: 1232
+        y: 1456
+        width: 176
+        height: 112
+      alignment: 9
+      pivot: {x: 0.75, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 92298f370a8b24280800000000000000
+      internalID: -9060476501036068311
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Great Goblin With Club V2 MATRIX 176x112  _20
+      rect:
+        serializedVersion: 2
+        x: 1408
+        y: 1456
+        width: 176
+        height: 112
+      alignment: 9
+      pivot: {x: 0.75, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d858bbe1e80affb20800000000000000
+      internalID: 3170429194953524621
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Great Goblin With Club V2 MATRIX 176x112  _21
+      rect:
+        serializedVersion: 2
+        x: 1584
+        y: 1456
+        width: 176
+        height: 112
+      alignment: 9
+      pivot: {x: 0.75, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8676e2ca3410615b0800000000000000
+      internalID: -5398125713193801880
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Great Goblin With Club V2 MATRIX 176x112  _22
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1344
+        width: 176
+        height: 112
+      alignment: 9
+      pivot: {x: 0.75, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9924617da1ee5f520800000000000000
+      internalID: 2735354147742565017
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Great Goblin With Club V2 MATRIX 176x112  _23
+      rect:
+        serializedVersion: 2
+        x: 176
+        y: 1344
+        width: 176
+        height: 112
+      alignment: 9
+      pivot: {x: 0.75, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9edd3c6bd8d24fb90800000000000000
+      internalID: -7209087016833393175
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Great Goblin With Club V2 MATRIX 176x112  _24
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 1344
+        width: 176
+        height: 112
+      alignment: 9
+      pivot: {x: 0.75, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 12dc71114932c7330800000000000000
+      internalID: 3709879311895350561
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Great Goblin With Club V2 MATRIX 176x112  _25
+      rect:
+        serializedVersion: 2
+        x: 528
+        y: 1344
+        width: 176
+        height: 112
+      alignment: 9
+      pivot: {x: 0.75, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 15418c4ee85ebf730800000000000000
+      internalID: 4034070293126845521
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Great Goblin With Club V2 MATRIX 176x112  _26
+      rect:
+        serializedVersion: 2
+        x: 704
+        y: 1344
+        width: 176
+        height: 112
+      alignment: 9
+      pivot: {x: 0.75, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9822d60d5a8d481d0800000000000000
+      internalID: -3349314016178789751
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Great Goblin With Club V2 MATRIX 176x112  _27
+      rect:
+        serializedVersion: 2
+        x: 880
+        y: 1344
+        width: 176
+        height: 112
+      alignment: 9
+      pivot: {x: 0.75, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6a7cebcb7948d8480800000000000000
+      internalID: -8895307901745313882
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Great Goblin With Club V2 MATRIX 176x112  _28
+      rect:
+        serializedVersion: 2
+        x: 1056
+        y: 1344
+        width: 176
+        height: 112
+      alignment: 9
+      pivot: {x: 0.75, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2a70cdb89e0ac9b90800000000000000
+      internalID: -7233729976529582174
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Great Goblin With Club V2 MATRIX 176x112  _29
+      rect:
+        serializedVersion: 2
+        x: 1232
+        y: 1344
+        width: 176
+        height: 112
+      alignment: 9
+      pivot: {x: 0.75, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6aad950b941be3410800000000000000
+      internalID: 1458798259364027046
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Great Goblin With Club V2 MATRIX 176x112  _30
+      rect:
+        serializedVersion: 2
+        x: 1408
+        y: 1344
+        width: 176
+        height: 112
+      alignment: 9
+      pivot: {x: 0.75, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b9a9a0b7ae54f6420800000000000000
+      internalID: 2625393981169244827
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Great Goblin With Club V2 MATRIX 176x112  _31
+      rect:
+        serializedVersion: 2
+        x: 1584
+        y: 1344
+        width: 176
+        height: 112
+      alignment: 9
+      pivot: {x: 0.75, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7e6fba97ad01e4ae0800000000000000
+      internalID: -1563293490120755481
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Great Goblin With Club V2 MATRIX 176x112  _32
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1232
+        width: 176
+        height: 112
+      alignment: 9
+      pivot: {x: 0.75, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 33dc06dcb5b036db0800000000000000
+      internalID: -4799980288931214029
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Great Goblin With Club V2 MATRIX 176x112  _33
+      rect:
+        serializedVersion: 2
+        x: 176
+        y: 1232
+        width: 176
+        height: 112
+      alignment: 9
+      pivot: {x: 0.75, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fe4893be31ab1e920800000000000000
+      internalID: 3017897820028503279
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Great Goblin With Club V2 MATRIX 176x112  _34
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 1232
+        width: 176
+        height: 112
+      alignment: 9
+      pivot: {x: 0.75, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2eaa645c8fb09b300800000000000000
+      internalID: 268258815894792930
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Great Goblin With Club V2 MATRIX 176x112  _35
+      rect:
+        serializedVersion: 2
+        x: 528
+        y: 1232
+        width: 176
+        height: 112
+      alignment: 9
+      pivot: {x: 0.75, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 508ead33c1472adc0800000000000000
+      internalID: -3629210685229307899
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Great Goblin With Club V2 MATRIX 176x112  _36
+      rect:
+        serializedVersion: 2
+        x: 704
+        y: 1232
+        width: 176
+        height: 112
+      alignment: 9
+      pivot: {x: 0.75, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e4d80649d0c1d7a30800000000000000
+      internalID: 4214555670938160462
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Great Goblin With Club V2 MATRIX 176x112  _37
+      rect:
+        serializedVersion: 2
+        x: 880
+        y: 1232
+        width: 176
+        height: 112
+      alignment: 9
+      pivot: {x: 0.75, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 727914c7d52fedb50800000000000000
+      internalID: 6619994985611761447
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Great Goblin With Club V2 MATRIX 176x112  _38
+      rect:
+        serializedVersion: 2
+        x: 1056
+        y: 1232
+        width: 176
+        height: 112
+      alignment: 9
+      pivot: {x: 0.75, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 650f15e11c994ed70800000000000000
+      internalID: 9071544604147445846
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Great Goblin With Club V2 MATRIX 176x112  _39
+      rect:
+        serializedVersion: 2
+        x: 1232
+        y: 1232
+        width: 176
+        height: 112
+      alignment: 9
+      pivot: {x: 0.75, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 655d864dec9a1f3a0800000000000000
+      internalID: -6633334070348032682
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Great Goblin With Club V2 MATRIX 176x112  _40
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1120
+        width: 176
+        height: 112
+      alignment: 9
+      pivot: {x: 0.75, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8b10427d982168190800000000000000
+      internalID: -7960654908101492296
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Great Goblin With Club V2 MATRIX 176x112  _41
+      rect:
+        serializedVersion: 2
+        x: 176
+        y: 1120
+        width: 176
+        height: 112
+      alignment: 9
+      pivot: {x: 0.75, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 510c3a5af8d5adc70800000000000000
+      internalID: 8996606077166665749
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Great Goblin With Club V2 MATRIX 176x112  _42
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 1120
+        width: 176
+        height: 112
+      alignment: 9
+      pivot: {x: 0.75, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e38b1ec59780bef70800000000000000
+      internalID: 9217470379686213694
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Great Goblin With Club V2 MATRIX 176x112  _43
+      rect:
+        serializedVersion: 2
+        x: 528
+        y: 1120
+        width: 176
+        height: 112
+      alignment: 9
+      pivot: {x: 0.75, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 29e4de728b596f950800000000000000
+      internalID: 6482533331822792338
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Great Goblin With Club V2 MATRIX 176x112  _44
+      rect:
+        serializedVersion: 2
+        x: 704
+        y: 1120
+        width: 176
+        height: 112
+      alignment: 9
+      pivot: {x: 0.75, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cfe5dbb11c76c3480800000000000000
+      internalID: -8918139083008680196
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Great Goblin With Club V2 MATRIX 176x112  _45
+      rect:
+        serializedVersion: 2
+        x: 880
+        y: 1120
+        width: 176
+        height: 112
+      alignment: 9
+      pivot: {x: 0.75, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c757158ff7f4956d0800000000000000
+      internalID: -3001280265620195972
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Great Goblin With Club V2 MATRIX 176x112  _46
+      rect:
+        serializedVersion: 2
+        x: 1056
+        y: 1120
+        width: 176
+        height: 112
+      alignment: 9
+      pivot: {x: 0.75, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4d4190391b9c2b1d0800000000000000
+      internalID: -3336382609414875948
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Great Goblin With Club V2 MATRIX 176x112  _47
+      rect:
+        serializedVersion: 2
+        x: 1232
+        y: 1120
+        width: 176
+        height: 112
+      alignment: 9
+      pivot: {x: 0.75, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ef1e8824770d7d1f0800000000000000
+      internalID: -1020117579940175362
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Great Goblin With Club V2 MATRIX 176x112  _48
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1008
+        width: 176
+        height: 112
+      alignment: 9
+      pivot: {x: 0.75, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 44541d5135b82acd0800000000000000
+      internalID: -2548321250173696700
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Great Goblin With Club V2 MATRIX 176x112  _49
+      rect:
+        serializedVersion: 2
+        x: 176
+        y: 1008
+        width: 176
+        height: 112
+      alignment: 9
+      pivot: {x: 0.75, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 09ed37d56ed929fc0800000000000000
+      internalID: -3489553148522799472
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Great Goblin With Club V2 MATRIX 176x112  _50
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 1008
+        width: 176
+        height: 112
+      alignment: 9
+      pivot: {x: 0.75, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5fa9a60406bd6e2c0800000000000000
+      internalID: -4402590379264009483
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Great Goblin With Club V2 MATRIX 176x112  _51
+      rect:
+        serializedVersion: 2
+        x: 528
+        y: 1008
+        width: 176
+        height: 112
+      alignment: 9
+      pivot: {x: 0.75, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a6390c9f92a427cf0800000000000000
+      internalID: -256060684662434966
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Great Goblin With Club V2 MATRIX 176x112  _52
+      rect:
+        serializedVersion: 2
+        x: 704
+        y: 1008
+        width: 176
+        height: 112
+      alignment: 9
+      pivot: {x: 0.75, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c7922c89a41e154b0800000000000000
+      internalID: -5453329963262269060
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Great Goblin With Club V2 MATRIX 176x112  _53
+      rect:
+        serializedVersion: 2
+        x: 880
+        y: 1008
+        width: 176
+        height: 112
+      alignment: 9
+      pivot: {x: 0.75, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4902568c9bb079650800000000000000
+      internalID: 6239468701304037524
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Great Goblin With Club V2 MATRIX 176x112  _54
+      rect:
+        serializedVersion: 2
+        x: 1056
+        y: 1008
+        width: 176
+        height: 112
+      alignment: 9
+      pivot: {x: 0.75, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bacf61137e64b1310800000000000000
+      internalID: 1376772069866798251
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Great Goblin With Club V2 MATRIX 176x112  _55
+      rect:
+        serializedVersion: 2
+        x: 1232
+        y: 1008
+        width: 176
+        height: 112
+      alignment: 9
+      pivot: {x: 0.75, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 796d8937e297387c0800000000000000
+      internalID: -4070276397797943657
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Great Goblin With Club V2 MATRIX 176x112  _56
+      rect:
+        serializedVersion: 2
+        x: 1408
+        y: 1008
+        width: 176
+        height: 112
+      alignment: 9
+      pivot: {x: 0.75, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e0574007d60cbcec0800000000000000
+      internalID: -3545528705360825074
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Great Goblin With Club V2 MATRIX 176x112  _57
+      rect:
+        serializedVersion: 2
+        x: 1584
+        y: 1008
+        width: 176
+        height: 112
+      alignment: 9
+      pivot: {x: 0.75, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 75b8134c3ca319050800000000000000
+      internalID: 5805486007141894999
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Great Goblin With Club V2 MATRIX 176x112  _58
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 896
+        width: 176
+        height: 112
+      alignment: 9
+      pivot: {x: 0.75, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a64c4fb4a28b793d0800000000000000
+      internalID: -3199886518420978582
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Great Goblin With Club V2 MATRIX 176x112  _59
+      rect:
+        serializedVersion: 2
+        x: 176
+        y: 896
+        width: 176
+        height: 112
+      alignment: 9
+      pivot: {x: 0.75, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8e6ec36f3535e16b0800000000000000
+      internalID: -5323726089426770200
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Great Goblin With Club V2 MATRIX 176x112  _60
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 896
+        width: 176
+        height: 112
+      alignment: 9
+      pivot: {x: 0.75, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9945604e7f4971090800000000000000
+      internalID: -8063812815380130663
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Great Goblin With Club V2 MATRIX 176x112  _61
+      rect:
+        serializedVersion: 2
+        x: 528
+        y: 896
+        width: 176
+        height: 112
+      alignment: 9
+      pivot: {x: 0.75, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2957637e94b43bb00800000000000000
+      internalID: 843100336032216466
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Great Goblin With Club V2 MATRIX 176x112  _62
+      rect:
+        serializedVersion: 2
+        x: 704
+        y: 896
+        width: 176
+        height: 112
+      alignment: 9
+      pivot: {x: 0.75, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 89750a82fdbcbd010800000000000000
+      internalID: 1214788683826223000
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Great Goblin With Club V2 MATRIX 176x112  _63
+      rect:
+        serializedVersion: 2
+        x: 880
+        y: 896
+        width: 176
+        height: 112
+      alignment: 9
+      pivot: {x: 0.75, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5b6a82d89c7d51870800000000000000
+      internalID: 8653059519718926005
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Great Goblin With Club V2 MATRIX 176x112  _64
+      rect:
+        serializedVersion: 2
+        x: 1056
+        y: 896
+        width: 176
+        height: 112
+      alignment: 9
+      pivot: {x: 0.75, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3754dcd980f162b10800000000000000
+      internalID: 1956285210006734195
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Great Goblin With Club V2 MATRIX 176x112  _65
+      rect:
+        serializedVersion: 2
+        x: 1232
+        y: 896
+        width: 176
+        height: 112
+      alignment: 9
+      pivot: {x: 0.75, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ac2e8d6f74b4422f0800000000000000
+      internalID: -998590444913237302
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Great Goblin With Club V2 MATRIX 176x112  _66
+      rect:
+        serializedVersion: 2
+        x: 1408
+        y: 896
+        width: 176
+        height: 112
+      alignment: 9
+      pivot: {x: 0.75, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bfe693202b7faa750800000000000000
+      internalID: 6317133771254099707
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Great Goblin With Club V2 MATRIX 176x112  _67
+      rect:
+        serializedVersion: 2
+        x: 1584
+        y: 896
+        width: 176
+        height: 112
+      alignment: 9
+      pivot: {x: 0.75, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ad3945b352922e930800000000000000
+      internalID: 4170941444784427994
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Great Goblin With Club V2 MATRIX 176x112  _68
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 784
+        width: 176
+        height: 112
+      alignment: 9
+      pivot: {x: 0.75, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d0005dac4ad178780800000000000000
+      internalID: -8680937163118542835
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Great Goblin With Club V2 MATRIX 176x112  _69
+      rect:
+        serializedVersion: 2
+        x: 176
+        y: 784
+        width: 176
+        height: 112
+      alignment: 9
+      pivot: {x: 0.75, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0d37fde9ee1644010800000000000000
+      internalID: 1172169480518726608
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Great Goblin With Club V2 MATRIX 176x112  _70
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 784
+        width: 176
+        height: 112
+      alignment: 9
+      pivot: {x: 0.75, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 252bd9ebd4f6d7ca0800000000000000
+      internalID: -6017531147395943854
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Great Goblin With Club V2 MATRIX 176x112  _71
+      rect:
+        serializedVersion: 2
+        x: 528
+        y: 784
+        width: 176
+        height: 112
+      alignment: 9
+      pivot: {x: 0.75, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c7d47ff74ffe63fd0800000000000000
+      internalID: -2362437121111274116
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Great Goblin With Club V2 MATRIX 176x112  _72
+      rect:
+        serializedVersion: 2
+        x: 704
+        y: 784
+        width: 176
+        height: 112
+      alignment: 9
+      pivot: {x: 0.75, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 752a83aa1f9c35430800000000000000
+      internalID: 3770579352819376727
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Great Goblin With Club V2 MATRIX 176x112  _73
+      rect:
+        serializedVersion: 2
+        x: 880
+        y: 784
+        width: 176
+        height: 112
+      alignment: 9
+      pivot: {x: 0.75, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 80000ede3188acde0800000000000000
+      internalID: -1312086722248441848
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Great Goblin With Club V2 MATRIX 176x112  _74
+      rect:
+        serializedVersion: 2
+        x: 1056
+        y: 784
+        width: 176
+        height: 112
+      alignment: 9
+      pivot: {x: 0.75, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e790162134b8b0920800000000000000
+      internalID: 2957610700486281598
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Great Goblin With Club V2 MATRIX 176x112  _75
+      rect:
+        serializedVersion: 2
+        x: 1232
+        y: 784
+        width: 176
+        height: 112
+      alignment: 9
+      pivot: {x: 0.75, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b166f69771c8988f0800000000000000
+      internalID: -537744648044583397
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Great Goblin With Club V2 MATRIX 176x112  _76
+      rect:
+        serializedVersion: 2
+        x: 1408
+        y: 784
+        width: 176
+        height: 112
+      alignment: 9
+      pivot: {x: 0.75, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 48623db1ebb518eb0800000000000000
+      internalID: -4719390062438832508
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Great Goblin With Club V2 MATRIX 176x112  _77
+      rect:
+        serializedVersion: 2
+        x: 1584
+        y: 784
+        width: 176
+        height: 112
+      alignment: 9
+      pivot: {x: 0.75, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e1f56bb03f46bca50800000000000000
+      internalID: 6542433878722109214
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Great Goblin With Club V2 MATRIX 176x112  _78
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 672
+        width: 176
+        height: 112
+      alignment: 9
+      pivot: {x: 0.75, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9d926308a84098150800000000000000
+      internalID: 5875232181784553945
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Great Goblin With Club V2 MATRIX 176x112  _79
+      rect:
+        serializedVersion: 2
+        x: 176
+        y: 672
+        width: 176
+        height: 112
+      alignment: 9
+      pivot: {x: 0.75, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a10d1051caa497550800000000000000
+      internalID: 6159036068353134618
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Great Goblin With Club V2 MATRIX 176x112  _80
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 672
+        width: 176
+        height: 112
+      alignment: 9
+      pivot: {x: 0.75, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 29cd3f9aa8e654430800000000000000
+      internalID: 3766538205201161362
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Great Goblin With Club V2 MATRIX 176x112  _81
+      rect:
+        serializedVersion: 2
+        x: 528
+        y: 672
+        width: 176
+        height: 112
+      alignment: 9
+      pivot: {x: 0.75, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 445745d1d352a0530800000000000000
+      internalID: 3821908178192594244
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Great Goblin With Club V2 MATRIX 176x112  _82
+      rect:
+        serializedVersion: 2
+        x: 704
+        y: 672
+        width: 176
+        height: 112
+      alignment: 9
+      pivot: {x: 0.75, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9298e5dcd313132f0800000000000000
+      internalID: -994959901163878103
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Great Goblin With Club V2 MATRIX 176x112  _83
+      rect:
+        serializedVersion: 2
+        x: 880
+        y: 672
+        width: 176
+        height: 112
+      alignment: 9
+      pivot: {x: 0.75, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 36078d2de0f469490800000000000000
+      internalID: -7739911984504082333
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Great Goblin With Club V2 MATRIX 176x112  _84
+      rect:
+        serializedVersion: 2
+        x: 1056
+        y: 672
+        width: 176
+        height: 112
+      alignment: 9
+      pivot: {x: 0.75, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f5e93abf86a55dbe0800000000000000
+      internalID: -1453155897812214177
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Great Goblin With Club V2 MATRIX 176x112  _85
+      rect:
+        serializedVersion: 2
+        x: 1232
+        y: 672
+        width: 176
+        height: 112
+      alignment: 9
+      pivot: {x: 0.75, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8740c7d0575d044f0800000000000000
+      internalID: -846442031231531912
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Great Goblin With Club V2 MATRIX 176x112  _86
+      rect:
+        serializedVersion: 2
+        x: 1408
+        y: 672
+        width: 176
+        height: 112
+      alignment: 9
+      pivot: {x: 0.75, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7a75a39cdcb231720800000000000000
+      internalID: 2815642354881025959
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Great Goblin With Club V2 MATRIX 176x112  _87
+      rect:
+        serializedVersion: 2
+        x: 1584
+        y: 672
+        width: 176
+        height: 112
+      alignment: 9
+      pivot: {x: 0.75, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c8fe09424902ab170800000000000000
+      internalID: 8194898292594765708
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Great Goblin With Club V2 MATRIX 176x112  _88
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 560
+        width: 176
+        height: 112
+      alignment: 9
+      pivot: {x: 0.75, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3a9286a6e41b6ac80800000000000000
+      internalID: -8311761111914894941
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Great Goblin With Club V2 MATRIX 176x112  _89
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 448
+        width: 176
+        height: 112
+      alignment: 9
+      pivot: {x: 0.75, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: de79050b55b7ab0e0800000000000000
+      internalID: -2253353055585003539
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Great Goblin With Club V2 MATRIX 176x112  _90
+      rect:
+        serializedVersion: 2
+        x: 176
+        y: 448
+        width: 176
+        height: 112
+      alignment: 9
+      pivot: {x: 0.75, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dbe52c21cb7f47fb0800000000000000
+      internalID: -4650820128026239299
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Great Goblin With Club V2 MATRIX 176x112  _91
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 448
+        width: 176
+        height: 112
+      alignment: 9
+      pivot: {x: 0.75, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7edd03ee9c592ed00800000000000000
+      internalID: 1000526761746816487
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Great Goblin With Club V2 MATRIX 176x112  _92
+      rect:
+        serializedVersion: 2
+        x: 528
+        y: 448
+        width: 176
+        height: 112
+      alignment: 9
+      pivot: {x: 0.75, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8ecffd14039a4a660800000000000000
+      internalID: 7396222512777919720
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Great Goblin With Club V2 MATRIX 176x112  _93
+      rect:
+        serializedVersion: 2
+        x: 704
+        y: 448
+        width: 176
+        height: 112
+      alignment: 9
+      pivot: {x: 0.75, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d394fbfd920b02c20800000000000000
+      internalID: 3179735030817573181
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Great Goblin With Club V2 MATRIX 176x112  _94
+      rect:
+        serializedVersion: 2
+        x: 880
+        y: 448
+        width: 176
+        height: 112
+      alignment: 9
+      pivot: {x: 0.75, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 10902feeff3bd5400800000000000000
+      internalID: 314605460792674561
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Great Goblin With Club V2 MATRIX 176x112  _95
+      rect:
+        serializedVersion: 2
+        x: 1056
+        y: 448
+        width: 176
+        height: 112
+      alignment: 9
+      pivot: {x: 0.75, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9ba8470cc28ef23f0800000000000000
+      internalID: -923264119682594119
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Great Goblin With Club V2 MATRIX 176x112  _96
+      rect:
+        serializedVersion: 2
+        x: 1232
+        y: 448
+        width: 176
+        height: 112
+      alignment: 9
+      pivot: {x: 0.75, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a89b7ddc893ca8770800000000000000
+      internalID: 8613912298355407242
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Great Goblin With Club V2 MATRIX 176x112  _97
+      rect:
+        serializedVersion: 2
+        x: 1408
+        y: 448
+        width: 176
+        height: 112
+      alignment: 9
+      pivot: {x: 0.75, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c4131d24461452f50800000000000000
+      internalID: 6855957906614989132
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Great Goblin With Club V2 MATRIX 176x112  _98
+      rect:
+        serializedVersion: 2
+        x: 1584
+        y: 448
+        width: 176
+        height: 112
+      alignment: 9
+      pivot: {x: 0.75, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0f3816462bcf0d310800000000000000
+      internalID: 1427918924994937840
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Great Goblin With Club V2 MATRIX 176x112  _99
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 336
+        width: 176
+        height: 112
+      alignment: 9
+      pivot: {x: 0.75, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2ba3abded4ca92590800000000000000
+      internalID: -7698432637312288078
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Great Goblin With Club V2 MATRIX 176x112  _100
+      rect:
+        serializedVersion: 2
+        x: 176
+        y: 336
+        width: 176
+        height: 112
+      alignment: 9
+      pivot: {x: 0.75, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 71ab04139ffe0a780800000000000000
+      internalID: -8673669028763354601
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Great Goblin With Club V2 MATRIX 176x112  _101
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 336
+        width: 176
+        height: 112
+      alignment: 9
+      pivot: {x: 0.75, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9f9827d107f000270800000000000000
+      internalID: 8214582694528584185
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Great Goblin With Club V2 MATRIX 176x112  _102
+      rect:
+        serializedVersion: 2
+        x: 528
+        y: 336
+        width: 176
+        height: 112
+      alignment: 9
+      pivot: {x: 0.75, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6306ccdedddb5ebc0800000000000000
+      internalID: -3754385953468424138
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Great Goblin With Club V2 MATRIX 176x112  _103
+      rect:
+        serializedVersion: 2
+        x: 704
+        y: 336
+        width: 176
+        height: 112
+      alignment: 9
+      pivot: {x: 0.75, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d27e1a3c301d2cca0800000000000000
+      internalID: -5998001939606804691
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Great Goblin With Club V2 MATRIX 176x112  _104
+      rect:
+        serializedVersion: 2
+        x: 880
+        y: 336
+        width: 176
+        height: 112
+      alignment: 9
+      pivot: {x: 0.75, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2e2a0d7b65d997630800000000000000
+      internalID: 3925341546006749922
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Great Goblin With Club V2 MATRIX 176x112  _105
+      rect:
+        serializedVersion: 2
+        x: 1056
+        y: 336
+        width: 176
+        height: 112
+      alignment: 9
+      pivot: {x: 0.75, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 46022c48244a37e90800000000000000
+      internalID: -7029093987793100700
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Great Goblin With Club V2 MATRIX 176x112  _106
+      rect:
+        serializedVersion: 2
+        x: 1232
+        y: 336
+        width: 176
+        height: 112
+      alignment: 9
+      pivot: {x: 0.75, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 464f50755da8aba50800000000000000
+      internalID: 6537690457974371428
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Great Goblin With Club V2 MATRIX 176x112  _107
+      rect:
+        serializedVersion: 2
+        x: 1408
+        y: 336
+        width: 176
+        height: 112
+      alignment: 9
+      pivot: {x: 0.75, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 58f391a1b6dcf76f0800000000000000
+      internalID: -684602758453969019
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Great Goblin With Club V2 MATRIX 176x112  _108
+      rect:
+        serializedVersion: 2
+        x: 1584
+        y: 336
+        width: 176
+        height: 112
+      alignment: 9
+      pivot: {x: 0.75, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c5d4bc37aae207680800000000000000
+      internalID: -8759449965613593252
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Great Goblin With Club V2 MATRIX 176x112  _109
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 224
+        width: 176
+        height: 112
+      alignment: 9
+      pivot: {x: 0.75, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 15483aa19e0e2d230800000000000000
+      internalID: 3662236738784560209
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Great Goblin With Club V2 MATRIX 176x112  _110
+      rect:
+        serializedVersion: 2
+        x: 176
+        y: 224
+        width: 176
+        height: 112
+      alignment: 9
+      pivot: {x: 0.75, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 44ab104a549e363a0800000000000000
+      internalID: -6673233737519351228
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Great Goblin With Club V2 MATRIX 176x112  _111
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 112
+        width: 176
+        height: 112
+      alignment: 9
+      pivot: {x: 0.75, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0e835ff70e5a8a120800000000000000
+      internalID: 2425370782977046752
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Great Goblin With Club V2 MATRIX 176x112  _112
+      rect:
+        serializedVersion: 2
+        x: 176
+        y: 112
+        width: 176
+        height: 112
+      alignment: 9
+      pivot: {x: 0.75, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8202746333e0f3310800000000000000
+      internalID: 1386842823370154024
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Great Goblin With Club V2 MATRIX 176x112  _113
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 112
+        width: 176
+        height: 112
+      alignment: 9
+      pivot: {x: 0.75, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 91d7f27250af01140800000000000000
+      internalID: 4688522112131890457
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Great Goblin With Club V2 MATRIX 176x112  _114
+      rect:
+        serializedVersion: 2
+        x: 528
+        y: 112
+        width: 176
+        height: 112
+      alignment: 9
+      pivot: {x: 0.75, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d6db496890d69e630800000000000000
+      internalID: 3956813635301719405
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Great Goblin With Club V2 MATRIX 176x112  _115
+      rect:
+        serializedVersion: 2
+        x: 704
+        y: 112
+        width: 176
+        height: 112
+      alignment: 9
+      pivot: {x: 0.75, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3c31dab8947a29010800000000000000
+      internalID: 1194200785524429763
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Great Goblin With Club V2 MATRIX 176x112  _116
+      rect:
+        serializedVersion: 2
+        x: 880
+        y: 112
+        width: 176
+        height: 112
+      alignment: 9
+      pivot: {x: 0.75, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 95b4a9c28dcb516f0800000000000000
+      internalID: -714457329221088423
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Great Goblin With Club V2 MATRIX 176x112  _117
+      rect:
+        serializedVersion: 2
+        x: 1056
+        y: 112
+        width: 176
+        height: 112
+      alignment: 9
+      pivot: {x: 0.75, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 36a6d151176dc09c0800000000000000
+      internalID: -3959554191191610781
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Great Goblin With Club V2 MATRIX 176x112  _118
+      rect:
+        serializedVersion: 2
+        x: 1232
+        y: 112
+        width: 176
+        height: 112
+      alignment: 9
+      pivot: {x: 0.75, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f94db49d0dad034e0800000000000000
+      internalID: -2003861243646192481
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Great Goblin With Club V2 MATRIX 176x112  _119
+      rect:
+        serializedVersion: 2
+        x: 1408
+        y: 112
+        width: 176
+        height: 112
+      alignment: 9
+      pivot: {x: 0.75, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4da4bac12843cbe20800000000000000
+      internalID: 3367624354797669076
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Great Goblin With Club V2 MATRIX 176x112  _120
+      rect:
+        serializedVersion: 2
+        x: 1584
+        y: 112
+        width: 176
+        height: 112
+      alignment: 9
+      pivot: {x: 0.75, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 01277f90da60d79a0800000000000000
+      internalID: -6233818968944578032
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Great Goblin With Club V2 MATRIX 176x112  _121
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 176
+        height: 112
+      alignment: 9
+      pivot: {x: 0.75, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 96eb01547a3d1b980800000000000000
+      internalID: -8524799904263913879
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Great Goblin With Club V2 MATRIX 176x112  _122
+      rect:
+        serializedVersion: 2
+        x: 176
+        y: 0
+        width: 176
+        height: 112
+      alignment: 9
+      pivot: {x: 0.75, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2cca2d87b05b48fa0800000000000000
+      internalID: -5799311359270015806
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Great Goblin With Club V2 MATRIX 176x112  _123
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 0
+        width: 176
+        height: 112
+      alignment: 9
+      pivot: {x: 0.75, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dd2aab42e08765120800000000000000
+      internalID: 2402239453389824733
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Great Goblin With Club V2 MATRIX 176x112  _124
+      rect:
+        serializedVersion: 2
+        x: 528
+        y: 0
+        width: 176
+        height: 112
+      alignment: 9
+      pivot: {x: 0.75, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6a98ccfae04b070a0800000000000000
+      internalID: -6885805855077529178
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Great Goblin With Club V2 MATRIX 176x112  _125
+      rect:
+        serializedVersion: 2
+        x: 704
+        y: 0
+        width: 176
+        height: 112
+      alignment: 9
+      pivot: {x: 0.75, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 54050fb4a940e08e0800000000000000
+      internalID: -1725436546490806203
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Great Goblin With Club V2 MATRIX 176x112  _126
+      rect:
+        serializedVersion: 2
+        x: 880
+        y: 0
+        width: 176
+        height: 112
+      alignment: 9
+      pivot: {x: 0.75, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 69553dbeb953f53c0800000000000000
+      internalID: -4368714169733393002
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Great Goblin With Club V2 MATRIX 176x112  _127
+      rect:
+        serializedVersion: 2
+        x: 1056
+        y: 0
+        width: 176
+        height: 112
+      alignment: 9
+      pivot: {x: 0.75, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b78e9bee218a4ccf0800000000000000
+      internalID: -232876481448384389
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Great Goblin With Club V2 MATRIX 176x112  _128
+      rect:
+        serializedVersion: 2
+        x: 1232
+        y: 0
+        width: 176
+        height: 112
+      alignment: 9
+      pivot: {x: 0.75, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 22269c096375849d0800000000000000
+      internalID: -2789884077287054814
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Great Goblin With Club V2 MATRIX 176x112  _129
+      rect:
+        serializedVersion: 2
+        x: 1408
+        y: 0
+        width: 176
+        height: 112
+      alignment: 9
+      pivot: {x: 0.75, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 442d6b0dea34f0ed0800000000000000
+      internalID: -2445661654533877180
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      Great Goblin With Club V2 MATRIX 176x112  _45: -3001280265620195972
+      Great Goblin With Club V2 MATRIX 176x112  _79: 6159036068353134618
+      Great Goblin With Club V2 MATRIX 176x112  _34: 268258815894792930
+      Great Goblin With Club V2 MATRIX 176x112  _32: -4799980288931214029
+      Great Goblin With Club V2 MATRIX 176x112  _98: 1427918924994937840
+      Great Goblin With Club V2 MATRIX 176x112  _126: -4368714169733393002
+      Great Goblin With Club V2 MATRIX 176x112  _111: 2425370782977046752
+      Great Goblin With Club V2 MATRIX 176x112  _124: -6885805855077529178
+      Great Goblin With Club V2 MATRIX 176x112  _100: -8673669028763354601
+      Great Goblin With Club V2 MATRIX 176x112  _117: -3959554191191610781
+      Great Goblin With Club V2 MATRIX 176x112  _4: -1213242146719448473
+      Great Goblin With Club V2 MATRIX 176x112  _101: 8214582694528584185
+      Great Goblin With Club V2 MATRIX 176x112  _106: 6537690457974371428
+      Great Goblin With Club V2 MATRIX 176x112  _8: 9201142574802116343
+      Great Goblin With Club V2 MATRIX 176x112  _10: 2136136960443590639
+      Great Goblin With Club V2 MATRIX 176x112  _42: 9217470379686213694
+      Great Goblin With Club V2 MATRIX 176x112  _118: -2003861243646192481
+      Great Goblin With Club V2 MATRIX 176x112  _128: -2789884077287054814
+      Great Goblin With Club V2 MATRIX 176x112  _70: -6017531147395943854
+      Great Goblin With Club V2 MATRIX 176x112  _41: 8996606077166665749
+      Great Goblin With Club V2 MATRIX 176x112  _37: 6619994985611761447
+      Great Goblin With Club V2 MATRIX 176x112  _84: -1453155897812214177
+      Great Goblin With Club V2 MATRIX 176x112  _40: -7960654908101492296
+      Great Goblin With Club V2 MATRIX 176x112  _105: -7029093987793100700
+      Great Goblin With Club V2 MATRIX 176x112  _49: -3489553148522799472
+      Great Goblin With Club V2 MATRIX 176x112  _39: -6633334070348032682
+      Great Goblin With Club V2 MATRIX 176x112  _48: -2548321250173696700
+      Great Goblin With Club V2 MATRIX 176x112  _53: 6239468701304037524
+      Great Goblin With Club V2 MATRIX 176x112  _68: -8680937163118542835
+      Great Goblin With Club V2 MATRIX 176x112  _103: -5998001939606804691
+      Great Goblin With Club V2 MATRIX 176x112  _2: 6736094252610134745
+      Great Goblin With Club V2 MATRIX 176x112  _62: 1214788683826223000
+      Great Goblin With Club V2 MATRIX 176x112  _67: 4170941444784427994
+      Great Goblin With Club V2 MATRIX 176x112  _23: -7209087016833393175
+      Great Goblin With Club V2 MATRIX 176x112  _115: 1194200785524429763
+      Great Goblin With Club V2 MATRIX 176x112  _77: 6542433878722109214
+      Great Goblin With Club V2 MATRIX 176x112  _113: 4688522112131890457
+      Great Goblin With Club V2 MATRIX 176x112  _43: 6482533331822792338
+      Great Goblin With Club V2 MATRIX 176x112  _89: -2253353055585003539
+      Great Goblin With Club V2 MATRIX 176x112  _64: 1956285210006734195
+      Great Goblin With Club V2 MATRIX 176x112  _26: -3349314016178789751
+      Great Goblin With Club V2 MATRIX 176x112  _78: 5875232181784553945
+      Great Goblin With Club V2 MATRIX 176x112  _107: -684602758453969019
+      Great Goblin With Club V2 MATRIX 176x112  _19: -9060476501036068311
+      Great Goblin With Club V2 MATRIX 176x112  _55: -4070276397797943657
+      Great Goblin With Club V2 MATRIX 176x112  _121: -8524799904263913879
+      Great Goblin With Club V2 MATRIX 176x112  _11: 8345525304121741112
+      Great Goblin With Club V2 MATRIX 176x112  _14: 7071505987341827879
+      Great Goblin With Club V2 MATRIX 176x112  _60: -8063812815380130663
+      Great Goblin With Club V2 MATRIX 176x112  _125: -1725436546490806203
+      Great Goblin With Club V2 MATRIX 176x112  _7: -2533659047837604363
+      Great Goblin With Club V2 MATRIX 176x112  _9: -4053137089307150001
+      Great Goblin With Club V2 MATRIX 176x112  _50: -4402590379264009483
+      Great Goblin With Club V2 MATRIX 176x112  _28: -7233729976529582174
+      Great Goblin With Club V2 MATRIX 176x112  _80: 3766538205201161362
+      Great Goblin With Club V2 MATRIX 176x112  _15: -1051852566678884497
+      Great Goblin With Club V2 MATRIX 176x112  _3: 3667124112053081941
+      Great Goblin With Club V2 MATRIX 176x112  _87: 8194898292594765708
+      Great Goblin With Club V2 MATRIX 176x112  _22: 2735354147742565017
+      Great Goblin With Club V2 MATRIX 176x112  _12: 2064145901134263086
+      Great Goblin With Club V2 MATRIX 176x112  _59: -5323726089426770200
+      Great Goblin With Club V2 MATRIX 176x112  _54: 1376772069866798251
+      Great Goblin With Club V2 MATRIX 176x112  _69: 1172169480518726608
+      Great Goblin With Club V2 MATRIX 176x112  _21: -5398125713193801880
+      Great Goblin With Club V2 MATRIX 176x112  _31: -1563293490120755481
+      Great Goblin With Club V2 MATRIX 176x112  _63: 8653059519718926005
+      Great Goblin With Club V2 MATRIX 176x112  _29: 1458798259364027046
+      Great Goblin With Club V2 MATRIX 176x112  _88: -8311761111914894941
+      Great Goblin With Club V2 MATRIX 176x112  _72: 3770579352819376727
+      Great Goblin With Club V2 MATRIX 176x112  _90: -4650820128026239299
+      Great Goblin With Club V2 MATRIX 176x112  _1: 2009594617675613005
+      Great Goblin With Club V2 MATRIX 176x112  _99: -7698432637312288078
+      Great Goblin With Club V2 MATRIX 176x112  _108: -8759449965613593252
+      Great Goblin With Club V2 MATRIX 176x112  _96: 8613912298355407242
+      Great Goblin With Club V2 MATRIX 176x112  _46: -3336382609414875948
+      Great Goblin With Club V2 MATRIX 176x112  _122: -5799311359270015806
+      Great Goblin With Club V2 MATRIX 176x112  _36: 4214555670938160462
+      Great Goblin With Club V2 MATRIX 176x112  _57: 5805486007141894999
+      Great Goblin With Club V2 MATRIX 176x112  _129: -2445661654533877180
+      Great Goblin With Club V2 MATRIX 176x112  _110: -6673233737519351228
+      Great Goblin With Club V2 MATRIX 176x112  _17: 1483937915765791810
+      Great Goblin With Club V2 MATRIX 176x112  _25: 4034070293126845521
+      Great Goblin With Club V2 MATRIX 176x112  _104: 3925341546006749922
+      Great Goblin With Club V2 MATRIX 176x112  _16: 6003502216219291523
+      Great Goblin With Club V2 MATRIX 176x112  _109: 3662236738784560209
+      Great Goblin With Club V2 MATRIX 176x112  _123: 2402239453389824733
+      Great Goblin With Club V2 MATRIX 176x112  _73: -1312086722248441848
+      Great Goblin With Club V2 MATRIX 176x112  _27: -8895307901745313882
+      Great Goblin With Club V2 MATRIX 176x112  _33: 3017897820028503279
+      Great Goblin With Club V2 MATRIX 176x112  _47: -1020117579940175362
+      Great Goblin With Club V2 MATRIX 176x112  _76: -4719390062438832508
+      Great Goblin With Club V2 MATRIX 176x112  _13: 5933739858664655876
+      Great Goblin With Club V2 MATRIX 176x112  _30: 2625393981169244827
+      Great Goblin With Club V2 MATRIX 176x112  _75: -537744648044583397
+      Great Goblin With Club V2 MATRIX 176x112  _94: 314605460792674561
+      Great Goblin With Club V2 MATRIX 176x112  _83: -7739911984504082333
+      Great Goblin With Club V2 MATRIX 176x112  _95: -923264119682594119
+      Great Goblin With Club V2 MATRIX 176x112  _65: -998590444913237302
+      Great Goblin With Club V2 MATRIX 176x112  _20: 3170429194953524621
+      Great Goblin With Club V2 MATRIX 176x112  _82: -994959901163878103
+      Great Goblin With Club V2 MATRIX 176x112  _61: 843100336032216466
+      Great Goblin With Club V2 MATRIX 176x112  _51: -256060684662434966
+      Great Goblin With Club V2 MATRIX 176x112  _44: -8918139083008680196
+      Great Goblin With Club V2 MATRIX 176x112  _81: 3821908178192594244
+      Great Goblin With Club V2 MATRIX 176x112  _71: -2362437121111274116
+      Great Goblin With Club V2 MATRIX 176x112  _127: -232876481448384389
+      Great Goblin With Club V2 MATRIX 176x112  _86: 2815642354881025959
+      Great Goblin With Club V2 MATRIX 176x112  _66: 6317133771254099707
+      Great Goblin With Club V2 MATRIX 176x112  _5: -2736219711909739872
+      Great Goblin With Club V2 MATRIX 176x112  _114: 3956813635301719405
+      Great Goblin With Club V2 MATRIX 176x112  _24: 3709879311895350561
+      Great Goblin With Club V2 MATRIX 176x112  _102: -3754385953468424138
+      Great Goblin With Club V2 MATRIX 176x112  _52: -5453329963262269060
+      Great Goblin With Club V2 MATRIX 176x112  _92: 7396222512777919720
+      Great Goblin With Club V2 MATRIX 176x112  _119: 3367624354797669076
+      Great Goblin With Club V2 MATRIX 176x112  _74: 2957610700486281598
+      Great Goblin With Club V2 MATRIX 176x112  _91: 1000526761746816487
+      Great Goblin With Club V2 MATRIX 176x112  _116: -714457329221088423
+      Great Goblin With Club V2 MATRIX 176x112  _93: 3179735030817573181
+      Great Goblin With Club V2 MATRIX 176x112  _120: -6233818968944578032
+      Great Goblin With Club V2 MATRIX 176x112  _112: 1386842823370154024
+      Great Goblin With Club V2 MATRIX 176x112  _56: -3545528705360825074
+      Great Goblin With Club V2 MATRIX 176x112  _35: -3629210685229307899
+      Great Goblin With Club V2 MATRIX 176x112  _6: -3885759046054745522
+      Great Goblin With Club V2 MATRIX 176x112  _18: -3141754045931941621
+      Great Goblin With Club V2 MATRIX 176x112  _58: -3199886518420978582
+      Great Goblin With Club V2 MATRIX 176x112  _0: 1620920404174171772
+      Great Goblin With Club V2 MATRIX 176x112  _85: -846442031231531912
+      Great Goblin With Club V2 MATRIX 176x112  _97: 6855957906614989132
+      Great Goblin With Club V2 MATRIX 176x112  _38: 9071544604147445846
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
