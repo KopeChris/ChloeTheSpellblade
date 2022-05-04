@@ -165,7 +165,7 @@ public class EnemyBasic : MonoBehaviour
     }
    
     
-    private void OnDrawGizmos()
+    private void OnDrawGizmosSelected()
     {
         if (showDetectionGizmos)
         {

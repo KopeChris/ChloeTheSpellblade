@@ -195,7 +195,11 @@ public class PlayerBasic : MonoBehaviour
             Attack1();
             attackBufferCounter = 0;
         }
-        
+
+        if (Input.GetKeyDown(KeyCode.W))    //interact button
+        {
+            
+        }
 
     }
     
