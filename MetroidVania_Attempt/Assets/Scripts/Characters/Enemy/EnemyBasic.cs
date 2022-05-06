@@ -156,7 +156,7 @@ public class EnemyBasic : MonoBehaviour
         Destroy(GetComponent<CapsuleCollider2D>());
         Destroy(GetComponent<EnemyBasic>());
 
-        Player.GetComponent<PlayerBasic>().GetCoin(enemyCoin);
+        //Player.GetComponent<PlayerBasic>().GetCoin(enemyCoin);
 
         //destroy all children except first
         for (var i = rb.transform.childCount - 1; i >= 1; i--)
