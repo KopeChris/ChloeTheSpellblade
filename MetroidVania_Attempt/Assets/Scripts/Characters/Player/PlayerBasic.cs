@@ -9,7 +9,7 @@ public class PlayerBasic : MonoBehaviour
 
     public int maxHealth = 100;
     public  int currentHealth;
-
+    public int playerCoin=0;
 
     [SerializeField]
     private float movementSpeed;
@@ -370,8 +370,16 @@ public class PlayerBasic : MonoBehaviour
 
         }
     }    
+    public void GetCoin(int coin)
+    {
+        playerCoin += coin;
+    }
+    public void LoseCoin(int coin)
+    {
+        playerCoin -= coin;
+    }
 
-    
+
 
     public void TakeDamage(int damage, int pushForce , int pushDirection)
     {
@@ -392,6 +400,7 @@ public class PlayerBasic : MonoBehaviour
             {
                 isDead = true;
                 animator.SetBool("isDead", true);
+                LoseCoin(playerCoin);
                 this.enabled = false;
             }
 
@@ -413,7 +422,6 @@ public class PlayerBasic : MonoBehaviour
         currentHealth = Mathf.Clamp(currentHealth, 0, maxHealth);
 
     }
-
 
     void Attack1()
     {

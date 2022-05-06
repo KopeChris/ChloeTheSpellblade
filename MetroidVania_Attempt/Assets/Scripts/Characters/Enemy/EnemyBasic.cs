@@ -10,6 +10,7 @@ public class EnemyBasic : MonoBehaviour
     public SpriteRenderer sprite;
     public Animator animator;
     public HealthBar healthBar;
+    public int enemyCoin;
     public int maxHealth = 100;
     public int currentHealth;
 
@@ -154,7 +155,8 @@ public class EnemyBasic : MonoBehaviour
         //Physics2D.IgnoreCollision((CapsuleCollider2D)Player.GetComponentInChildren(typeof(CapsuleCollider2D)), GetComponent<CapsuleCollider2D>(), true);
         Destroy(GetComponent<CapsuleCollider2D>());
         Destroy(GetComponent<EnemyBasic>());
-        
+
+        Player.GetComponent<PlayerBasic>().GetCoin(enemyCoin);
 
         //destroy all children except first
         for (var i = rb.transform.childCount - 1; i >= 1; i--)
@@ -204,6 +206,7 @@ public class EnemyBasic : MonoBehaviour
                 isDead = true;
                 animator.Play("Death");
                 this.enabled = false;
+                
             }
         }
     }
