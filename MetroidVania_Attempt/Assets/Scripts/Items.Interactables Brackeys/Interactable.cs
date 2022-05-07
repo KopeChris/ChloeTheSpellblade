@@ -7,23 +7,24 @@ public class Interactable : MonoBehaviour
     public float radius = 3f;
 
     bool hasInteracted;
-
-    public virtual void Interact()
-    {
-        // this method is meant to be overwritten
-        Debug.Log("Interacting with " + transform.name);
-    }
+    public bool interactsManyTimes;
+   
     private void Update()
     {
 
         float distance = Vector2.Distance(player.position, transform.position);
 
-        if (distance <= radius && Input.GetKeyDown(KeyCode.W) && !hasInteracted)
+        if (distance <= radius && Input.GetKeyDown(KeyCode.W) && (!hasInteracted || interactsManyTimes))
         {
-            Debug.Log("Interact");
+            //Debug.Log("Interact");
             Interact();
             hasInteracted = true;
         }
+    }
+    public virtual void Interact()
+    {
+        // this method is meant to be overwritten
+        Debug.Log("Interacting with " + transform.name);
     }
 
     private void OnDrawGizmosSelected()

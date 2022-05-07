@@ -58,9 +58,8 @@ public class PlayerBasic : MonoBehaviour
     CapsuleCollider2D cc;
 
     //stuff to do with the attack
-    public LayerMask targetLayer;
-    public Transform AttackSphere;
-    public float attack1Range;
+    //public Transform AttackSphere;
+    //public float attack1Range;
     public int attack1Damage;
 
     //states
@@ -345,8 +344,8 @@ public class PlayerBasic : MonoBehaviour
     private void OnDrawGizmos()
     {
         Gizmos.DrawWireSphere(groundCheck.position, groundCheckRadius);
-        Gizmos.color = Color.red;
-        Gizmos.DrawWireSphere(AttackSphere.position, attack1Range);
+       // Gizmos.color = Color.red;
+        //Gizmos.DrawWireSphere(AttackSphere.position, attack1Range);
 
     }
     public void Push(float pushForceX, float pushForceY, float pushDirection)

@@ -134,14 +134,6 @@ PrefabInstance:
       propertyPath: healthBar
       value: 
       objectReference: {fileID: 2120893783}
-    - target: {fileID: 7454119504127863911, guid: b204017af7ec7ad45ad868f854259375, type: 3}
-      propertyPath: rollForce
-      value: 27
-      objectReference: {fileID: 0}
-    - target: {fileID: 7454119504127863911, guid: b204017af7ec7ad45ad868f854259375, type: 3}
-      propertyPath: movementSpeed
-      value: 17
-      objectReference: {fileID: 0}
     - target: {fileID: 7454119504127863912, guid: b204017af7ec7ad45ad868f854259375, type: 3}
       propertyPath: m_RootOrder
       value: 7
@@ -56033,7 +56025,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 0.94152045, y: 1}
+    m_SensorSize: {x: 1.3333334, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0

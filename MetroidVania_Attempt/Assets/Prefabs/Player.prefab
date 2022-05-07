@@ -179,7 +179,8 @@ MonoBehaviour:
   healthBar: {fileID: 0}
   maxHealth: 400
   currentHealth: 0
-  movementSpeed: 18
+  playerCoin: 0
+  movementSpeed: 17
   groundCheckRadius: 0.3
   jumpForce: 35
   slopeCheckDistance: 0.5
@@ -190,7 +191,7 @@ MonoBehaviour:
     m_Bits: 320
   noFriction: {fileID: 6200000, guid: a4bdca4b67f40e44b92cd2769f40204e, type: 2}
   fullFriction: {fileID: 6200000, guid: fafd4a3d7955c2f4f913bd7db1e32678, type: 2}
-  rollForce: 30
+  rollForce: 27
   iFrames: 15
   targetLayer:
     serializedVersion: 2

@@ -5,7 +5,7 @@ using UnityEngine;
 public class BossDoorStartCinematic : MonoBehaviour
 {
     private BoxCollider2D doorCollider;
-    private SpriteRenderer sprite;
+    private SpriteRenderer doorSprite;
     public GameObject bossHB;
     public EnemyBasic bossCurrentHealth;
 
@@ -18,8 +18,8 @@ public class BossDoorStartCinematic : MonoBehaviour
     {
         doorCollider = GetComponent<BoxCollider2D>();
         doorCollider.enabled = false;
-        sprite = GetComponent<SpriteRenderer>();
-        sprite.enabled = false;
+        doorSprite = GetComponent<SpriteRenderer>();
+        doorSprite.enabled = false;
 
         bossHB.SetActive(false);
     }
@@ -37,7 +37,7 @@ public class BossDoorStartCinematic : MonoBehaviour
         if (collision.CompareTag(detectionTag) && !doorInAction)
         {
             doorCollider.enabled = true;
-            sprite.enabled = true;
+            doorSprite.enabled = true;
             doorInAction = true;
 
 
@@ -59,7 +59,7 @@ public class BossDoorStartCinematic : MonoBehaviour
     {
         Destroy(bossHB);
         Destroy(doorCollider);
-        Destroy(sprite);
+        Destroy(doorSprite);
     }
 
 }

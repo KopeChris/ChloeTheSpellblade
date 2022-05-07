@@ -247,8 +247,7 @@ AnimatorState:
   m_Transitions:
   - {fileID: 6235917412919958714}
   - {fileID: -2419023112339478521}
-  m_StateMachineBehaviours:
-  - {fileID: 547900550801660010}
+  m_StateMachineBehaviours: []
   m_Position: {x: 50, y: 50, z: 0}
   m_IKOnFeet: 0
   m_WriteDefaultValues: 1
@@ -471,7 +470,7 @@ AnimatorState:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Chloe_Idle
-  m_Speed: 0.5
+  m_Speed: 0.4
   m_CycleOffset: 0
   m_Transitions:
   - {fileID: 9017124459574257567}
