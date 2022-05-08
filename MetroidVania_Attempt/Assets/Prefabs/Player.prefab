@@ -193,11 +193,6 @@ MonoBehaviour:
   fullFriction: {fileID: 6200000, guid: fafd4a3d7955c2f4f913bd7db1e32678, type: 2}
   rollForce: 27
   iFrames: 15
-  targetLayer:
-    serializedVersion: 2
-    m_Bits: 256
-  AttackSphere: {fileID: 7454119504928093199}
-  attack1Range: -6.25
   attack1Damage: 40
   coyoteTimeCoolDown: 0.1
   bufferTime: 0.2

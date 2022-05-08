@@ -12,9 +12,15 @@ public class Dialogue : MonoBehaviour
 
     public GameObject gameobject;
 
+    bool asleep;
     private void Awake()
     {
-        gameobject.SetActive(false);
+        if(!asleep)
+        {
+            gameobject.SetActive(false);
+            asleep=true;
+
+        }
 
     }
     
@@ -27,7 +33,7 @@ public class Dialogue : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetButtonDown("Jump") || Input.GetKeyDown(KeyCode.I))
+        if (Input.GetButtonDown("Jump") || Input.GetKeyDown(KeyCode.Y))
         {
             if(textComponent.text == lines[index])
             {
