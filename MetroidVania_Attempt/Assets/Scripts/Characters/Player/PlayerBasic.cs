@@ -42,11 +42,22 @@ public class PlayerBasic : MonoBehaviour
 
     private int facingDirection = 1;
 
+    //states
+    public static bool isRolling;
+    public static bool canAction = true;
+    public static bool canMove;
+    //public static bool canAction = true;
+    public static bool isInvincible;
+    public static bool actionInv;
+    public static bool isDead;
+    public static bool cinematicState = false;
+
     private bool isGrounded;
     private bool isOnSlope;
     private bool isJumping;
     private bool canWalkOnSlope;
     private bool canJump;
+    
 
     private Vector2 newVelocity;
     private Vector2 newForce;
@@ -62,17 +73,10 @@ public class PlayerBasic : MonoBehaviour
     //public float attack1Range;
     public int attack1Damage;
 
-    //states
-    public static bool isRolling;
-    public static bool canMove = true;
-    public static bool isInvincible;
-    public static bool actionInv;
-    public static bool isDead;
-    public static bool cinematicState = false;
+    
 
     //bools for animation states to activate
     //removed that replaced with normal input, did this for buffering to work public static bool chloeAttack1;
-    public static bool chloeAttack1Hit;
 
     //coyote time for jump
     public float coyoteTimeCoolDown= 0.08f;
@@ -85,7 +89,7 @@ public class PlayerBasic : MonoBehaviour
 
     SpriteRenderer sprite;
 
-    public IEnumerator FlashWhite()
+    public IEnumerator Flash()
     {
         sprite.color = new Color(1, 0.5f, 0.5f, 1);
         yield return new WaitForSeconds(0.083f);
@@ -126,7 +130,7 @@ public class PlayerBasic : MonoBehaviour
 
     void Update()
     {
-        CheckInput();
+        Input();
         
         if(isInvincible && actionInv)
         { actionInv = false;  InvincibleFunction(true);}
@@ -139,65 +143,77 @@ public class PlayerBasic : MonoBehaviour
     {
         CheckGround();
         SlopeCheck();
-        if (cinematicState) { newVelocity.Set(0.0f, 0.0f); rb.velocity = newVelocity; }
-        else{ ApplyMovement(); }
+        if (cinematicState) { canAction = false; newVelocity.Set(0.0f, 0.0f); rb.velocity = newVelocity; }
+        else {if(canMove) ApplyMovement(); }
 
         animator.SetFloat("speedParameter", Mathf.Abs(rb.velocity.x));
         animator.SetFloat("yParameter", rb.velocity.y);
         if(isGrounded) { animator.SetBool("isGrounded", true);}
         else { animator.SetBool("isGrounded", false); }
-        if (xInput == 0 && isGrounded && canMove &&!isRolling) {
+        /*if (xInput == 0 && isGrounded && canAction &&!isRolling) {
             newVelocity.Set(movementSpeed * xInput,rb.velocity.y);
             rb.velocity = newVelocity;
         }
+        */
     }
-    
-    private void CheckInput() 
+    private void Input() 
     {
-        xInput = Input.GetAxisRaw("Horizontal");
+        xInput = UnityEngine.Input.GetAxisRaw("Horizontal");
         
-        if ((xInput >0 && facingDirection == -1)|| (xInput < 0 && facingDirection == 1))
+        if ((xInput >0 && facingDirection == -1 && rb.velocity.x>=0 ) || (xInput < 0 && facingDirection == 1 && rb.velocity.x <= 0))
         {
             Flip();
         }
         
 
-        if (Input.GetButtonDown("Jump") ) 
-        { 
+        if (UnityEngine.Input.GetButtonDown("Jump") ) 
+        {
             jumpBufferCounter = bufferTime; 
         }
         else { jumpBufferCounter -= Time.deltaTime; }
-        if (jumpBufferCounter >0 && canJump && canMove && !isRolling)
+        if (jumpBufferCounter >0 && canJump && canAction && !isRolling)
         {
             Jump();
             jumpBufferCounter=0f;
         }
         
-        if(Input.GetKeyDown(KeyCode.O))
+        if(UnityEngine.Input.GetKeyDown(KeyCode.O))
         {
-            rollBufferCounter = bufferTime/2;
+            rollBufferCounter = bufferTime / 2;
         }
         else { rollBufferCounter -= Time.deltaTime; }
-        if (rollBufferCounter > 0 && canMove && !isRolling && canJump)
+        if (rollBufferCounter > 0 && canAction && !isRolling && canJump)
         {
             Roll();
             rollBufferCounter=0f;
         }
 
-        if (Input.GetKeyDown(KeyCode.I))
+        if (UnityEngine.Input.GetKeyDown(KeyCode.I))
         {
             attackBufferCounter = bufferTime;
         }
         else { attackBufferCounter -= Time.deltaTime; }
-        if (attackBufferCounter > 0 && canMove && !isRolling && canJump)
+        if (attackBufferCounter > 0 && canAction && !isRolling && canJump)
         {
             Attack1();
             attackBufferCounter = 0;
         }
 
-        if (Input.GetKeyDown(KeyCode.W))    //interact button
+        if (UnityEngine.Input.GetKey(KeyCode.S) == true && canAction && isGrounded && !isRolling)    //interact button
         {
-            
+            canMove = false;
+            animator.SetBool("stand", false);
+            animator.Play("Chloe Crouch");
+        }
+        if (UnityEngine.Input.GetKey(KeyCode.S) == false)
+        {
+            animator.SetBool("stand",true);
+        }
+        if (UnityEngine.Input.GetKeyDown(KeyCode.I) && isJumping)   //jump Attack
+        {
+            canAction = false;
+            //canMove= false;       maybe to nerf the player but now keep it as is
+            animator.Play("Chloe JumpAttack");
         }
 
     }
@@ -207,7 +223,7 @@ public class PlayerBasic : MonoBehaviour
     {
         isGrounded = Physics2D.OverlapCircle(groundCheck.position, groundCheckRadius, whatIsGround);
 
-        if (rb.velocity.y <= 0.0f)
+        if (rb.velocity.y <= 0.01f && isGrounded)
         {
             isJumping = false;
         }
@@ -295,19 +311,17 @@ public class PlayerBasic : MonoBehaviour
 
     private void ApplyMovement()
     {
-        if (isGrounded && !isOnSlope && !isJumping && !isRolling && canMove) //if on straigth ground, not on slope
+        if (isGrounded && !isOnSlope && !isJumping && !isRolling ) //if on straigth ground, not on slope
         {
             newVelocity.Set(movementSpeed * xInput *50*Time.fixedDeltaTime, rb.velocity.y); //y = 0 in the original slope code
             rb.velocity = newVelocity;
         }
-        else if (isGrounded && isOnSlope && canWalkOnSlope && !isJumping && !isRolling && canMove) //If on slope
+        else if (isGrounded && isOnSlope && canWalkOnSlope && !isJumping && !isRolling) //If on slope
         {
             newVelocity.Set(movementSpeed * slopeNormalPerp.x * -xInput * 50 * Time.fixedDeltaTime, movementSpeed * slopeNormalPerp.y * -xInput * 50 * Time.fixedDeltaTime);
             rb.velocity = newVelocity;
-
-       
         }
-        else if (!isGrounded && canMove && !isRolling) //If in air
+        else if (!isGrounded && !isRolling) //If in air
         {
             //newVelocity.Set(rb.velocity.x, rb.velocity.y);
             //rb.velocity = newVelocity;
@@ -334,7 +348,7 @@ public class PlayerBasic : MonoBehaviour
 
     private void Flip()
     {
-        if(!isRolling && canMove)
+        if(!isRolling && canAction)
         { 
         facingDirection *= -1;
         transform.Rotate(0.0f, 180.0f, 0.0f);
@@ -361,6 +375,7 @@ public class PlayerBasic : MonoBehaviour
     {
         if (!isJumping  && isGrounded)
         {
+            canAction = false;
             Push(rollForce,0, facingDirection);
             animator.SetTrigger("Roll");
             isRolling = true;
@@ -377,8 +392,6 @@ public class PlayerBasic : MonoBehaviour
     {
         playerCoin -= coin;
     }
-
-
 
     public void TakeDamage(int damage, int pushForce , int pushDirection)
     {
@@ -403,7 +416,7 @@ public class PlayerBasic : MonoBehaviour
                 this.enabled = false;
             }
 
-            StartCoroutine(FlashWhite());
+            StartCoroutine(Flash());
             InvincibleFunction(true);
             Invoke("notInvincible", 1);
         }
@@ -424,6 +437,8 @@ public class PlayerBasic : MonoBehaviour
 
     void Attack1()
     {
+        canAction = false;
+        canMove = false;
         animator.Play("Chloe_Atk1");
         newVelocity.Set(0.0f, 0.0f);
         rb.velocity = newVelocity;

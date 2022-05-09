@@ -69,7 +69,7 @@ public class EnemyBasic : MonoBehaviour
         sprite.color = Color.white;
     }
 
-        void Start()
+    void Start()
     {
         animator.SetBool("isFollowing", false);
         currentHealth = maxHealth;
@@ -83,6 +83,7 @@ public class EnemyBasic : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (rb.velocity.x > 0) { facingRight = true; } else{ facingRight = false; }     //facing depends on x movement direction
         
         //In attack Range Player
         var collider = Physics2D.OverlapCircle(Attack1.position, attack1Range, targetLayer);

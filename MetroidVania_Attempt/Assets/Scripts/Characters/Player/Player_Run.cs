@@ -10,25 +10,17 @@ public class Player_Run : StateMachineBehaviour
 
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        
 
     }
 
     override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        /*
-        if (Input.GetKeyDown(KeyCode.I))
-        {
-            PlayerBasic.chloeAttack1 = true;        //removed to to replace it with normal input
-        }
-        */
 
     }
 
 
     override public void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-       // PlayerBasic.chloeAttack1 = false;
 
     }
 

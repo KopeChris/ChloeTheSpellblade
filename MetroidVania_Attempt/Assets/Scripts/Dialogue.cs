@@ -6,22 +6,23 @@ using TMPro;
 public class Dialogue : MonoBehaviour
 {
     public TextMeshProUGUI textComponent;
+    public GameObject gameobject;
+
     public string[] lines;
     public float textSpeed;
     public int index;
-
-    public GameObject gameobject;
+    public bool repeatedSpeech=true;
 
     bool asleep;
+
     private void Awake()
     {
         if(!asleep)
         {
             gameobject.SetActive(false);
             asleep=true;
-
         }
-
+        index = 0;
     }
     
     private void OnEnable()
@@ -48,7 +49,6 @@ public class Dialogue : MonoBehaviour
     }
     void StartDialogue()
     {
-        index = 0;
         StartCoroutine(TypeLine());
     }
 
@@ -71,8 +71,9 @@ public class Dialogue : MonoBehaviour
         }
         else //endDialogue
         {
-            index = 0;
+            if (repeatedSpeech) { index = 0; }  //start from line 0 else it will repeat last line
             gameObject.SetActive(false);
+
         }
     }
 }

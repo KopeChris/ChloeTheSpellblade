@@ -10,21 +10,14 @@ public class Player_Idle : StateMachineBehaviour
     {
         
         PlayerBasic.isRolling = false;
+        PlayerBasic.canAction = true;
         PlayerBasic.canMove = true;
-        PlayerBasic.chloeAttack1Hit = false;
-        //PlayerBasic.chloeAttack1 = false;
         PlayerBasic.isInvincible = false;
     }
 
     override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-
-       /* if (Input.GetKeyDown(KeyCode.I))
-        {
-            PlayerBasic.chloeAttack1 = true;
-        }
-       */
-        PlayerBasic.isInvincible = false;
+        
     }
 
     // OnStateExit is called when a transition ends and the state machine finishes evaluating this state

@@ -15,7 +15,7 @@ public class NpcDialogue : MonoBehaviour
 
         float distance = Vector2.Distance(player.position, transform.position);
 
-        if (distance <= radius && (Input.GetButtonDown("Jump") || Input.GetKeyDown(KeyCode.Y)) ) //interact Button Y
+        if (distance <= radius && Input.GetKeyDown(KeyCode.Y) ) //interact Button Y
         {
             //Debug.Log("Interact");
             dialogue.SetActive(true);
