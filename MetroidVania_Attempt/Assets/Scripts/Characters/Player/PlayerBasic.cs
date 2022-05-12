@@ -114,14 +114,17 @@ public class PlayerBasic : MonoBehaviour
         yield return new WaitForSeconds(0.1f);
         sprite.color = Color.white;
     }
+
+    private void Awake()
+    {
+        rb = GetComponent<Rigidbody2D>();
+        cc = GetComponent<CapsuleCollider2D>();
+        sprite = GetComponent<SpriteRenderer>();
+    }
     void Start()
     {
         currentHealth = maxHealth;
         healthBar.SetMaxHealth(maxHealth);
-
-        rb = GetComponent<Rigidbody2D>();
-        cc = GetComponent<CapsuleCollider2D>();
-        sprite = GetComponent<SpriteRenderer>();
         capsuleColliderSize = cc.size;
         InvincibleFunction(false);
 

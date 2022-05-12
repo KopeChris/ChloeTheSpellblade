@@ -69,14 +69,18 @@ public class EnemyBasic : MonoBehaviour
         sprite.color = Color.white;
     }
 
+    private void Awake()
+    {
+        rb = GetComponent<Rigidbody2D>();
+        sprite = GetComponent<SpriteRenderer>();
+    }
     void Start()
     {
         animator.SetBool("isFollowing", false);
         currentHealth = maxHealth;
         healthBar.SetMaxHealth(maxHealth);
 
-        rb = GetComponent<Rigidbody2D>();
-        sprite=GetComponent<SpriteRenderer>();
+        
         InvokeRepeating("RandValue", 0, 2);
     }
 
