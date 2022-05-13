@@ -95,22 +95,22 @@ public class PlayerBasic : MonoBehaviour
         yield return new WaitForSeconds(0.083f);
         sprite.color = Color.white;
         yield return new WaitForSeconds(0.1f);
-        sprite.color = new Color(1, 1, 0.5f, 0.2f);
+        sprite.color = new Color(1, 1, 0.5f, 0.4f);
         yield return new WaitForSeconds(0.1f);
         sprite.color = Color.white;
         yield return new WaitForSeconds(0.1f);
-        sprite.color = new Color(1, 1, 1, 0.2f);
+        sprite.color = new Color(1, 1, 1, 0.4f);
         yield return new WaitForSeconds(0.1f);
         sprite.color = Color.white;
-        sprite.color = new Color(1, 1, 1, 0.2f);
-        yield return new WaitForSeconds(0.1f);
-        sprite.color = Color.white;
-        yield return new WaitForSeconds(0.1f);
-        sprite.color = new Color(1, 1, 1, 0.2f);
+        sprite.color = new Color(1, 1, 1, 0.4f);
         yield return new WaitForSeconds(0.1f);
         sprite.color = Color.white;
         yield return new WaitForSeconds(0.1f);
-        sprite.color = new Color(1, 1, 1, 0.2f);
+        sprite.color = new Color(1, 1, 1, 0.4f);
+        yield return new WaitForSeconds(0.1f);
+        sprite.color = Color.white;
+        yield return new WaitForSeconds(0.1f);
+        sprite.color = new Color(1, 1, 1, 0.4f);
         yield return new WaitForSeconds(0.1f);
         sprite.color = Color.white;
     }
@@ -140,7 +140,10 @@ public class PlayerBasic : MonoBehaviour
         if(!isInvincible && actionInv) 
         { actionInv = false;  InvincibleFunction(false);}
 
-        
+        animator.SetFloat("speedParameter", Mathf.Abs(rb.velocity.x));
+        animator.SetFloat("yParameter", rb.velocity.y);
+        if (isGrounded) { animator.SetBool("isGrounded", true); }
+        else { animator.SetBool("isGrounded", false); }
     }
     private void FixedUpdate()
     {
@@ -149,10 +152,7 @@ public class PlayerBasic : MonoBehaviour
         if (cinematicState) { canAction = false; newVelocity.Set(0.0f, 0.0f); rb.velocity = newVelocity; }
         else {if(canMove) ApplyMovement(); }
 
-        animator.SetFloat("speedParameter", Mathf.Abs(rb.velocity.x));
-        animator.SetFloat("yParameter", rb.velocity.y);
-        if(isGrounded) { animator.SetBool("isGrounded", true);}
-        else { animator.SetBool("isGrounded", false); }
+        
         /*if (xInput == 0 && isGrounded && canAction &&!isRolling) {
             newVelocity.Set(movementSpeed * xInput,rb.velocity.y);
             rb.velocity = newVelocity;
@@ -217,6 +217,8 @@ public class PlayerBasic : MonoBehaviour
             canAction = false;
             //canMove= false;       maybe to nerf the player but now keep it as is
             animator.Play("Chloe JumpAttack");
+            AudioManager.instance.PlaySwing();
+
         }
 
     }
@@ -403,12 +405,16 @@ public class PlayerBasic : MonoBehaviour
             currentHealth -= damage;
             currentHealth = Mathf.Clamp(currentHealth, 0, maxHealth);
             healthBar.SetHealth(currentHealth);
+            canAction = false;
+            canMove = false;
 
+            AudioManager.instance.PlayPlayerHurt();
+            CameraShake.shake = true;
 
             if (currentHealth >= 0)
             {
                 animator.SetTrigger("Stun");
-                Push(pushForce,0, pushDirection);
+                Push(2*pushForce,0, pushDirection);
             }
 
             if (currentHealth <= 0)
@@ -440,6 +446,7 @@ public class PlayerBasic : MonoBehaviour
 
     void Attack1()
     {
+        AudioManager.instance.PlaySwing();
         canAction = false;
         canMove = false;
         animator.Play("Chloe_Atk1");

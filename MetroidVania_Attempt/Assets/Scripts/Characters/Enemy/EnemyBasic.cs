@@ -58,8 +58,9 @@ public class EnemyBasic : MonoBehaviour
     public static bool attack1Hit = false;
     bool isDead;
 
+    bool timeWaiting;
 
-
+    public AudioClip hurtSound;
     public IEnumerator FlashWhite()
     {
         sprite.color = new Color(1, 0.5f, 0.5f, 1);
@@ -195,23 +196,27 @@ public class EnemyBasic : MonoBehaviour
     {
         if (!isDead)  
         {
-
             currentHealth -= damage;
             currentHealth = Mathf.Clamp(currentHealth, 0, maxHealth);
             healthBar.SetHealth(currentHealth);
-            if (currentHealth > 0) { StartCoroutine(FlashWhite()); }
+
+            AudioManager.instance.PlayHurt();
+            CameraShake.shake = true;
+
+            if (currentHealth > 0) { StartCoroutine(FlashWhite()); StopTime(0.05f); }
+
 
             if (CanGetStunned == true && currentHealth >= 0)
             {
                 animator.Play("Hurt");
-                Push(15*(-pushDirection));
+                Push(15 * (-pushDirection));
             }
+
             if (currentHealth <= 0)
             {
                 isDead = true;
                 animator.Play("Death");
                 this.enabled = false;
-                
             }
         }
     }
@@ -223,10 +228,23 @@ public class EnemyBasic : MonoBehaviour
         newForce.Set(pushForce, 0.0f);
         rb.AddForce(newForce, ForceMode2D.Impulse);
     }
+
+    public void StopTime(float duration)
+    {
+        if (timeWaiting) { return; }
+        Time.timeScale = 0.0f;
+        StartCoroutine(ContinueTime(duration));
+    }
+    IEnumerator ContinueTime(float duration)
+    {
+        timeWaiting = true;
+        yield return new WaitForSecondsRealtime(duration);
+        Time.timeScale = 1.0f;
+        timeWaiting = false;
+    }
+
     void RandValue()
     {
         randValue = Random.value;
     }
-
-
 }
