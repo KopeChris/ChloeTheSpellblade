@@ -9,7 +9,11 @@ public class NpcDialogue : MonoBehaviour
     public Transform player;
     public float radius = 3f;
 
-    
+
+    private void Awake()
+    {
+        dialogue.SetActive(false);
+    }
     private void Update()
     {
 

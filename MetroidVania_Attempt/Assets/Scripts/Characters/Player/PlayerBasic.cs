@@ -144,6 +144,8 @@ public class PlayerBasic : MonoBehaviour
         animator.SetFloat("yParameter", rb.velocity.y);
         if (isGrounded) { animator.SetBool("isGrounded", true); }
         else { animator.SetBool("isGrounded", false); }
+
+        healthBar.SetHealth(currentHealth);
     }
     private void FixedUpdate()
     {
@@ -217,7 +219,7 @@ public class PlayerBasic : MonoBehaviour
             canAction = false;
             //canMove= false;       maybe to nerf the player but now keep it as is
             animator.Play("Chloe JumpAttack");
-            AudioManager.instance.PlaySwing();
+            //AudioManager.instance.PlaySwing();
 
         }
 
@@ -404,7 +406,7 @@ public class PlayerBasic : MonoBehaviour
         {
             currentHealth -= damage;
             currentHealth = Mathf.Clamp(currentHealth, 0, maxHealth);
-            healthBar.SetHealth(currentHealth);
+            
             canAction = false;
             canMove = false;
 
@@ -446,7 +448,7 @@ public class PlayerBasic : MonoBehaviour
 
     void Attack1()
     {
-        AudioManager.instance.PlaySwing();
+        //AudioManager.instance.PlaySwing();
         canAction = false;
         canMove = false;
         animator.Play("Chloe_Atk1");
