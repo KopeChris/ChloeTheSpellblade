@@ -159,16 +159,16 @@ public class EnemyBasic : MonoBehaviour
     {
         //Physics2D.IgnoreCollision(Player.GetComponent<CapsuleCollider2D>(), GetComponent<CapsuleCollider2D>(), true);
         //Physics2D.IgnoreCollision((CapsuleCollider2D)Player.GetComponentInChildren(typeof(CapsuleCollider2D)), GetComponent<CapsuleCollider2D>(), true);
-        Destroy(GetComponent<CapsuleCollider2D>());
-        Destroy(GetComponent<EnemyBasic>());
 
         //Player.GetComponent<PlayerBasic>().GetCoin(enemyCoin);
 
         //destroy all children except first
         for (var i = rb.transform.childCount - 1; i >= 1; i--)
         {
-            Object.Destroy(rb.transform.GetChild(i).gameObject);
+            Object.Destroy(rb.transform.GetChild(i).gameObject,3f);
         }
+        Destroy(GetComponent<CapsuleCollider2D>(),3f);
+        Destroy(GetComponent<EnemyBasic>(),3f);
 
     }
    

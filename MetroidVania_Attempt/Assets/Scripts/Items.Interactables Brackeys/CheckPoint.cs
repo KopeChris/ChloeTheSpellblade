@@ -11,45 +11,55 @@ public class CheckPoint : MonoBehaviour
     public PlayerBasic player;
     public float radius = 3f;
 
-    bool closeAction = true;
     //states
+    bool closeAction = true;
     bool menuOpen;
+    
 
     void Update()
     {
         float distance = Vector2.Distance(player.transform.position, transform.position);
 
-        if (distance <= radius && Input.GetKeyDown(KeyCode.Y))
+        if (distance <= radius && Input.GetKeyDown(KeyCode.Y))      //when to activate the checkpoint
         {
+            // menu.SetActive(true);
+           menuOpen = true;
+
             player.currentHealth = player.maxHealth;
-            PlayerBasic.cinematicState = true;
 
-            menu.SetActive(true);
-            interactionIndication.SetActive(false);
+            interactionIndication.SetActive(false); //close the indication
 
-            menuOpen = true;
+            player.SavePlayer();
+            player.animator.Play("Pray");
+
 
         }
-        if (distance <= radius && !menuOpen)
+        if (distance <= radius && !menuOpen)    //Show the indication
         {
             interactionIndication.SetActive(true);
             closeAction = true;
         }
-        if(distance > 2*radius && closeAction)
-        {     
-            closeAction = false; 
-            interactionIndication.SetActive(false); 
-            menu.SetActive(false); }
-        if (UnityEngine.Input.GetKeyDown(KeyCode.O))
-        {
-            menu.SetActive(false);
-            PlayerBasic.cinematicState = false;
-            menuOpen = false;
 
+        if(distance>2*radius)
+        {
+            menuOpen = false;
+            interactionIndication.SetActive(false);
         }
+        /*
+        if((distance > 2*radius && closeAction) || UnityEngine.Input.GetKeyDown(KeyCode.O))      //when to close it
+        {     
+            // menu.SetActive(false); 
+            // menuOpen = false;
+
+            closeAction = false; 
+            interactionIndication.SetActive(false);
+            PlayerBasic.cinematicState = false;
+        }
+        */
+        
     }
     
-
+    
     private void OnDrawGizmosSelected()
     {
         Gizmos.color = Color.yellow;

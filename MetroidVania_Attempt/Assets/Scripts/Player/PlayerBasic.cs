@@ -50,6 +50,7 @@ public class PlayerBasic : MonoBehaviour
     public static bool isInvincible;
     public static bool actionInv;
     public static bool isDead;
+    [SerializeField]
     public static bool cinematicState = false;
 
     private bool isGrounded;
@@ -217,7 +218,7 @@ public class PlayerBasic : MonoBehaviour
         if (UnityEngine.Input.GetKeyDown(KeyCode.I) && isJumping)   //jump Attack
         {
             canAction = false;
-            //canMove= false;       maybe to nerf the player but now keep it as is
+            //canMove= false;       //maybe to nerf the player but now keep it as is
             animator.Play("Chloe JumpAttack");
             //AudioManager.instance.PlaySwing();
 
@@ -478,4 +479,25 @@ public class PlayerBasic : MonoBehaviour
     {
         canJump = false;
     }
+
+
+    public void SavePlayer()
+    {
+        SaveSystem.SavePlayer(this);
+    }
+
+    public void LoadPlayer()
+    {
+        PlayerData data = SaveSystem.LoadPlayer();
+
+        currentHealth = data.currentHealth;
+        maxHealth = data.maxHealth;
+        Vector3 position;
+        position.x = data.position[0];
+        position.y = data.position[1];
+        position.z = data.position[2];
+        transform.position = position;
+
+    }
+
 }

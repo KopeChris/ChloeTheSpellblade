@@ -1861,81 +1861,11 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!1 &139505741 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 6824283589083813101, guid: 3b906c2f0d020fd4ba8ef930f8293350, type: 3}
-  m_PrefabInstance: {fileID: 1952866210}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &139505746
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 139505741}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c8f4d2b8514f208418c7eb1ca761c27c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  curve:
-    serializedVersion: 2
-    m_Curve: []
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  duration: 0
 --- !u!1 &168348313 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6824283589242836649, guid: 3b906c2f0d020fd4ba8ef930f8293350, type: 3}
   m_PrefabInstance: {fileID: 1952866210}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &168348317
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 168348313}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c8f4d2b8514f208418c7eb1ca761c27c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  curve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 0
-      inSlope: 2
-      outSlope: 2
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0
-      outWeight: 0
-    - serializedVersion: 3
-      time: 0.098806195
-      value: 0.20106286
-      inSlope: -0.09978476
-      outSlope: -0.09978476
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.119370475
-    - serializedVersion: 3
-      time: 1.0031738
-      value: -0.013465881
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0
-      outWeight: 0
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  duration: 0.2
 --- !u!114 &235315791 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 1659642531446253508, guid: d7d700836aef1df45b85400c353c7909, type: 3}
@@ -30506,30 +30436,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 6824283589083813102, guid: 3b906c2f0d020fd4ba8ef930f8293350, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6824283589083813102, guid: 3b906c2f0d020fd4ba8ef930f8293350, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 6824283589242836648, guid: 3b906c2f0d020fd4ba8ef930f8293350, type: 3}
       propertyPath: m_Follow
       value: 
       objectReference: {fileID: 2142800533}
-    - target: {fileID: 6824283589242836651, guid: 3b906c2f0d020fd4ba8ef930f8293350, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -354.43002
-      objectReference: {fileID: 0}
-    - target: {fileID: 6824283589242836651, guid: 3b906c2f0d020fd4ba8ef930f8293350, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 44.71
-      objectReference: {fileID: 0}
-    - target: {fileID: 6824283589242836651, guid: 3b906c2f0d020fd4ba8ef930f8293350, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -10.443506
-      objectReference: {fileID: 0}
     - target: {fileID: 6824283590683945866, guid: 3b906c2f0d020fd4ba8ef930f8293350, type: 3}
       propertyPath: m_Name
       value: CM StateDrivenCamera1

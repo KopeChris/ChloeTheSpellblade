@@ -14,6 +14,8 @@ public class BossDoorStartCinematic : MonoBehaviour
     public Animator camAnim;
     public float sceneDuration;
 
+    public float destroyDelay = 3f;
+
     void Start()
     {
         doorCollider = GetComponent<BoxCollider2D>();
@@ -27,14 +29,16 @@ public class BossDoorStartCinematic : MonoBehaviour
     
     private void Update()
     {
-        if(bossCurrentHealth.currentHealth==0)
+        if(bossCurrentHealth.currentHealth==0)  //after boss dies
         {
-            Invoke("DestroyBossHBdoorSprite", 3);
+            Destroy(bossHB, destroyDelay);      //remove boss healthbar
+            Destroy(doorCollider, destroyDelay);// destroy boss door collider
+            Destroy(doorSprite, destroyDelay);  //Destroy boss door sprite
         }
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.CompareTag(detectionTag) && !doorInAction)
+        if (collision.CompareTag(detectionTag) && !doorInAction)    //when triggered activate door collider,sprite , activate cinematic
         {
             doorCollider.enabled = true;
             doorSprite.enabled = true;
@@ -48,18 +52,9 @@ public class BossDoorStartCinematic : MonoBehaviour
     }
     void StopCutScene()
     {
-
         bossHB.SetActive(true);
         camAnim.SetBool("cinematic1", false);
         PlayerBasic.cinematicState = false;
-    }
-
-    //after boss dies
-    void DestroyBossHBdoorSprite()
-    {
-        Destroy(bossHB);
-        Destroy(doorCollider);
-        Destroy(doorSprite);
     }
 
 }
