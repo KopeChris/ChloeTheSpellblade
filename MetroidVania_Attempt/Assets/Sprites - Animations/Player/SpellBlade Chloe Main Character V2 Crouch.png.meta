@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 0eae023a8e55137419332b4f63e9502c
+guid: a097b8eebaee9be409324543084fc638
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -104,7 +104,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: SpellBlade Chloe Main Character V2 Crouch _0
+      name: SpellBlade Chloe Main Character V2 Crouch_0
       rect:
         serializedVersion: 2
         x: 0
@@ -118,14 +118,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ac588facf80763b43852ea6708774504
-      internalID: 1019347426
+      spriteID: 9003fe184364a7d4e8d2e1e0e67e82d5
+      internalID: 2101308937
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SpellBlade Chloe Main Character V2 Crouch _1
+      name: SpellBlade Chloe Main Character V2 Crouch_1
       rect:
         serializedVersion: 2
         x: 72
@@ -139,14 +139,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8ecbbb8a3f6854946ba3ae4e711ddbc0
-      internalID: -674339678
+      spriteID: d72c84b3033bea74ab3a52010f3d34f8
+      internalID: 1034276691
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SpellBlade Chloe Main Character V2 Crouch _2
+      name: SpellBlade Chloe Main Character V2 Crouch_2
       rect:
         serializedVersion: 2
         x: 144
@@ -160,14 +160,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d46652e7bde8fa540bd1afac8f30d7d8
-      internalID: -166500982
+      spriteID: b1403b328fd391f4fab7656d94fa5937
+      internalID: -383669107
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SpellBlade Chloe Main Character V2 Crouch _3
+      name: SpellBlade Chloe Main Character V2 Crouch_3
       rect:
         serializedVersion: 2
         x: 216
@@ -181,8 +181,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1ca02843bf9b62e4b9f98eeaa53e4c77
-      internalID: 139063227
+      spriteID: faff5a519c7512c46b7974376a283f58
+      internalID: -1982685022
       vertices: []
       indices: 
       edges: []
@@ -198,10 +198,10 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      SpellBlade Chloe Main Character V2 Crouch _2: -166500982
-      SpellBlade Chloe Main Character V2 Crouch _1: -674339678
-      SpellBlade Chloe Main Character V2 Crouch _0: 1019347426
-      SpellBlade Chloe Main Character V2 Crouch _3: 139063227
+      SpellBlade Chloe Main Character V2 Crouch_3: -1982685022
+      SpellBlade Chloe Main Character V2 Crouch_2: -383669107
+      SpellBlade Chloe Main Character V2 Crouch_1: 1034276691
+      SpellBlade Chloe Main Character V2 Crouch_0: 2101308937
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

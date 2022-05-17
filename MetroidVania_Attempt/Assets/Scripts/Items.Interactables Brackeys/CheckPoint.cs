@@ -4,15 +4,15 @@ using UnityEngine;
 
 public class CheckPoint : MonoBehaviour
 {
-    public GameObject menu;
+    //public GameObject menu;
     public GameObject interactionIndication;
 
 
     public PlayerBasic player;
-    public float radius = 3f;
+    public float radius;
 
     //states
-    bool closeAction = true;
+   // bool closeAction = true;
     bool menuOpen;
     
 
@@ -37,7 +37,7 @@ public class CheckPoint : MonoBehaviour
         if (distance <= radius && !menuOpen)    //Show the indication
         {
             interactionIndication.SetActive(true);
-            closeAction = true;
+            //closeAction = true;
         }
 
         if(distance>2*radius)

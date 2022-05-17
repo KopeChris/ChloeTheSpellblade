@@ -152,7 +152,7 @@ public class PlayerBasic : MonoBehaviour
     {
         CheckGround();
         SlopeCheck();
-        if (cinematicState) { canAction = false; newVelocity.Set(0.0f, 0.0f); rb.velocity = newVelocity; }
+        if (cinematicState) { canAction = false; newVelocity.Set(0.0f, rb.velocity.y); rb.velocity = newVelocity; } //change to for not to slow down y velocity when praying
         else {if(canMove) ApplyMovement(); }
 
         
