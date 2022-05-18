@@ -11,9 +11,10 @@ public class CheckPoint : MonoBehaviour
     public PlayerBasic player;
     public float radius;
 
+
     //states
    // bool closeAction = true;
-    bool menuOpen;
+    //bool menuOpen;
     
 
     void Update()
@@ -23,7 +24,7 @@ public class CheckPoint : MonoBehaviour
         if (distance <= radius && Input.GetKeyDown(KeyCode.Y))      //when to activate the checkpoint
         {
             // menu.SetActive(true);
-           menuOpen = true;
+           //menuOpen = true;
 
             player.currentHealth = player.maxHealth;
 
@@ -34,7 +35,7 @@ public class CheckPoint : MonoBehaviour
 
 
         }
-        if (distance <= radius && !menuOpen)    //Show the indication
+        if (distance <= radius)    //Show the indication       if (distance <= radius && !menuOpen) 
         {
             interactionIndication.SetActive(true);
             //closeAction = true;
@@ -42,7 +43,7 @@ public class CheckPoint : MonoBehaviour
 
         if(distance>2*radius)
         {
-            menuOpen = false;
+            //menuOpen = false;
             interactionIndication.SetActive(false);
         }
         /*

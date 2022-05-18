@@ -7,12 +7,12 @@ public class PlayerBasic : MonoBehaviour
     public Animator animator;
     public HealthBar healthBar;
 
-    public int maxHealth = 100;
+    public  int maxHealth = 100;
     public  int currentHealth;
     public int playerCoin=0;
 
     [SerializeField]
-    private float movementSpeed;
+    public static float movementSpeed = 17;
     [SerializeField]
     private float groundCheckRadius;
     [SerializeField]
@@ -33,14 +33,14 @@ public class PlayerBasic : MonoBehaviour
     [SerializeField]
     private int rollForce;
     [SerializeField]
-    private float iFrames;
+    private float iframes;
 
     private float xInput;   // xinput is the horizMovement
     private float slopeDownAngle;
     private float slopeSideAngle;
     private float lastSlopeAngle;
 
-    private int facingDirection = 1;
+    public static int facingDirection = 1;
 
     //states
     public static bool isRolling;
@@ -53,6 +53,8 @@ public class PlayerBasic : MonoBehaviour
     [SerializeField]
     public static bool cinematicState = false;
 
+    public static bool nextAttack;
+
     private bool isGrounded;
     private bool isOnSlope;
     private bool isJumping;
@@ -60,13 +62,13 @@ public class PlayerBasic : MonoBehaviour
     private bool canJump;
     
 
-    private Vector2 newVelocity;
+    public static Vector2 newVelocity;
     private Vector2 newForce;
     private Vector2 capsuleColliderSize;
 
     private Vector2 slopeNormalPerp;
 
-    private Rigidbody2D rb;
+    public static Rigidbody2D rb;
     CapsuleCollider2D cc;
 
     //stuff to do with the attack
@@ -87,6 +89,7 @@ public class PlayerBasic : MonoBehaviour
     private float jumpBufferCounter;
     private float attackBufferCounter;
     private float rollBufferCounter;
+    private float healBufferCounter;
 
     SpriteRenderer sprite;
 
@@ -121,6 +124,7 @@ public class PlayerBasic : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         cc = GetComponent<CapsuleCollider2D>();
         sprite = GetComponent<SpriteRenderer>();
+        animator = GetComponent<Animator>();
     }
     void Start()
     {
@@ -171,7 +175,6 @@ public class PlayerBasic : MonoBehaviour
             Flip();
         }
         
-
         if (UnityEngine.Input.GetButtonDown("Jump") ) 
         {
             jumpBufferCounter = bufferTime; 
@@ -199,13 +202,13 @@ public class PlayerBasic : MonoBehaviour
             attackBufferCounter = bufferTime;
         }
         else { attackBufferCounter -= Time.deltaTime; }
-        if (attackBufferCounter > 0 && canAction && !isRolling && canJump)
+        if (attackBufferCounter > 0 && canAction && !isRolling && canJump &&!nextAttack)
         {
             Attack1();
             attackBufferCounter = 0;
         }
 
-        if (UnityEngine.Input.GetKey(KeyCode.S) == true && canAction && isGrounded && !isRolling)    //interact button
+        if (UnityEngine.Input.GetKey(KeyCode.S) == true && canAction && isGrounded && !isRolling && rb.velocity.y<3)    //interact button
         {
             canMove = false;
             animator.SetBool("stand", false);
@@ -222,6 +225,18 @@ public class PlayerBasic : MonoBehaviour
             animator.Play("Chloe JumpAttack");
             //AudioManager.instance.PlaySwing();
 
+        }
+
+        if (UnityEngine.Input.GetKeyDown(KeyCode.K))
+        {
+            healBufferCounter = bufferTime;
+        }
+        else { healBufferCounter -= Time.deltaTime; }
+        if (healBufferCounter>0 && canAction && isGrounded)
+        {
+            canAction=false;
+            canMove = false;
+            animator.Play("Chloe Heal");
         }
 
     }
@@ -345,6 +360,7 @@ public class PlayerBasic : MonoBehaviour
     private void Jump()
     {
         animator.SetTrigger("Jump");
+        animator.Play("Chloe Jump");
         canJump = false;
         isJumping = true;
         newVelocity.Set(0.0f, 0.0f);
@@ -388,7 +404,7 @@ public class PlayerBasic : MonoBehaviour
             animator.SetTrigger("Roll");
             isRolling = true;
             InvincibleFunction(true);
-            Invoke("notInvincible", iFrames/60);
+            Invoke("notInvincible", iframes/60);
 
         }
     }    
@@ -440,7 +456,7 @@ public class PlayerBasic : MonoBehaviour
 
     }
 
-    void Heal(int heal)
+    public void Heal(int heal)
     {
         currentHealth += heal;
         currentHealth = Mathf.Clamp(currentHealth, 0, maxHealth);
@@ -452,13 +468,17 @@ public class PlayerBasic : MonoBehaviour
         //AudioManager.instance.PlaySwing();
         canAction = false;
         canMove = false;
-        animator.Play("Chloe_Atk1");
+        animator.Play("Chloe Atk1");
         newVelocity.Set(0.0f, 0.0f);
         rb.velocity = newVelocity;
 
         //Push(3,0, facingDirection);
     }
-
+    public static void SetVelocity(float x, float y)
+        {
+        newVelocity.Set(x, y);
+        rb.velocity = newVelocity;
+    }
     
 
     private void InvincibleFunction(bool invincible)
@@ -480,6 +500,7 @@ public class PlayerBasic : MonoBehaviour
         canJump = false;
     }
 
+    
 
     public void SavePlayer()
     {
