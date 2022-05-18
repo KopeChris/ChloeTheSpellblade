@@ -10,6 +10,7 @@ public class EnemyBasic : MonoBehaviour
     public SpriteRenderer sprite;
     public Animator animator;
     public HealthBar healthBar;
+    public GameObject Player;
     public int enemyCoin;
     public int maxHealth = 100;
     public int currentHealth;
@@ -43,7 +44,7 @@ public class EnemyBasic : MonoBehaviour
     public Transform Attack1;
     public Transform Attack2;
     public Transform Attack3;
-    public Transform Player;
+    
 
     public bool PlayerDetected { get; internal set; }
     public bool PlayerFollowed { get; internal set; }
@@ -142,7 +143,7 @@ public class EnemyBasic : MonoBehaviour
         }
 
         
-        if (Player.position.x < rb.transform.position.x)
+        if (Player.transform.position.x < rb.transform.position.x)
         {
             pushDirection = -1;
             
@@ -165,10 +166,10 @@ public class EnemyBasic : MonoBehaviour
         //destroy all children except first
         for (var i = rb.transform.childCount - 1; i >= 1; i--)
         {
-            Object.Destroy(rb.transform.GetChild(i).gameObject,3f);
+            Object.Destroy(rb.transform.GetChild(i).gameObject,2f);
         }
-        Destroy(GetComponent<CapsuleCollider2D>(),3f);
-        Destroy(GetComponent<EnemyBasic>(),3f);
+        Destroy(GetComponent<CapsuleCollider2D>(),2f);
+        Destroy(GetComponent<EnemyBasic>(),2f);
 
     }
    
@@ -200,7 +201,7 @@ public class EnemyBasic : MonoBehaviour
             currentHealth = Mathf.Clamp(currentHealth, 0, maxHealth);
             healthBar.SetHealth(currentHealth);
 
-            AudioManager.instance.PlayHurt();
+            //AudioManager.instance.PlayHurt();
             CameraShake.shake = true;
 
             if (currentHealth > 0) { StartCoroutine(FlashWhite()); StopTime(0.05f); }
@@ -212,8 +213,9 @@ public class EnemyBasic : MonoBehaviour
                 Push(15 * (-pushDirection));
             }
 
-            if (currentHealth <= 0)
+            if (currentHealth <= 0)     // ON DEATH
             {
+                Player.GetComponent<PlayerBasic>().GetCoin(enemyCoin);
                 isDead = true;
                 animator.Play("Death");
                 this.enabled = false;

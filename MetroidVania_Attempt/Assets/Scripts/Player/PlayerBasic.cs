@@ -44,7 +44,8 @@ public class PlayerBasic : MonoBehaviour
 
     //states
     public static bool isRolling;
-    public static bool canAction = true;
+    public static bool canAction = true;    //if canAction but !canMo
+                                            //ve then you can flip but not move used in crouch
     public static bool canMove;
     //public static bool canAction = true;
     public static bool isInvincible;
@@ -119,15 +120,31 @@ public class PlayerBasic : MonoBehaviour
         sprite.color = Color.white;
     }
 
+    //to jump off platforms
+    bool ignorePlatformsCoroutineIsRunning;
+    int playerLayer, jumpDownPlatformLayer;
+
+    IEnumerator IgnorePlatforms()
+    {
+        ignorePlatformsCoroutineIsRunning = true;
+        Physics2D.IgnoreLayerCollision(playerLayer, jumpDownPlatformLayer, true);
+        yield return new WaitForSeconds(0.3f);
+        Physics2D.IgnoreLayerCollision(playerLayer, jumpDownPlatformLayer, false);
+        ignorePlatformsCoroutineIsRunning = false;
+    }
+
     private void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
         cc = GetComponent<CapsuleCollider2D>();
         sprite = GetComponent<SpriteRenderer>();
         animator = GetComponent<Animator>();
+        playerLayer = LayerMask.NameToLayer("Player");
+        jumpDownPlatformLayer = LayerMask.NameToLayer("JumpDownPlatforms");
     }
     void Start()
     {
+
         currentHealth = maxHealth;
         healthBar.SetMaxHealth(maxHealth);
         capsuleColliderSize = cc.size;
@@ -180,13 +197,17 @@ public class PlayerBasic : MonoBehaviour
             jumpBufferCounter = bufferTime; 
         }
         else { jumpBufferCounter -= Time.deltaTime; }
-        if (jumpBufferCounter >0 && canJump && canAction && !isRolling)
+        if (jumpBufferCounter >0 && !UnityEngine.Input.GetKey(KeyCode.S) && canJump && canAction && !isRolling && !ignorePlatformsCoroutineIsRunning)
         {
             Jump();
             jumpBufferCounter=0f;
         }
-        
-        if(UnityEngine.Input.GetKeyDown(KeyCode.O))
+        else if (UnityEngine.Input.GetButtonDown("Jump") && UnityEngine.Input.GetKey(KeyCode.S) && !ignorePlatformsCoroutineIsRunning)
+        {
+            StartCoroutine("IgnorePlatforms");
+        }
+
+        if (UnityEngine.Input.GetKeyDown(KeyCode.O))
         {
             rollBufferCounter = bufferTime / 2;
         }
@@ -208,7 +229,7 @@ public class PlayerBasic : MonoBehaviour
             attackBufferCounter = 0;
         }
 
-        if (UnityEngine.Input.GetKey(KeyCode.S) == true && canAction && isGrounded && !isRolling && rb.velocity.y<3)    //interact button
+        if (UnityEngine.Input.GetKey(KeyCode.S) == true && canAction && isGrounded && !isRolling && rb.velocity.y<3 && !ignorePlatformsCoroutineIsRunning)    //interact button the rb.velocity.y<3 was to activate jump animation
         {
             canMove = false;
             animator.SetBool("stand", false);
@@ -367,7 +388,7 @@ public class PlayerBasic : MonoBehaviour
         rb.velocity = newVelocity;
         //newForce.Set(xInput * (jumpForce/4), jumpForce);
         //rb.AddForce(newForce, ForceMode2D.Impulse);
-        Push((jumpForce / 4), jumpForce, xInput);
+        Push(xInput*jumpForce/4, jumpForce);
     }
 
     private void Flip()
@@ -386,11 +407,11 @@ public class PlayerBasic : MonoBehaviour
         //Gizmos.DrawWireSphere(AttackSphere.position, attack1Range);
 
     }
-    public void Push(float pushForceX, float pushForceY, float pushDirection)
+    public void Push(float pushForceX, float pushForceY)
     {
         newVelocity.Set(0.0f, 0.0f);
         rb.velocity = newVelocity;
-        newForce.Set(pushForceX * pushDirection, pushForceY);
+        newForce.Set(pushForceX, pushForceY);
 
         rb.AddForce(newForce , ForceMode2D.Impulse);
     }
@@ -400,7 +421,7 @@ public class PlayerBasic : MonoBehaviour
         if (!isJumping  && isGrounded)
         {
             canAction = false;
-            Push(rollForce,0, facingDirection);
+            Push(rollForce * facingDirection, 0);
             animator.SetTrigger("Roll");
             isRolling = true;
             InvincibleFunction(true);
@@ -427,13 +448,13 @@ public class PlayerBasic : MonoBehaviour
             canAction = false;
             canMove = false;
 
-            AudioManager.instance.PlayPlayerHurt();
+           // AudioManager.instance.PlayPlayerHurt();
             CameraShake.shake = true;
 
             if (currentHealth >= 0)
             {
                 animator.SetTrigger("Stun");
-                Push(2*pushForce,0, pushDirection);
+                Push(2*pushForce * pushDirection, 0);
             }
 
             if (currentHealth <= 0)

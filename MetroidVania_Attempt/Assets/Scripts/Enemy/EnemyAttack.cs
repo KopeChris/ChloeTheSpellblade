@@ -10,13 +10,13 @@ public class EnemyAttack : MonoBehaviour
     private string detectionTag = "Player";
     
     public Rigidbody2D rb;
-    public Transform Player;
+    public GameObject Player;
     public static int pushDirection;
 
 
     private void Update()
     {
-        if (Player.position.x < rb.transform.position.x)    {pushDirection = -1;}        else { pushDirection = 1; }
+        if (Player.transform.position.x < rb.transform.position.x)    {pushDirection = -1;}        else { pushDirection = 1; }
     }
 
     private void OnTriggerEnter2D(Collider2D collision)

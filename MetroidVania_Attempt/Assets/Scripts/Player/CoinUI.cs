@@ -9,17 +9,9 @@ public class CoinUI : MonoBehaviour
     public static int coins;
     public PlayerBasic player;
 
-
-    
-
     void Update()
     {
         coins = player.playerCoin;
         textComponent.text = coins.ToString();
     }
-    
-
-    
-
-    
 }
