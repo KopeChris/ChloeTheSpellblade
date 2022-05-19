@@ -11,19 +11,21 @@ public class EnemyAttack : MonoBehaviour
     
     public Rigidbody2D rb;
     public GameObject Player;
-    public static int pushDirection;
+    int pushDirection;
 
 
     private void Update()
     {
-        if (Player.transform.position.x < rb.transform.position.x)    {pushDirection = -1;}        else { pushDirection = 1; }
+        if (Player.transform.position.x < rb.transform.position.x)    
+        {pushDirection = -1;}        
+        else { pushDirection = 1; }
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.CompareTag(detectionTag))
         {
-            Player.GetComponent<PlayerBasic>().TakeDamage(attackDamage, pushForce, pushDirection);
+            Player.GetComponent<PlayerBasic>().TakeDamage(attackDamage, pushForce * pushDirection);
         }
     }
 

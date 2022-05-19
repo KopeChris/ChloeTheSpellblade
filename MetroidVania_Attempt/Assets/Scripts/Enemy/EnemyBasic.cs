@@ -153,7 +153,10 @@ public class EnemyBasic : MonoBehaviour
     }
     void FixedUpdate()
     {
-        
+
+        newForce.Set(50, 0.0f);
+        if (rb.velocity.x > 0.001) { rb.AddForce(-newForce, ForceMode2D.Force); }
+        if (rb.velocity.x < -0.001) { rb.AddForce(newForce, ForceMode2D.Force); }
 
     }
     void OnDisable()

@@ -150,7 +150,7 @@ public class EnemyAiMelee : MonoBehaviour
     //damage enemies effect of hit
     foreach (Collider2D enemy in hitEnemies)
     {
-        enemy.GetComponent<PlayerBasic>().TakeDamage(attack1Damage,5, pushDirection);
+        enemy.GetComponent<PlayerBasic>().TakeDamage(attack1Damage,5* pushDirection);
     }
 }
 

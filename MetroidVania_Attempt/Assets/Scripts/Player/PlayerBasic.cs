@@ -122,14 +122,15 @@ public class PlayerBasic : MonoBehaviour
 
     //to jump off platforms
     bool ignorePlatformsCoroutineIsRunning;
-    int playerLayer, jumpDownPlatformLayer;
+    int playerLayer, platformsLayer, enemiesLayer, collisionBlockerLayer;
+    public GameObject groundCollider;
 
     IEnumerator IgnorePlatforms()
     {
         ignorePlatformsCoroutineIsRunning = true;
-        Physics2D.IgnoreLayerCollision(playerLayer, jumpDownPlatformLayer, true);
+        groundCollider.SetActive(false);
         yield return new WaitForSeconds(0.3f);
-        Physics2D.IgnoreLayerCollision(playerLayer, jumpDownPlatformLayer, false);
+        groundCollider.SetActive(true);
         ignorePlatformsCoroutineIsRunning = false;
     }
 
@@ -140,7 +141,9 @@ public class PlayerBasic : MonoBehaviour
         sprite = GetComponent<SpriteRenderer>();
         animator = GetComponent<Animator>();
         playerLayer = LayerMask.NameToLayer("Player");
-        jumpDownPlatformLayer = LayerMask.NameToLayer("JumpDownPlatforms");
+        platformsLayer = LayerMask.NameToLayer("Platforms");
+        enemiesLayer = LayerMask.NameToLayer("Enemies");
+        collisionBlockerLayer = LayerMask.NameToLayer("CollisionBlocker");
     }
     void Start()
     {
@@ -176,12 +179,10 @@ public class PlayerBasic : MonoBehaviour
         if (cinematicState) { canAction = false; newVelocity.Set(0.0f, rb.velocity.y); rb.velocity = newVelocity; } //change to for not to slow down y velocity when praying
         else {if(canMove) ApplyMovement(); }
 
-        
-        /*if (xInput == 0 && isGrounded && canAction &&!isRolling) {
-            newVelocity.Set(movementSpeed * xInput,rb.velocity.y);
-            rb.velocity = newVelocity;
-        }
-        */
+        //tend to go to zero x speed. helps while in air and adds a fake tension
+        newForce.Set(50, 0.0f);
+        if (rb.velocity.x > 0.001) { rb.AddForce(-newForce, ForceMode2D.Force); }
+        if (rb.velocity.x < -0.001) { rb.AddForce(newForce, ForceMode2D.Force); }
     }
     private void Input() 
     {
@@ -365,20 +366,25 @@ public class PlayerBasic : MonoBehaviour
             newVelocity.Set(movementSpeed * slopeNormalPerp.x * -xInput * 50 * Time.fixedDeltaTime, movementSpeed * slopeNormalPerp.y * -xInput * 50 * Time.fixedDeltaTime);
             rb.velocity = newVelocity;
         }
+        
         else if (!isGrounded && !isRolling) //If in air
         {
             //newVelocity.Set(rb.velocity.x, rb.velocity.y);
             //rb.velocity = newVelocity;
+            
             newForce.Set(170, 0.0f);
-            rb.AddForce(newForce * xInput, ForceMode2D.Force);
+            rb.AddForce(newForce * xInput, ForceMode2D.Force);                                  // helps to move on air
             if (rb.velocity.x > movementSpeed-2) { rb.AddForce(-newForce, ForceMode2D.Force); }
             if (rb.velocity.x < -movementSpeed+2) { rb.AddForce(newForce, ForceMode2D.Force); }
-            if (rb.velocity.x > 0.01) { rb.AddForce(-newForce / 6, ForceMode2D.Force); }
+            /*
+            if (rb.velocity.x > 0.01) { rb.AddForce(-newForce / 6, ForceMode2D.Force); }    // that was to tend to be 0 x speed but now its permanent and acts like tension
             if (rb.velocity.x < 0.01) { rb.AddForce(newForce / 6, ForceMode2D.Force); }
+            */
         }
 
+
     }
-    private void Jump()
+        private void Jump()
     {
         animator.SetTrigger("Jump");
         animator.Play("Chloe Jump");
@@ -438,7 +444,7 @@ public class PlayerBasic : MonoBehaviour
         playerCoin -= coin;
     }
 
-    public void TakeDamage(int damage, int pushForce , int pushDirection)
+    public void TakeDamage(int damage, int pushForce)
     {
         if(!isInvincible && !isDead)
         {
@@ -454,7 +460,7 @@ public class PlayerBasic : MonoBehaviour
             if (currentHealth >= 0)
             {
                 animator.SetTrigger("Stun");
-                Push(2*pushForce * pushDirection, 0);
+                Push(2*pushForce, 0);
             }
 
             if (currentHealth <= 0)
@@ -502,18 +508,18 @@ public class PlayerBasic : MonoBehaviour
     }
     
 
-    private void InvincibleFunction(bool invincible)
+    private void InvincibleFunction(bool invincible)        //playerLayer, platformsLayer, enemiesLayer, collisionBlockerLayer
     {
-        Physics2D.IgnoreLayerCollision(7, 8, invincible);
-        Physics2D.IgnoreLayerCollision(7, 10, invincible);
-        Physics2D.IgnoreLayerCollision(8, 10, invincible);
+        Physics2D.IgnoreLayerCollision(playerLayer, enemiesLayer, invincible);
+        Physics2D.IgnoreLayerCollision(playerLayer, collisionBlockerLayer, invincible);
+        Physics2D.IgnoreLayerCollision(enemiesLayer, collisionBlockerLayer, invincible);
         isInvincible = invincible;
     }
     private void notInvincible()
     {
-        Physics2D.IgnoreLayerCollision(7, 8, false);
-        Physics2D.IgnoreLayerCollision(7, 10, false);
-        Physics2D.IgnoreLayerCollision(8, 10, false);
+        Physics2D.IgnoreLayerCollision(playerLayer, enemiesLayer, false);
+        Physics2D.IgnoreLayerCollision(playerLayer, collisionBlockerLayer, false);
+        Physics2D.IgnoreLayerCollision(enemiesLayer, collisionBlockerLayer, false);
         isInvincible = false;
     }
     void canNotJump()

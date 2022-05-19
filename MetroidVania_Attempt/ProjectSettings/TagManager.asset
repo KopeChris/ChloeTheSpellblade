@@ -12,14 +12,14 @@ TagManager:
   - 
   - Water
   - UI
-  - Platforms
+  - Ground
   - Player
   - Enemies
   - Background
-  - Player Collision Blocker
-  - GroundNotSinkAfterDeath
-  - JumpDownPlatforms
-  - 
+  - CollisionBlocker
+  - Platforms
+  - GroundCollider
+  - PlatformsCollider
   - 
   - 
   - 
