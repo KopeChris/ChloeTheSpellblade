@@ -1624,7 +1624,7 @@ GameObject:
   m_Component:
   - component: {fileID: 573447542}
   - component: {fileID: 573447543}
-  m_Layer: 6
+  m_Layer: 12
   m_Name: GroundNotSink
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -120675,7 +120675,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1819110664}
   - component: {fileID: 1819110665}
-  m_Layer: 6
+  m_Layer: 12
   m_Name: EarthSinkPrevention
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -124686,11 +124686,11 @@ PrefabInstance:
       objectReference: {fileID: 1079229229}
     - target: {fileID: 6824283589242836651, guid: 3b906c2f0d020fd4ba8ef930f8293350, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -31.581024
+      value: 13.828949
       objectReference: {fileID: 0}
     - target: {fileID: 6824283589242836651, guid: 3b906c2f0d020fd4ba8ef930f8293350, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 58.612045
+      value: 59.272045
       objectReference: {fileID: 0}
     - target: {fileID: 6824283589802126150, guid: 3b906c2f0d020fd4ba8ef930f8293350, type: 3}
       propertyPath: m_BoundingShape2D
@@ -125227,11 +125227,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7454119504127863912, guid: b204017af7ec7ad45ad868f854259375, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 439.89
+      value: 485.3
       objectReference: {fileID: 0}
     - target: {fileID: 7454119504127863912, guid: b204017af7ec7ad45ad868f854259375, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 7.74
+      value: 8.4
       objectReference: {fileID: 0}
     - target: {fileID: 7454119504127863912, guid: b204017af7ec7ad45ad868f854259375, type: 3}
       propertyPath: m_LocalPosition.z
