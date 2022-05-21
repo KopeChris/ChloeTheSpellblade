@@ -4,14 +4,25 @@ using UnityEngine;
 
 public class OpenDoor : Indicator
 {
-    Animator animator;
-    private void Awake()
+    public SpriteRenderer closed;
+    public SpriteRenderer open;
+    BoxCollider2D collider;
+    
+    private void Start()
     {
-        animator = GetComponent<Animator>();
-    }
-    public override void Interact()
+        open.enabled = false;
+        collider = GetComponent<BoxCollider2D>();
+    }/*
+    private void Update()
+    {
+        
+    }*/
+    public override void Interact() //open door
     {
         base.Interact();
-        animator.Play("Open");
+        open.enabled = true;
+        Destroy(this.gameObject);
+        
+        //AudioManager.instance.PlayDoorOpen();
     }
 }

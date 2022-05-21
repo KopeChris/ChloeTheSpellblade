@@ -20,7 +20,7 @@ public class Parallax : MonoBehaviour
         camStartPosX = cam.transform.position.x;
         camStartPosY = cam.transform.position.y;
     }
-
+    
     void Update()
     {
         /*
@@ -30,8 +30,8 @@ public class Parallax : MonoBehaviour
         }
         */
         float temp = ((cam.transform.position.x- camStartPosX) * (1 - parallaxEffect));
-        float xDist = ((cam.transform.position.x - camStartPosX) * parallaxEffect) + extraXDistance; 
-        float yDist = ((cam.transform.position.y - camStartPosY) * parallaxEffect); 
+        float xDist = ((cam.transform.position.x - camStartPosX) * parallaxEffect) + extraXDistance;
+        float yDist = 0; // ((cam.transform.position.y - camStartPosY) * parallaxEffect); 
 
         transform.position = new Vector3(startPosX + xDist, startPosY + yDist, transform.position.z);
 

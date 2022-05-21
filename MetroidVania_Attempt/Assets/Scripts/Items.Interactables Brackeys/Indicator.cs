@@ -8,7 +8,6 @@ public class Indicator : MonoBehaviour
     public float radius = 3f;
     float startRadius;
 
-
     private void Awake()
     {
         startRadius = radius;
@@ -16,9 +15,7 @@ public class Indicator : MonoBehaviour
     }
     private void Update()
     {
-
         float distance = Vector2.Distance(player.position, transform.position);
-
 
         if (distance <= radius)  //indication
         {
@@ -31,8 +28,8 @@ public class Indicator : MonoBehaviour
         }
         if(distance>radius)
         {
-            text.enabled = false;
             radius = startRadius;
+            text.enabled = false;
         }
     }
     public virtual void Interact()

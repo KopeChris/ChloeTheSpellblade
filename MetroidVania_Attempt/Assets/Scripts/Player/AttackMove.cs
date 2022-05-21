@@ -8,11 +8,16 @@ public class AttackMove : MonoBehaviour
     [SerializeField]
     [Range(0, 2f)]
     float velocityMultiplier;
-    
+    Rigidbody2D rb;
+
+    private void Awake()
+    {
+        rb = GetComponent<Rigidbody2D>();   
+    }
     void OnEnable()
     {
         newVelocity.Set(PlayerBasic.facingDirection * PlayerBasic.movementSpeed * velocityMultiplier, 0.0f);
-        PlayerBasic.rb.velocity = newVelocity;
+        rb.velocity = newVelocity;
     }
 
     void OnDisable()

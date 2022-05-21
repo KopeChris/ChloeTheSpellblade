@@ -10,7 +10,6 @@ public class Chloe_Atk3 : StateMachineBehaviour
         PlayerBasic.canAction = false;
         PlayerBasic.canMove = false;
         PlayerBasic.nextAttack = false;
-        PlayerBasic.SetVelocity(0, 0);
     }
 
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks

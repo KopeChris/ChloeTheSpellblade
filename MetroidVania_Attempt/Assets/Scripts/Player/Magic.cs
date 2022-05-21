@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class HealingBerry : MonoBehaviour
+public class Magic : MonoBehaviour
 {
     PlayerBasic player;
     public int healAmount;
@@ -13,6 +13,6 @@ public class HealingBerry : MonoBehaviour
     }
     private void OnEnable()
     {
-        player.Heal(healAmount);
+        player.Cast();
     }
 }

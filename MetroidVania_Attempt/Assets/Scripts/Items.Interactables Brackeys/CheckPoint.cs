@@ -7,7 +7,6 @@ public class CheckPoint : MonoBehaviour
     //public GameObject menu;
     public GameObject interactionIndication;
 
-
     public PlayerBasic player;
     public float radius;
 
@@ -27,6 +26,7 @@ public class CheckPoint : MonoBehaviour
            //menuOpen = true;
 
             player.currentHealth = player.maxHealth;
+            player.berries = player.maxBerries;
 
             interactionIndication.SetActive(false); //close the indication
 

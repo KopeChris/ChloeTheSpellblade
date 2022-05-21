@@ -7,9 +7,14 @@ public class PlayerBasic : MonoBehaviour
     public Animator animator;
     public HealthBar healthBar;
 
-    public  int maxHealth = 100;
-    public  int currentHealth;
+    public int maxHealth = 100;
+    public int currentHealth;
     public int playerCoin=0;
+
+    public int mana=100;
+    public int maxMana;
+    public int manaCost=25;
+
 
     [SerializeField]
     public static float movementSpeed = 17;
@@ -69,8 +74,8 @@ public class PlayerBasic : MonoBehaviour
 
     private Vector2 slopeNormalPerp;
 
-    public static Rigidbody2D rb;
-    CapsuleCollider2D cc;
+    public Rigidbody2D rb;
+    public CapsuleCollider2D cc;
 
     //stuff to do with the attack
     //public Transform AttackSphere;
@@ -91,9 +96,12 @@ public class PlayerBasic : MonoBehaviour
     private float attackBufferCounter;
     private float rollBufferCounter;
     private float healBufferCounter;
+    private float castBufferCounter;
+
+    public int berries=0;
+    public int maxBerries;
 
     SpriteRenderer sprite;
-
     public IEnumerator Flash()
     {
         sprite.color = new Color(1, 0.5f, 0.5f, 1);
@@ -124,17 +132,16 @@ public class PlayerBasic : MonoBehaviour
     bool ignorePlatformsCoroutineIsRunning;
     int playerLayer, platformsLayer, enemiesLayer, collisionBlockerLayer;
     public GameObject groundCollider;
-
     IEnumerator IgnorePlatforms()
     {
         ignorePlatformsCoroutineIsRunning = true;
         groundCollider.SetActive(false);
-        yield return new WaitForSeconds(0.3f);
+        yield return new WaitForSeconds(0.24f);
         groundCollider.SetActive(true);
         ignorePlatformsCoroutineIsRunning = false;
     }
 
-    private void Awake()
+    void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         cc = GetComponent<CapsuleCollider2D>();
@@ -144,16 +151,12 @@ public class PlayerBasic : MonoBehaviour
         platformsLayer = LayerMask.NameToLayer("Platforms");
         enemiesLayer = LayerMask.NameToLayer("Enemies");
         collisionBlockerLayer = LayerMask.NameToLayer("CollisionBlocker");
-    }
-    void Start()
-    {
-
+    
         currentHealth = maxHealth;
         healthBar.SetMaxHealth(maxHealth);
         capsuleColliderSize = cc.size;
         InvincibleFunction(false);
 
-        //transform.position = startingPosition.initialValue;
     }
 
     void Update()
@@ -236,10 +239,7 @@ public class PlayerBasic : MonoBehaviour
             animator.SetBool("stand", false);
             animator.Play("Chloe Crouch");
         }
-        if (UnityEngine.Input.GetKey(KeyCode.S) == false)
-        {
-            animator.SetBool("stand",true);
-        }
+        if (UnityEngine.Input.GetKey(KeyCode.S) == false) {animator.SetBool("stand",true);}
         if (UnityEngine.Input.GetKeyDown(KeyCode.I) && isJumping)   //jump Attack
         {
             canAction = false;
@@ -249,16 +249,21 @@ public class PlayerBasic : MonoBehaviour
 
         }
 
-        if (UnityEngine.Input.GetKeyDown(KeyCode.K))
-        {
-            healBufferCounter = bufferTime;
-        }
+        if (UnityEngine.Input.GetKeyDown(KeyCode.K)) {healBufferCounter = bufferTime;}
         else { healBufferCounter -= Time.deltaTime; }
-        if (healBufferCounter>0 && canAction && isGrounded)
+        if (healBufferCounter>0 && canAction && isGrounded &&berries>0)     //heal
         {
             canAction=false;
             canMove = false;
             animator.Play("Chloe Heal");
+        }
+        if (UnityEngine.Input.GetKeyDown(KeyCode.J)) {castBufferCounter = bufferTime;}
+        else { castBufferCounter -= Time.deltaTime; }
+        if (castBufferCounter>0 && canAction && isGrounded && manaCost>=mana)     //heal
+        {
+            canAction=false;
+            canMove = false;
+            animator.Play("Chloe Cast");
         }
 
     }
@@ -485,9 +490,15 @@ public class PlayerBasic : MonoBehaviour
 
     public void Heal(int heal)
     {
-        currentHealth += heal;
-        currentHealth = Mathf.Clamp(currentHealth, 0, maxHealth);
+            currentHealth += heal;
+            currentHealth = Mathf.Clamp(currentHealth, 0, maxHealth);
+            berries--;
+    }
 
+    public void Cast()
+    {
+            mana -= manaCost;
+            mana = Mathf.Clamp(mana, 0, maxMana);
     }
 
     void Attack1()
@@ -501,7 +512,7 @@ public class PlayerBasic : MonoBehaviour
 
         //Push(3,0, facingDirection);
     }
-    public static void SetVelocity(float x, float y)
+    public void SetVelocity(float x, float y)
         {
         newVelocity.Set(x, y);
         rb.velocity = newVelocity;
