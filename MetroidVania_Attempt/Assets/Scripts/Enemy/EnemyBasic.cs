@@ -54,6 +54,7 @@ public class EnemyBasic : MonoBehaviour
     public bool PlayerInRange3 { get; internal set; }
 
     public bool facingRight = false;
+    public int  facingDirection;
     public bool CanGetStunned = false;
     public static int pushDirection;
     public static bool attack1Hit = false;
@@ -89,7 +90,7 @@ public class EnemyBasic : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (rb.velocity.x > 0) { facingRight = true; } else{ facingRight = false; }     //facing depends on x movement direction
+        if (rb.velocity.x > 0) { facingRight = true; facingDirection = 1; } else{ facingRight = false; facingDirection = -1; }     //facing depends on x movement direction
         
         //In attack Range Player
         var collider = Physics2D.OverlapCircle(Attack1.position, attack1Range, targetLayer);
@@ -127,11 +128,15 @@ public class EnemyBasic : MonoBehaviour
         //detection and follow
         var detection = Physics2D.OverlapCircle(DetectionPositionSphere.position, detectionRadius, targetLayer);
         PlayerDetected = detection != null;
-        if (PlayerDetected && !PlayerInRange || (randValue > 0.5f)) //if !playerdetected then it doesnt follow, if it is detected but outside of attack range (follows), if inside attack range chance to follow
-
+        if (PlayerDetected && !PlayerInRange) //if !playerdetected then it doesnt follow, if it is detected but outside of attack range (follows), if inside attack range chance to follow
         {
             // OnPlayerDetected.Invoke(detection.gameObject);
             animator.SetBool("isFollowing", true);
+        }
+
+        if(currentHealth < maxHealth)
+        {
+           animator.SetBool("isFollowing", true);
         }
         //stop follow
         var follow = Physics2D.OverlapCircle(DetectionPositionSphere.position, followRadius, targetLayer);

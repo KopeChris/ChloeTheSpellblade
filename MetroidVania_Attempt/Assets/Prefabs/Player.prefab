@@ -186,6 +186,37 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   attackDamage: 45
+--- !u!1 &1380844864
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1380844865}
+  m_Layer: 7
+  m_Name: FirePoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1380844865
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1380844864}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.481, y: 0.139, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 7454119504127863912}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2922728656533128825
 GameObject:
   m_ObjectHideFlags: 0
@@ -196,8 +227,8 @@ GameObject:
   m_Component:
   - component: {fileID: 2075772201224782219}
   - component: {fileID: 7208125463425914333}
-  m_Layer: 11
-  m_Name: GroundNotSink
+  m_Layer: 13
+  m_Name: PlatformIgnoreCollider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -211,7 +242,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2922728656533128825}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.378, y: -2.008, z: -2.21592}
+  m_LocalPosition: {x: -0.378, y: -1.702, z: -2.21592}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -227,13 +258,13 @@ CircleCollider2D:
   m_GameObject: {fileID: 2922728656533128825}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: a4bdca4b67f40e44b92cd2769f40204e, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 0.5
+  m_Radius: 0.8
 --- !u!1 &7454119504127863917
 GameObject:
   m_ObjectHideFlags: 0
@@ -252,10 +283,11 @@ GameObject:
   - component: {fileID: 1635180678}
   - component: {fileID: 1635180679}
   - component: {fileID: 1635180685}
+  - component: {fileID: 1635180686}
   m_Layer: 7
   m_Name: Player
   m_TagString: Player
-  m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -278,6 +310,7 @@ Transform:
   - {fileID: 140987873}
   - {fileID: 251350015}
   - {fileID: 2075772201224782219}
+  - {fileID: 1380844865}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -381,14 +414,14 @@ CapsuleCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7454119504127863917}
-  m_Enabled: 0
+  m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 6200000, guid: d7f948433e591c44d82f7ba4d26939a1, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.40999997, y: -0.43441164}
-  m_Size: {x: 1.2633667, y: 3.6748827}
+  m_Offset: {x: -0.24, y: -0.5518116}
+  m_Size: {x: 1.01, y: 3.9096825}
   m_Direction: 0
 --- !u!114 &7454119505276187013
 MonoBehaviour:
@@ -418,8 +451,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   animator: {fileID: 7454119504127863914}
   healthBar: {fileID: 0}
+  manaBar: {fileID: 0}
   maxHealth: 400
   currentHealth: 0
+  mana: 90
+  maxMana: 90
+  manaCost: 30
   playerCoin: 0
   groundCheckRadius: 0.3
   jumpForce: 35
@@ -428,14 +465,18 @@ MonoBehaviour:
   groundCheck: {fileID: 7454119504958938755}
   whatIsGround:
     serializedVersion: 2
-    m_Bits: 4416
+    m_Bits: 2368
   noFriction: {fileID: 6200000, guid: a4bdca4b67f40e44b92cd2769f40204e, type: 2}
   fullFriction: {fileID: 6200000, guid: fafd4a3d7955c2f4f913bd7db1e32678, type: 2}
   rollForce: 27
   iframes: 15
+  rb: {fileID: 0}
+  cc: {fileID: 0}
   attack1Damage: 40
   coyoteTimeCoolDown: 0.1
   bufferTime: 0.2
+  berries: 2
+  maxBerries: 2
   groundCollider: {fileID: 2922728656533128825}
 --- !u!114 &1635180678
 MonoBehaviour:
@@ -474,7 +515,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2d1c2f08022e0fb4a83c0730903e7adb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  healAmount: 75
+  healAmount: 150
+--- !u!114 &1635180686
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7454119504127863917}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7f14e0b6784f49b4b95a0f5a38524406, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  firePoint: {fileID: 1380844865}
+  fireBallPrefab: {fileID: 8442064448344489779, guid: 89c749298a8a8cf45b7c42706622fabb, type: 3}
 --- !u!1 &7454119504928093200
 GameObject:
   m_ObjectHideFlags: 0
@@ -635,6 +690,6 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.37, y: -0.34}
-  m_Size: {x: 1.5892334, y: 4.048931}
+  m_Offset: {x: -0.37, y: -0.4272623}
+  m_Size: {x: 1.71, y: 4.2234554}
   m_Direction: 0

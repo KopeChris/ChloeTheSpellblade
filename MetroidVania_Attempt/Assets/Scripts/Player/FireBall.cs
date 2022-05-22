@@ -6,31 +6,21 @@ public class FireBall : MonoBehaviour
 {
     Vector2 newVelocity;
     Vector2 newForce;
-    Rigidbody2D rb;
-    Vector3 position;
-    SpriteRenderer sprite;
+    public Rigidbody2D rb;
 
-    private void Awake()
-    {
-        rb = GetComponent<Rigidbody2D>();
-        position = transform.position;
-        
-    }
+    
+
     void OnEnable()
     {
+        
 
-        transform.position = position;
         newVelocity.Set(0.0f, 0.0f);
         rb.velocity = newVelocity;
 
-        sprite.enabled = true;
-
-        newForce.Set(30 * PlayerBasic.facingDirection, 20);
+        newForce.Set(20* PlayerBasic.facingDirection, 1);
         rb.AddForce(newForce, ForceMode2D.Impulse);
+
     }
 
-    private void OnDisable()
-    {
-        sprite.enabled = false;
-    }
+    
 }

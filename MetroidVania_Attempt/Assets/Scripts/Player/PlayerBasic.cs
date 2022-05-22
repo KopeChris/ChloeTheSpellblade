@@ -6,15 +6,16 @@ public class PlayerBasic : MonoBehaviour
 {
     public Animator animator;
     public HealthBar healthBar;
+    public ManaBar manaBar;
 
     public int maxHealth = 100;
     public int currentHealth;
-    public int playerCoin=0;
 
     public int mana=100;
     public int maxMana;
-    public int manaCost=25;
+    public int manaCost;
 
+    public int playerCoin=0;
 
     [SerializeField]
     public static float movementSpeed = 17;
@@ -98,8 +99,8 @@ public class PlayerBasic : MonoBehaviour
     private float healBufferCounter;
     private float castBufferCounter;
 
-    public int berries=0;
-    public int maxBerries;
+    public int berries=2;
+    public int maxBerries=2;
 
     SpriteRenderer sprite;
     public IEnumerator Flash()
@@ -151,11 +152,15 @@ public class PlayerBasic : MonoBehaviour
         platformsLayer = LayerMask.NameToLayer("Platforms");
         enemiesLayer = LayerMask.NameToLayer("Enemies");
         collisionBlockerLayer = LayerMask.NameToLayer("CollisionBlocker");
-    
-        currentHealth = maxHealth;
-        healthBar.SetMaxHealth(maxHealth);
+
         capsuleColliderSize = cc.size;
         InvincibleFunction(false);
+
+        currentHealth = maxHealth;
+        healthBar.SetMaxHealth(maxHealth);
+        mana = maxMana;
+        manaBar.SetMaxMana(maxMana);
+        
 
     }
 
@@ -174,6 +179,8 @@ public class PlayerBasic : MonoBehaviour
         else { animator.SetBool("isGrounded", false); }
 
         healthBar.SetHealth(currentHealth);
+        manaBar.SetMana(mana);
+
     }
     private void FixedUpdate()
     {
@@ -251,7 +258,7 @@ public class PlayerBasic : MonoBehaviour
 
         if (UnityEngine.Input.GetKeyDown(KeyCode.K)) {healBufferCounter = bufferTime;}
         else { healBufferCounter -= Time.deltaTime; }
-        if (healBufferCounter>0 && canAction && isGrounded &&berries>0)     //heal
+        if (healBufferCounter>0 && canAction && isGrounded && berries > 0)     //heal &&berries>0
         {
             canAction=false;
             canMove = false;
@@ -259,11 +266,13 @@ public class PlayerBasic : MonoBehaviour
         }
         if (UnityEngine.Input.GetKeyDown(KeyCode.J)) {castBufferCounter = bufferTime;}
         else { castBufferCounter -= Time.deltaTime; }
-        if (castBufferCounter>0 && canAction && isGrounded && manaCost>=mana)     //heal
+        if (castBufferCounter>0 && canAction && isGrounded && manaCost <= mana)     //Cast && manaCost<=mana
         {
             canAction=false;
             canMove = false;
-            animator.Play("Chloe Cast");
+            animator.Play("Cast");
+
+            mana -= manaCost;
         }
 
     }
@@ -495,11 +504,7 @@ public class PlayerBasic : MonoBehaviour
             berries--;
     }
 
-    public void Cast()
-    {
-            mana -= manaCost;
-            mana = Mathf.Clamp(mana, 0, maxMana);
-    }
+    
 
     void Attack1()
     {

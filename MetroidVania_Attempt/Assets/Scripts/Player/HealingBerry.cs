@@ -14,5 +14,6 @@ public class HealingBerry : MonoBehaviour
     private void OnEnable()
     {
         player.Heal(healAmount);
+
     }
 }

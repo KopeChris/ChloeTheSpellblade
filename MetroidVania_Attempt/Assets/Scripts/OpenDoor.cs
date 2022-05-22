@@ -6,7 +6,7 @@ public class OpenDoor : Indicator
 {
     public SpriteRenderer closed;
     public SpriteRenderer open;
-    BoxCollider2D collider;
+    new BoxCollider2D collider;
     
     private void Start()
     {
