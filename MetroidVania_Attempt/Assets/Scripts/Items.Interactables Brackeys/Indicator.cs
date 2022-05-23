@@ -4,9 +4,9 @@ using TMPro;
 public class Indicator : MonoBehaviour
 {
     public Transform player;
-    public TextMeshProUGUI text;
+    public TextMeshProUGUI indicator;
     public float radius = 3f;
-    float startRadius;
+    public float startRadius;
 
     private void Start()
     {
@@ -18,7 +18,7 @@ public class Indicator : MonoBehaviour
 
         if (distance <= radius)  //indication
         {
-            text.enabled = true;
+            indicator.enabled = true;
             radius = 2 * startRadius;
         }
         if (distance <= radius && Input.GetButtonDown("Interact"))  //action
@@ -28,7 +28,7 @@ public class Indicator : MonoBehaviour
         if(distance>radius)
         {
             radius = startRadius;
-            text.enabled = false;
+            indicator.enabled = false;
         }
     }
     public virtual void Interact()

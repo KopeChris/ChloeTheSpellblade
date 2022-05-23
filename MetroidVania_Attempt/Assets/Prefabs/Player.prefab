@@ -416,7 +416,7 @@ CapsuleCollider2D:
   m_GameObject: {fileID: 7454119504127863917}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 6200000, guid: d7f948433e591c44d82f7ba4d26939a1, type: 2}
+  m_Material: {fileID: 6200000, guid: a4bdca4b67f40e44b92cd2769f40204e, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
@@ -452,7 +452,7 @@ MonoBehaviour:
   animator: {fileID: 7454119504127863914}
   healthBar: {fileID: 0}
   manaBar: {fileID: 0}
-  maxHealth: 400
+  maxHealth: 200
   currentHealth: 0
   mana: 90
   maxMana: 90
@@ -529,7 +529,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   firePoint: {fileID: 1380844865}
-  fireBallPrefab: {fileID: 8442064448344489779, guid: 89c749298a8a8cf45b7c42706622fabb, type: 3}
+  projectileBallPrefab: {fileID: 8442064448344489779, guid: 89c749298a8a8cf45b7c42706622fabb, type: 3}
 --- !u!1 &7454119504928093200
 GameObject:
   m_ObjectHideFlags: 0

@@ -10,13 +10,12 @@ public class EnemyAttack : MonoBehaviour
     private string detectionTag = "Player";
     
     public Rigidbody2D rb;
-    public GameObject Player;
     int pushDirection;
 
 
     private void Update()
     {
-        if (Player.transform.position.x < rb.transform.position.x)    
+        if (PlayerBasic.positionX < rb.transform.position.x)    
         {pushDirection = -1;}        
         else { pushDirection = 1; }
     }
@@ -25,7 +24,7 @@ public class EnemyAttack : MonoBehaviour
     {
         if (collision.CompareTag(detectionTag))
         {
-            Player.GetComponent<PlayerBasic>().TakeDamage(attackDamage, pushForce * pushDirection);
+            collision.GetComponent<PlayerBasic>().TakeDamage(attackDamage, pushForce * pushDirection);
         }
     }
 

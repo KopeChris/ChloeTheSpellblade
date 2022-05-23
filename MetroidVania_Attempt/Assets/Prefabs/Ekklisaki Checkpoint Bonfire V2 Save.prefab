@@ -335,7 +335,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 0}
-  text: {fileID: 1222597790}
+  indicator: {fileID: 1222597790}
   radius: 4
+  startRadius: 0
   interactionIndication: {fileID: 1911058351}
   playerBasic: {fileID: 0}

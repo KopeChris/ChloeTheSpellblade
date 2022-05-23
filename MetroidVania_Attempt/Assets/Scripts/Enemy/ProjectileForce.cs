@@ -27,6 +27,11 @@ public class ProjectileForce : MonoBehaviour
         rb.AddForce(newForce, ForceMode2D.Impulse);
 
     }
+    private void OnDisable()
+    {
+        Destroy(this.gameObject);
 
-    
+    }
+
+
 }
