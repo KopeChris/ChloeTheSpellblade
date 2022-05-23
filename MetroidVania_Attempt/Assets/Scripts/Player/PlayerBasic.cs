@@ -102,6 +102,9 @@ public class PlayerBasic : MonoBehaviour
     public int berries=2;
     public int maxBerries=2;
 
+    public static float positionX;
+    public static float positionY;
+
     SpriteRenderer sprite;
     public IEnumerator Flash()
     {
@@ -181,6 +184,8 @@ public class PlayerBasic : MonoBehaviour
         healthBar.SetHealth(currentHealth);
         manaBar.SetMana(mana);
 
+        positionX = transform.position.x;
+        positionY = transform.position.y;
     }
     private void FixedUpdate()
     {

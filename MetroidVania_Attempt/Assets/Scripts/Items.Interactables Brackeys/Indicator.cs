@@ -8,10 +8,9 @@ public class Indicator : MonoBehaviour
     public float radius = 3f;
     float startRadius;
 
-    private void Awake()
+    private void Start()
     {
         startRadius = radius;
-        text = GetComponent<TextMeshProUGUI>();
     }
     private void Update()
     {
@@ -22,7 +21,7 @@ public class Indicator : MonoBehaviour
             text.enabled = true;
             radius = 2 * startRadius;
         }
-        if (distance <= radius && Input.GetKeyDown(KeyCode.Y))  //action
+        if (distance <= radius && Input.GetButtonDown("Interact"))  //action
         {
             Interact();
         }

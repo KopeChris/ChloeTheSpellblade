@@ -27,17 +27,13 @@ public class FollowingBehavior : StateMachineBehaviour
 
         {
             facingRight = !facingRight;
-            Vector3 tmpScale = animator.transform.localScale;
-            tmpScale.x *= -1;
-            animator.transform.localScale = tmpScale;
+            animator.transform.Rotate(0.0f, 180.0f, 0.0f);
 
         }
         if ((playerPos.position.x > animator.transform.position.x) && !facingRight)
         {
             facingRight = !facingRight;
-            Vector3 tmpScale = animator.transform.localScale;
-            tmpScale.x *= -1;
-            animator.transform.localScale = tmpScale;
+            animator.transform.Rotate(0.0f, 180.0f, 0.0f);
         }
     }
 

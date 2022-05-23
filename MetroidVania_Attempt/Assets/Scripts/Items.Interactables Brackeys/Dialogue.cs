@@ -7,11 +7,11 @@ public class Dialogue : MonoBehaviour
 {
     public TextMeshProUGUI textComponent;
     public GameObject gameobject;
+    public bool repeatedSpeech;
 
     public string[] lines;
     public float textSpeed;
     public int index;
-    public bool repeatedSpeech=true;
 
     bool asleep;
 
@@ -31,22 +31,7 @@ public class Dialogue : MonoBehaviour
         StartDialogue();
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        if (Input.GetButtonDown("Jump") || Input.GetKeyDown(KeyCode.Y))
-        {
-            if(textComponent.text == lines[index])
-            {
-                NextLine();
-            }
-            else 
-            {
-                StopAllCoroutines();
-                textComponent.text = lines[index]; 
-            }
-        }
-    }
+    
     void StartDialogue()
     {
         StartCoroutine(TypeLine());
@@ -59,8 +44,23 @@ public class Dialogue : MonoBehaviour
             textComponent.text += c;
             yield return new WaitForSeconds(textSpeed);
         }
-    }    
+    }
 
+    void Update()
+    {
+        if (Input.GetButtonDown("Jump") || Input.GetButtonDown("Interact"))
+        {
+            if (textComponent.text == lines[index])
+            {
+                NextLine();
+            }
+            else
+            {
+                StopAllCoroutines();
+                textComponent.text = lines[index];
+            }
+        }
+    }
     void NextLine()
     {
         if(index < lines.Length-1)

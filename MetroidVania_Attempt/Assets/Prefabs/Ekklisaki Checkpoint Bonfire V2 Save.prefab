@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 1222597789}
   - component: {fileID: 1222597791}
   - component: {fileID: 1222597790}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Text (TMP)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -66,7 +66,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Pray
+  m_text: Press H to Pray
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -100,7 +100,7 @@ MonoBehaviour:
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
-  m_HorizontalAlignment: 16
+  m_HorizontalAlignment: 2
   m_VerticalAlignment: 256
   m_textAlignment: 65535
   m_characterSpacing: 0
@@ -147,7 +147,7 @@ GameObject:
   - component: {fileID: 1911058355}
   - component: {fileID: 1911058354}
   - component: {fileID: 1911058353}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Canvas Indication For Interaction
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -172,8 +172,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 2.81}
-  m_SizeDelta: {x: 40, y: 10.0678}
+  m_AnchoredPosition: {x: 0, y: 3.4}
+  m_SizeDelta: {x: 74.21, y: 10.0678}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!223 &1911058355
 Canvas:
@@ -308,9 +308,9 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingLayerID: -1479127429
+  m_SortingLayer: 1
+  m_SortingOrder: 3
   m_Sprite: {fileID: 21300000, guid: 85ba86780a9674c498f2d4dd4d04db4c, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -334,7 +334,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e647b794d30a80f4ca82577bd71c087b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  menu: {fileID: 0}
-  interactionIndication: {fileID: 1911058351}
   player: {fileID: 0}
-  radius: 3
+  text: {fileID: 1222597790}
+  radius: 4
+  interactionIndication: {fileID: 1911058351}
+  playerBasic: {fileID: 0}

@@ -6,23 +6,19 @@ public class Projectile : MonoBehaviour
 {
 
     public int attackDamage;
-    public LayerMask target;
     private string detectionTag = "Enemies";
-    float time=1.5f;
+    public float timeUntilDestroyed =1.2f;
 
     
 
     
-    private void OnEnable()
-    {
-        time = 1.5f;
-    }
+    
     private void Update()
     {
-        time -= Time.deltaTime;
-        if (time <= 0)
+        timeUntilDestroyed  -= Time.deltaTime;
+        if (timeUntilDestroyed  <= 0)
         {
-            Destroy(this.gameObject);
+            Destroy(this.gameObject,0.1f);
         }
     }
     private void OnTriggerEnter2D(Collider2D collision)

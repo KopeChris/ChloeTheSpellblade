@@ -55,8 +55,9 @@ public class EnemyBasic : MonoBehaviour
 
     public bool facingRight = false;
     public int  facingDirection;
+    public int  playerDirection;
+
     public bool CanGetStunned = false;
-    public static int pushDirection;
     public static bool attack1Hit = false;
     bool isDead;
 
@@ -90,8 +91,11 @@ public class EnemyBasic : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (rb.velocity.x > 0) { facingRight = true; facingDirection = 1; } else{ facingRight = false; facingDirection = -1; }     //facing depends on x movement direction
+        if (rb.velocity.x > 0) { facingRight = true; facingDirection = 1; } else { facingRight = false; facingDirection = -1; }     //facing depends on x movement direction
+        if (Player.transform.position.x > rb.transform.position.x) { playerDirection = 1; } else { playerDirection = -1; }
         
+
+
         //In attack Range Player
         var collider = Physics2D.OverlapCircle(Attack1.position, attack1Range, targetLayer);
         PlayerInRange1 = collider != null;
@@ -99,7 +103,6 @@ public class EnemyBasic : MonoBehaviour
         if (PlayerInRange1 && Time.time >= nextAttackTime && canAttack && attack1Miss < randValue)
         {
             animator.Play("Attack1");
-            animator.SetBool("isFollowing", false);
             nextAttackTime = Time.time + attack1Cooldown;
             canAttack = false;
         }
@@ -110,7 +113,6 @@ public class EnemyBasic : MonoBehaviour
         {
             animator.Play("Attack2");
             nextAttackTime = Time.time + attack1Cooldown;
-            animator.SetBool("isFollowing", false);
             canAttack = false;
         }
         collider = Physics2D.OverlapCircle(Attack3.position, attack2Range, targetLayer);
@@ -119,7 +121,6 @@ public class EnemyBasic : MonoBehaviour
         {
             animator.Play("Attack3");
             nextAttackTime = Time.time + attack1Cooldown;
-            animator.SetBool("isFollowing", false);
             canAttack = false;
         }
 
@@ -147,15 +148,8 @@ public class EnemyBasic : MonoBehaviour
 
         }
 
-        
-        if (Player.transform.position.x < rb.transform.position.x)
-        {
-            pushDirection = -1;
-            
-        }
-        else { pushDirection = 1; }
-
     }
+
     void FixedUpdate()
     {
 
@@ -174,10 +168,11 @@ public class EnemyBasic : MonoBehaviour
         //destroy all children except first
         for (var i = rb.transform.childCount - 1; i >= 1; i--)
         {
-            Object.Destroy(rb.transform.GetChild(i).gameObject,2f);
+            Object.Destroy(rb.transform.GetChild(i).gameObject,1f);
         }
-        Destroy(GetComponent<CapsuleCollider2D>(),2f);
-        Destroy(GetComponent<EnemyBasic>(),2f);
+        Destroy(GetComponent<CapsuleCollider2D>(),1f);
+        Destroy(GetComponent<EnemyBasic>(),1f);
+        Destroy(this.gameObject, 3f);
 
     }
    
@@ -218,7 +213,7 @@ public class EnemyBasic : MonoBehaviour
             if (CanGetStunned == true && currentHealth >= 0)
             {
                 animator.Play("Hurt");
-                Push(15 * (-pushDirection));
+                Push(15 * (-playerDirection));
             }
 
             if (currentHealth <= 0)     // ON DEATH

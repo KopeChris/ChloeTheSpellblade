@@ -2,69 +2,28 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CheckPoint : MonoBehaviour
+public class CheckPoint : Indicator
 {
     //public GameObject menu;
     public GameObject interactionIndication;
 
-    public PlayerBasic player;
-    public float radius;
+    public PlayerBasic playerBasic;
 
 
     //states
-   // bool closeAction = true;
+    // bool closeAction = true;
     //bool menuOpen;
     
-
-    void Update()
+    public override void Interact()
     {
-        float distance = Vector2.Distance(player.transform.position, transform.position);
+        playerBasic.currentHealth = playerBasic.maxHealth;
+        playerBasic.berries = playerBasic.maxBerries;
+        playerBasic.mana = playerBasic.maxMana;
 
-        if (distance <= radius && Input.GetKeyDown(KeyCode.Y))      //when to activate the checkpoint
-        {
-            // menu.SetActive(true);
-           //menuOpen = true;
+        interactionIndication.SetActive(false); //close the indication forever
 
-            player.currentHealth = player.maxHealth;
-            player.berries = player.maxBerries;
-
-            interactionIndication.SetActive(false); //close the indication
-
-            player.SavePlayer();
-            player.animator.Play("Pray");
-
-
-        }
-        if (distance <= radius)    //Show the indication       if (distance <= radius && !menuOpen) 
-        {
-            interactionIndication.SetActive(true);
-            //closeAction = true;
-        }
-
-        if(distance>2*radius)
-        {
-            //menuOpen = false;
-            interactionIndication.SetActive(false);
-        }
-        /*
-        if((distance > 2*radius && closeAction) || UnityEngine.Input.GetKeyDown(KeyCode.O))      //when to close it
-        {     
-            // menu.SetActive(false); 
-            // menuOpen = false;
-
-            closeAction = false; 
-            interactionIndication.SetActive(false);
-            PlayerBasic.cinematicState = false;
-        }
-        */
-        
+        playerBasic.SavePlayer();
+        playerBasic.animator.Play("Pray");
     }
     
-    
-    private void OnDrawGizmosSelected()
-    {
-        Gizmos.color = Color.yellow;
-
-        Gizmos.DrawWireSphere(transform.position, radius);
-    }
 }

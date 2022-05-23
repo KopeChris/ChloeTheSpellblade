@@ -1,40 +1,23 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
-public class NpcDialogue : MonoBehaviour
+public class NpcDialogue : Indicator
 {
     public GameObject dialogue;
-
-    public Transform player;
-    public float radius = 3f;
-
 
     private void Awake()
     {
         dialogue.SetActive(false);
     }
-    private void Update()
-    {
-
-        float distance = Vector2.Distance(player.position, transform.position);
-
-        if (distance <= radius && Input.GetKeyDown(KeyCode.Y) ) //interact Button Y
-        {
-            //Debug.Log("Interact");
-            dialogue.SetActive(true);
-        }
-    }
-    public virtual void Interact()
+    
+    public override void Interact()
     {
         // this method is meant to be overwritten
         Debug.Log("Interacting with " + transform.name);
+        dialogue.SetActive(true);
+        text.gameObject.SetActive(false);
     }
 
-    private void OnDrawGizmosSelected()
-    {
-        Gizmos.color = Color.yellow;
-
-        Gizmos.DrawWireSphere(transform.position, radius);
-    }
 }

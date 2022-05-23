@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Parallax : MonoBehaviour
 {
-    private float length, startPosX, startPosY;
+    private float length, height, startPosX, startPosY;
     float camStartPosX;
     float camStartPosY;
     public GameObject cam;
@@ -12,11 +12,12 @@ public class Parallax : MonoBehaviour
 
     float extraXDistance = 0;
 
-    void Awake()
+    void Start()
     {
         startPosX = transform.position.x;
         startPosY = transform.position.y;
         length = GetComponent<SpriteRenderer>().bounds.size.x;
+        height = GetComponent<SpriteRenderer>().bounds.size.y;
         camStartPosX = cam.transform.position.x;
         camStartPosY = cam.transform.position.y;
     }
@@ -31,8 +32,23 @@ public class Parallax : MonoBehaviour
         */
         float temp = ((cam.transform.position.x- camStartPosX) * (1 - parallaxEffect));
         float xDist = ((cam.transform.position.x - camStartPosX) * parallaxEffect) + extraXDistance;
-        float yDist = 0; // ((cam.transform.position.y - camStartPosY) * parallaxEffect); 
+        float yDist = ((cam.transform.position.y - camStartPosY) * parallaxEffect)/10;
+        /*
+        if(PlayerBasic.positionY> startPosY + height * parallaxEffect) 
+        {
+            yDist = height * parallaxEffect;
+        }
+        else if(PlayerBasic.positionY < startPosY - height * parallaxEffect) 
+        {
+            yDist = -height * parallaxEffect;
 
+        }
+        else 
+        {
+            yDist = ((cam.transform.position.y - camStartPosY) * parallaxEffect);
+
+        }
+        */
         transform.position = new Vector3(startPosX + xDist, startPosY + yDist, transform.position.z);
 
 

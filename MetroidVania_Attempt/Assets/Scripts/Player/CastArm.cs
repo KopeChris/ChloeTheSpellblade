@@ -5,10 +5,10 @@ using UnityEngine;
 public class CastArm : MonoBehaviour
 {
     public Transform firePoint;
-    public GameObject fireBallPrefab;
+    public GameObject projectileBallPrefab;
 
     void OnEnable()
     {
-        Instantiate(fireBallPrefab, firePoint.position, firePoint.rotation);
+        Instantiate(projectileBallPrefab, firePoint.position, firePoint.rotation);
     }
 }
