@@ -5,7 +5,6 @@ using UnityEngine;
 public class FollowingBehavior : StateMachineBehaviour
 {
     private Transform playerPos;
-    public float speed = 2;
     public bool facingRight;
 
 
@@ -13,14 +12,14 @@ public class FollowingBehavior : StateMachineBehaviour
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
         playerPos = GameObject.FindGameObjectWithTag("Player").transform;
-        EnemyBasic.canAttack = true;
+        animator.gameObject.GetComponent<EnemyBasic>().canAttack = true;
     }
 
     // Update
     override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
         //move towards player
-        animator.transform.position = Vector2.MoveTowards(animator.transform.position, playerPos.position, speed * Time.deltaTime);
+        animator.transform.position = Vector2.MoveTowards(animator.transform.position, playerPos.position, animator.gameObject.GetComponent<EnemyBasic>().speed * Time.deltaTime);
 
         //Flip towards player
         if ((playerPos.position.x < animator.transform.position.x) && facingRight)

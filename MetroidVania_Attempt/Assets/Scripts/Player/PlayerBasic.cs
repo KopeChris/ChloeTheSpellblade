@@ -42,7 +42,9 @@ public class PlayerBasic : MonoBehaviour
     [SerializeField]
     private int rollForce;
     [SerializeField]
-    private float iframes;
+    private float rollIframes;
+    [SerializeField]
+    private float hurtIseconds;
 
     private float xInput;   // xinput is the horizMovement
     private float slopeDownAngle;
@@ -453,7 +455,7 @@ public class PlayerBasic : MonoBehaviour
             animator.SetTrigger("Roll");
             isRolling = true;
             InvincibleFunction(true);
-            Invoke("notInvincible", iframes/60);
+            Invoke("notInvincible", rollIframes/60);
 
         }
     }    
@@ -495,7 +497,7 @@ public class PlayerBasic : MonoBehaviour
 
             StartCoroutine(Flash());
             InvincibleFunction(true);
-            Invoke("notInvincible", 1);
+            Invoke("notInvincible", hurtIseconds);
         }
 
     }

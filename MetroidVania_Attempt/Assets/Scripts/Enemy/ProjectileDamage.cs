@@ -20,6 +20,6 @@ public class ProjectileDamage : MonoBehaviour
         {
             collision.GetComponent<PlayerBasic>().TakeDamage(attackDamage,force*(PlayerBasic.positionX-transform.position.x)/Mathf.Abs(PlayerBasic.positionX - transform.position.x));
         }
-        Debug.Log((PlayerBasic.positionX - transform.position.x) / Mathf.Abs(PlayerBasic.positionX - transform.position.x));
+        //Debug.Log((PlayerBasic.positionX - transform.position.x) / Mathf.Abs(PlayerBasic.positionX - transform.position.x));
     }
 }

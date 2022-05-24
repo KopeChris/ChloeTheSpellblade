@@ -15,6 +15,7 @@ public class EnemyBasic : MonoBehaviour
     public int maxHealth = 100;
     public int currentHealth;
 
+    public float speed=7;
     //to create the push function
     private Rigidbody2D rb;
     private Vector2 newVelocity;
@@ -24,7 +25,8 @@ public class EnemyBasic : MonoBehaviour
     //public UnityEvent<GameObject> OnPlayerDetected;
 
     [Header("Attacks")]
-    public static bool canAttack;
+    public bool canAttack;
+    public bool AttackPlayer;
     public float attack1Cooldown = 3.0f;
     public float attack1Range = 1;
     public float attack2Range = 1;
@@ -46,7 +48,7 @@ public class EnemyBasic : MonoBehaviour
     public Transform Attack2;
     public Transform Attack3;
     
-
+    [SerializeField]
     public bool PlayerDetected { get; internal set; }
     public bool PlayerFollowed { get; internal set; }
     public bool PlayerInMeleeRange { get; internal set; } //is equal to all playerrangss together
@@ -54,12 +56,12 @@ public class EnemyBasic : MonoBehaviour
     public bool PlayerInRange2 { get; internal set; }
     public bool PlayerInRange3 { get; internal set; }
 
+
     public bool facingRight = false;
     public int  facingDirection;
     public int  playerDirection;
 
     public bool CanGetStunned = false;
-    public static bool attack1Hit = false;
     bool isDead;
 
     bool timeWaiting;
@@ -96,7 +98,7 @@ public class EnemyBasic : MonoBehaviour
         if (Player.transform.position.x > rb.transform.position.x) { playerDirection = 1; } else { playerDirection = -1; }
         
 
-        if(PlayerDetected)
+        if(AttackPlayer && !isDead)
         {
 
             //In attack Range Player
@@ -136,7 +138,7 @@ public class EnemyBasic : MonoBehaviour
         if (PlayerDetected && !PlayerInMeleeRange || currentHealth < maxHealth) //if !playerdetected then it doesnt follow, if it is detected but outside of attack range (follows), if inside attack range chance to follow
         {
             animator.SetBool("isFollowing", true);
-            PlayerDetected = true;
+            AttackPlayer = true;
         }
         //stop follow
         var follow = Physics2D.OverlapCircle(DetectionPositionSphere.position, followRadius, targetLayer);
@@ -144,9 +146,16 @@ public class EnemyBasic : MonoBehaviour
         if (PlayerFollowed == false)
         {
             animator.SetBool("isFollowing", false);
-            PlayerDetected = false;
+            AttackPlayer = false;
 
         }
+
+        if(isDead)
+        {
+            Color opaqueRed = new Color(1, 0, 0, 0f);
+            sprite.color = Color.Lerp(sprite.color, opaqueRed, 0.005f);
+        }    
+            
 
     }
 
@@ -158,7 +167,7 @@ public class EnemyBasic : MonoBehaviour
         if (rb.velocity.x < -0.001) { rb.AddForce(newForce, ForceMode2D.Force); }
 
     }
-    void OnDisable()
+    void Death()
     {
         //Physics2D.IgnoreCollision(Player.GetComponent<CapsuleCollider2D>(), GetComponent<CapsuleCollider2D>(), true);
         //Physics2D.IgnoreCollision((CapsuleCollider2D)Player.GetComponentInChildren(typeof(CapsuleCollider2D)), GetComponent<CapsuleCollider2D>(), true);
@@ -168,12 +177,13 @@ public class EnemyBasic : MonoBehaviour
         //destroy all children except first
         for (var i = rb.transform.childCount - 1; i >= 1; i--)
         {
-            Object.Destroy(rb.transform.GetChild(i).gameObject,1f);
+            Object.Destroy(rb.transform.GetChild(i).gameObject,5f);
         }
         Destroy(GetComponent<CapsuleCollider2D>(),1f);
-        Destroy(GetComponent<EnemyBasic>(),1f);
-        Destroy(this.gameObject, 3f);
+        Destroy(GetComponent<EnemyBasic>(),5f);
+        Destroy(this.gameObject, 5f);
 
+        
     }
    
     //Gizmos
@@ -232,7 +242,7 @@ public class EnemyBasic : MonoBehaviour
                 Player.GetComponent<PlayerBasic>().GetCoin(enemyCoin);
                 isDead = true;
                 animator.Play("Death");
-                this.enabled = false;
+                Death();
             }
         }
     }

@@ -12,7 +12,8 @@ public class Player_Stunned : StateMachineBehaviour
         PlayerBasic.isInvincible = true;
         PlayerBasic.actionInv = true;
         */
-        animator.GetComponent<PlayerBasic>().InvincibleFunction(true);
+
+        //animator.GetComponent<PlayerBasic>().InvincibleFunction(true);
     }
 
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
@@ -29,7 +30,8 @@ public class Player_Stunned : StateMachineBehaviour
         PlayerBasic.isInvincible = false;
         PlayerBasic.actionInv = true;
         */
-        animator.GetComponent<PlayerBasic>().InvincibleFunction(false);
+
+        //animator.GetComponent<PlayerBasic>().InvincibleFunction(false);
     }
 
     // OnStateMove is called right after Animator.OnAnimatorMove()
