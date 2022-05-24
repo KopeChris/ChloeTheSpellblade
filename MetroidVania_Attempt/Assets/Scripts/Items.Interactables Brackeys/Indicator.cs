@@ -8,7 +8,7 @@ public class Indicator : MonoBehaviour
     public float radius = 3f;
     float startRadius;
 
-    private void Start()
+    private void Awake()
     {
         startRadius = radius;
     }
