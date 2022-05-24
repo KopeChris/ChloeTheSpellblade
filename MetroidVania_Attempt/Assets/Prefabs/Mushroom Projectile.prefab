@@ -7,13 +7,17 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 7084551953325710480, guid: 9c7e6b5218d0d4c49b7798d2342057a6, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 1864013978, guid: 116cda5dd6c968544bd9f05bf213dfb0, type: 3}
     - target: {fileID: 7084551953325710481, guid: 9c7e6b5218d0d4c49b7798d2342057a6, type: 3}
       propertyPath: m_Controller
       value: 
       objectReference: {fileID: 9100000, guid: 6769b71f676e4834581cc65d83af000f, type: 2}
     - target: {fileID: 7084551953325710482, guid: 9c7e6b5218d0d4c49b7798d2342057a6, type: 3}
       propertyPath: m_Mass
-      value: 2
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 7084551953325710482, guid: 9c7e6b5218d0d4c49b7798d2342057a6, type: 3}
       propertyPath: m_Material
@@ -28,8 +32,12 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7084551953325710482, guid: 9c7e6b5218d0d4c49b7798d2342057a6, type: 3}
+      propertyPath: m_Constraints
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 7084551953325710482, guid: 9c7e6b5218d0d4c49b7798d2342057a6, type: 3}
       propertyPath: m_GravityScale
-      value: 2.07
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 7084551953325710483, guid: 9c7e6b5218d0d4c49b7798d2342057a6, type: 3}
       propertyPath: m_RootOrder
@@ -75,9 +83,17 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7084551953325710484, guid: 9c7e6b5218d0d4c49b7798d2342057a6, type: 3}
+      propertyPath: m_Radius
+      value: 1.02
+      objectReference: {fileID: 0}
     - target: {fileID: 7084551953325710485, guid: 9c7e6b5218d0d4c49b7798d2342057a6, type: 3}
       propertyPath: m_Name
-      value: Mushroom Projectile Variant
+      value: Mushroom Projectile
+      objectReference: {fileID: 0}
+    - target: {fileID: 7084551953325710486, guid: 9c7e6b5218d0d4c49b7798d2342057a6, type: 3}
+      propertyPath: force
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 7084551953325710486, guid: 9c7e6b5218d0d4c49b7798d2342057a6, type: 3}
       propertyPath: timeUntilDestroyed
@@ -85,12 +101,16 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7084551953325710487, guid: 9c7e6b5218d0d4c49b7798d2342057a6, type: 3}
       propertyPath: forceX
-      value: 20
+      value: 60
       objectReference: {fileID: 0}
     - target: {fileID: 7084551953325710487, guid: 9c7e6b5218d0d4c49b7798d2342057a6, type: 3}
       propertyPath: forceY
-      value: 20
+      value: 40
       objectReference: {fileID: 0}
+    - target: {fileID: 7084551953325710493, guid: 9c7e6b5218d0d4c49b7798d2342057a6, type: 3}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 6200000, guid: 7809db9504d4e17479df0ad01685509f, type: 2}
     - target: {fileID: 7084551953325710493, guid: 9c7e6b5218d0d4c49b7798d2342057a6, type: 3}
       propertyPath: m_Offset.y
       value: -0.94

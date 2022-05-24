@@ -124,7 +124,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   attackDamage: 15
   force: 10
-  time: 1.5
 --- !u!114 &7084551953325710487
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -195,8 +194,8 @@ Rigidbody2D:
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 1
-  m_LinearDrag: 0.22
-  m_AngularDrag: 0.05
+  m_LinearDrag: 0
+  m_AngularDrag: 0
   m_GravityScale: 1
   m_Material: {fileID: 6200000, guid: fafd4a3d7955c2f4f913bd7db1e32678, type: 2}
   m_Interpolate: 0

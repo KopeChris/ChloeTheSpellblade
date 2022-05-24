@@ -16,13 +16,13 @@ TagManager:
   - Player
   - Enemies
   - Background
-  - CollisionBlocker
+  - EnemyCollisionBlocker
   - Platforms
   - GroundCollider
   - PlatformsCollider
   - ProjectilePlayer
   - ProjectileEnemies
-  - 
+  - PlayerCollisionBlocker
   - 
   - 
   - 

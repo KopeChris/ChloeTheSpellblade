@@ -107,7 +107,6 @@ MonoBehaviour:
   player: {fileID: 0}
   indicator: {fileID: 200126654}
   radius: 5
-  startRadius: 0
   dialogue: {fileID: 0}
 --- !u!222 &1836286481566055010
 CanvasRenderer:

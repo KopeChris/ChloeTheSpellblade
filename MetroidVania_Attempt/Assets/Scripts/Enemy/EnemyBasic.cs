@@ -38,6 +38,7 @@ public class EnemyBasic : MonoBehaviour
 
     [Header("Gizmos Parameters")]
     public bool showDetectionGizmos = true;
+    public bool showAttackGizmos = true;
     public float detectionRadius;
     public float followRadius;
     public Transform DetectionPositionSphere;
@@ -48,7 +49,7 @@ public class EnemyBasic : MonoBehaviour
 
     public bool PlayerDetected { get; internal set; }
     public bool PlayerFollowed { get; internal set; }
-    public bool PlayerInRange { get; internal set; } //is equal to all playerrangss together
+    public bool PlayerInMeleeRange { get; internal set; } //is equal to all playerrangss together
     public bool PlayerInRange1 { get; internal set; }
     public bool PlayerInRange2 { get; internal set; }
     public bool PlayerInRange3 { get; internal set; }
@@ -95,49 +96,47 @@ public class EnemyBasic : MonoBehaviour
         if (Player.transform.position.x > rb.transform.position.x) { playerDirection = 1; } else { playerDirection = -1; }
         
 
-
-        //In attack Range Player
-        var collider = Physics2D.OverlapCircle(Attack1.position, attack1Range, targetLayer);
-        PlayerInRange1 = collider != null;
-
-        if (PlayerInRange1 && Time.time >= nextAttackTime && canAttack && attack1Miss < randValue)
+        if(PlayerDetected)
         {
-            animator.Play("Attack1");
-            nextAttackTime = Time.time + attack1Cooldown;
-            canAttack = false;
+
+            //In attack Range Player
+            var collider = Physics2D.OverlapCircle(Attack1.position, attack1Range, targetLayer);
+            PlayerInRange1 = collider != null;
+
+            if (PlayerInRange1 && Time.time >= nextAttackTime && canAttack && attack1Miss < randValue)
+            {
+                animator.Play("Attack1");
+                nextAttackTime = Time.time + attack1Cooldown;
+                canAttack = false;
+            }
+
+            collider = Physics2D.OverlapCircle(Attack2.position, attack2Range, targetLayer);
+            PlayerInRange2 = collider != null;
+            if (PlayerInRange2 && Time.time >= nextAttackTime && canAttack && attack2Chance > randValue)
+            {
+                animator.Play("Attack2");
+                nextAttackTime = Time.time + attack1Cooldown;
+                canAttack = false;
+            }
+            collider = Physics2D.OverlapCircle(Attack3.position, attack3Range, targetLayer);
+            PlayerInRange3 = collider != null;
+            if (PlayerInRange3 && Time.time >= nextAttackTime && canAttack && attack3Chance > randValue)
+            {
+                animator.Play("Attack3");
+                nextAttackTime = Time.time + attack1Cooldown;
+                canAttack = false;
+            }
         }
 
-        collider = Physics2D.OverlapCircle(Attack2.position, attack2Range, targetLayer);
-        PlayerInRange2 = collider != null;
-        if (PlayerInRange2 && Time.time >= nextAttackTime && canAttack && attack2Chance > randValue)
-        {
-            animator.Play("Attack2");
-            nextAttackTime = Time.time + attack1Cooldown;
-            canAttack = false;
-        }
-        collider = Physics2D.OverlapCircle(Attack3.position, attack2Range, targetLayer);
-        PlayerInRange3 = collider != null;
-        if (PlayerInRange3 && Time.time >= nextAttackTime && canAttack && attack3Chance > randValue)
-        {
-            animator.Play("Attack3");
-            nextAttackTime = Time.time + attack1Cooldown;
-            canAttack = false;
-        }
-
-        PlayerInRange = PlayerInRange1 || PlayerInRange2 || PlayerInRange3;
+        PlayerInMeleeRange = PlayerInRange1 || PlayerInRange2;  //if player in melee range following isnt activated as to not run while being right in front
 
         //detection and follow
         var detection = Physics2D.OverlapCircle(DetectionPositionSphere.position, detectionRadius, targetLayer);
         PlayerDetected = detection != null;
-        if (PlayerDetected && !PlayerInRange) //if !playerdetected then it doesnt follow, if it is detected but outside of attack range (follows), if inside attack range chance to follow
+        if (PlayerDetected && !PlayerInMeleeRange || currentHealth < maxHealth) //if !playerdetected then it doesnt follow, if it is detected but outside of attack range (follows), if inside attack range chance to follow
         {
-            // OnPlayerDetected.Invoke(detection.gameObject);
             animator.SetBool("isFollowing", true);
-        }
-
-        if(currentHealth < maxHealth)
-        {
-           animator.SetBool("isFollowing", true);
+            PlayerDetected = true;
         }
         //stop follow
         var follow = Physics2D.OverlapCircle(DetectionPositionSphere.position, followRadius, targetLayer);
@@ -145,6 +144,7 @@ public class EnemyBasic : MonoBehaviour
         if (PlayerFollowed == false)
         {
             animator.SetBool("isFollowing", false);
+            PlayerDetected = false;
 
         }
 
@@ -176,26 +176,37 @@ public class EnemyBasic : MonoBehaviour
 
     }
    
-    
+    //Gizmos
     private void OnDrawGizmosSelected()
     {
         if (showDetectionGizmos)
         {
-            Gizmos.color = new Color(1, 1, 0, 0.5f);
+            Gizmos.color = new Color(1, 1, 0, 0.4f);
             Gizmos.DrawWireSphere(DetectionPositionSphere.position, detectionRadius);
-            Gizmos.color = new Color(0, 1, 0, 0.5f);
+            Gizmos.color = new Color(0, 1, 0, 0.4f);
             Gizmos.DrawWireSphere(DetectionPositionSphere.position, followRadius);
-        }
 
-        Gizmos.color = new Color(1, 0, 0, 0.5f);
-        Gizmos.DrawWireSphere(Attack1.position, attack1Range);
-        Gizmos.color = new Color(1, 0.5f, 0, 0.5f);
-        Gizmos.DrawWireSphere(Attack2.position, attack2Range);
-        Gizmos.color = new Color(1, 1, 0, 0.5f);
-        Gizmos.DrawWireSphere(Attack3.position, attack3Range);
+        }
+        AttackGizmos();
 
     }
-    
+    private void OnDrawGizmos()
+    {
+        if (showAttackGizmos)
+        {
+            AttackGizmos();
+        }
+    }
+    private void AttackGizmos()
+    {
+        Gizmos.color = new Color(1, 0, 0, 0.7f);
+        Gizmos.DrawWireSphere(Attack1.position, attack1Range);
+        Gizmos.color = new Color(1, 0.5f, 0, 0.7f);
+        Gizmos.DrawWireSphere(Attack2.position, attack2Range);
+        Gizmos.color = new Color(1, 0, 0.5f, 0.7f);
+        Gizmos.DrawWireSphere(Attack3.position, attack3Range);
+    }
+
     public void TakeDamage(int damage)
     {
         if (!isDead)  

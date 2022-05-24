@@ -15,10 +15,9 @@ public class NpcDialogue : Indicator
     public override void Interact()
     {
         // this method is meant to be overwritten
-        Debug.Log("Interacting with " + transform.name);
+        base.Interact();
         dialogue.SetActive(true);
         indicator.gameObject.SetActive(false);
-        player.gameObject.GetComponent<PlayerBasic>().maxBerries = 2;
     }
 
 }

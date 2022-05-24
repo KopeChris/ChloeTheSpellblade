@@ -15,6 +15,9 @@ public class PlayerBasic : MonoBehaviour
     public int maxMana;
     public int manaCost;
 
+    public int berries=2;
+    public int maxBerries=2;
+
     public int playerCoin=0;
 
     [SerializeField]
@@ -99,8 +102,6 @@ public class PlayerBasic : MonoBehaviour
     private float healBufferCounter;
     private float castBufferCounter;
 
-    public int berries=2;
-    public int maxBerries=2;
 
     public static float positionX;
     public static float positionY;
@@ -134,14 +135,14 @@ public class PlayerBasic : MonoBehaviour
 
     //to jump off platforms
     bool ignorePlatformsCoroutineIsRunning;
-    int playerLayer, platformsLayer, enemiesLayer, collisionBlockerLayer;
-    public GameObject groundCollider;
+    int playerLayer, platformsLayer, enemiesLayer, enemyCollisionBlocker, playerCollisionBlocker, enemyProjectile;
+    public GameObject platformCollider;
     IEnumerator IgnorePlatforms()
     {
         ignorePlatformsCoroutineIsRunning = true;
-        groundCollider.SetActive(false);
+        platformCollider.SetActive(false);
         yield return new WaitForSeconds(0.24f);
-        groundCollider.SetActive(true);
+        platformCollider.SetActive(true);
         ignorePlatformsCoroutineIsRunning = false;
     }
 
@@ -154,7 +155,9 @@ public class PlayerBasic : MonoBehaviour
         playerLayer = LayerMask.NameToLayer("Player");
         platformsLayer = LayerMask.NameToLayer("Platforms");
         enemiesLayer = LayerMask.NameToLayer("Enemies");
-        collisionBlockerLayer = LayerMask.NameToLayer("CollisionBlocker");
+        enemyCollisionBlocker = LayerMask.NameToLayer("EnemyCollisionBlocker");
+        playerCollisionBlocker = LayerMask.NameToLayer("PlayerCollisionBlocker");
+        enemyProjectile = LayerMask.NameToLayer("ProjectileEnemies");
 
         capsuleColliderSize = cc.size;
         InvincibleFunction(false);
@@ -170,12 +173,12 @@ public class PlayerBasic : MonoBehaviour
     void Update()
     {
         Input();
-        
+        /*
         if(isInvincible && actionInv)
         { actionInv = false;  InvincibleFunction(true);}
         if(!isInvincible && actionInv) 
         { actionInv = false;  InvincibleFunction(false);}
-
+        */
         animator.SetFloat("speedParameter", Mathf.Abs(rb.velocity.x));
         animator.SetFloat("yParameter", rb.velocity.y);
         if (isGrounded) { animator.SetBool("isGrounded", true); }
@@ -463,7 +466,7 @@ public class PlayerBasic : MonoBehaviour
         playerCoin -= coin;
     }
 
-    public void TakeDamage(int damage, int pushForce)
+    public void TakeDamage(int damage, float pushForce)
     {
         if(!isInvincible && !isDead)
         {
@@ -529,18 +532,19 @@ public class PlayerBasic : MonoBehaviour
     }
     
 
-    private void InvincibleFunction(bool invincible)        //playerLayer, platformsLayer, enemiesLayer, collisionBlockerLayer
+    public void InvincibleFunction(bool invincible)        //playerLayer, platformsLayer, enemiesLayer, collisionBlockerLayer
     {
         Physics2D.IgnoreLayerCollision(playerLayer, enemiesLayer, invincible);
-        Physics2D.IgnoreLayerCollision(playerLayer, collisionBlockerLayer, invincible);
-        Physics2D.IgnoreLayerCollision(enemiesLayer, collisionBlockerLayer, invincible);
+        Physics2D.IgnoreLayerCollision(playerLayer, enemyCollisionBlocker, invincible);
+        Physics2D.IgnoreLayerCollision(playerLayer, enemyProjectile, invincible);
+        Physics2D.IgnoreLayerCollision(playerCollisionBlocker, enemiesLayer, invincible);
+        Physics2D.IgnoreLayerCollision(playerCollisionBlocker, enemyCollisionBlocker, invincible);
+        Physics2D.IgnoreLayerCollision(playerCollisionBlocker, enemyProjectile, invincible);
         isInvincible = invincible;
     }
-    private void notInvincible()
+    public void notInvincible()
     {
-        Physics2D.IgnoreLayerCollision(playerLayer, enemiesLayer, false);
-        Physics2D.IgnoreLayerCollision(playerLayer, collisionBlockerLayer, false);
-        Physics2D.IgnoreLayerCollision(enemiesLayer, collisionBlockerLayer, false);
+        InvincibleFunction(false);
         isInvincible = false;
     }
     void canNotJump()
