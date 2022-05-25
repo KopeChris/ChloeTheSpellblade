@@ -10,15 +10,17 @@ public class EnemyBasic : MonoBehaviour
     public SpriteRenderer sprite;
     public Animator animator;
     public HealthBar healthBar;
-    public GameObject Player;
+    GameObject Player;
     public int enemyCoin;
     public int maxHealth = 100;
     public int currentHealth;
 
     public float speed=7;
     //to create the push function
-    private Rigidbody2D rb;
-    private Vector2 newVelocity;
+    [HideInInspector]
+    public Rigidbody2D rb;
+    [HideInInspector]
+    public Vector2 newVelocity;
     private Vector2 newForce;
 
     public LayerMask targetLayer;
@@ -27,7 +29,7 @@ public class EnemyBasic : MonoBehaviour
     [Header("Attacks")]
     public bool canAttack;
     public bool AttackPlayer;
-    public float attack1Cooldown = 3.0f;
+    public float cooldown = 2.0f;
     public float attack1Range = 1;
     public float attack2Range = 1;
     public float attack3Range = 1;
@@ -36,6 +38,8 @@ public class EnemyBasic : MonoBehaviour
     public float attack3Chance;
 
     float randValue;
+    float randValue2;
+    float randCooldown;
     private float nextAttackTime = 0f;
 
     [Header("Gizmos Parameters")]
@@ -87,11 +91,11 @@ public class EnemyBasic : MonoBehaviour
         currentHealth = maxHealth;
         healthBar.SetMaxHealth(maxHealth);
 
-        
+        Player = GameObject.FindGameObjectWithTag("Player");
+
         InvokeRepeating("RandValue", 0, 2);
     }
 
-    // Update is called once per frame
     void Update()
     {
         if (rb.velocity.x > 0) { facingRight = true; facingDirection = 1; } else { facingRight = false; facingDirection = -1; }     //facing depends on x movement direction
@@ -108,7 +112,7 @@ public class EnemyBasic : MonoBehaviour
             if (PlayerInRange1 && Time.time >= nextAttackTime && canAttack && attack1Miss < randValue)
             {
                 animator.Play("Attack1");
-                nextAttackTime = Time.time + attack1Cooldown;
+                nextAttackTime = Time.time + randCooldown;
                 canAttack = false;
             }
 
@@ -117,7 +121,7 @@ public class EnemyBasic : MonoBehaviour
             if (PlayerInRange2 && Time.time >= nextAttackTime && canAttack && attack2Chance > randValue)
             {
                 animator.Play("Attack2");
-                nextAttackTime = Time.time + attack1Cooldown;
+                nextAttackTime = Time.time + randCooldown;
                 canAttack = false;
             }
             collider = Physics2D.OverlapCircle(Attack3.position, attack3Range, targetLayer);
@@ -125,7 +129,7 @@ public class EnemyBasic : MonoBehaviour
             if (PlayerInRange3 && Time.time >= nextAttackTime && canAttack && attack3Chance > randValue)
             {
                 animator.Play("Attack3");
-                nextAttackTime = Time.time + attack1Cooldown;
+                nextAttackTime = Time.time + randCooldown;
                 canAttack = false;
             }
         }
@@ -161,10 +165,16 @@ public class EnemyBasic : MonoBehaviour
 
     void FixedUpdate()
     {
-
+        //friction
         newForce.Set(50, 0.0f);
         if (rb.velocity.x > 0.001) { rb.AddForce(-newForce, ForceMode2D.Force); }
         if (rb.velocity.x < -0.001) { rb.AddForce(newForce, ForceMode2D.Force); }
+
+        if(Mathf.Abs(rb.velocity.x) <0.1)
+        {
+            newVelocity.Set(0, rb.velocity.y); //y = 0 in the original slope code
+            rb.velocity = newVelocity;
+        }
 
     }
     void Death()
@@ -175,14 +185,17 @@ public class EnemyBasic : MonoBehaviour
         //Player.GetComponent<PlayerBasic>().GetCoin(enemyCoin);
 
         //destroy all children except first
+        /*
         for (var i = rb.transform.childCount - 1; i >= 1; i--)
         {
             Object.Destroy(rb.transform.GetChild(i).gameObject,5f);
         }
-        Destroy(GetComponent<CapsuleCollider2D>(),1f);
-        Destroy(GetComponent<EnemyBasic>(),5f);
-        Destroy(this.gameObject, 5f);
+        */
+        //Destroy(GetComponent<EnemyBasic>(),5f);
 
+        Object.Destroy(rb.transform.GetChild(rb.transform.childCount-1).gameObject, 1f);    //destroys collision block
+        Destroy(GetComponent<CapsuleCollider2D>(),1f);
+        Destroy(this.gameObject, 5f);
         
     }
    
@@ -228,7 +241,7 @@ public class EnemyBasic : MonoBehaviour
             //AudioManager.instance.PlayHurt();
             CameraShake.shake = true;
 
-            if (currentHealth > 0) { StartCoroutine(FlashWhite()); StopTime(0.05f); }
+            if (currentHealth > 0) { StartCoroutine(FlashWhite()); StopTime(0.3f); }      // hitstop stop time when hit
 
 
             if (CanGetStunned == true && currentHealth >= 0)
@@ -272,5 +285,7 @@ public class EnemyBasic : MonoBehaviour
     void RandValue()
     {
         randValue = Random.value;
+        randValue2 = Random.Range(0.5f, 1.5f);
+        randCooldown = randValue2 * cooldown;
     }
 }

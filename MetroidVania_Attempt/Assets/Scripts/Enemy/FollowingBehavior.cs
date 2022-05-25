@@ -13,13 +13,18 @@ public class FollowingBehavior : StateMachineBehaviour
     {
         playerPos = GameObject.FindGameObjectWithTag("Player").transform;
         animator.gameObject.GetComponent<EnemyBasic>().canAttack = true;
+        
     }
 
     // Update
     override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
         //move towards player
-        animator.transform.position = Vector2.MoveTowards(animator.transform.position, playerPos.position, animator.gameObject.GetComponent<EnemyBasic>().speed * Time.deltaTime);
+        // animator.transform.position = Vector2.MoveTowards(animator.transform.position, playerPos.position, animator.gameObject.GetComponent<EnemyBasic>().speed * Time.deltaTime);
+        animator.GetComponent<EnemyBasic>().newVelocity.Set(animator.GetComponent<EnemyBasic>().speed * animator.GetComponent<EnemyBasic>().playerDirection, animator.GetComponent<EnemyBasic>().rb.velocity.y); //y = 0 in the original slope code
+        animator.GetComponent<EnemyBasic>().rb.velocity = animator.GetComponent<EnemyBasic>().newVelocity;
+
+        //Debug.Log(Time.deltaTime);
 
         //Flip towards player
         if ((playerPos.position.x < animator.transform.position.x) && facingRight)

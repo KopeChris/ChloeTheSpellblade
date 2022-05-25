@@ -311,7 +311,6 @@ MonoBehaviour:
   attackDamage: 20
   pushForce: 10
   rb: {fileID: 1850454574158897939}
-  Player: {fileID: 0}
 --- !u!70 &1850454574056206317
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -373,7 +372,6 @@ GameObject:
   - component: {fileID: 1850454574158898153}
   - component: {fileID: 1850454574158898156}
   - component: {fileID: 1850454574158897938}
-  - component: {fileID: 1850454574158897937}
   - component: {fileID: 1850454574158897936}
   m_Layer: 8
   m_Name: Enemy
@@ -531,21 +529,26 @@ MonoBehaviour:
   sprite: {fileID: 1850454574158898158}
   animator: {fileID: 1850454574158898156}
   healthBar: {fileID: 1850454574806429838}
-  Player: {fileID: 0}
   enemyCoin: 10
   maxHealth: 100
   currentHealth: 0
+  speed: 7
+  rb: {fileID: 0}
+  newVelocity: {x: 0, y: 0}
   targetLayer:
     serializedVersion: 2
     m_Bits: 128
+  canAttack: 0
+  AttackPlayer: 0
   attack1Cooldown: 2
   attack1Range: 3.3
   attack2Range: 3.4
   attack3Range: 6.68
-  attack1Miss: 0.2
+  attack1Miss: 0
   attack2Chance: 0.7
   attack3Chance: 0.5
   showDetectionGizmos: 1
+  showAttackGizmos: 1
   detectionRadius: 12
   followRadius: 40
   DetectionPositionSphere: {fileID: 1850454575521893507}
@@ -557,20 +560,6 @@ MonoBehaviour:
   playerDirection: 0
   CanGetStunned: 1
   hurtSound: {fileID: 0}
---- !u!114 &1850454574158897937
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1850454574158898155}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d997bb71b435bfd409f4f5598ef69dc5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  charcter: {fileID: 1850454574158898153}
-  blockCollider: {fileID: 1850454575028900120}
 --- !u!114 &1850454574158897936
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -712,7 +701,6 @@ MonoBehaviour:
   attackDamage: 10
   pushForce: 5
   rb: {fileID: 1850454574158897939}
-  Player: {fileID: 0}
 --- !u!58 &1850454574246198354
 CircleCollider2D:
   m_ObjectHideFlags: 0

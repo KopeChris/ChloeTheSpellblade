@@ -15,9 +15,13 @@ PrefabInstance:
       propertyPath: Player
       value: 
       objectReference: {fileID: 7454119504127863917, guid: b204017af7ec7ad45ad868f854259375, type: 3}
+    - target: {fileID: 1850454574158897938, guid: b8d99bbf1d520e3408dd2d824096421c, type: 3}
+      propertyPath: showAttackGizmos
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1850454574158898155, guid: b8d99bbf1d520e3408dd2d824096421c, type: 3}
       propertyPath: m_Name
-      value: GoblinEnemy Variant
+      value: Goblin Enemy
       objectReference: {fileID: 0}
     - target: {fileID: 1850454574158898156, guid: b8d99bbf1d520e3408dd2d824096421c, type: 3}
       propertyPath: m_Controller
@@ -29,11 +33,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1850454574158898157, guid: b8d99bbf1d520e3408dd2d824096421c, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: -363.9
       objectReference: {fileID: 0}
     - target: {fileID: 1850454574158898157, guid: b8d99bbf1d520e3408dd2d824096421c, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 17.7
       objectReference: {fileID: 0}
     - target: {fileID: 1850454574158898157, guid: b8d99bbf1d520e3408dd2d824096421c, type: 3}
       propertyPath: m_LocalPosition.z

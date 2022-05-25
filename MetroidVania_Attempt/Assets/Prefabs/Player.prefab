@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 140987873}
   - component: {fileID: 140987875}
   - component: {fileID: 140987874}
-  m_Layer: 7
+  m_Layer: 14
   m_Name: Attack 3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -135,7 +135,7 @@ GameObject:
   - component: {fileID: 1080471949}
   - component: {fileID: 1080471951}
   - component: {fileID: 1080471950}
-  m_Layer: 7
+  m_Layer: 14
   m_Name: Attack 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -278,7 +278,6 @@ GameObject:
   - component: {fileID: 7454119504127863914}
   - component: {fileID: 7454119504127863915}
   - component: {fileID: 7454119504127863916}
-  - component: {fileID: 7454119505276187013}
   - component: {fileID: 7454119504127863911}
   - component: {fileID: 1635180678}
   - component: {fileID: 1635180679}
@@ -423,20 +422,6 @@ CapsuleCollider2D:
   m_Offset: {x: -0.38, y: -0.5518116}
   m_Size: {x: 1.01, y: 3.9096825}
   m_Direction: 0
---- !u!114 &7454119505276187013
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7454119504127863917}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d997bb71b435bfd409f4f5598ef69dc5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  charcter: {fileID: 7454119504127863916}
-  blockCollider: {fileID: 7454119505900127040}
 --- !u!114 &7454119504127863911
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -471,7 +456,8 @@ MonoBehaviour:
   noFriction: {fileID: 6200000, guid: a4bdca4b67f40e44b92cd2769f40204e, type: 2}
   fullFriction: {fileID: 6200000, guid: fafd4a3d7955c2f4f913bd7db1e32678, type: 2}
   rollForce: 27
-  iframes: 15
+  rollIframes: 15
+  hurtIseconds: 1.2
   rb: {fileID: 0}
   cc: {fileID: 0}
   attack1Damage: 40
@@ -490,7 +476,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e9242f99ab688b846a421ef2187da285, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  velocityMultiplier: 0.9
+  velocityMultiplier: 0.8
 --- !u!114 &1635180679
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -541,7 +527,7 @@ GameObject:
   - component: {fileID: 7454119504928093199}
   - component: {fileID: 7454119504928093198}
   - component: {fileID: 7454119504928093197}
-  m_Layer: 7
+  m_Layer: 14
   m_Name: Attack 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}

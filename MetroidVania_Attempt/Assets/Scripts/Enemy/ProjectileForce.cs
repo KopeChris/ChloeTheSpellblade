@@ -32,6 +32,4 @@ public class ProjectileForce : MonoBehaviour
         Destroy(this.gameObject);
 
     }
-
-
 }
