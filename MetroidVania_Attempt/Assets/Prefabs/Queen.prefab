@@ -9,7 +9,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2358095478332156939, guid: 383ccbdf4bd8a7a46ad361497e930a03, type: 3}
       propertyPath: m_Name
-      value: NPC
+      value: Queen
       objectReference: {fileID: 0}
     - target: {fileID: 7515967221448090794, guid: 383ccbdf4bd8a7a46ad361497e930a03, type: 3}
       propertyPath: m_Pivot.x
@@ -77,11 +77,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7515967221448090794, guid: 383ccbdf4bd8a7a46ad361497e930a03, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 534.2405
+      value: 597.7
       objectReference: {fileID: 0}
     - target: {fileID: 7515967221448090794, guid: 383ccbdf4bd8a7a46ad361497e930a03, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 6.063202
+      value: 2.33
       objectReference: {fileID: 0}
     - target: {fileID: 7515967221448090794, guid: 383ccbdf4bd8a7a46ad361497e930a03, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -95,5 +95,38 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 2358095478332156942, guid: 383ccbdf4bd8a7a46ad361497e930a03, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 383ccbdf4bd8a7a46ad361497e930a03, type: 3}
+--- !u!1 &1587298370897161543 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2358095478332156939, guid: 383ccbdf4bd8a7a46ad361497e930a03, type: 3}
+  m_PrefabInstance: {fileID: 3944753246120231244}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1298658763
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1587298370897161543}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1ba4b56f77f979648a05bc6c3a9f2c31, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 0}
+  indicator: {fileID: 3944753246001525234}
+  radius: 5
+  dialogue: {fileID: 0}
+--- !u!114 &3944753246001525234 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 200126654, guid: 383ccbdf4bd8a7a46ad361497e930a03, type: 3}
+  m_PrefabInstance: {fileID: 3944753246120231244}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

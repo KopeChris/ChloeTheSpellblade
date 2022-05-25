@@ -17,7 +17,6 @@ public class NpcDialogue : Indicator
         // this method is meant to be overwritten
         base.Interact();
         dialogue.SetActive(true);
-        indicator.gameObject.SetActive(false);
     }
 
 }

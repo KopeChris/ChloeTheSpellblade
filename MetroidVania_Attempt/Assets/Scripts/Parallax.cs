@@ -32,7 +32,7 @@ public class Parallax : MonoBehaviour
         */
         float temp = ((cam.transform.position.x- camStartPosX) * (1 - parallaxEffect));
         float xDist = ((cam.transform.position.x - camStartPosX) * parallaxEffect) + extraXDistance;
-        float yDist = ((cam.transform.position.y - camStartPosY) * parallaxEffect)/10;
+        float yDist = 0;// ((cam.transform.position.y - camStartPosY) * parallaxEffect)/10;
         /*
         if(PlayerBasic.positionY> startPosY + height * parallaxEffect) 
         {

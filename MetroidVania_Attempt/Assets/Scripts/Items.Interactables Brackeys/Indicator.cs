@@ -8,7 +8,7 @@ public class Indicator : MonoBehaviour
     public float radius = 3f;
     float startRadius;
 
-    private void Awake()
+    private void Start()
     {
         startRadius = radius;
     }
@@ -35,6 +35,8 @@ public class Indicator : MonoBehaviour
     {
         // this method is meant to be overwritten
         Debug.Log("Interacting with " + transform.name);
+
+        indicator.gameObject.SetActive(false);
     }
 
     private void OnDrawGizmosSelected()

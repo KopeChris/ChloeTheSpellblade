@@ -10,11 +10,12 @@ public class Dialogue : MonoBehaviour
     public bool repeatedSpeech;
 
     public string[] lines;
+    [Range(0.0f, 1f)]
     public float textSpeed;
     public int index;
 
     bool asleep;
-
+    /*
     private void Awake()
     {
         if(!asleep)
@@ -24,40 +25,47 @@ public class Dialogue : MonoBehaviour
         }
         index = 0;
     }
-    
+    */
     private void OnEnable()
     {//if i had these things in start it wouldnt work
         textComponent.text = string.Empty;
         StartDialogue();
+        Debug.Log("onEnable");
     }
 
     
     void StartDialogue()
     {
-        StartCoroutine(TypeLine());
+        StartCoroutine(TypeCharacter());
     }
 
-    IEnumerator TypeLine()
+    IEnumerator TypeCharacter()
     {
         foreach(char c  in lines[index].ToCharArray())
         {
             textComponent.text += c;
-            yield return new WaitForSeconds(textSpeed);
+            yield return new WaitForSeconds((0.27f-0.27f *textSpeed));
+            // AudioManager.instance.PlayPlayerHurt();      Play sound for each character typed
         }
+        //Line Ends
+        yield return new WaitForSeconds(0.4f * textSpeed);
+        NextLine();
     }
 
     void Update()
     {
-        if (Input.GetButtonDown("Jump") || Input.GetButtonDown("Interact"))
+        if (Input.GetButtonDown("Jump") || Input.GetButtonDown("Interact"))     //change line
         {
+            
             if (textComponent.text == lines[index])
             {
                 NextLine();
             }
             else
             {
-                StopAllCoroutines();
+                StopAllCoroutines();                    
                 textComponent.text = lines[index];
+                
             }
         }
     }
@@ -67,7 +75,7 @@ public class Dialogue : MonoBehaviour
         {
             index++; 
             textComponent.text=string.Empty;
-            StartCoroutine(TypeLine());
+            StartCoroutine(TypeCharacter());
         }
         else //endDialogue
         {

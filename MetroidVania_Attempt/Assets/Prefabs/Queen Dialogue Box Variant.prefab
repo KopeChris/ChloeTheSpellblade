@@ -9,7 +9,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 6288679680404333501, guid: c54885e284adfff4aa2b4b122843e519, type: 3}
       propertyPath: m_Name
-      value: Dialogue Box
+      value: Queen Dialogue Box Variant
       objectReference: {fileID: 0}
     - target: {fileID: 6288679680404333502, guid: c54885e284adfff4aa2b4b122843e519, type: 3}
       propertyPath: m_Pivot.x

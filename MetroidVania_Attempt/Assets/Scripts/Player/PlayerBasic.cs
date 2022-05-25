@@ -151,7 +151,7 @@ public class PlayerBasic : MonoBehaviour
         capsuleColliderSize = cc.size;
         InvincibleFunction(false);
 
-        currentHealth = maxHealth;
+        //currentHealth = maxHealth;
         healthBar.SetMaxHealth(maxHealth);
         mana = maxMana;
         manaBar.SetMaxMana(maxMana);
@@ -190,6 +190,8 @@ public class PlayerBasic : MonoBehaviour
         newForce.Set(50, 0.0f);
         if (rb.velocity.x > 0.001) { rb.AddForce(-newForce, ForceMode2D.Force); }
         if (rb.velocity.x < -0.001) { rb.AddForce(newForce, ForceMode2D.Force); }
+
+        if (Mathf.Abs(rb.velocity.y) >150) { TakeDamage(maxHealth,0); }
     }
     private void Input() 
     {
@@ -479,7 +481,7 @@ public class PlayerBasic : MonoBehaviour
                 isDead = true;
                 animator.SetBool("isDead", true);
                 LoseCoin(playerCoin);
-                this.enabled = false;
+                //this.enabled = false;
             }
 
             StartCoroutine(Flash());

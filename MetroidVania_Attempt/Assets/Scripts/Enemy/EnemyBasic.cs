@@ -33,8 +33,11 @@ public class EnemyBasic : MonoBehaviour
     public float attack1Range = 1;
     public float attack2Range = 1;
     public float attack3Range = 1;
+    [Range(0.0f, 1f)]
     public float attack1Miss;
+    [Range(0.0f, 1f)]
     public float attack2Chance;
+    [Range(0.0f, 1f)]
     public float attack3Chance;
 
     float randValue;
@@ -175,7 +178,7 @@ public class EnemyBasic : MonoBehaviour
             newVelocity.Set(0, rb.velocity.y); //y = 0 in the original slope code
             rb.velocity = newVelocity;
         }
-
+        
     }
     void Death()
     {
@@ -241,8 +244,9 @@ public class EnemyBasic : MonoBehaviour
             //AudioManager.instance.PlayHurt();
             CameraShake.shake = true;
 
-            if (currentHealth > 0) { StartCoroutine(FlashWhite()); StopTime(0.3f); }      // hitstop stop time when hit
+            StopTime(0.1f);                                                 // hitstop stop time when hit
 
+            if (currentHealth > 0) { StartCoroutine(FlashWhite());}      
 
             if (CanGetStunned == true && currentHealth >= 0)
             {
