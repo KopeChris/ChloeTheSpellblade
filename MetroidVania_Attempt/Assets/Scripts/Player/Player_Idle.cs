@@ -12,7 +12,6 @@ public class Player_Idle : StateMachineBehaviour
         PlayerBasic.isRolling = false;
         PlayerBasic.canAction = true;
         PlayerBasic.canMove = true;
-        PlayerBasic.isInvincible = false;
     }
 
     override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)

@@ -80,7 +80,9 @@ public class PlayerBasic : MonoBehaviour
 
     private Vector2 slopeNormalPerp;
 
+    [HideInInspector]
     public Rigidbody2D rb;
+    [HideInInspector]
     public CapsuleCollider2D cc;
 
     //stuff to do with the attack
@@ -111,28 +113,13 @@ public class PlayerBasic : MonoBehaviour
     SpriteRenderer sprite;
     public IEnumerator Flash()
     {
-        sprite.color = new Color(1, 0.5f, 0.5f, 1);
-        yield return new WaitForSeconds(0.083f);
-        sprite.color = Color.white;
-        yield return new WaitForSeconds(0.1f);
-        sprite.color = new Color(1, 1, 0.5f, 0.4f);
-        yield return new WaitForSeconds(0.1f);
-        sprite.color = Color.white;
-        yield return new WaitForSeconds(0.1f);
-        sprite.color = new Color(1, 1, 1, 0.4f);
-        yield return new WaitForSeconds(0.1f);
-        sprite.color = Color.white;
-        sprite.color = new Color(1, 1, 1, 0.4f);
-        yield return new WaitForSeconds(0.1f);
-        sprite.color = Color.white;
-        yield return new WaitForSeconds(0.1f);
-        sprite.color = new Color(1, 1, 1, 0.4f);
-        yield return new WaitForSeconds(0.1f);
-        sprite.color = Color.white;
-        yield return new WaitForSeconds(0.1f);
-        sprite.color = new Color(1, 1, 1, 0.4f);
-        yield return new WaitForSeconds(0.1f);
-        sprite.color = Color.white;
+        for (float i = 0; i < hurtIseconds; i += 0.2f)
+        {
+            sprite.color = new Color(1, 1, 1, 0.4f);
+            yield return new WaitForSeconds(0.1f);
+            sprite.color = Color.white; 
+            yield return new WaitForSeconds(0.1f);
+        }
     }
 
     //to jump off platforms

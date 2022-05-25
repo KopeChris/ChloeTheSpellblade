@@ -2114,6 +2114,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 267094746}
     m_Modifications:
+    - target: {fileID: 3433733777897537636, guid: cb42babdd9d46e449ae4fb1e7bdf7e9d, type: 3}
+      propertyPath: speed
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 3433733777897537636, guid: cb42babdd9d46e449ae4fb1e7bdf7e9d, type: 3}
+      propertyPath: cooldown
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 3433733777897537691, guid: cb42babdd9d46e449ae4fb1e7bdf7e9d, type: 3}
       propertyPath: m_RootOrder
       value: 6
@@ -133160,18 +133168,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 140987872, guid: b204017af7ec7ad45ad868f854259375, type: 3}
-      propertyPath: m_Layer
-      value: 14
-      objectReference: {fileID: 0}
-    - target: {fileID: 1080471948, guid: b204017af7ec7ad45ad868f854259375, type: 3}
-      propertyPath: m_Layer
-      value: 14
-      objectReference: {fileID: 0}
-    - target: {fileID: 1635180678, guid: b204017af7ec7ad45ad868f854259375, type: 3}
-      propertyPath: velocityMultiplier
-      value: 0.8
-      objectReference: {fileID: 0}
     - target: {fileID: 7454119504127863911, guid: b204017af7ec7ad45ad868f854259375, type: 3}
       propertyPath: manaBar
       value: 
@@ -133180,18 +133176,6 @@ PrefabInstance:
       propertyPath: healthBar
       value: 
       objectReference: {fileID: 1716297223}
-    - target: {fileID: 7454119504127863911, guid: b204017af7ec7ad45ad868f854259375, type: 3}
-      propertyPath: rollIframes
-      value: 15
-      objectReference: {fileID: 0}
-    - target: {fileID: 7454119504127863911, guid: b204017af7ec7ad45ad868f854259375, type: 3}
-      propertyPath: hurtISeconds
-      value: 1.2
-      objectReference: {fileID: 0}
-    - target: {fileID: 7454119504127863911, guid: b204017af7ec7ad45ad868f854259375, type: 3}
-      propertyPath: hurtIseconds
-      value: 1.2
-      objectReference: {fileID: 0}
     - target: {fileID: 7454119504127863912, guid: b204017af7ec7ad45ad868f854259375, type: 3}
       propertyPath: m_RootOrder
       value: 16
@@ -133240,12 +133224,7 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
-    - target: {fileID: 7454119504928093200, guid: b204017af7ec7ad45ad868f854259375, type: 3}
-      propertyPath: m_Layer
-      value: 14
-      objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 7454119505276187013, guid: b204017af7ec7ad45ad868f854259375, type: 3}
+    m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b204017af7ec7ad45ad868f854259375, type: 3}
 --- !u!1001 &7582227779629236971
 PrefabInstance:
