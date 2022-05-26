@@ -8,6 +8,10 @@ public class FireBall : MonoBehaviour
     Vector2 newForce;
     public Rigidbody2D rb;
 
+    public float forceX;
+    public float forceY;
+
+
     
 
     void OnEnable()
@@ -15,7 +19,7 @@ public class FireBall : MonoBehaviour
         newVelocity.Set(0.0f, 0.0f);
         rb.velocity = newVelocity;
 
-        newForce.Set(20* PlayerBasic.facingDirection, 1);
+        newForce.Set(forceX * PlayerBasic.facingDirection, forceY+3*forceY * UnityEngine.Input.GetAxis("Vertical"));
         rb.AddForce(newForce, ForceMode2D.Impulse);
 
     }

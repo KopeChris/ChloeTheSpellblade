@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Projectile : MonoBehaviour
+public class PlayerProjectile : MonoBehaviour
 {
 
     public int attackDamage;
@@ -42,9 +42,11 @@ public class Projectile : MonoBehaviour
             }
         }*/
 
-        if (collision.CompareTag(detectionTag))
+        if (collision.CompareTag(detectionTag) || collision.gameObject.layer == LayerMask.NameToLayer("Ground"))
         {
-            collision.GetComponent<EnemyBasic>().TakeDamage(attackDamage);
+            if(collision.CompareTag(detectionTag))
+                collision.GetComponent<EnemyBasic>().TakeDamage(attackDamage);
+
             Destroy(this.gameObject);
         }
     }
