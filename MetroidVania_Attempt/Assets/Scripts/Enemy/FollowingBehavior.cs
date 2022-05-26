@@ -21,7 +21,9 @@ public class FollowingBehavior : StateMachineBehaviour
     {
         //move towards player
         // animator.transform.position = Vector2.MoveTowards(animator.transform.position, playerPos.position, animator.gameObject.GetComponent<EnemyBasic>().speed * Time.deltaTime);
-        animator.GetComponent<EnemyBasic>().newVelocity.Set(animator.GetComponent<EnemyBasic>().speed * animator.GetComponent<EnemyBasic>().playerDirection, animator.GetComponent<EnemyBasic>().rb.velocity.y); //y = 0 in the original slope code
+        animator.GetComponent<EnemyBasic>().newForce.Set(0f, animator.GetComponent<EnemyBasic>().speed/2 * animator.GetComponent<EnemyBasic>().playerDirectionY);
+        animator.GetComponent<EnemyBasic>().rb.AddForce(animator.GetComponent<EnemyBasic>().newForce, ForceMode2D.Force);
+        animator.GetComponent<EnemyBasic>().newVelocity.Set(animator.GetComponent<EnemyBasic>().speed * animator.GetComponent<EnemyBasic>().playerDirectionX, animator.GetComponent<EnemyBasic>().rb.velocity.y); //y = 0 in the original slope code
         animator.GetComponent<EnemyBasic>().rb.velocity = animator.GetComponent<EnemyBasic>().newVelocity;
 
         //Debug.Log(Time.deltaTime);

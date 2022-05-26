@@ -21,7 +21,8 @@ public class EnemyBasic : MonoBehaviour
     public Rigidbody2D rb;
     [HideInInspector]
     public Vector2 newVelocity;
-    private Vector2 newForce;
+    [HideInInspector]
+    public Vector2 newForce;
 
     public LayerMask targetLayer;
     //public UnityEvent<GameObject> OnPlayerDetected;
@@ -66,7 +67,8 @@ public class EnemyBasic : MonoBehaviour
 
     public bool facingRight = false;
     public int  facingDirection;
-    public int  playerDirection;
+    public int  playerDirectionX;
+    public int  playerDirectionY;
 
     public bool CanGetStunned = false;
     bool isDead;
@@ -102,10 +104,11 @@ public class EnemyBasic : MonoBehaviour
     void Update()
     {
         if (rb.velocity.x > 0) { facingRight = true; facingDirection = 1; } else { facingRight = false; facingDirection = -1; }     //facing depends on x movement direction
-        if (Player.transform.position.x > rb.transform.position.x) { playerDirection = 1; } else { playerDirection = -1; }
-        
+        if (Player.transform.position.x > rb.transform.position.x) { playerDirectionX = 1; } else { playerDirectionX = -1; }
+        if (Player.transform.position.y > rb.transform.position.y) { playerDirectionY = 1; } else { playerDirectionY = -1; }
+        Debug.Log(PlayerBasic.positionY - rb.transform.position.y);
 
-        if(AttackPlayer && !isDead)
+        if (AttackPlayer && !isDead)
         {
 
             //In attack Range Player
@@ -244,14 +247,14 @@ public class EnemyBasic : MonoBehaviour
             //AudioManager.instance.PlayHurt();
             CameraShake.shake = true;
 
-            StopTime(0.1f);                                                 // hitstop stop time when hit
+            //StopTime(0.1f);                                                 // hitstop stop time when hit
 
             if (currentHealth > 0) { StartCoroutine(FlashWhite());}      
 
             if (CanGetStunned == true && currentHealth >= 0)
             {
                 animator.Play("Hurt");
-                Push(15 * (-playerDirection));
+                Push(15 * (-playerDirectionX));
             }
 
             if (currentHealth <= 0)     // ON DEATH

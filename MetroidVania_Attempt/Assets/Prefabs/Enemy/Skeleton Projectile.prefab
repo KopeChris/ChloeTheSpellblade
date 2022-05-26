@@ -11,6 +11,18 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: -1595807587, guid: ddfb403e3f2b42d468566a7799b561aa, type: 3}
+    - target: {fileID: 7084551953325710481, guid: 9c7e6b5218d0d4c49b7798d2342057a6, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: c4c31eb98b895d7419834f1c6dd762ac, type: 2}
+    - target: {fileID: 7084551953325710482, guid: 9c7e6b5218d0d4c49b7798d2342057a6, type: 3}
+      propertyPath: m_Mass
+      value: 1.23
+      objectReference: {fileID: 0}
+    - target: {fileID: 7084551953325710482, guid: 9c7e6b5218d0d4c49b7798d2342057a6, type: 3}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 6200000, guid: fafd4a3d7955c2f4f913bd7db1e32678, type: 2}
     - target: {fileID: 7084551953325710483, guid: 9c7e6b5218d0d4c49b7798d2342057a6, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -73,7 +85,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7084551953325710487, guid: 9c7e6b5218d0d4c49b7798d2342057a6, type: 3}
       propertyPath: forceX
-      value: 25
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 7084551953325710487, guid: 9c7e6b5218d0d4c49b7798d2342057a6, type: 3}
+      propertyPath: forceY2
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 7084551953325710487, guid: 9c7e6b5218d0d4c49b7798d2342057a6, type: 3}
       propertyPath: m_Enabled

@@ -14,7 +14,15 @@ PrefabInstance:
     - target: {fileID: 7084551953325710481, guid: 9c7e6b5218d0d4c49b7798d2342057a6, type: 3}
       propertyPath: m_Controller
       value: 
-      objectReference: {fileID: 9100000, guid: e070c8d7349f2734f92464d1ce5defde, type: 2}
+      objectReference: {fileID: 9100000, guid: 9c14ca5e2e596e84db5daca10d638ba7, type: 2}
+    - target: {fileID: 7084551953325710482, guid: 9c7e6b5218d0d4c49b7798d2342057a6, type: 3}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 6200000, guid: fafd4a3d7955c2f4f913bd7db1e32678, type: 2}
+    - target: {fileID: 7084551953325710482, guid: 9c7e6b5218d0d4c49b7798d2342057a6, type: 3}
+      propertyPath: m_GravityScale
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7084551953325710483, guid: 9c7e6b5218d0d4c49b7798d2342057a6, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -59,9 +67,25 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7084551953325710484, guid: 9c7e6b5218d0d4c49b7798d2342057a6, type: 3}
+      propertyPath: m_Offset.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7084551953325710484, guid: 9c7e6b5218d0d4c49b7798d2342057a6, type: 3}
+      propertyPath: m_Offset.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7084551953325710485, guid: 9c7e6b5218d0d4c49b7798d2342057a6, type: 3}
       propertyPath: m_Name
       value: Flying Eye Projectile
+      objectReference: {fileID: 0}
+    - target: {fileID: 7084551953325710487, guid: 9c7e6b5218d0d4c49b7798d2342057a6, type: 3}
+      propertyPath: forceY
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7084551953325710487, guid: 9c7e6b5218d0d4c49b7798d2342057a6, type: 3}
+      propertyPath: forceY2
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 7084551953325710493, guid: 9c7e6b5218d0d4c49b7798d2342057a6, type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.x

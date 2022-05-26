@@ -9,6 +9,7 @@ public class ProjectileForce : MonoBehaviour
     public Rigidbody2D rb;
     public int forceX;
     public int forceY;
+    public float forceY2;
     int direction;
     
 
@@ -23,7 +24,7 @@ public class ProjectileForce : MonoBehaviour
         newVelocity.Set(0.0f, 0.0f);
         rb.velocity = newVelocity;
 
-        newForce.Set(direction*(forceX/2f + forceX/2f  * 0.1f * Mathf.Abs((PlayerBasic.positionX - rb.transform.position.x))), forceY+ forceY/2 * 0.3f * (PlayerBasic.positionY - rb.transform.position.y));
+        newForce.Set(direction*(forceX/2f + forceX/2f  * 0.1f * Mathf.Abs((PlayerBasic.positionX - rb.transform.position.x))), forceY+ forceY2 *0.1f* (PlayerBasic.positionY - rb.transform.position.y));
         rb.AddForce(newForce, ForceMode2D.Impulse);
 
     }
