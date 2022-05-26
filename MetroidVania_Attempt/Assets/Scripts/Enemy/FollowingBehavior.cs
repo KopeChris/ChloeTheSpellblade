@@ -6,13 +6,16 @@ public class FollowingBehavior : StateMachineBehaviour
 {
     private Transform playerPos;
     public bool facingRight;
+    EnemyBasic enemy;
+    
 
 
 
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
+        enemy = animator.GetComponent<EnemyBasic>();
         playerPos = GameObject.FindGameObjectWithTag("Player").transform;
-        animator.gameObject.GetComponent<EnemyBasic>().canAttack = true;
+        enemy.canAttack = true;
         
     }
 
@@ -21,10 +24,10 @@ public class FollowingBehavior : StateMachineBehaviour
     {
         //move towards player
         // animator.transform.position = Vector2.MoveTowards(animator.transform.position, playerPos.position, animator.gameObject.GetComponent<EnemyBasic>().speed * Time.deltaTime);
-        animator.GetComponent<EnemyBasic>().newForce.Set(0f, animator.GetComponent<EnemyBasic>().speed/2 * animator.GetComponent<EnemyBasic>().playerDirectionY);
-        animator.GetComponent<EnemyBasic>().rb.AddForce(animator.GetComponent<EnemyBasic>().newForce, ForceMode2D.Force);
-        animator.GetComponent<EnemyBasic>().newVelocity.Set(animator.GetComponent<EnemyBasic>().speed * animator.GetComponent<EnemyBasic>().playerDirectionX, animator.GetComponent<EnemyBasic>().rb.velocity.y); //y = 0 in the original slope code
-        animator.GetComponent<EnemyBasic>().rb.velocity = animator.GetComponent<EnemyBasic>().newVelocity;
+        enemy.newForce.Set(0f, enemy.speed / 4 * enemy.playerDirectionY);
+        enemy.rb.AddForce(enemy.newForce, ForceMode2D.Force);
+        enemy.newVelocity.Set(enemy.speed * enemy.playerDirectionX * 50 * Time.fixedDeltaTime, enemy.rb.velocity.y);//y = 0 in the original slope code
+        enemy.rb.velocity = enemy.newVelocity;
 
         //Debug.Log(Time.deltaTime);
 

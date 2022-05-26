@@ -29,7 +29,7 @@ public class EnemyBasic : MonoBehaviour
 
     [Header("Attacks")]
     public bool canAttack;
-    public bool AttackPlayer;
+    public bool attackPlayer;
     public float cooldown = 2.0f;
     public float attack1Range = 1;
     public float attack2Range = 1;
@@ -71,7 +71,7 @@ public class EnemyBasic : MonoBehaviour
     public int  playerDirectionY;
 
     public bool CanGetStunned = false;
-    bool isDead;
+    public bool isDead;
 
     bool timeWaiting;
 
@@ -107,7 +107,7 @@ public class EnemyBasic : MonoBehaviour
         if (Player.transform.position.x > rb.transform.position.x) { playerDirectionX = 1; } else { playerDirectionX = -1; }
         if (Player.transform.position.y > rb.transform.position.y) { playerDirectionY = 1; } else { playerDirectionY = -1; }
 
-        if (AttackPlayer && !isDead)
+        if (attackPlayer && !isDead)
         {
 
             //In attack Range Player
@@ -147,7 +147,7 @@ public class EnemyBasic : MonoBehaviour
         if (PlayerDetected && !PlayerInMeleeRange || currentHealth < maxHealth) //if !playerdetected then it doesnt follow, if it is detected but outside of attack range (follows), if inside attack range chance to follow
         {
             animator.SetBool("isFollowing", true);
-            AttackPlayer = true;
+            attackPlayer = true;
         }
         //stop follow
         var follow = Physics2D.OverlapCircle(DetectionPositionSphere.position, followRadius, targetLayer);
@@ -155,7 +155,7 @@ public class EnemyBasic : MonoBehaviour
         if (PlayerFollowed == false)
         {
             animator.SetBool("isFollowing", false);
-            AttackPlayer = false;
+            attackPlayer = false;
 
         }
 
