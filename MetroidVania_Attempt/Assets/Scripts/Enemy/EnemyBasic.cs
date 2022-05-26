@@ -106,7 +106,6 @@ public class EnemyBasic : MonoBehaviour
         if (rb.velocity.x > 0) { facingRight = true; facingDirection = 1; } else { facingRight = false; facingDirection = -1; }     //facing depends on x movement direction
         if (Player.transform.position.x > rb.transform.position.x) { playerDirectionX = 1; } else { playerDirectionX = -1; }
         if (Player.transform.position.y > rb.transform.position.y) { playerDirectionY = 1; } else { playerDirectionY = -1; }
-        Debug.Log(PlayerBasic.positionY - rb.transform.position.y);
 
         if (AttackPlayer && !isDead)
         {
