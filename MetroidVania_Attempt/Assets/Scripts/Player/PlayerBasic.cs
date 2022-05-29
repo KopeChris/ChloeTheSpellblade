@@ -85,10 +85,6 @@ public class PlayerBasic : MonoBehaviour
     [HideInInspector]
     public CapsuleCollider2D cc;
 
-    //stuff to do with the attack
-    //public Transform AttackSphere;
-    //public float attack1Range;
-    public int attack1Damage;
 
     
 
@@ -368,7 +364,7 @@ public class PlayerBasic : MonoBehaviour
         if (isOnSlope && canWalkOnSlope && xInput == 0.0f)
         {
             rb.sharedMaterial = fullFriction;
-            newVelocity.Set(0.0f, 0.0f);
+            newVelocity.Set(0.0f, rb.velocity.y);       //used to be (0,0)
             rb.velocity = newVelocity;
         }
         else
