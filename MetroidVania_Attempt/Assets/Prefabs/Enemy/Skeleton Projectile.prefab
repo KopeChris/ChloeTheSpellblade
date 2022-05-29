@@ -85,7 +85,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7084551953325710487, guid: 9c7e6b5218d0d4c49b7798d2342057a6, type: 3}
       propertyPath: forceX
-      value: 30
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 7084551953325710487, guid: 9c7e6b5218d0d4c49b7798d2342057a6, type: 3}
       propertyPath: forceY2
@@ -94,6 +94,10 @@ PrefabInstance:
     - target: {fileID: 7084551953325710487, guid: 9c7e6b5218d0d4c49b7798d2342057a6, type: 3}
       propertyPath: m_Enabled
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7084551953325710487, guid: 9c7e6b5218d0d4c49b7798d2342057a6, type: 3}
+      propertyPath: rotationValue
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7084551953325710493, guid: 9c7e6b5218d0d4c49b7798d2342057a6, type: 3}
       propertyPath: m_Size.x

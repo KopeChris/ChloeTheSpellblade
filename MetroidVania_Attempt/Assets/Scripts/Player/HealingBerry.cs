@@ -6,6 +6,7 @@ public class HealingBerry : MonoBehaviour
 {
     PlayerBasic player;
     public int healAmount;
+    public int manaRestored=45;
 
     private void Awake()
     {
@@ -13,7 +14,7 @@ public class HealingBerry : MonoBehaviour
     }
     private void OnEnable()
     {
-        player.Heal(healAmount);
+        player.Heal(healAmount, manaRestored);
 
     }
 }

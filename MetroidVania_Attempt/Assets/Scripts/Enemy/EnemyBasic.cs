@@ -103,7 +103,7 @@ public class EnemyBasic : MonoBehaviour
 
     void Update()
     {
-        if (rb.velocity.x > 0) { facingRight = true; facingDirection = 1; } else { facingRight = false; facingDirection = -1; }     //facing depends on x movement direction
+        if (rb.velocity.x > 0) {  facingDirection = 1; } else {  facingDirection = -1; }     //facing depends on x movement direction
         if (Player.transform.position.x > rb.transform.position.x) { playerDirectionX = 1; } else { playerDirectionX = -1; }
         if (Player.transform.position.y > rb.transform.position.y) { playerDirectionY = 1; } else { playerDirectionY = -1; }
 
@@ -180,7 +180,12 @@ public class EnemyBasic : MonoBehaviour
             newVelocity.Set(0, rb.velocity.y); //y = 0 in the original slope code
             rb.velocity = newVelocity;
         }
-        
+                                            //increase gravity when fall
+        /*
+        if(rb.velocity.y<-2)
+            rb.gravityScale = 2;
+        */
+
     }
     void Death()
     {

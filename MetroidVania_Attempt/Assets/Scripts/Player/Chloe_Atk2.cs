@@ -9,7 +9,7 @@ public class Chloe_Atk2 : StateMachineBehaviour
     {
         PlayerBasic.canAction = false;
         PlayerBasic.canMove = false;
-        PlayerBasic.nextAttack = false;
+        PlayerBasic.comboAttack = false;
     }
 
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
@@ -24,7 +24,7 @@ public class Chloe_Atk2 : StateMachineBehaviour
         PlayerBasic.canMove = true;
         PlayerBasic.canAction = true;
 
-        if (PlayerBasic.nextAttack)
+        if (PlayerBasic.comboAttack)
             animator.Play("Chloe Atk3");
     }
 

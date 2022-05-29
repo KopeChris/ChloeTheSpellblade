@@ -20,7 +20,6 @@ public class PlayerBasic : MonoBehaviour
 
     public int playerCoin=0;
 
-    [SerializeField]
     public static float movementSpeed = 17;
     [SerializeField]
     private float groundCheckRadius;
@@ -65,11 +64,12 @@ public class PlayerBasic : MonoBehaviour
     [SerializeField]
     public static bool cinematicState = false;
 
-    public static bool nextAttack;
+    public static bool comboAttack;
 
     private bool isGrounded;
     private bool isOnSlope;
-    private bool isJumping;
+    [HideInInspector]
+    public bool isJumping;
     private bool canWalkOnSlope;
     private bool canJump;
     
@@ -186,12 +186,20 @@ public class PlayerBasic : MonoBehaviour
         if (cinematicState) { canAction = false; newVelocity.Set(0.0f, rb.velocity.y); rb.velocity = newVelocity; } //change to for not to slow down y velocity when praying
         else {if(canMove) ApplyMovement(); }
 
-        //tend to go to zero x speed. helps while in air and adds a fake tension
+        //tend to go to zero x speed. helps while in air and adds a fake friction
+        /*
         newForce.Set(50, 0.0f);
-        if (rb.velocity.x > 0.001) { rb.AddForce(-newForce, ForceMode2D.Force); }
-        if (rb.velocity.x < -0.001) { rb.AddForce(newForce, ForceMode2D.Force); }
+        if (rb.velocity.x > 0.2) { rb.AddForce(-newForce, ForceMode2D.Force); }
+        if (rb.velocity.x < -0.2) { rb.AddForce(newForce, ForceMode2D.Force); }
+        */
+        //if (rb.velocity.x < 0.001 || rb.velocity.x > -0.001 && xInput==0) { newVelocity.Set(0.0f, rb.velocity.y); rb.velocity = newVelocity; }
 
         if (Mathf.Abs(rb.velocity.y) >150) { TakeDamage(maxHealth,0); }
+
+        if (rb.velocity.y < -2)             // to make jump feel better and less floaty
+            rb.gravityScale = 15;
+        else
+            rb.gravityScale = 10;
     }
     private void Input() 
     {
@@ -233,7 +241,7 @@ public class PlayerBasic : MonoBehaviour
             attackBufferCounter = bufferTime;
         }
         else { attackBufferCounter -= Time.deltaTime; }
-        if (attackBufferCounter > 0 && canAction && !isRolling && canJump &&!nextAttack)
+        if (attackBufferCounter > 0 && canAction && !isRolling && canJump &&!comboAttack)
         {
             Attack1();
             attackBufferCounter = 0;
@@ -360,6 +368,8 @@ public class PlayerBasic : MonoBehaviour
         if (isOnSlope && canWalkOnSlope && xInput == 0.0f)
         {
             rb.sharedMaterial = fullFriction;
+            newVelocity.Set(0.0f, 0.0f);
+            rb.velocity = newVelocity;
         }
         else
         {
@@ -371,7 +381,7 @@ public class PlayerBasic : MonoBehaviour
     {
         if (isGrounded && !isOnSlope && !isJumping && !isRolling ) //if on straigth ground, not on slope
         {
-            newVelocity.Set(movementSpeed * xInput *50*Time.fixedDeltaTime, rb.velocity.y); //y = 0 in the original slope code
+            newVelocity.Set(movementSpeed * xInput * 50 * Time.fixedDeltaTime, rb.velocity.y); //y = 0 in the original slope code
             rb.velocity = newVelocity;
         }
         else if (isGrounded && isOnSlope && canWalkOnSlope && !isJumping && !isRolling) //If on slope
@@ -397,7 +407,8 @@ public class PlayerBasic : MonoBehaviour
 
 
     }
-        private void Jump()
+    
+    private void Jump()
     {
         animator.SetTrigger("Jump");
         animator.Play("Chloe Jump");
@@ -496,10 +507,12 @@ public class PlayerBasic : MonoBehaviour
 
     }
 
-    public void Heal(int heal)
+    public void Heal(int heal, int manaRestored)
     {
             currentHealth += heal;
             currentHealth = Mathf.Clamp(currentHealth, 0, maxHealth);
+            mana += manaRestored;
+            mana = Mathf.Clamp(mana, 0, maxMana);
             berries--;
     }
 

@@ -4,41 +4,40 @@ using UnityEngine;
 
 public class EnemyHbBillboard : MonoBehaviour
 {
-    public Animator animator;
+    public EnemyBasic enemy;
     bool flipToLeft;
-    bool flipToRigt;
+    bool flipToRight;
 
     private void Start()
     {
-        if(animator.GetBehaviour<FollowingBehavior>().facingRight == true)
+
+        if (enemy.facingRight)
         {
             flipToLeft = true;
         }
 
-        if(animator.GetBehaviour<FollowingBehavior>().facingRight == false)
+        if(!enemy.facingRight)
         {
-            flipToRigt = true;
+            flipToRight = true;
         }
 
     }
-    void LateUpdate()
+    void Update()
     {
-        if(animator.GetBehaviour<FollowingBehavior>().facingRight == false && flipToLeft)
-        {
+        
+        if (!enemy.facingRight && flipToLeft)
+        { 
             transform.Rotate(0.0f, 180.0f, 0.0f);
-            flipToLeft=false;
-            flipToRigt = true;
+            flipToLeft = false;
+            flipToRight = true;
         }
-        if (animator.GetBehaviour<FollowingBehavior>().facingRight == true && flipToRigt)
+        if (enemy.facingRight && flipToRight)
         {
             transform.Rotate(0.0f, 180.0f, 0.0f);
-            flipToRigt = false;
+            flipToRight = false;
             flipToLeft = true;
         }
-
-        if (animator.GetBehaviour<FollowingBehavior>().facingRight == true )
-        {
-            
-        }
+        
     }
+        
 }

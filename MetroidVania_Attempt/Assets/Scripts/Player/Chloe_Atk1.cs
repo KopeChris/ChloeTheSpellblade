@@ -8,7 +8,7 @@ public class Chloe_Atk1 : StateMachineBehaviour
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
         PlayerBasic.canAction = false;
-        PlayerBasic.nextAttack = false;
+        PlayerBasic.comboAttack = false;
 
     }
 
@@ -23,7 +23,7 @@ public class Chloe_Atk1 : StateMachineBehaviour
     {
         PlayerBasic.canMove = true;
         PlayerBasic.canAction = true;
-        if (PlayerBasic.nextAttack)
+        if (PlayerBasic.comboAttack)
             animator.Play("Chloe Atk2");
     }
 

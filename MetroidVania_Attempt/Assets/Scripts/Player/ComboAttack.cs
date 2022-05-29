@@ -17,7 +17,7 @@ public class ComboAttack : MonoBehaviour
     {
         if (UnityEngine.Input.GetKeyDown(KeyCode.I))
         {
-            PlayerBasic.nextAttack = true;
+            PlayerBasic.comboAttack = true;
 
         }
     }

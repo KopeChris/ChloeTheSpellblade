@@ -5,10 +5,7 @@ using UnityEngine;
 public class FollowingBehavior : StateMachineBehaviour
 {
     private Transform playerPos;
-    public bool facingRight;
-    EnemyBasic enemy;
-    
-
+    public EnemyBasic enemy;
 
 
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
@@ -16,10 +13,8 @@ public class FollowingBehavior : StateMachineBehaviour
         enemy = animator.GetComponent<EnemyBasic>();
         playerPos = GameObject.FindGameObjectWithTag("Player").transform;
         enemy.canAttack = true;
-        
     }
 
-    // Update
     override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
         //move towards player
@@ -30,18 +25,17 @@ public class FollowingBehavior : StateMachineBehaviour
         enemy.rb.velocity = enemy.newVelocity;
 
         //Debug.Log(Time.deltaTime);
-
         //Flip towards player
-        if ((playerPos.position.x < animator.transform.position.x) && facingRight)
+        if ((playerPos.position.x < animator.transform.position.x) && enemy.facingRight)
 
         {
-            facingRight = !facingRight;
+            enemy.facingRight = !enemy.facingRight;
             animator.transform.Rotate(0.0f, 180.0f, 0.0f);
 
         }
-        if ((playerPos.position.x > animator.transform.position.x) && !facingRight)
+        if ((playerPos.position.x > animator.transform.position.x) && !enemy.facingRight)
         {
-            facingRight = !facingRight;
+            enemy.facingRight = !enemy.facingRight;
             animator.transform.Rotate(0.0f, 180.0f, 0.0f);
         }
     }

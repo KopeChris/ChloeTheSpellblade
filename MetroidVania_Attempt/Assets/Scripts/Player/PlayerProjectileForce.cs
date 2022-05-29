@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class FireBall : MonoBehaviour
+public class PlayerProjectileForce : MonoBehaviour
 {
     Vector2 newVelocity;
     Vector2 newForce;
@@ -23,6 +23,13 @@ public class FireBall : MonoBehaviour
         rb.AddForce(newForce, ForceMode2D.Impulse);
 
     }
+    private void Update()
+    {
+        if (rb.velocity.y > 2)           
+            rb.gravityScale = 1;
+        else
+            rb.gravityScale = 2;
+    }
 
-    
+
 }
