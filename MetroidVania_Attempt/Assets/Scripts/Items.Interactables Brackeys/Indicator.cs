@@ -5,13 +5,9 @@ public class Indicator : MonoBehaviour
 {
     public Transform player;
     public TextMeshProUGUI indicator;
-    public float radius = 3f;
-    float startRadius;
+    public float radius = 4f;
 
-    private void Start()
-    {
-        startRadius = radius;
-    }
+    
     private void Update()
     {
         float distance = Vector2.Distance(new Vector2(PlayerBasic.positionX,PlayerBasic.positionY), transform.position);
@@ -19,7 +15,7 @@ public class Indicator : MonoBehaviour
         if (distance <= radius)  //indication
         {
             indicator.enabled = true;
-            radius = 2 * startRadius;
+            radius = 8;
         }
         if (distance <= radius && Input.GetButtonDown("Interact"))  //action
         {
@@ -27,7 +23,7 @@ public class Indicator : MonoBehaviour
         }
         if(distance>radius)
         {
-            radius = startRadius;
+            radius = 4;
             indicator.enabled = false;
         }
     }

@@ -190,7 +190,7 @@ public class PlayerBasic : MonoBehaviour
         */
         //if (rb.velocity.x < 0.001 || rb.velocity.x > -0.001 && xInput==0) { newVelocity.Set(0.0f, rb.velocity.y); rb.velocity = newVelocity; }
 
-        if (Mathf.Abs(rb.velocity.y) >150) { TakeDamage(maxHealth,0); }
+        //if (Mathf.Abs(rb.velocity.y) >150) { TakeDamage(maxHealth,0); }
 
         if (rb.velocity.y < -2)             // to make jump feel better and less floaty
             rb.gravityScale = 15;
