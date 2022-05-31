@@ -535,30 +535,33 @@ MonoBehaviour:
   speed: 7
   rb: {fileID: 0}
   newVelocity: {x: 0, y: 0}
+  newForce: {x: 0, y: 0}
   targetLayer:
     serializedVersion: 2
     m_Bits: 128
   canAttack: 0
-  AttackPlayer: 0
-  attack1Cooldown: 2
+  playerDetected: 0
+  cooldown: 2
   attack1Range: 3.3
   attack2Range: 3.4
   attack3Range: 6.68
   attack1Miss: 0
   attack2Chance: 0.7
   attack3Chance: 0.5
-  showDetectionGizmos: 1
+  showSightGizmos: 1
   showAttackGizmos: 1
-  detectionRadius: 12
+  sightRadius: 0
   followRadius: 40
-  DetectionPositionSphere: {fileID: 1850454575521893507}
+  SightPositionSphere: {fileID: 0}
   Attack1: {fileID: 1850454574176702934}
   Attack2: {fileID: 1850454574811373550}
   Attack3: {fileID: 1850454575031531420}
   facingRight: 1
   facingDirection: 0
-  playerDirection: 0
+  playerDirectionX: 0
+  playerDirectionY: 0
   CanGetStunned: 1
+  isDead: 0
   hurtSound: {fileID: 0}
 --- !u!114 &1850454574158897936
 MonoBehaviour:
@@ -615,7 +618,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1850454574212456933}
   - component: {fileID: 1850454574212456932}
-  m_Layer: 0
+  m_Layer: 17
   m_Name: GroundAndPlatformNotSink
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1068,7 +1071,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c176418cb9beafc41b0ff877a16af69d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  animator: {fileID: 1850454574158898156}
+  enemy: {fileID: 0}
 --- !u!1 &1850454575246738616
 GameObject:
   m_ObjectHideFlags: 0

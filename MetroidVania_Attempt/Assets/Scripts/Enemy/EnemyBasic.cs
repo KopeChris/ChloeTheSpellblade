@@ -25,11 +25,10 @@ public class EnemyBasic : MonoBehaviour
     public Vector2 newForce;
 
     public LayerMask targetLayer;
-    //public UnityEvent<GameObject> OnPlayerDetected;
 
     [Header("Attacks")]
     public bool canAttack;
-    public bool attackPlayer;
+    public bool playerDetected;
     public float cooldown = 2.0f;
     public float attack1Range = 1;
     public float attack2Range = 1;
@@ -47,17 +46,17 @@ public class EnemyBasic : MonoBehaviour
     private float nextAttackTime = 0f;
 
     [Header("Gizmos Parameters")]
-    public bool showDetectionGizmos = true;
+    public bool showSightGizmos = true;
     public bool showAttackGizmos = true;
-    public float detectionRadius;
+    public float sightRadius;
     public float followRadius;
-    public Transform DetectionPositionSphere;
+    public Transform SightPositionSphere;
     public Transform Attack1;
     public Transform Attack2;
     public Transform Attack3;
     
     [SerializeField]
-    public bool PlayerDetected { get; internal set; }
+    public bool PlayerSeen { get; internal set; }
     public bool PlayerFollowed { get; internal set; }
     public bool PlayerInMeleeRange { get; internal set; } //is equal to all playerrangss together
     public bool PlayerInRange1 { get; internal set; }
@@ -107,7 +106,7 @@ public class EnemyBasic : MonoBehaviour
         if (Player.transform.position.x > rb.transform.position.x) { playerDirectionX = 1; } else { playerDirectionX = -1; }
         if (Player.transform.position.y > rb.transform.position.y) { playerDirectionY = 1; } else { playerDirectionY = -1; }
 
-        if (attackPlayer && !isDead)
+        if (playerDetected && !isDead)
         {
 
             //In attack Range Player
@@ -141,21 +140,21 @@ public class EnemyBasic : MonoBehaviour
 
         PlayerInMeleeRange = PlayerInRange1 || PlayerInRange2;  //if player in melee range following isnt activated as to not run while being right in front
 
-        //detection and follow
-        var detection = Physics2D.OverlapCircle(DetectionPositionSphere.position, detectionRadius, targetLayer);
-        PlayerDetected = detection != null;
-        if (PlayerDetected && !PlayerInMeleeRange || currentHealth < maxHealth) //if !playerdetected then it doesnt follow, if it is detected but outside of attack range (follows), if inside attack range chance to follow
+        //seen and follow
+        var seen = Physics2D.OverlapCircle(SightPositionSphere.position, sightRadius, targetLayer);
+        PlayerSeen = seen != null;
+        if (PlayerSeen && !PlayerInMeleeRange || currentHealth < maxHealth) //if it is seen but outside of attack range (follows), if inside attack range chance to follow
         {
             animator.SetBool("isFollowing", true);
-            attackPlayer = true;
+            playerDetected = true;
         }
         //stop follow
-        var follow = Physics2D.OverlapCircle(DetectionPositionSphere.position, followRadius, targetLayer);
+        var follow = Physics2D.OverlapCircle(SightPositionSphere.position, followRadius, targetLayer);
         PlayerFollowed = follow != null;
         if (PlayerFollowed == false)
         {
             animator.SetBool("isFollowing", false);
-            attackPlayer = false;
+            playerDetected = false;
 
         }
 
@@ -212,12 +211,12 @@ public class EnemyBasic : MonoBehaviour
     //Gizmos
     private void OnDrawGizmosSelected()
     {
-        if (showDetectionGizmos)
+        if (showSightGizmos)
         {
             Gizmos.color = new Color(1, 1, 0, 0.4f);
-            Gizmos.DrawWireSphere(DetectionPositionSphere.position, detectionRadius);
+            Gizmos.DrawWireSphere(SightPositionSphere.position, sightRadius);
             Gizmos.color = new Color(0, 1, 0, 0.4f);
-            Gizmos.DrawWireSphere(DetectionPositionSphere.position, followRadius);
+            Gizmos.DrawWireSphere(SightPositionSphere.position, followRadius);
 
         }
         AttackGizmos();

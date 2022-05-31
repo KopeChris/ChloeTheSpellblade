@@ -44,12 +44,24 @@ PrefabInstance:
       value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 1850454574158897938, guid: b8d99bbf1d520e3408dd2d824096421c, type: 3}
+      propertyPath: cooldown
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1850454574158897938, guid: b8d99bbf1d520e3408dd2d824096421c, type: 3}
       propertyPath: enemyCoin
       value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 1850454574158897938, guid: b8d99bbf1d520e3408dd2d824096421c, type: 3}
+      propertyPath: maxHealth
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 1850454574158897938, guid: b8d99bbf1d520e3408dd2d824096421c, type: 3}
       propertyPath: attack1Miss
-      value: 0.2
+      value: 0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1850454574158897938, guid: b8d99bbf1d520e3408dd2d824096421c, type: 3}
+      propertyPath: sightRadius
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 1850454574158897938, guid: b8d99bbf1d520e3408dd2d824096421c, type: 3}
       propertyPath: attack1Range
@@ -65,7 +77,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1850454574158897938, guid: b8d99bbf1d520e3408dd2d824096421c, type: 3}
       propertyPath: attack2Chance
-      value: 0.8
+      value: 0.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 1850454574158897938, guid: b8d99bbf1d520e3408dd2d824096421c, type: 3}
+      propertyPath: attack3Chance
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1850454574158897938, guid: b8d99bbf1d520e3408dd2d824096421c, type: 3}
+      propertyPath: currentHealth
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 1850454574158897938, guid: b8d99bbf1d520e3408dd2d824096421c, type: 3}
       propertyPath: attack1Cooldown
@@ -79,9 +99,17 @@ PrefabInstance:
       propertyPath: showAttackGizmos
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1850454574158897938, guid: b8d99bbf1d520e3408dd2d824096421c, type: 3}
+      propertyPath: SightPositionSphere
+      value: 
+      objectReference: {fileID: 3433733779285454837}
     - target: {fileID: 1850454574158898155, guid: b8d99bbf1d520e3408dd2d824096421c, type: 3}
       propertyPath: m_Name
       value: Mushroom Enemy
+      objectReference: {fileID: 0}
+    - target: {fileID: 1850454574158898155, guid: b8d99bbf1d520e3408dd2d824096421c, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1850454574158898156, guid: b8d99bbf1d520e3408dd2d824096421c, type: 3}
       propertyPath: m_Controller
@@ -147,6 +175,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Attack 1 Range
       objectReference: {fileID: 0}
+    - target: {fileID: 1850454574212456934, guid: b8d99bbf1d520e3408dd2d824096421c, type: 3}
+      propertyPath: m_Layer
+      value: 17
+      objectReference: {fileID: 0}
     - target: {fileID: 1850454574246198355, guid: b8d99bbf1d520e3408dd2d824096421c, type: 3}
       propertyPath: pushForce
       value: 10
@@ -175,5 +207,37 @@ PrefabInstance:
       propertyPath: m_LocalRotation.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1850454575159438453, guid: b8d99bbf1d520e3408dd2d824096421c, type: 3}
+      propertyPath: enemy
+      value: 
+      objectReference: {fileID: 3433733777897537636}
+    - target: {fileID: 1850454575246738623, guid: b8d99bbf1d520e3408dd2d824096421c, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1850454575246738623, guid: b8d99bbf1d520e3408dd2d824096421c, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1850454575521893532, guid: b8d99bbf1d520e3408dd2d824096421c, type: 3}
+      propertyPath: m_Name
+      value: SightPostitionSphere
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b8d99bbf1d520e3408dd2d824096421c, type: 3}
+--- !u!114 &3433733777897537636 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1850454574158897938, guid: b8d99bbf1d520e3408dd2d824096421c, type: 3}
+  m_PrefabInstance: {fileID: 3893696181631132534}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f931cf85178763041a90a8e092452ee8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &3433733779285454837 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1850454575521893507, guid: b8d99bbf1d520e3408dd2d824096421c, type: 3}
+  m_PrefabInstance: {fileID: 3893696181631132534}
+  m_PrefabAsset: {fileID: 0}

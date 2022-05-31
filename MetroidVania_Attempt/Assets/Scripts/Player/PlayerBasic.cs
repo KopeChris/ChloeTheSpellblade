@@ -157,6 +157,8 @@ public class PlayerBasic : MonoBehaviour
 
     void Update()
     {
+        if (isRolling)
+            rb.gravityScale = 0;
         Input();
         /*
         if(isInvincible && actionInv)
@@ -361,7 +363,7 @@ public class PlayerBasic : MonoBehaviour
             canWalkOnSlope = true;
         }
 
-        if (isOnSlope && canWalkOnSlope && xInput == 0.0f)
+        if (isOnSlope && canWalkOnSlope && xInput == 0.0f && !isRolling)
         {
             rb.sharedMaterial = fullFriction;
             newVelocity.Set(0.0f, rb.velocity.y);       //used to be (0,0)
@@ -446,9 +448,10 @@ public class PlayerBasic : MonoBehaviour
     {
         if (!isJumping  && isGrounded)
         {
-            canAction = false;
-            Push(rollForce * facingDirection, 0);
+            Push(rollForce * facingDirection,0);
+            
             animator.SetTrigger("Roll");
+            canAction = false;
             isRolling = true;
             InvincibleFunction(true);
             Invoke("notInvincible", rollIframes/60);

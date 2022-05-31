@@ -9,6 +9,7 @@ public class ProjectileForce : MonoBehaviour
     public Rigidbody2D rb;
 
     public int forceX;
+    public int forceX2;
     public int forceY;
     public float forceY2;
     [Range(0f, 1f)]
@@ -32,16 +33,18 @@ public class ProjectileForce : MonoBehaviour
         newVelocity.Set(0.0f, 0.0f);
         rb.velocity = newVelocity;
 
-        newForce.Set(direction*(forceX/2f + forceX/2f  * 0.1f * Mathf.Abs((PlayerBasic.positionX - rb.transform.position.x))), forceY+ forceY2 *0.1f* (PlayerBasic.positionY - rb.transform.position.y));
+        newForce.Set(direction * (forceX + forceX2 * 0.1f * Mathf.Abs((PlayerBasic.positionX - rb.transform.position.x))), forceY + forceY2 * 0.1f * (PlayerBasic.positionY - rb.transform.position.y));
         rb.AddForce(newForce, ForceMode2D.Impulse);
 
     }
     private void Update()
     {
-        if (rb.velocity.y >-1)             // to make jump feel better and less floaty
+        /*
+        if (rb.velocity.y >-1)             // to make feel less floaty
             rb.gravityScale = 1;
         else
             rb.gravityScale = 1.5f;
+        */
     }
     private void OnDisable()
     {
