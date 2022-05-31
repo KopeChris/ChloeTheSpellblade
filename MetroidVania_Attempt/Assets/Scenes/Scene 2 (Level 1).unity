@@ -4254,7 +4254,7 @@ PlatformEffector2D:
   m_UseColliderMask: 1
   m_ColliderMask:
     serializedVersion: 2
-    m_Bits: 41217
+    m_Bits: 172033
   m_RotationalOffset: 0
   m_UseOneWay: 1
   m_UseOneWayGrouping: 1
@@ -133819,6 +133819,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Skeleton
       objectReference: {fileID: 0}
+    - target: {fileID: 2770545400771830175, guid: 3f5c3ccdce935a146bdd21a374c9b833, type: 3}
+      propertyPath: m_GravityScale
+      value: 10
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3f5c3ccdce935a146bdd21a374c9b833, type: 3}
 --- !u!1 &2146137411
@@ -134252,30 +134256,6 @@ PrefabInstance:
     - target: {fileID: 2941208604068586253, guid: f6aeca91aac973245b4ecc42e2964b62, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2941208604068586482, guid: f6aeca91aac973245b4ecc42e2964b62, type: 3}
-      propertyPath: cooldown
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 2941208604068586482, guid: f6aeca91aac973245b4ecc42e2964b62, type: 3}
-      propertyPath: attack1Miss
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2941208604068586482, guid: f6aeca91aac973245b4ecc42e2964b62, type: 3}
-      propertyPath: attack2Chance
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2941208604068586482, guid: f6aeca91aac973245b4ecc42e2964b62, type: 3}
-      propertyPath: attack3Chance
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6325870079424636593, guid: f6aeca91aac973245b4ecc42e2964b62, type: 3}
-      propertyPath: m_Speed
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 6325870079424636593, guid: f6aeca91aac973245b4ecc42e2964b62, type: 3}
-      propertyPath: m_StoppingDistance
-      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f6aeca91aac973245b4ecc42e2964b62, type: 3}
