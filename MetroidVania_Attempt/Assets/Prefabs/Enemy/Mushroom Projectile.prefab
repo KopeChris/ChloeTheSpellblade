@@ -16,28 +16,8 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 9100000, guid: 6769b71f676e4834581cc65d83af000f, type: 2}
     - target: {fileID: 7084551953325710482, guid: 9c7e6b5218d0d4c49b7798d2342057a6, type: 3}
-      propertyPath: m_Mass
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 7084551953325710482, guid: 9c7e6b5218d0d4c49b7798d2342057a6, type: 3}
-      propertyPath: m_Material
-      value: 
-      objectReference: {fileID: 6200000, guid: 7809db9504d4e17479df0ad01685509f, type: 2}
-    - target: {fileID: 7084551953325710482, guid: 9c7e6b5218d0d4c49b7798d2342057a6, type: 3}
-      propertyPath: m_LinearDrag
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7084551953325710482, guid: 9c7e6b5218d0d4c49b7798d2342057a6, type: 3}
-      propertyPath: m_AngularDrag
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7084551953325710482, guid: 9c7e6b5218d0d4c49b7798d2342057a6, type: 3}
-      propertyPath: m_Constraints
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 7084551953325710482, guid: 9c7e6b5218d0d4c49b7798d2342057a6, type: 3}
       propertyPath: m_GravityScale
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 7084551953325710483, guid: 9c7e6b5218d0d4c49b7798d2342057a6, type: 3}
       propertyPath: m_RootOrder
@@ -85,31 +65,27 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7084551953325710484, guid: 9c7e6b5218d0d4c49b7798d2342057a6, type: 3}
       propertyPath: m_Radius
-      value: 1.02
+      value: 1.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7084551953325710484, guid: 9c7e6b5218d0d4c49b7798d2342057a6, type: 3}
+      propertyPath: m_Offset.x
+      value: 0.27
+      objectReference: {fileID: 0}
+    - target: {fileID: 7084551953325710484, guid: 9c7e6b5218d0d4c49b7798d2342057a6, type: 3}
+      propertyPath: m_Offset.y
+      value: -0.21
       objectReference: {fileID: 0}
     - target: {fileID: 7084551953325710485, guid: 9c7e6b5218d0d4c49b7798d2342057a6, type: 3}
       propertyPath: m_Name
       value: Mushroom Projectile
       objectReference: {fileID: 0}
-    - target: {fileID: 7084551953325710486, guid: 9c7e6b5218d0d4c49b7798d2342057a6, type: 3}
-      propertyPath: force
-      value: 7
-      objectReference: {fileID: 0}
-    - target: {fileID: 7084551953325710486, guid: 9c7e6b5218d0d4c49b7798d2342057a6, type: 3}
-      propertyPath: timeUntilDestroyed
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 7084551953325710487, guid: 9c7e6b5218d0d4c49b7798d2342057a6, type: 3}
       propertyPath: forceX
-      value: 60
-      objectReference: {fileID: 0}
-    - target: {fileID: 7084551953325710487, guid: 9c7e6b5218d0d4c49b7798d2342057a6, type: 3}
-      propertyPath: forceY
       value: 40
       objectReference: {fileID: 0}
     - target: {fileID: 7084551953325710487, guid: 9c7e6b5218d0d4c49b7798d2342057a6, type: 3}
-      propertyPath: forceY2
-      value: 10
+      propertyPath: forceX2
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 7084551953325710493, guid: 9c7e6b5218d0d4c49b7798d2342057a6, type: 3}
       propertyPath: m_Size.x
@@ -120,12 +96,20 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7084551953325710493, guid: 9c7e6b5218d0d4c49b7798d2342057a6, type: 3}
-      propertyPath: m_Material
-      value: 
-      objectReference: {fileID: 6200000, guid: 7809db9504d4e17479df0ad01685509f, type: 2}
+      propertyPath: m_Offset.x
+      value: 0.36
+      objectReference: {fileID: 0}
     - target: {fileID: 7084551953325710493, guid: 9c7e6b5218d0d4c49b7798d2342057a6, type: 3}
       propertyPath: m_Offset.y
-      value: -0.23
+      value: -0.12
+      objectReference: {fileID: 0}
+    - target: {fileID: 7084551953325710493, guid: 9c7e6b5218d0d4c49b7798d2342057a6, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.x
+      value: 12.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7084551953325710493, guid: 9c7e6b5218d0d4c49b7798d2342057a6, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.y
+      value: 12.5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9c7e6b5218d0d4c49b7798d2342057a6, type: 3}

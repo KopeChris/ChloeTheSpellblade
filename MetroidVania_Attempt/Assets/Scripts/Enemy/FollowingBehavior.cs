@@ -19,8 +19,7 @@ public class FollowingBehavior : StateMachineBehaviour
     {
         //move towards player
         // animator.transform.position = Vector2.MoveTowards(animator.transform.position, playerPos.position, animator.gameObject.GetComponent<EnemyBasic>().speed * Time.deltaTime);
-        enemy.newForce.Set(0f, enemy.speed / 4 * enemy.playerDirectionY);
-        enemy.rb.AddForce(enemy.newForce, ForceMode2D.Force);
+        
         enemy.newVelocity.Set(enemy.speed * enemy.playerDirectionX * 50 * Time.fixedDeltaTime, enemy.rb.velocity.y);//y = 0 in the original slope code
         enemy.rb.velocity = enemy.newVelocity;
 

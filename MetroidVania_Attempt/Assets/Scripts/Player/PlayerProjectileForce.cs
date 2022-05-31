@@ -31,5 +31,9 @@ public class PlayerProjectileForce : MonoBehaviour
             rb.gravityScale = 2;
     }
 
+    private void OnDisable()
+    {
+        Destroy(this.gameObject);
+    }
 
 }

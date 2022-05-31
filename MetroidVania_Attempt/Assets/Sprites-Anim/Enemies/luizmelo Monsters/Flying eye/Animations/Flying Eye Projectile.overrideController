@@ -1,0 +1,15 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!221 &22100000
+AnimatorOverrideController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Flying Eye Projectile
+  m_Controller: {fileID: 9100000, guid: 505dd7edbef626442bd8d64a570aadf3, type: 2}
+  m_Clips:
+  - m_OriginalClip: {fileID: 7400000, guid: d998f01b969f53d49a5559a11fba3922, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 9bcb3baeb274de048a41c3b3bad4fc34, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: 25cfde684654f0d488d833c97802f4e7, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 35c5a896c82030242856127c2074015f, type: 2}

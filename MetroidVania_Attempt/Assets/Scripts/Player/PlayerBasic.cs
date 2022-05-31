@@ -184,20 +184,25 @@ public class PlayerBasic : MonoBehaviour
         if (cinematicState) { canAction = false; newVelocity.Set(0.0f, rb.velocity.y); rb.velocity = newVelocity; } //change to for not to slow down y velocity when praying
         else {if(canMove) ApplyMovement(); }
 
-        //tend to go to zero x speed. helps while in air and adds a fake friction
-        /*
-        newForce.Set(50, 0.0f);
-        if (rb.velocity.x > 0.2) { rb.AddForce(-newForce, ForceMode2D.Force); }
-        if (rb.velocity.x < -0.2) { rb.AddForce(newForce, ForceMode2D.Force); }
-        */
-        //if (rb.velocity.x < 0.001 || rb.velocity.x > -0.001 && xInput==0) { newVelocity.Set(0.0f, rb.velocity.y); rb.velocity = newVelocity; }
+        //friction
+
+        
+        newForce.Set(30, 0.0f);
+        if (rb.velocity.x > 0.01) { rb.AddForce(-newForce, ForceMode2D.Force); }
+        if (rb.velocity.x < -0.01) { rb.AddForce(newForce, ForceMode2D.Force); }
+
+        if (Mathf.Abs(rb.velocity.x )< 0.01 && xInput == 0 ) {
+            newVelocity.Set(0.0f, rb.velocity.y);      
+            rb.velocity = newVelocity;
+        }
+        
 
         //if (Mathf.Abs(rb.velocity.y) >150) { TakeDamage(maxHealth,0); }
 
-        if (rb.velocity.y < -2)             // to make jump feel better and less floaty
-            rb.gravityScale = 15;
-        else
+        if (rb.velocity.y > -2)             // to make jump feel better and less floaty
             rb.gravityScale = 10;
+        else
+            rb.gravityScale = 12;
     }
     private void Input() 
     {

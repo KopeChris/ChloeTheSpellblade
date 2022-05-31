@@ -7,22 +7,16 @@ public class PlayerProjectileDamage : MonoBehaviour
 
     public int attackDamage;
     private string detectionTag = "Enemies";
-    public float timeUntilDestroyed =1.2f;
+    Animator animator;
 
-    
-
-    
-    
-    private void Update()
+    private void Start()
     {
-        timeUntilDestroyed  -= Time.deltaTime;
-        if (timeUntilDestroyed  <= 0)
-        {
-            Destroy(this.gameObject,0.1f);
-        }
+        animator = GetComponent<Animator>();
     }
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        #region Comments
         /*
         if(target== LayerMask.NameToLayer("Enemies"))
         {
@@ -41,13 +35,12 @@ public class PlayerProjectileDamage : MonoBehaviour
                 Destroy(this.gameObject);
             }
         }*/
+        #endregion
 
-        if (collision.CompareTag(detectionTag) || collision.gameObject.layer == LayerMask.NameToLayer("Ground"))
+        if (collision.CompareTag(detectionTag))
         {
-            if(collision.CompareTag(detectionTag))
                 collision.GetComponent<EnemyBasic>().TakeDamage(attackDamage);
-
-            Destroy(this.gameObject);
         }
+        animator.SetTrigger("Explode");
     }
 }
