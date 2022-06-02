@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+
 
 [System.Serializable]
 public class PlayerData  
@@ -11,6 +13,8 @@ public class PlayerData
     public int mana;
     public int maxMana;
     public int coin;
+    public static int sceneIndex;
+    public static string sceneIndexString;
 
     public PlayerData(PlayerBasic player)
     {
@@ -25,7 +29,9 @@ public class PlayerData
         maxMana = player.maxMana;
         coin = player.playerCoin;
 
-        //scene;
+        //sceneIndex=SceneManager.GetActiveScene().buildIndex;
+        PlayerPrefs.SetInt(sceneIndexString, SceneManager.GetActiveScene().buildIndex);
+
         //bosses that died;
 
     }

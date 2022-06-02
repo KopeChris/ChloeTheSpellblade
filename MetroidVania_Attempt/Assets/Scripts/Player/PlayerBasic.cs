@@ -149,14 +149,18 @@ public class PlayerBasic : MonoBehaviour
 
         //currentHealth = maxHealth;
         healthBar.SetMaxHealth(maxHealth);
-        mana = maxMana;
         manaBar.SetMaxMana(maxMana);
-        
 
+        
     }
 
     void Update()
     {
+        if(UnityEngine.Input.GetKey(KeyCode.B))
+        {
+            Debug.Log("Load");
+            SaveSystem.LoadPlayer();
+        }
         if (isRolling)
             rb.gravityScale = 0;
         Input();
