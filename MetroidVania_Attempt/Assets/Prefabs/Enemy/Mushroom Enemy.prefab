@@ -19,6 +19,10 @@ PrefabInstance:
       propertyPath: m_Size.y
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 1850454574056206317, guid: b8d99bbf1d520e3408dd2d824096421c, type: 3}
+      propertyPath: m_Offset.x
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 1850454574056206318, guid: b8d99bbf1d520e3408dd2d824096421c, type: 3}
       propertyPath: pushForce
       value: 15

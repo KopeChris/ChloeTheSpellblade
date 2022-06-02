@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using EZCameraShake;
 
 public class PlayerBasic : MonoBehaviour
 {
@@ -105,6 +106,7 @@ public class PlayerBasic : MonoBehaviour
 
     public static float positionX;
     public static float positionY;
+
 
     SpriteRenderer sprite;
     public IEnumerator Flash()
@@ -486,8 +488,9 @@ public class PlayerBasic : MonoBehaviour
             canAction = false;
             canMove = false;
 
-           // AudioManager.instance.PlayPlayerHurt();
-            CameraShake.shake = true;
+            // AudioManager.instance.PlayPlayerHurt();
+            CameraShaker.Instance.ShakeOnce((float)damage/10f, 4f,0.1f,1f);
+            StopTime(0.05f);
 
             if (currentHealth >= 0)
             {
@@ -585,4 +588,19 @@ public class PlayerBasic : MonoBehaviour
 
     }
 
+
+    bool timeWaiting;
+    public void StopTime(float duration)
+    {
+        if (timeWaiting) { return; }
+        Time.timeScale = 0.0f;
+        StartCoroutine(ContinueTime(duration));
+    }
+    IEnumerator ContinueTime(float duration)
+    {
+        timeWaiting = true;
+        yield return new WaitForSecondsRealtime(duration);
+        Time.timeScale = 1.0f;
+        timeWaiting = false;
+    }
 }

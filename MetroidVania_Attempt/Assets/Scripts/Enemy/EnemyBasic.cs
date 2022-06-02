@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
+using EZCameraShake;
+
 
 
 
@@ -248,9 +250,10 @@ public class EnemyBasic : MonoBehaviour
             healthBar.SetHealth(currentHealth);
 
             //AudioManager.instance.PlayHurt();
-            CameraShake.shake = true;
+            //CameraShake.shake = true;
 
-            //StopTime(0.1f);                                                 // hitstop stop time when hit
+            StopTime(0.05f);                                                 // hitstop stop time when hit
+            CameraShaker.Instance.ShakeOnce((float)damage / 10f, 3f, 0.1f, 0.5f);
 
             if (currentHealth > 0) { StartCoroutine(FlashWhite());}      
 
