@@ -2035,8 +2035,9 @@ GameObject:
   - component: {fileID: 441863928}
   - component: {fileID: 441863927}
   - component: {fileID: 441863926}
-  - component: {fileID: 441863925}
   - component: {fileID: 441863923}
+  - component: {fileID: 441863925}
+  - component: {fileID: 441863930}
   m_Layer: 8
   m_Name: Great Goblin
   m_TagString: Enemies
@@ -2096,12 +2097,12 @@ MonoBehaviour:
   attack1Range: 3
   attack2Range: 5
   attack3Range: 4
-  attack1Miss: 0.2
-  attack2Chance: 0.6
-  attack3Chance: 0.7
-  showSightGizmos: 1
-  showAttackGizmos: 1
-  sightRadius: 0
+  attack1Miss: 1
+  attack2Chance: 0
+  attack3Chance: 1
+  showSightGizmos: 0
+  showAttackGizmos: 0
+  sightRadius: 20
   followRadius: 90
   SightPositionSphere: {fileID: 441863929}
   Attack1: {fileID: 1426708865}
@@ -2225,6 +2226,20 @@ Transform:
   m_Father: {fileID: 267094746}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &441863930
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 441863922}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d9b73da65d76100469f12bb76f709212, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  velocityMultiplier: 5
+  enemyPushDirection: 0
 --- !u!1 &443009348
 GameObject:
   m_ObjectHideFlags: 0
@@ -137070,7 +137085,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!50 &2146137412
 Rigidbody2D:
   serializedVersion: 4
@@ -137521,11 +137536,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6824283589242836651, guid: 3b906c2f0d020fd4ba8ef930f8293350, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -42.021027
+      value: 71.72897
       objectReference: {fileID: 0}
     - target: {fileID: 6824283589242836651, guid: 3b906c2f0d020fd4ba8ef930f8293350, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.5279541
+      value: 4.5720444
       objectReference: {fileID: 0}
     - target: {fileID: 6824283589242836651, guid: 3b906c2f0d020fd4ba8ef930f8293350, type: 3}
       propertyPath: m_LocalPosition.z
@@ -137648,11 +137663,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7454119504127863912, guid: b204017af7ec7ad45ad868f854259375, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 429.45
+      value: 543.2
       objectReference: {fileID: 0}
     - target: {fileID: 7454119504127863912, guid: b204017af7ec7ad45ad868f854259375, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -50.6
+      value: -45.5
       objectReference: {fileID: 0}
     - target: {fileID: 7454119504127863912, guid: b204017af7ec7ad45ad868f854259375, type: 3}
       propertyPath: m_LocalPosition.z
