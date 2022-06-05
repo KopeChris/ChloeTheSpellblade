@@ -11,12 +11,12 @@ public class EnemyAttackMove : MonoBehaviour
     Rigidbody2D rb;
     EnemyBasic enemy;
 
-    public enum pushDirection // your custom enumeration
+    public enum leapDirection // your custom enumeration
     {
         Facing,
         Player,
     };
-    public pushDirection enemyPushDirection = pushDirection.Facing;
+    public leapDirection enemyleapDirection = leapDirection.Facing;
 
     private void Awake()
     {
@@ -25,16 +25,15 @@ public class EnemyAttackMove : MonoBehaviour
     }
     void OnEnable()
     {
-        if (enemyPushDirection == pushDirection.Facing)
+        if (enemyleapDirection == leapDirection.Facing)
         {
             newVelocity.Set(enemy.facingDirection * enemy.speed * velocityMultiplier, 0);
             rb.velocity = newVelocity;
 
         }
-        //enemy.Push(enemy.facingDirection * enemy.speed * velocityMultiplier);
 
 
-        if (enemyPushDirection == pushDirection.Player)
+        if (enemyleapDirection == leapDirection.Player)
         {
             newVelocity.Set(enemy.playerDirectionX * enemy.speed * velocityMultiplier, 0);   //* (PlayerBasic.positionX - rb.transform.position.x)
             rb.AddForce(newVelocity, ForceMode2D.Impulse);

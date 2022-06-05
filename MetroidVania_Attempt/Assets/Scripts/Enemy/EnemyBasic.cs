@@ -44,6 +44,7 @@ public class EnemyBasic : MonoBehaviour
 
     float randValue;
     float randValue2;
+    float randValue3;
     float randCooldown;
     private float nextAttackTime = 0f;
 
@@ -300,7 +301,11 @@ public class EnemyBasic : MonoBehaviour
     void RandValue()
     {
         randValue = Random.value;
+        
         randValue2 = Random.Range(0.5f, 1.5f);
         randCooldown = randValue2 * cooldown;
+
+        randValue3 = Random.value;
+        animator.SetFloat("randValue", randValue3);
     }
 }

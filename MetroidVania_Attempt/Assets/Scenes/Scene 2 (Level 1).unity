@@ -2095,11 +2095,11 @@ MonoBehaviour:
   playerDetected: 0
   cooldown: 2
   attack1Range: 3
-  attack2Range: 5
-  attack3Range: 4
-  attack1Miss: 1
-  attack2Chance: 0
-  attack3Chance: 1
+  attack2Range: 7
+  attack3Range: 5
+  attack1Miss: 0.2
+  attack2Chance: 0.5
+  attack3Chance: 0.8
   showSightGizmos: 0
   showAttackGizmos: 0
   sightRadius: 20
@@ -2239,7 +2239,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   velocityMultiplier: 5
-  enemyPushDirection: 0
+  enemyleapDirection: 0
 --- !u!1 &443009348
 GameObject:
   m_ObjectHideFlags: 0
@@ -131339,7 +131339,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1354099531}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -9.42, y: -3.6, z: 0}
+  m_LocalPosition: {x: -13.7, y: -3.6, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -131817,7 +131817,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1383823791}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.3, y: -3.92, z: 0}
+  m_LocalPosition: {x: 2.9, y: -3.92, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -137650,6 +137650,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 9059913054161838857}
     - target: {fileID: 7454119504127863911, guid: b204017af7ec7ad45ad868f854259375, type: 3}
+      propertyPath: maxHealth
+      value: 2000
+      objectReference: {fileID: 0}
+    - target: {fileID: 7454119504127863911, guid: b204017af7ec7ad45ad868f854259375, type: 3}
       propertyPath: cameraShake
       value: 
       objectReference: {fileID: 0}
@@ -137657,6 +137661,10 @@ PrefabInstance:
       propertyPath: groundCheck
       value: 
       objectReference: {fileID: 1809986040}
+    - target: {fileID: 7454119504127863911, guid: b204017af7ec7ad45ad868f854259375, type: 3}
+      propertyPath: currentHealth
+      value: 2000
+      objectReference: {fileID: 0}
     - target: {fileID: 7454119504127863912, guid: b204017af7ec7ad45ad868f854259375, type: 3}
       propertyPath: m_RootOrder
       value: 23
