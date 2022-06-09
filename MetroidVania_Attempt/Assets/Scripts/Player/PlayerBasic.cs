@@ -489,7 +489,7 @@ public class PlayerBasic : MonoBehaviour
             canMove = false;
 
             // AudioManager.instance.PlayPlayerHurt();
-            CameraShaker.Instance.ShakeOnce((float)damage/10f, 4f,0.1f,1f);
+            CameraShaker.Instance.ShakeOnce((float)damage*maxHealth/2000f, 4f,0.1f,1f);
             StopTime(0.05f);
 
             if (currentHealth >= 0)
