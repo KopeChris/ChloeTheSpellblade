@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CheckPoint : Indicator
+public class CMCheckPoint : Indicator
 {
     //public GameObject menu;
     public GameObject interactionIndication;
@@ -13,7 +13,7 @@ public class CheckPoint : Indicator
     //states
     // bool closeAction = true;
     //bool menuOpen;
-    
+
     public override void Interact()
     {
         playerBasic.currentHealth = playerBasic.maxHealth;
@@ -23,7 +23,7 @@ public class CheckPoint : Indicator
         playerBasic.animator.Play("Pray");
 
 
-        playerBasic.SavePlayer();
+        playerBasic.Save();
     }
-    
+
 }

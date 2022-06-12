@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using EZCameraShake;
+using UnityEngine.SceneManagement;
+
 
 public class PlayerBasic : MonoBehaviour
 {
@@ -158,13 +160,8 @@ public class PlayerBasic : MonoBehaviour
 
     void Update()
     {
-        if(UnityEngine.Input.GetKey(KeyCode.B))
-        {
-            Debug.Log("Load");
-            SaveSystem.LoadPlayer();
-        }
-        if (isRolling)
-            rb.gravityScale = 0;
+        
+        
         Input();
         /*
         if(isInvincible && actionInv)
@@ -588,6 +585,41 @@ public class PlayerBasic : MonoBehaviour
 
     }
 
+    //code monkey save system       left unfinished
+    public float[] position;
+    int coin;
+    public static string sceneIndexString;
+    public int maxHealthSS;
+    public int currentHealthSS;
+
+    public int manaSS;
+    public int maxManaSS;
+
+    public int berriesSS;
+    public int maxBerriesSS;
+
+    public void Save()
+    {
+        position[0] = transform.position.x;
+        position[1] = transform.position.y;
+        position[2] = transform.position.z;
+        coin = playerCoin;
+        maxHealthSS = maxHealth;
+        currentHealthSS = currentHealth;
+        manaSS = mana;
+        maxManaSS = maxMana;
+        berriesSS = berries;
+        maxBerriesSS = maxBerries;
+
+        PlayerPrefs.SetInt(sceneIndexString, SceneManager.GetActiveScene().buildIndex);
+
+        SaveSystem.SavePlayer(this);
+
+    }
+    public void Load()
+    {
+        GetCoin(coin);
+    }
 
     bool timeWaiting;
     public void StopTime(float duration)

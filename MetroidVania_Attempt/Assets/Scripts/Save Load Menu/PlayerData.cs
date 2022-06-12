@@ -13,7 +13,10 @@ public class PlayerData
     public int mana;
     public int maxMana;
     public int coin;
-    public static int sceneIndex;
+    public int berries;
+    public int maxBerries;
+
+   // public static int sceneIndex;
     public static string sceneIndexString;
 
     public PlayerData(PlayerBasic player)
