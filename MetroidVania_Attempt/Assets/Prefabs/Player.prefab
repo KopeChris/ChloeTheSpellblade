@@ -599,6 +599,13 @@ MonoBehaviour:
   coyoteTimeCoolDown: 0.1
   bufferTime: 0.2
   platformCollider: {fileID: 2922728656533128825}
+  position: []
+  maxHealthSS: 0
+  currentHealthSS: 0
+  manaSS: 0
+  maxManaSS: 0
+  berriesSS: 0
+  maxBerriesSS: 0
 --- !u!114 &1635180678
 MonoBehaviour:
   m_ObjectHideFlags: 0

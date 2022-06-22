@@ -149,7 +149,7 @@ public class PlayerBasic : MonoBehaviour
         enemyProjectile = LayerMask.NameToLayer("ProjectileEnemies");
 
         capsuleColliderSize = cc.size;
-        InvincibleFunction(false);
+        notInvincible();
 
         //currentHealth = maxHealth;
         healthBar.SetMaxHealth(maxHealth);
@@ -553,11 +553,14 @@ public class PlayerBasic : MonoBehaviour
         Physics2D.IgnoreLayerCollision(playerCollisionBlocker, enemyCollisionBlocker, invincible);
         Physics2D.IgnoreLayerCollision(playerCollisionBlocker, enemyProjectile, invincible);
         isInvincible = invincible;
+
+       // sprite.color = new Color(1, 1, 0, 1);
     }
     public void notInvincible()
     {
         InvincibleFunction(false);
-        isInvincible = false;
+       // sprite.color = Color.white;
+
     }
     void canNotJump()
     {
