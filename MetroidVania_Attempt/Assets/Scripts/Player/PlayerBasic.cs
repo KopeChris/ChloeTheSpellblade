@@ -4,6 +4,7 @@ using UnityEngine;
 using EZCameraShake;
 using UnityEngine.SceneManagement;
 
+using BayatGames.SaveGameFree;
 
 public class PlayerBasic : MonoBehaviour
 {
@@ -588,7 +589,7 @@ public class PlayerBasic : MonoBehaviour
 
     }
 
-    //code monkey save system       left unfinished
+    #region //code monkey save system       left unfinished
     public float[] position;
     int coin;
     public static string sceneIndexString;
@@ -623,6 +624,27 @@ public class PlayerBasic : MonoBehaviour
     {
         GetCoin(coin);
     }
+
+    #endregion
+
+    #region SaveGameFree
+
+    
+    void SaveGameFree()
+    {
+        SaveGame.Save<int>("currentHealth", currentHealth);
+        SaveGame.Save<int>("maxHealth", maxHealth);
+        SaveGame.Save<int>("mana", mana);
+        SaveGame.Save<int>("maxMana", maxMana);
+        SaveGame.Save<int>("coin", coin);
+        SaveGame.Save<int>("berries", berries);
+        SaveGame.Save<int>("maxBerries", maxBerries);
+
+    }
+
+
+    #endregion
+
 
     bool timeWaiting;
     public void StopTime(float duration)
