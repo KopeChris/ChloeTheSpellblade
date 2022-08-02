@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.Events;
 using EZCameraShake;
 
+using BayatGames.SaveGameFree;
 
 
 
@@ -31,7 +32,7 @@ public class EnemyBasic : MonoBehaviour
     [Header("Attacks")]
     public bool canAttack;
     public bool playerDetected;
-    public float cooldown = 2.0f;
+    public float cooldown;
     public float attack1Range = 1;
     public float attack2Range = 1;
     public float attack3Range = 1;
@@ -45,7 +46,7 @@ public class EnemyBasic : MonoBehaviour
     float randValue;
     float randValue2;
     float randValue3;
-    float randCooldown;
+    float randCooldown = 0f;
     private float nextAttackTime = 0f;
 
     [Header("Gizmos Parameters")]
@@ -94,11 +95,16 @@ public class EnemyBasic : MonoBehaviour
     }
     void Start()
     {
+
         animator.SetBool("isFollowing", false);
         currentHealth = maxHealth;
         healthBar.SetMaxHealth(maxHealth);
 
         Player = GameObject.FindGameObjectWithTag("Player");
+
+        SaveGame.Save<float>("positionX", transform.position.x);
+        SaveGame.Save<float>("positionY", transform.position.y);
+        SaveGame.Save<float>("positionZ", transform.position.z);
 
         InvokeRepeating("RandValue", 0, 2);
     }
@@ -302,10 +308,18 @@ public class EnemyBasic : MonoBehaviour
     {
         randValue = Random.value;
         
-        randValue2 = Random.Range(0.5f, 1.5f);
-        randCooldown = randValue2 * cooldown;
+        //randValue2 = Random.Range(0.5f, 1.5f);
+        //randCooldown = randValue2 * cooldown;
 
         randValue3 = Random.value;
         animator.SetFloat("randValue", randValue3);
+    }
+
+    public void LoadGameFreeEnemy()
+    {
+        currentHealth = maxHealth;
+        transform.position = new Vector3(SaveGame.Load<float>("positionX"), SaveGame.Load<float>("positionY"), SaveGame.Load<float>("positionZ"));
+        animator.SetBool("isFollowing", false);
+        playerDetected = false;
     }
 }
