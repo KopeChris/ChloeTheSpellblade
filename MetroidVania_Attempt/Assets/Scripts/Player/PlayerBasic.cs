@@ -164,6 +164,7 @@ public class PlayerBasic : MonoBehaviour
         
         
         Input();
+       
         /*
         if(isInvincible && actionInv)
         { actionInv = false;  InvincibleFunction(true);}
@@ -496,11 +497,11 @@ public class PlayerBasic : MonoBehaviour
                 Push(2*pushForce, 0);
             }
 
-            if (currentHealth <= 0)
+            if (currentHealth <= 0)     //DEAD
             {
                 isDead = true;
                 animator.SetBool("isDead", true);
-                LoseCoin(playerCoin);
+                Invoke("LoadGameFree", 6f);
                 //this.enabled = false;
             }
 
@@ -568,7 +569,7 @@ public class PlayerBasic : MonoBehaviour
         canJump = false;
     }
 
-    
+    //Saves And Loads
 
     public void SavePlayer()
     {
@@ -629,9 +630,13 @@ public class PlayerBasic : MonoBehaviour
 
     #region SaveGameFree
 
-    
-    void SaveGameFree()
+
+    public void SaveGameFree()
     {
+        SaveGame.Save<float>("positionX", transform.position.x);
+        SaveGame.Save<float>("positionY", transform.position.y);
+        SaveGame.Save<float>("positionZ", transform.position.z);
+
         SaveGame.Save<int>("currentHealth", currentHealth);
         SaveGame.Save<int>("maxHealth", maxHealth);
         SaveGame.Save<int>("mana", mana);
@@ -640,8 +645,22 @@ public class PlayerBasic : MonoBehaviour
         SaveGame.Save<int>("berries", berries);
         SaveGame.Save<int>("maxBerries", maxBerries);
 
+        PlayerPrefs.SetInt(sceneIndexString, SceneManager.GetActiveScene().buildIndex);
     }
 
+    public void LoadGameFree()
+    {
+        maxHealth = SaveGame.Load<int>("maxHealth");
+        currentHealth = SaveGame.Load<int>("maxHealth");
+        maxMana = SaveGame.Load<int>("maxMana");
+        mana = SaveGame.Load<int>("maxMana");
+        coin = SaveGame.Load<int>("coin");
+        maxBerries = SaveGame.Load<int>("maxBerries");
+        berries = SaveGame.Load<int>("berries");
+
+        transform.position = new Vector3(SaveGame.Load<float>("positionX"), SaveGame.Load<float>("positionY"), SaveGame.Load<float>("positionZ"));
+        animator.Play("Chloe_Idle");
+    }
 
     #endregion
 

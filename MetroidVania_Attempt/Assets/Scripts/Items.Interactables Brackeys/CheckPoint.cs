@@ -23,7 +23,7 @@ public class CheckPoint : Indicator
         playerBasic.animator.Play("Pray");
 
 
-        playerBasic.SavePlayer();
+        playerBasic.SaveGameFree();
     }
     
 }
