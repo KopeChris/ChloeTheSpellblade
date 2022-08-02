@@ -645,11 +645,7 @@ public class PlayerBasic : MonoBehaviour
         SaveGame.Save<float>("positionY", transform.position.y);
         SaveGame.Save<float>("positionZ", transform.position.z);
 
-        Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(transform.position, 1000, enemiesLayer);
-        foreach (Collider2D enemy in hitEnemies)
-        {
-            enemy.GetComponent<EnemyBasic>().LoadGameFreeEnemy(); 
-        }
+        LoadGameFreeEnemies();
 
         PlayerPrefs.SetInt(sceneIndexString, SceneManager.GetActiveScene().buildIndex);
     }
@@ -667,13 +663,18 @@ public class PlayerBasic : MonoBehaviour
         transform.position = new Vector3(SaveGame.Load<float>("positionX"), SaveGame.Load<float>("positionY"), SaveGame.Load<float>("positionZ"));
         animator.Play("Chloe_Idle");
 
-        Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(transform.position, 1000, enemiesLayer);
-        foreach (Collider2D enemy in hitEnemies)
-        {
-            enemy.GetComponent<EnemyBasic>().LoadGameFreeEnemy();
-        }
+        LoadGameFreeEnemies();
     }
 
+    public void LoadGameFreeEnemies()
+            
+    {
+        EnemyBasic[] enemies = (EnemyBasic[])GameObject.FindObjectsOfType(typeof(EnemyBasic));
+        foreach (EnemyBasic enemy in enemies)
+        {
+            enemy.LoadGameFreeEnemy();
+        }
+    }
     #endregion
 
 

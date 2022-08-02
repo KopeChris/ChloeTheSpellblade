@@ -46,7 +46,7 @@ public class EnemyBasic : MonoBehaviour
     float randValue;
     float randValue2;
     float randValue3;
-    float randCooldown = 0f;
+    float randCooldown;
     private float nextAttackTime = 0f;
 
     [Header("Gizmos Parameters")]
@@ -77,6 +77,9 @@ public class EnemyBasic : MonoBehaviour
     public bool isDead;
 
     bool timeWaiting;
+    float startPosX;
+    float startPosY;
+    float startPosZ;
 
     public AudioClip hurtSound;
     public IEnumerator FlashWhite()
@@ -102,9 +105,9 @@ public class EnemyBasic : MonoBehaviour
 
         Player = GameObject.FindGameObjectWithTag("Player");
 
-        SaveGame.Save<float>("positionX", transform.position.x);
-        SaveGame.Save<float>("positionY", transform.position.y);
-        SaveGame.Save<float>("positionZ", transform.position.z);
+        startPosX = transform.position.x;
+        startPosY = transform.position.y;
+        startPosZ = transform.position.z;
 
         InvokeRepeating("RandValue", 0, 2);
     }
@@ -309,7 +312,7 @@ public class EnemyBasic : MonoBehaviour
         randValue = Random.value;
         
         //randValue2 = Random.Range(0.5f, 1.5f);
-        //randCooldown = randValue2 * cooldown;
+        randCooldown = cooldown; // * randValue2
 
         randValue3 = Random.value;
         animator.SetFloat("randValue", randValue3);
@@ -318,7 +321,8 @@ public class EnemyBasic : MonoBehaviour
     public void LoadGameFreeEnemy()
     {
         currentHealth = maxHealth;
-        transform.position = new Vector3(SaveGame.Load<float>("positionX"), SaveGame.Load<float>("positionY"), SaveGame.Load<float>("positionZ"));
+        healthBar.SetHealth(currentHealth);
+        transform.position = new Vector3(startPosX, startPosY, startPosZ);
         animator.SetBool("isFollowing", false);
         playerDetected = false;
     }
