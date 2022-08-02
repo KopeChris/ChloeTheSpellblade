@@ -244,7 +244,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2922728656533128825}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.353, y: -2.296, z: 0}
+  m_LocalPosition: {x: 0, y: -2.296, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -264,7 +264,7 @@ CircleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0.5, y: 0}
   serializedVersion: 2
   m_Radius: 0.2
 --- !u!114 &613640737
@@ -287,7 +287,7 @@ BoxCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2922728656533128825}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 1
@@ -330,7 +330,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3752703700174993758}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0.5, y: -2.28, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -536,8 +536,8 @@ Rigidbody2D:
   m_LinearDrag: 0.5
   m_AngularDrag: 0.05
   m_GravityScale: 10
-  m_Material: {fileID: 6200000, guid: d7f948433e591c44d82f7ba4d26939a1, type: 2}
-  m_Interpolate: 0
+  m_Material: {fileID: 6200000, guid: a4bdca4b67f40e44b92cd2769f40204e, type: 2}
+  m_Interpolate: 1
   m_SleepingMode: 1
   m_CollisionDetection: 1
   m_Constraints: 4
@@ -550,11 +550,11 @@ CapsuleCollider2D:
   m_GameObject: {fileID: 7454119504127863917}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 6200000, guid: d7f948433e591c44d82f7ba4d26939a1, type: 2}
+  m_Material: {fileID: 6200000, guid: a4bdca4b67f40e44b92cd2769f40204e, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.38, y: -0.5518116}
+  m_Offset: {x: 0.5, y: -0.5518116}
   m_Size: {x: 1.01, y: 3.9096825}
   m_Direction: 0
 --- !u!114 &7454119504127863911
@@ -572,7 +572,7 @@ MonoBehaviour:
   animator: {fileID: 7454119504127863914}
   healthBar: {fileID: 0}
   manaBar: {fileID: 0}
-  maxHealth: 200
+  maxHealth: 100
   currentHealth: 200
   mana: 90
   maxMana: 90
@@ -584,7 +584,7 @@ MonoBehaviour:
   jumpForce: 35
   slopeCheckDistance: 1
   maxSlopeAngle: 60
-  groundCheck: {fileID: 2075772201224782219}
+  groundCheck: {fileID: 2481836913325359413}
   whatIsGround:
     serializedVersion: 2
     m_Bits: 2368
@@ -747,7 +747,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7454119505900127042}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.002, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -788,6 +788,6 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.37, y: -0.5}
+  m_Offset: {x: 0.5, y: -0.5}
   m_Size: {x: 1.6, y: 4.1}
   m_Direction: 0
