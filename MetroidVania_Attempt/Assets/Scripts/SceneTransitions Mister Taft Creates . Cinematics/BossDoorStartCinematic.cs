@@ -63,4 +63,12 @@ public class BossDoorStartCinematic : MonoBehaviour
         boss.animator.SetBool("isFollowing", true);
     }
 
+    public void LoadGameFreeDoor()
+    {
+        doorCollider.enabled = false;
+        doorSprite.enabled = false;
+        bossHB.SetActive(false);
+        doorInAction = false;
+        trigger.enabled = true;
+    }
 }

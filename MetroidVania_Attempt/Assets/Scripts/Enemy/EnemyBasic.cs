@@ -155,11 +155,15 @@ public class EnemyBasic : MonoBehaviour
         //seen and follow
         var seen = Physics2D.OverlapCircle(SightPositionSphere.position, sightRadius, targetLayer);
         PlayerSeen = seen != null;
-        if (PlayerSeen && !PlayerInMeleeRange || currentHealth < maxHealth) //if it is seen but outside of attack range (follows), if inside attack range chance to follow
-        {
-            animator.SetBool("isFollowing", true);
-            playerDetected = true;
+        if(!playerDetected){
+            if (PlayerSeen && !PlayerInMeleeRange || currentHealth < maxHealth) //if it is seen but outside of attack range (follows), if inside attack range chance to follow
+            {
+                animator.SetBool("isFollowing", true);
+                animator.Play("Following");
+                playerDetected = true;
+            }
         }
+        
         //stop follow
         var follow = Physics2D.OverlapCircle(SightPositionSphere.position, followRadius, targetLayer);
         PlayerFollowed = follow != null;

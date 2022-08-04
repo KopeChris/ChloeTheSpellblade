@@ -497,7 +497,7 @@ public class PlayerBasic : MonoBehaviour
                 Push(2*pushForce, 0);
             }
 
-            if (currentHealth <= 0)     //DEAD
+            if (currentHealth <= 0)     //DEAD  DEATH
             {
                 isDead = true;
                 animator.SetBool("isDead", true);
@@ -571,65 +571,9 @@ public class PlayerBasic : MonoBehaviour
 
     //Saves And Loads
 
-    public void SavePlayer()
-    {
-        SaveSystem.SavePlayer(this);
-    }
-
-    public void LoadPlayer()
-    {
-        PlayerData data = SaveSystem.LoadPlayer();
-
-        currentHealth = data.currentHealth;
-        maxHealth = data.maxHealth;
-        Vector3 position;
-        position.x = data.position[0];
-        position.y = data.position[1];
-        position.z = data.position[2];
-        transform.position = position;
-
-    }
-
-    #region //code monkey save system       left unfinished
-    public float[] position;
-    int coin;
-    public static string sceneIndexString;
-    public int maxHealthSS;
-    public int currentHealthSS;
-
-    public int manaSS;
-    public int maxManaSS;
-
-    public int berriesSS;
-    public int maxBerriesSS;
-
-    public void Save()
-    {
-        position[0] = transform.position.x;
-        position[1] = transform.position.y;
-        position[2] = transform.position.z;
-        coin = playerCoin;
-        maxHealthSS = maxHealth;
-        currentHealthSS = currentHealth;
-        manaSS = mana;
-        maxManaSS = maxMana;
-        berriesSS = berries;
-        maxBerriesSS = maxBerries;
-
-        PlayerPrefs.SetInt(sceneIndexString, SceneManager.GetActiveScene().buildIndex);
-
-        SaveSystem.SavePlayer(this);
-
-    }
-    public void Load()
-    {
-        GetCoin(coin);
-    }
-
-    #endregion
 
     #region SaveGameFree
-
+    public static string sceneIndexString;
 
     public void SaveGameFree()
     {
@@ -637,7 +581,7 @@ public class PlayerBasic : MonoBehaviour
         SaveGame.Save<int>("maxHealth", maxHealth);
         SaveGame.Save<int>("mana", mana);
         SaveGame.Save<int>("maxMana", maxMana);
-        SaveGame.Save<int>("coin", coin);
+        SaveGame.Save<int>("coin", playerCoin);
         SaveGame.Save<int>("berries", berries);
         SaveGame.Save<int>("maxBerries", maxBerries);
 
@@ -656,7 +600,7 @@ public class PlayerBasic : MonoBehaviour
         currentHealth = SaveGame.Load<int>("maxHealth");
         maxMana = SaveGame.Load<int>("maxMana");
         mana = SaveGame.Load<int>("maxMana");
-        coin = SaveGame.Load<int>("coin");
+        playerCoin = SaveGame.Load<int>("coin");
         maxBerries = SaveGame.Load<int>("maxBerries");
         berries = SaveGame.Load<int>("berries");
 
@@ -664,15 +608,24 @@ public class PlayerBasic : MonoBehaviour
         animator.Play("Chloe_Idle");
 
         LoadGameFreeEnemies();
+        LoadGameFreeBossDoor();
     }
 
     public void LoadGameFreeEnemies()
-            
     {
         EnemyBasic[] enemies = (EnemyBasic[])GameObject.FindObjectsOfType(typeof(EnemyBasic));
         foreach (EnemyBasic enemy in enemies)
         {
             enemy.LoadGameFreeEnemy();
+        }
+    }
+
+    public void LoadGameFreeBossDoor()
+    {
+        BossDoorStartCinematic[] doors = (BossDoorStartCinematic[])GameObject.FindObjectsOfType(typeof(BossDoorStartCinematic));
+        foreach (BossDoorStartCinematic door in doors)
+        {
+            door.LoadGameFreeDoor();
         }
     }
     #endregion
