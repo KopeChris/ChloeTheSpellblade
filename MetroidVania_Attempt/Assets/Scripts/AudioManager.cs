@@ -8,12 +8,15 @@ public class AudioManager : MonoBehaviour
     AudioSource audioSource;
 
     public  AudioClip enemyHurtClip;
+    public  AudioClip fireHurt;
     public  AudioClip swingClip;
     public  AudioClip playerHurt;
+    public  AudioClip death;
     public  AudioClip footsteps;
     public  AudioClip jump;
     public  AudioClip save;
     public  AudioClip berryMunch;
+    public  AudioClip heal;
     public  AudioClip gateClose;
     public  AudioClip speech;
 
