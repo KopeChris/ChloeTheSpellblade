@@ -23,7 +23,7 @@ public class CMCheckPoint : Indicator
         playerBasic.animator.Play("Pray");
 
 
-        playerBasic.Save();
+        //playerBasic.Save();
     }
 
 }

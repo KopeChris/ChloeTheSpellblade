@@ -1,3 +1,4 @@
+/*
 public void SavePlayer()
     {
         SaveSystem.SavePlayer(this);
@@ -54,3 +55,4 @@ public void SavePlayer()
     }
 
     #endregion
+*/

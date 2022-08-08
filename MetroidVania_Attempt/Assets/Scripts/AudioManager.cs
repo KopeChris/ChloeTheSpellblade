@@ -7,9 +7,15 @@ public class AudioManager : MonoBehaviour
     public static AudioManager instance;
     AudioSource audioSource;
 
-    public  AudioClip hurtClip;
+    public  AudioClip enemyHurtClip;
     public  AudioClip swingClip;
     public  AudioClip playerHurt;
+    public  AudioClip footsteps;
+    public  AudioClip jump;
+    public  AudioClip save;
+    public  AudioClip berryMunch;
+    public  AudioClip gateClose;
+    public  AudioClip speech;
 
     private void Awake()
     {
@@ -24,9 +30,14 @@ public class AudioManager : MonoBehaviour
 
         audioSource = GetComponent<AudioSource>();
     }
+    public void PlaySound(AudioClip sound)
+    {
+        audioSource.PlayOneShot(sound);
+    }
+    /*
     public void PlayHurt()
     {
-        audioSource.PlayOneShot(hurtClip);
+        audioSource.PlayOneShot(enemyHurtClip);
     }
     public void PlaySwing()
     {
@@ -36,5 +47,5 @@ public class AudioManager : MonoBehaviour
     {
         audioSource.PlayOneShot(playerHurt);
     }
-
+    */
 }

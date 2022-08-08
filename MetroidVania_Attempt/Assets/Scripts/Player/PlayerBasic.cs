@@ -267,7 +267,7 @@ public class PlayerBasic : MonoBehaviour
             canAction = false;
             //canMove= false;       //maybe to nerf the player but now keep it as is
             animator.Play("Chloe JumpAttack");
-            //AudioManager.instance.PlaySwing();
+            AudioManager.instance.PlaySound(AudioManager.instance.swingClip);
 
         }
 
@@ -487,7 +487,7 @@ public class PlayerBasic : MonoBehaviour
             canAction = false;
             canMove = false;
 
-            // AudioManager.instance.PlayPlayerHurt();
+            AudioManager.instance.PlaySound(AudioManager.instance.playerHurt);
             CameraShaker.Instance.ShakeOnce((float)damage*maxHealth/2000f, 4f,0.1f,1f);
             StopTime(0.05f);
 
@@ -530,7 +530,7 @@ public class PlayerBasic : MonoBehaviour
 
     void Attack1()
     {
-        //AudioManager.instance.PlaySwing();
+        AudioManager.instance.PlaySound(AudioManager.instance.swingClip);
         canAction = false;
         canMove = false;
         animator.Play("Chloe Atk1");
