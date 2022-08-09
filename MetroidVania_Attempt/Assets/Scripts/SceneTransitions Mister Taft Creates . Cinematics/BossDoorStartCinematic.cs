@@ -52,6 +52,7 @@ public class BossDoorStartCinematic : MonoBehaviour
             PlayerBasic.cinematicState = true;
             Invoke("StopCutScene", sceneDuration);  //stop scene and activate Boss
             trigger.enabled = false;
+            AudioManager.instance.PlaySound(AudioManager.instance.gateClose);
 
         }
     }

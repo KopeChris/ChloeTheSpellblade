@@ -9,6 +9,7 @@ public class Chloe_Atk1 : StateMachineBehaviour
     {
         PlayerBasic.canAction = false;
         PlayerBasic.comboAttack = false;
+        AudioManager.instance.PlaySound(AudioManager.instance.swingClip);
 
     }
 

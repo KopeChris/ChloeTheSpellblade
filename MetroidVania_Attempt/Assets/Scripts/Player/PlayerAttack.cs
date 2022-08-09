@@ -7,7 +7,7 @@ public class PlayerAttack : MonoBehaviour
     public int attackDamage;
     private string detectionTag = "Enemies";
 
-
+    
     private void OnTriggerEnter2D(Collider2D collision)
     {
         /*

@@ -143,13 +143,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyHurtClip: {fileID: 8300000, guid: 3658f76d779246a4784f8184b24c7c15, type: 3}
   fireHurt: {fileID: 8300000, guid: a0ce4e6713492274f9fbc7190163ddf5, type: 3}
-  swingClip: {fileID: 8300000, guid: c75901e16db8c2844ab6bcd5ea118bce, type: 3}
+  swingClip: {fileID: 8300000, guid: 91851e4eedf57774fafcb0d1053b86fa, type: 3}
   playerHurt: {fileID: 8300000, guid: ac4d17abb21602145a4a6304f620ce9c, type: 3}
   death: {fileID: 8300000, guid: cfe1fe1b92f32c046a0c6162005ba9e2, type: 3}
-  footsteps: {fileID: 8300000, guid: ea77a701728efad43b75f55127de04c3, type: 3}
-  jump: {fileID: 8300000, guid: da8e5b8ec8d3b3f408d23ff4b9d3f459, type: 3}
+  jump: {fileID: 8300000, guid: 47de56e6475657b47acda7247587055d, type: 3}
   save: {fileID: 8300000, guid: 94bffc5c712ec384cabdd45be914ec1e, type: 3}
-  berryMunch: {fileID: 0}
+  berryMunch: {fileID: 8300000, guid: a6278f1a65200e14fab1058409cc2cce, type: 3}
   heal: {fileID: 8300000, guid: a12119051b5f8bc4c87c33facabff96f, type: 3}
-  gateClose: {fileID: 0}
-  speech: {fileID: 0}
+  gateClose: {fileID: 8300000, guid: 339e18ef61ff1ec42be776d757542249, type: 3}
+  speech: {fileID: 8300000, guid: ddb8cf59626c2a741b021e4baf8ef304, type: 3}
+  roll: {fileID: 0}

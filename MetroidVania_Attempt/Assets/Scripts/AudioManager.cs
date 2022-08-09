@@ -12,13 +12,13 @@ public class AudioManager : MonoBehaviour
     public  AudioClip swingClip;
     public  AudioClip playerHurt;
     public  AudioClip death;
-    public  AudioClip footsteps;
     public  AudioClip jump;
     public  AudioClip save;
     public  AudioClip berryMunch;
     public  AudioClip heal;
     public  AudioClip gateClose;
     public  AudioClip speech;
+    public  AudioClip roll;
 
     private void Awake()
     {
@@ -36,6 +36,10 @@ public class AudioManager : MonoBehaviour
     public void PlaySound(AudioClip sound)
     {
         audioSource.PlayOneShot(sound);
+    }
+    public void LoopSound()
+    {
+        audioSource.loop=true;
     }
     /*
     public void PlayHurt()

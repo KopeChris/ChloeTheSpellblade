@@ -58,6 +58,7 @@ public class PlayerBasic : MonoBehaviour
 
     //states
     public static bool isRolling;
+    public static bool playerIsRunning;
     public static bool canAction = true;    //if canAction but !canMo
                                             //ve then you can flip but not move used in crouch
     public static bool canMove;
@@ -110,6 +111,7 @@ public class PlayerBasic : MonoBehaviour
     public static float positionX;
     public static float positionY;
 
+    AudioSource playerAudioSource;
 
     SpriteRenderer sprite;
     public IEnumerator Flash()
@@ -156,7 +158,8 @@ public class PlayerBasic : MonoBehaviour
         healthBar.SetMaxHealth(maxHealth);
         manaBar.SetMaxMana(maxMana);
 
-        
+        playerAudioSource=GetComponent<AudioSource>();
+        playerAudioSource.Stop();
     }
 
     void Update()
@@ -181,6 +184,8 @@ public class PlayerBasic : MonoBehaviour
 
         positionX = transform.position.x;
         positionY = transform.position.y;
+
+        playerAudioSource.loop = playerIsRunning;
     }
     private void FixedUpdate()
     {
@@ -267,7 +272,7 @@ public class PlayerBasic : MonoBehaviour
             canAction = false;
             //canMove= false;       //maybe to nerf the player but now keep it as is
             animator.Play("Chloe JumpAttack");
-            AudioManager.instance.PlaySound(AudioManager.instance.swingClip);
+            
 
         }
 
@@ -427,6 +432,7 @@ public class PlayerBasic : MonoBehaviour
         //newForce.Set(xInput * (jumpForce/4), jumpForce);
         //rb.AddForce(newForce, ForceMode2D.Impulse);
         Push(xInput*jumpForce/4, jumpForce);
+        AudioManager.instance.PlaySound(AudioManager.instance.jump);
     }
 
     private void Flip()
@@ -501,7 +507,8 @@ public class PlayerBasic : MonoBehaviour
             {
                 isDead = true;
                 animator.SetBool("isDead", true);
-                Invoke("LoadGameFree", 6f);
+                Invoke("LoadGameFree", 5f);
+                AudioManager.instance.PlaySound(AudioManager.instance.death);
                 //this.enabled = false;
             }
 
@@ -519,11 +526,16 @@ public class PlayerBasic : MonoBehaviour
 
     public void Heal(int heal, int manaRestored)
     {
-            currentHealth += heal;
-            currentHealth = Mathf.Clamp(currentHealth, 0, maxHealth);
-            mana += manaRestored;
-            mana = Mathf.Clamp(mana, 0, maxMana);
-            berries--;
+        currentHealth += heal;
+        currentHealth = Mathf.Clamp(currentHealth, 0, maxHealth);
+        mana += manaRestored;
+        mana = Mathf.Clamp(mana, 0, maxMana);
+        berries--;
+        AudioManager.instance.PlaySound(AudioManager.instance.heal);
+        AudioManager.instance.PlaySound(AudioManager.instance.berryMunch);
+
+        
+
     }
 
     
