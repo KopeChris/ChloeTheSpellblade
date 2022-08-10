@@ -3026,7 +3026,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 594333945}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -27.21103, y: 54.812046, z: -10}
+  m_LocalPosition: {x: 119.12894, y: 49.772045, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -137281,6 +137281,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4409521743505047059, guid: 8f0bcdf046c1ad544a9404370a294fa4, type: 3}
+      propertyPath: Loop
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4409521743505047059, guid: 8f0bcdf046c1ad544a9404370a294fa4, type: 3}
+      propertyPath: m_Volume
+      value: 0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4409521743505047059, guid: 8f0bcdf046c1ad544a9404370a294fa4, type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 0bd6392800e0a4349b9a393e2725f4a0, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8f0bcdf046c1ad544a9404370a294fa4, type: 3}
 --- !u!1001 &3367596554689613992
@@ -137521,11 +137533,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6824283589242836651, guid: 3b906c2f0d020fd4ba8ef930f8293350, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -27.21103
+      value: 119.12894
       objectReference: {fileID: 0}
     - target: {fileID: 6824283589242836651, guid: 3b906c2f0d020fd4ba8ef930f8293350, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 58.612045
+      value: 53.572044
       objectReference: {fileID: 0}
     - target: {fileID: 6824283589242836651, guid: 3b906c2f0d020fd4ba8ef930f8293350, type: 3}
       propertyPath: m_LocalPosition.z
@@ -137632,11 +137644,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7454119504127863912, guid: b204017af7ec7ad45ad868f854259375, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 444.26
+      value: 590.6
       objectReference: {fileID: 0}
     - target: {fileID: 7454119504127863912, guid: b204017af7ec7ad45ad868f854259375, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 8.54
+      value: 3.5
       objectReference: {fileID: 0}
     - target: {fileID: 7454119504127863912, guid: b204017af7ec7ad45ad868f854259375, type: 3}
       propertyPath: m_LocalPosition.z
@@ -137961,6 +137973,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4913399079165655661, guid: 0ea286a2c2de2c5479bc0e46ebff534a, type: 3}
+      propertyPath: textSpeed
+      value: 0.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 4913399079165655661, guid: 0ea286a2c2de2c5479bc0e46ebff534a, type: 3}
       propertyPath: lines.Array.size
       value: 2
       objectReference: {fileID: 0}
@@ -137986,7 +138002,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6345825086133434020, guid: 0ea286a2c2de2c5479bc0e46ebff534a, type: 3}
       propertyPath: textSpeed
-      value: 0.7
+      value: 0.6
       objectReference: {fileID: 0}
     - target: {fileID: 6345825086133434020, guid: 0ea286a2c2de2c5479bc0e46ebff534a, type: 3}
       propertyPath: repeatedSpeech
