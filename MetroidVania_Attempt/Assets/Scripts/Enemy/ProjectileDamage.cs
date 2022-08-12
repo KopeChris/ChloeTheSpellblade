@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Audio;
 
 public class ProjectileDamage : MonoBehaviour
 {
@@ -9,9 +10,13 @@ public class ProjectileDamage : MonoBehaviour
     private string detectionTag = "Player";
     Animator animator;
 
+    public AudioClip explosion;
+    AudioSource audioSource;
+
     private void Start()
     {
         animator = GetComponent<Animator>();
+        audioSource=GetComponent<AudioSource>();
     }
 
 
@@ -22,5 +27,6 @@ public class ProjectileDamage : MonoBehaviour
             collision.GetComponent<PlayerBasic>().TakeDamage(attackDamage,force*(PlayerBasic.positionX-transform.position.x)/Mathf.Abs(PlayerBasic.positionX - transform.position.x));
         }
         animator.Play("Explosion");
+        audioSource.PlayOneShot(explosion);
     }
 }

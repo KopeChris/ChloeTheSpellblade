@@ -21,7 +21,8 @@ public class EnemyAttack : MonoBehaviour
 
     private void OnEnable()
     {
-        
+        if (audioSource == null)
+            return;
         audioSource.Play();
     }
     private void OnTriggerEnter2D(Collider2D collision)

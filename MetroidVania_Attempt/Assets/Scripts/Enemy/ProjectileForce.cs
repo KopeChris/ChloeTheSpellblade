@@ -17,8 +17,8 @@ public class ProjectileForce : MonoBehaviour
 
     int direction;
 
-    
 
+    
     void OnEnable()
     {
         //Debug.Log(rotationValue * 4 * (PlayerBasic.positionY - transform.position.y) - 2);
@@ -36,7 +36,7 @@ public class ProjectileForce : MonoBehaviour
         newForce.Set(direction * (forceX + forceX2 * 0.1f * Mathf.Abs((PlayerBasic.positionX - rb.transform.position.x))), forceY + forceY2 * 0.1f * (PlayerBasic.positionY - rb.transform.position.y));
         rb.AddForce(newForce, ForceMode2D.Impulse);
 
-
+        
     }
     private void Update()
     {

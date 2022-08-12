@@ -3,6 +3,9 @@ using UnityEngine.Audio;
 
 [System.Serializable]
 public class Sound {
+    
+    [HideInInspector]
+    public AudioSource source;
 
     public string name;
 
@@ -14,6 +17,6 @@ public class Sound {
     [Range(-3f, 3f)]
     public float pitch=1; 
 
-    [HideInInspector]
-    public AudioSource source;
+    //public bool loop;
+
 }
