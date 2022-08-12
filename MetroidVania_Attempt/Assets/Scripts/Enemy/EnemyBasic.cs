@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 using EZCameraShake;
-
+using UnityEngine.Audio;
 using BayatGames.SaveGameFree;
 
 
@@ -81,7 +81,11 @@ public class EnemyBasic : MonoBehaviour
     float startPosY;
     float startPosZ;
 
-    public AudioClip hurtSound;
+    AudioSource audioSource;
+    public AudioClip attack1;
+    public AudioClip attack2;
+    public AudioClip attack3;
+
     public IEnumerator FlashWhite()
     {
         sprite.color = new Color(1, 0.5f, 0.5f, 1);
@@ -110,6 +114,8 @@ public class EnemyBasic : MonoBehaviour
         startPosZ = transform.position.z;
 
         InvokeRepeating("RandValue", 0, 2);
+
+        audioSource = GetComponent<AudioSource>();
     }
 
     void Update()
@@ -223,7 +229,9 @@ public class EnemyBasic : MonoBehaviour
         Object.Destroy(rb.transform.GetChild(rb.transform.childCount-1).gameObject, 1f);    //destroys collision block
         Destroy(GetComponent<CapsuleCollider2D>(),1f);
         Destroy(this.gameObject, 5f);
-        
+        FindObjectOfType<AudioManager>().Play("EnemyKill"); 
+
+
     }
    
     //Gizmos
@@ -329,5 +337,14 @@ public class EnemyBasic : MonoBehaviour
         transform.position = new Vector3(startPosX, startPosY, startPosZ);
         animator.SetBool("isFollowing", false);
         playerDetected = false;
+    }
+
+    public void PlaySound(AudioClip sound)
+    {
+        if (sound == null)
+        {
+           //Debug.LogWarning("Sound: " + sound + " from " + gameObject.name + " not found");
+            return; }
+        audioSource.PlayOneShot(sound);
     }
 }
