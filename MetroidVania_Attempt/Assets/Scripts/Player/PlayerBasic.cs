@@ -496,7 +496,7 @@ public class PlayerBasic : MonoBehaviour
             canMove = false;
 
             //AudioManager.instance.PlaySound(AudioManager.instance.playerHurt);
-            FindObjectOfType<AudioManager>().Play("PlayerHurt");
+            
             CameraShaker.Instance.ShakeOnce((float)damage*maxHealth/2000f, 4f,0.1f,1f);
             StopTime(0.05f);
 
@@ -519,6 +519,7 @@ public class PlayerBasic : MonoBehaviour
             StartCoroutine(Flash());
             InvincibleFunction(true);
             Invoke("notInvincible", hurtIseconds);
+            FindObjectOfType<AudioManager>().Play("PlayerHurt");
         }
 
     }

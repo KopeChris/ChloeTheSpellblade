@@ -12,5 +12,6 @@ public class EnemyUI : MonoBehaviour
     void Update()
     {
         //textComponent.text = enemy.playerDirectionX.ToString();
+        textComponent.text = " ";
     }
 }
