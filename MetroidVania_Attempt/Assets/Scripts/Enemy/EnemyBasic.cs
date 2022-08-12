@@ -265,7 +265,7 @@ public class EnemyBasic : MonoBehaviour
             currentHealth = Mathf.Clamp(currentHealth, 0, maxHealth);
             healthBar.SetHealth(currentHealth);
 
-            AudioManager.instance.PlaySound(AudioManager.instance.enemyHurtClip);
+            FindObjectOfType<AudioManager>().Play("EnemyHurt");
             //CameraShake.shake = true;
 
             StopTime(0.05f);                                                 // hitstop stop time when hit

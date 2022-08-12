@@ -2,58 +2,42 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Audio;
+using System;
 
 public class AudioManager : MonoBehaviour
 {
-    public static AudioManager instance;
-    AudioSource audioSource;
+    public Sound[] sounds;
 
-    public  AudioClip enemyHurtClip;
-    public  AudioClip fireHurt;
-    public  AudioClip swingClip;
-    public  AudioClip playerHurt;
-    public  AudioClip death;
-    public  AudioClip jump;
-    public  AudioClip save;
-    public  AudioClip berryMunch;
-    public  AudioClip heal;
-    public  AudioClip gateClose;
-    public  AudioClip speech;
-    public  AudioClip roll;
+    public static AudioManager instance;
 
     private void Awake()
     {
-        if(instance != null && instance !=this)
-        {
-            Destroy(this);
-        }
+        if (instance == null)
+            instance = this;
         else
         {
-            instance = this;
+            Destroy(gameObject);
+            return;
         }
 
-        audioSource = GetComponent<AudioSource>();
+        DontDestroyOnLoad(gameObject);
+        foreach (Sound s in sounds)
+        {
+            s.source = gameObject.AddComponent<AudioSource>();
+            s.source.clip = s.clip;
+
+            s.source.volume = s.volume;
+            s.source.pitch = s.pitch;
+
+        }
     }
-    public void PlaySound(AudioClip sound)
+    
+    public void Play(string name)
     {
-        audioSource.PlayOneShot(sound);
+        Sound s = Array.Find(sounds, sound => sound.name == name);
+        if (s == null)
+        { Debug.LogWarning("Sound: " + name + " not found"); return; }
+        s.source.Play();
     }
-    public void LoopSound()
-    {
-        audioSource.loop=true;
-    }
-    /*
-    public void PlayHurt()
-    {
-        audioSource.PlayOneShot(enemyHurtClip);
-    }
-    public void PlaySwing()
-    {
-        audioSource.PlayOneShot(swingClip);
-    }
-    public void PlayPlayerHurt()
-    {
-        audioSource.PlayOneShot(playerHurt);
-    }
-    */
+
 }

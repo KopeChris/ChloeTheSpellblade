@@ -16,6 +16,7 @@ public class CheckPoint : Indicator
     
     public override void Interact()
     {
+        FindObjectOfType<AudioManager>().Play("Heal");
         playerBasic.currentHealth = playerBasic.maxHealth;
         playerBasic.berries = playerBasic.maxBerries;
         playerBasic.mana = playerBasic.maxMana;

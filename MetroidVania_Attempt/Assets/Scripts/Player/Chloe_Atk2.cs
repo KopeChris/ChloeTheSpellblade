@@ -10,7 +10,7 @@ public class Chloe_Atk2 : StateMachineBehaviour
         PlayerBasic.canAction = false;
         PlayerBasic.canMove = false;
         PlayerBasic.comboAttack = false;
-        AudioManager.instance.PlaySound(AudioManager.instance.swingClip);
+        FindObjectOfType<AudioManager>().Play("SwordSwing");
     }
 
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks

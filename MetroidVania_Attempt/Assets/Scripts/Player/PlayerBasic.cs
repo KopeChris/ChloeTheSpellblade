@@ -283,6 +283,7 @@ public class PlayerBasic : MonoBehaviour
             canAction=false;
             canMove = false;
             animator.Play("Chloe Heal");
+            FindObjectOfType<AudioManager>().Play("Bite");
         }
         if (UnityEngine.Input.GetKeyDown(KeyCode.J)) {castBufferCounter = bufferTime;}
         else { castBufferCounter -= Time.deltaTime; }
@@ -432,7 +433,8 @@ public class PlayerBasic : MonoBehaviour
         //newForce.Set(xInput * (jumpForce/4), jumpForce);
         //rb.AddForce(newForce, ForceMode2D.Impulse);
         Push(xInput*jumpForce/4, jumpForce);
-        AudioManager.instance.PlaySound(AudioManager.instance.jump);
+        //AudioManager.instance.PlaySound(AudioManager.instance.jump);
+        FindObjectOfType<AudioManager>().Play("Jump");
     }
 
     private void Flip()
@@ -493,7 +495,8 @@ public class PlayerBasic : MonoBehaviour
             canAction = false;
             canMove = false;
 
-            AudioManager.instance.PlaySound(AudioManager.instance.playerHurt);
+            //AudioManager.instance.PlaySound(AudioManager.instance.playerHurt);
+            FindObjectOfType<AudioManager>().Play("PlayerHurt");
             CameraShaker.Instance.ShakeOnce((float)damage*maxHealth/2000f, 4f,0.1f,1f);
             StopTime(0.05f);
 
@@ -508,7 +511,8 @@ public class PlayerBasic : MonoBehaviour
                 isDead = true;
                 animator.SetBool("isDead", true);
                 Invoke("LoadGameFree", 5f);
-                AudioManager.instance.PlaySound(AudioManager.instance.death);
+                FindObjectOfType<AudioManager>().Play("Death");
+                //AudioManager.instance.PlaySound(AudioManager.instance.death);
                 //this.enabled = false;
             }
 
@@ -531,8 +535,10 @@ public class PlayerBasic : MonoBehaviour
         mana += manaRestored;
         mana = Mathf.Clamp(mana, 0, maxMana);
         berries--;
-        AudioManager.instance.PlaySound(AudioManager.instance.heal);
-        AudioManager.instance.PlaySound(AudioManager.instance.berryMunch);
+        FindObjectOfType<AudioManager>().Play("Heal");
+        
+        //AudioManager.instance.PlaySound(AudioManager.instance.heal);
+        //AudioManager.instance.PlaySound(AudioManager.instance.berryMunch);
 
         
 
@@ -542,7 +548,8 @@ public class PlayerBasic : MonoBehaviour
 
     void Attack1()
     {
-        AudioManager.instance.PlaySound(AudioManager.instance.swingClip);
+        //AudioManager.instance.PlaySound(AudioManager.instance.swingClip);
+        FindObjectOfType<AudioManager>().Play("SwordSwing");
         canAction = false;
         canMove = false;
         animator.Play("Chloe Atk1");
