@@ -136,6 +136,10 @@ public class EnemyBasic : MonoBehaviour
                 animator.Play("Attack1");
                 nextAttackTime = Time.time + randCooldown;
                 canAttack = false;
+
+                if (attack1 == null)
+                    return;
+                audioSource.PlayOneShot(attack1);
             }
 
             collider = Physics2D.OverlapCircle(Attack2.position, attack2Range, targetLayer);
