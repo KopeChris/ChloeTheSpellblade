@@ -46,7 +46,7 @@ public class EnemyBasic : MonoBehaviour
     float randValue;
     float randValue2;
     float randValue3;
-    float randCooldown;
+    float randCooldown=2;
     private float nextAttackTime = 0f;
 
     [Header("Gizmos Parameters")]
@@ -81,10 +81,12 @@ public class EnemyBasic : MonoBehaviour
     float startPosY;
     float startPosZ;
 
-    AudioSource audioSource;
+    public AudioSource audioSource;
     public AudioClip attack1;
     public AudioClip attack2;
     public AudioClip attack3;
+    public AudioSource runSource;
+    public AudioClip run;
 
     public IEnumerator FlashWhite()
     {
@@ -115,7 +117,6 @@ public class EnemyBasic : MonoBehaviour
 
         InvokeRepeating("RandValue", 0, 2);
 
-        audioSource = GetComponent<AudioSource>();
     }
 
     void Update()
@@ -139,7 +140,8 @@ public class EnemyBasic : MonoBehaviour
 
                 if (attack1 == null)
                     return;
-                audioSource.PlayOneShot(attack1);
+                audioSource.clip = attack1;
+                audioSource.Play();
             }
 
             collider = Physics2D.OverlapCircle(Attack2.position, attack2Range, targetLayer);
@@ -152,7 +154,8 @@ public class EnemyBasic : MonoBehaviour
 
                 if (attack2 == null)
                     return;
-                audioSource.PlayOneShot(attack2);
+                audioSource.clip = attack2;
+                audioSource.Play();
             }
             collider = Physics2D.OverlapCircle(Attack3.position, attack3Range, targetLayer);
             PlayerInRange3 = collider != null;
@@ -164,7 +167,8 @@ public class EnemyBasic : MonoBehaviour
 
                 if (attack3 == null)
                     return;
-                audioSource.PlayOneShot(attack3);
+                audioSource.clip = attack3;
+                audioSource.Play();
             }
         }
 

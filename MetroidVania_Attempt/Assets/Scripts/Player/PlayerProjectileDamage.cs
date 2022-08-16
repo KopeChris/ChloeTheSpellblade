@@ -8,10 +8,12 @@ public class PlayerProjectileDamage : MonoBehaviour
     public int attackDamage;
     private string detectionTag = "Enemies";
     Animator animator;
+    AudioSource audioSource;
 
     private void Start()
     {
         animator = GetComponent<Animator>();
+        audioSource= GetComponent<AudioSource>();
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -42,5 +44,7 @@ public class PlayerProjectileDamage : MonoBehaviour
                 collision.GetComponent<EnemyBasic>().TakeDamage(attackDamage);
         }
         animator.SetTrigger("Explode");
+        audioSource.Play();
+
     }
 }

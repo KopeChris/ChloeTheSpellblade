@@ -10,7 +10,7 @@ public class Player_Run : StateMachineBehaviour
 
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        PlayerBasic.playerIsRunning = true; 
+        PlayerBasic.playerAudioSource.Play();
     }
 
     override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
@@ -21,7 +21,7 @@ public class Player_Run : StateMachineBehaviour
 
     override public void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        PlayerBasic.playerIsRunning = false;
+        PlayerBasic.playerAudioSource.Stop();
     }
 
     // OnStateMove is called right after Animator.OnAnimatorMove()

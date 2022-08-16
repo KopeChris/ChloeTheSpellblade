@@ -13,6 +13,10 @@ public class FollowingBehavior : StateMachineBehaviour
         enemy = animator.GetComponent<EnemyBasic>();
         playerPos = GameObject.FindGameObjectWithTag("Player").transform;
         enemy.canAttack = true;
+
+
+        enemy.runSource.clip = enemy.run;
+        enemy.runSource.Play();
     }
 
     override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
@@ -40,10 +44,10 @@ public class FollowingBehavior : StateMachineBehaviour
     }
 
     // OnStateExit is called when a transition ends and the state machine finishes evaluating this state
-    //override public void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
-    //{
-    //    
-    //}
+    override public void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
+    {
+        enemy.runSource.Stop();
+    }
 
     // OnStateMove is called right after Animator.OnAnimatorMove()
     //override public void OnStateMove(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)

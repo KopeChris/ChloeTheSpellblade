@@ -58,7 +58,6 @@ public class PlayerBasic : MonoBehaviour
 
     //states
     public static bool isRolling;
-    public static bool playerIsRunning;
     public static bool canAction = true;    //if canAction but !canMo
                                             //ve then you can flip but not move used in crouch
     public static bool canMove;
@@ -111,7 +110,7 @@ public class PlayerBasic : MonoBehaviour
     public static float positionX;
     public static float positionY;
 
-    AudioSource playerAudioSource;
+    public static AudioSource playerAudioSource;
 
     SpriteRenderer sprite;
     public IEnumerator Flash()
@@ -185,7 +184,6 @@ public class PlayerBasic : MonoBehaviour
         positionX = transform.position.x;
         positionY = transform.position.y;
 
-        playerAudioSource.loop = playerIsRunning;
     }
     private void FixedUpdate()
     {
@@ -292,6 +290,8 @@ public class PlayerBasic : MonoBehaviour
             canAction=false;
             canMove = false;
             animator.Play("Cast");
+            FindObjectOfType<AudioManager>().Play("FireBallCharge");
+
 
             mana -= manaCost;
         }

@@ -7,7 +7,7 @@ public class IdleBehavior : StateMachineBehaviour
     
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        animator.gameObject.GetComponent<EnemyBasic>().canAttack = true;
+        //animator.gameObject.GetComponent<EnemyBasic>().canAttack = true;
     }
     /*
     override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
