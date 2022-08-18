@@ -285,15 +285,22 @@ public class PlayerBasic : MonoBehaviour
         }
         if (UnityEngine.Input.GetKeyDown(KeyCode.J)) {castBufferCounter = bufferTime;}
         else { castBufferCounter -= Time.deltaTime; }
-        if (castBufferCounter>0 && canAction && isGrounded && manaCost <= mana)     //Cast && manaCost<=mana
+        if (castBufferCounter>0 && canAction && isGrounded )     //Cast && manaCost<=mana
         {
-            canAction=false;
-            canMove = false;
-            animator.Play("Cast");
-            FindObjectOfType<AudioManager>().Play("FireBallCharge");
+            if(manaCost <= mana)
+            {
+                canAction = false;
+                canMove = false;
+                animator.Play("Cast");
+                mana -= manaCost;
+                FindObjectOfType<AudioManager>().Play("FireBallCharge");
+            }
+            else
+            {
+                FindObjectOfType<AudioManager>().Play("Blip");
+                // maybe write a text above player saying "Not Enough Mana"
+            }
 
-
-            mana -= manaCost;
         }
 
     }
@@ -497,7 +504,7 @@ public class PlayerBasic : MonoBehaviour
 
             //AudioManager.instance.PlaySound(AudioManager.instance.playerHurt);
             
-            CameraShaker.Instance.ShakeOnce((float)damage*maxHealth/2000f, 4f,0.1f,1f);
+            CameraShaker.Instance.ShakeOnce((float)damage*20/maxHealth, 4f,0.1f,1f);
             StopTime(0.05f);
 
             if (currentHealth >= 0)

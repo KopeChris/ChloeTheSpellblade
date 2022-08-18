@@ -133,11 +133,11 @@ PrefabInstance:
       objectReference: {fileID: 3433733779285454837}
     - target: {fileID: 1850454574158898155, guid: b8d99bbf1d520e3408dd2d824096421c, type: 3}
       propertyPath: m_Name
-      value: Mushroom Enemy (1)
+      value: Mushroom Enemy
       objectReference: {fileID: 0}
     - target: {fileID: 1850454574158898155, guid: b8d99bbf1d520e3408dd2d824096421c, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1850454574158898156, guid: b8d99bbf1d520e3408dd2d824096421c, type: 3}
       propertyPath: m_Controller
@@ -149,11 +149,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1850454574158898157, guid: b8d99bbf1d520e3408dd2d824096421c, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -155.31
+      value: -40.2
       objectReference: {fileID: 0}
     - target: {fileID: 1850454574158898157, guid: b8d99bbf1d520e3408dd2d824096421c, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 6.7
+      value: 1.2
       objectReference: {fileID: 0}
     - target: {fileID: 1850454574158898157, guid: b8d99bbf1d520e3408dd2d824096421c, type: 3}
       propertyPath: m_LocalPosition.z
@@ -265,15 +265,27 @@ PrefabInstance:
       objectReference: {fileID: 3433733777897537636}
     - target: {fileID: 1850454575246738623, guid: b8d99bbf1d520e3408dd2d824096421c, type: 3}
       propertyPath: m_AnchorMax.x
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1850454575246738623, guid: b8d99bbf1d520e3408dd2d824096421c, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1850454575521893532, guid: b8d99bbf1d520e3408dd2d824096421c, type: 3}
       propertyPath: m_Name
       value: SightPostitionSphere
+      objectReference: {fileID: 0}
+    - target: {fileID: 5003272478054763512, guid: b8d99bbf1d520e3408dd2d824096421c, type: 3}
+      propertyPath: MaxDistance
+      value: 40
+      objectReference: {fileID: 0}
+    - target: {fileID: 5003272478054763512, guid: b8d99bbf1d520e3408dd2d824096421c, type: 3}
+      propertyPath: MinDistance
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 5003272478054763512, guid: b8d99bbf1d520e3408dd2d824096421c, type: 3}
+      propertyPath: panLevelCustomCurve.m_Curve.Array.data[0].value
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b8d99bbf1d520e3408dd2d824096421c, type: 3}
@@ -318,10 +330,10 @@ AudioSource:
   SpatializePostEffects: 0
   Priority: 128
   DopplerLevel: 1
-  MinDistance: 1
-  MaxDistance: 500
+  MinDistance: 20
+  MaxDistance: 40
   Pan2D: 0
-  rolloffMode: 0
+  rolloffMode: 1
   BypassEffects: 0
   BypassListenerEffects: 0
   BypassReverbZones: 0
@@ -354,7 +366,7 @@ AudioSource:
     m_Curve:
     - serializedVersion: 3
       time: 0
-      value: 0
+      value: 1
       inSlope: 0
       outSlope: 0
       tangentMode: 0
