@@ -1207,7 +1207,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1251,7 +1251,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e647b794d30a80f4ca82577bd71c087b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  menu: {fileID: 6340149171681743907}
-  interactionIndication: {fileID: 1911058351}
   player: {fileID: 0}
+  indicator: {fileID: 0}
   radius: 3
+  interactionIndication: {fileID: 1911058351}
+  playerBasic: {fileID: 0}
