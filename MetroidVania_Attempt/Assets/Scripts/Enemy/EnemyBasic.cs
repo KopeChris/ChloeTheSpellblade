@@ -245,9 +245,9 @@ public class EnemyBasic : MonoBehaviour
         Object.Destroy(rb.transform.GetChild(rb.transform.childCount-1).gameObject, 1f);    //destroys collision block
         Destroy(GetComponent<CapsuleCollider2D>(),1f);
         Destroy(this.gameObject, 5f);
-        FindObjectOfType<AudioManager>().Play("EnemyKill"); 
+        FindObjectOfType<AudioManager>().Play("EnemyKill");
 
-
+        rb.gravityScale = 2* rb.gravityScale + 1;
     }
    
     //Gizmos
