@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Rendering.Universal;
 
 public class BossDoorStartCinematic : MonoBehaviour
 {
@@ -9,6 +10,7 @@ public class BossDoorStartCinematic : MonoBehaviour
     private SpriteRenderer doorSprite;
     public GameObject bossHB;
     public EnemyBasic boss;
+    public Light2D doorLight;
 
     private string detectionTag = "Player";
     private bool doorInAction;
@@ -28,6 +30,10 @@ public class BossDoorStartCinematic : MonoBehaviour
         trigger = GetComponent<CircleCollider2D>();
 
         bossHB.SetActive(false);
+        doorLight.enabled = false;
+
+        
+
     }
 
     
@@ -38,6 +44,7 @@ public class BossDoorStartCinematic : MonoBehaviour
             Destroy(bossHB, destroyDelay);      //remove boss healthbar
             Destroy(doorCollider, destroyDelay);// destroy boss door collider
             Destroy(doorSprite, destroyDelay);  //Destroy boss door sprite
+            Destroy(this.gameObject, destroyDelay);
         }
     }
     private void OnTriggerEnter2D(Collider2D collision)
@@ -47,6 +54,7 @@ public class BossDoorStartCinematic : MonoBehaviour
             doorCollider.enabled = true;
             doorSprite.enabled = true;
             doorInAction = true;
+            doorLight.enabled = true;
 
             camAnim.SetBool("cinematic1", true);
             PlayerBasic.cinematicState = true;
@@ -72,5 +80,6 @@ public class BossDoorStartCinematic : MonoBehaviour
         bossHB.SetActive(false);
         doorInAction = false;
         trigger.enabled = true;
+        doorLight.enabled = false;
     }
 }
