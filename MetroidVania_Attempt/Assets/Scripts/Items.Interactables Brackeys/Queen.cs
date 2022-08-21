@@ -9,7 +9,7 @@ public class Queen : NpcDialogue
     {
         base.Interact();
 
-        if (player.gameObject.GetComponent<PlayerBasic>().maxBerries == 0)
+        if (player.gameObject.GetComponent<PlayerBasic>().maxBerries < 2)
         {
             player.gameObject.GetComponent<PlayerBasic>().maxBerries = 2;
             player.gameObject.GetComponent<PlayerBasic>().berries = 2;

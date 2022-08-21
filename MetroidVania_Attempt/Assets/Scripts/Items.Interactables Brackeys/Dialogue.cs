@@ -30,7 +30,6 @@ public class Dialogue : MonoBehaviour
     {//if i had these things in start it wouldnt work
         textComponent.text = string.Empty;
         StartDialogue();
-        Debug.Log("onEnable");
     }
 
     

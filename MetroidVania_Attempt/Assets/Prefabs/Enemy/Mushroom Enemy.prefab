@@ -131,6 +131,10 @@ PrefabInstance:
       propertyPath: SightPositionSphere
       value: 
       objectReference: {fileID: 3433733779285454837}
+    - target: {fileID: 1850454574158897939, guid: b8d99bbf1d520e3408dd2d824096421c, type: 3}
+      propertyPath: m_Interpolate
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1850454574158898155, guid: b8d99bbf1d520e3408dd2d824096421c, type: 3}
       propertyPath: m_Name
       value: Mushroom Enemy
@@ -259,6 +263,10 @@ PrefabInstance:
       propertyPath: m_LocalRotation.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1850454575031531421, guid: b8d99bbf1d520e3408dd2d824096421c, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1850454575159438453, guid: b8d99bbf1d520e3408dd2d824096421c, type: 3}
       propertyPath: enemy
       value: 
@@ -282,6 +290,10 @@ PrefabInstance:
     - target: {fileID: 5003272478054763512, guid: b8d99bbf1d520e3408dd2d824096421c, type: 3}
       propertyPath: MinDistance
       value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 5003272478054763512, guid: b8d99bbf1d520e3408dd2d824096421c, type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5003272478054763512, guid: b8d99bbf1d520e3408dd2d824096421c, type: 3}
       propertyPath: panLevelCustomCurve.m_Curve.Array.data[0].value

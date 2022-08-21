@@ -161,7 +161,7 @@ public class PlayerBasic : MonoBehaviour
         playerAudioSource=GetComponent<AudioSource>();
         playerAudioSource.Stop();
 
-        Invoke("LoadGameFree", 0.02f);
+        //Invoke("LoadGameFree", 0.02f);
     }
 
     void Update()
