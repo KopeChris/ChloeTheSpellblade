@@ -111,6 +111,7 @@ public class PlayerBasic : MonoBehaviour
     public static float positionY;
 
     public static AudioSource playerAudioSource;
+    public GameObject menu;
 
     SpriteRenderer sprite;
     public IEnumerator Flash()
@@ -160,7 +161,7 @@ public class PlayerBasic : MonoBehaviour
         playerAudioSource=GetComponent<AudioSource>();
         playerAudioSource.Stop();
 
-        Invoke("LoadGameFree", 0.1f);
+        Invoke("LoadGameFree", 0.02f);
     }
 
     void Update()
@@ -302,9 +303,13 @@ public class PlayerBasic : MonoBehaviour
                 FindObjectOfType<AudioManager>().Play("Blip");
                 // maybe write a text above player saying "Not Enough Mana"
             }
-
         }
 
+        if (UnityEngine.Input.GetKeyDown(KeyCode.Escape))
+        {
+            menu.SetActive(!menu.activeSelf);
+            
+        }
     }
     
 
