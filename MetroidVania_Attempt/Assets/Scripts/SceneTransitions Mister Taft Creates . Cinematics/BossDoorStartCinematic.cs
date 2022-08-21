@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Rendering.Universal;
+using EZCameraShake;
 
 public class BossDoorStartCinematic : MonoBehaviour
 {
@@ -9,6 +10,9 @@ public class BossDoorStartCinematic : MonoBehaviour
     private CircleCollider2D trigger;
     private SpriteRenderer doorSprite;
     public GameObject bossHB;
+    public GameObject Queen;
+    public GameObject Driver;
+
     public EnemyBasic boss;
     public Light2D doorLight;
 
@@ -19,6 +23,8 @@ public class BossDoorStartCinematic : MonoBehaviour
 
     public float destroyDelay = 3f;
 
+    public AudioSource bossSource;
+    public AudioClip bossMusic;
 
     void Start()
     {
@@ -37,16 +43,6 @@ public class BossDoorStartCinematic : MonoBehaviour
     }
 
     
-    private void Update()
-    {
-        if(boss.currentHealth==0)  //after boss dies
-        {
-            Destroy(bossHB, destroyDelay);      //remove boss healthbar
-            Destroy(doorCollider, destroyDelay);// destroy boss door collider
-            Destroy(doorSprite, destroyDelay);  //Destroy boss door sprite
-            Destroy(this.gameObject, destroyDelay);
-        }
-    }
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.CompareTag(detectionTag) && !doorInAction)    //when triggered activate door collider,sprite , activate cinematic
@@ -55,22 +51,46 @@ public class BossDoorStartCinematic : MonoBehaviour
             doorSprite.enabled = true;
             doorInAction = true;
             doorLight.enabled = true;
-
-            camAnim.SetBool("cinematic1", true);
-            PlayerBasic.cinematicState = true;
-            Invoke("StopCutScene", sceneDuration);  //stop scene and activate Boss
             trigger.enabled = false;
-            //AudioManager.instance.PlaySound(AudioManager.instance.gateClose);
-            FindObjectOfType<AudioManager>().Play("Gate");
 
+            FindObjectOfType<AudioManager>().Play("Gate");
+            CameraShaker.Instance.ShakeOnce(40f, 4f, 0.15f, 1.5f);
+            PlayerBasic.cinematicState = true;      //stops the player movement
+            Invoke("StartCutScene", 3f);            //moves the camaera to boss
+
+            bossSource.Stop();
         }
     }
+
+    void StartCutScene()
+    {
+        camAnim.SetBool("cinematic1", true);
+        Invoke("StopCutScene", sceneDuration);
+        bossSource.clip = bossMusic;
+        bossSource.Play();
+    }
+
     void StopCutScene()
     {
         bossHB.SetActive(true);
         camAnim.SetBool("cinematic1", false);
         PlayerBasic.cinematicState = false;
         boss.animator.SetBool("isFollowing", true);
+    }
+
+    private void Update()
+    {
+        if(boss.currentHealth==0)  //after boss dies
+        {
+            bossSource.Stop();
+            Destroy(bossHB, destroyDelay);      //remove boss healthbar
+            Destroy(doorCollider, destroyDelay);// destroy boss door collider
+            Destroy(doorSprite, destroyDelay);  //Destroy boss door sprite
+            Destroy(this.gameObject, destroyDelay);
+            Destroy(Queen);
+            Destroy(Driver);
+        }
+
     }
 
     public void LoadGameFreeDoor()
@@ -81,5 +101,6 @@ public class BossDoorStartCinematic : MonoBehaviour
         doorInAction = false;
         trigger.enabled = true;
         doorLight.enabled = false;
+        bossSource.Stop();
     }
 }
