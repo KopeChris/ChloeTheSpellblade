@@ -6,9 +6,9 @@ using EZCameraShake;
 
 public class BossDoorStartCinematic : MonoBehaviour
 {
-    private BoxCollider2D doorCollider;
-    private CircleCollider2D trigger;
-    private SpriteRenderer doorSprite;
+    BoxCollider2D doorCollider;
+    CircleCollider2D trigger;
+    SpriteRenderer doorSprite;
     public GameObject bossHB;
     public GameObject Queen;
     public GameObject Driver;
@@ -25,8 +25,9 @@ public class BossDoorStartCinematic : MonoBehaviour
 
     public AudioSource bossSource;
     public AudioClip bossMusic;
+    public AudioClip mainTheme;
 
-    void Start()
+    void Awake()
     {
         doorCollider = GetComponent<BoxCollider2D>();
         doorCollider.enabled = false;
@@ -54,8 +55,8 @@ public class BossDoorStartCinematic : MonoBehaviour
             trigger.enabled = false;
 
             FindObjectOfType<AudioManager>().Play("Gate");
-            CameraShaker.Instance.ShakeOnce(40f, 4f, 0.15f, 1.5f);
             PlayerBasic.cinematicState = true;      //stops the player movement
+            CameraShaker.Instance.ShakeOnce(100f, 4f, 0.15f, 1.5f);
             Invoke("StartCutScene", 3f);            //moves the camaera to boss
 
             bossSource.Stop();
@@ -102,5 +103,7 @@ public class BossDoorStartCinematic : MonoBehaviour
         trigger.enabled = true;
         doorLight.enabled = false;
         bossSource.Stop();
-    }
+        bossSource.clip = mainTheme;
+        bossSource.Play();
+}
 }

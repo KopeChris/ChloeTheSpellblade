@@ -28,7 +28,7 @@ public class PlayerProjectileForce : MonoBehaviour
         if (rb.velocity.y > 2)           
             rb.gravityScale = 1;
         else
-            rb.gravityScale = 4;
+            rb.gravityScale = 3;
     }
 
     private void OnDisable()

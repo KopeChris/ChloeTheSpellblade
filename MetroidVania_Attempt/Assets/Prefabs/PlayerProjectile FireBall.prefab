@@ -99,6 +99,10 @@ PrefabInstance:
       propertyPath: m_WasSpriteAssigned
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6616978495021774594, guid: 89c749298a8a8cf45b7c42706622fabb, type: 3}
+      propertyPath: OutputAudioMixerGroup
+      value: 
+      objectReference: {fileID: 24300002, guid: c4b90489869806643ac24f9b46de8777, type: 2}
     - target: {fileID: 7906663889129690378, guid: 89c749298a8a8cf45b7c42706622fabb, type: 3}
       propertyPath: m_Constraints
       value: 4
@@ -123,7 +127,7 @@ AudioSource:
   m_GameObject: {fileID: 8275302314879916394}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: 24300002, guid: c4b90489869806643ac24f9b46de8777, type: 2}
   m_audioClip: {fileID: 8300000, guid: a0ce4e6713492274f9fbc7190163ddf5, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 0.6
@@ -219,7 +223,7 @@ AudioSource:
   m_GameObject: {fileID: 8275302314879916394}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: 24300002, guid: c4b90489869806643ac24f9b46de8777, type: 2}
   m_audioClip: {fileID: 8300000, guid: e815fe1f40f6b8f44aff26d31446393d, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 0.6

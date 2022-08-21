@@ -9,7 +9,6 @@ public class MainMenu : MonoBehaviour
     public void Continue()
     {
         SceneManager.LoadScene(PlayerPrefs.GetInt(PlayerData.sceneIndexString));
-
         //SceneManager.LoadScene(1);
     }
 

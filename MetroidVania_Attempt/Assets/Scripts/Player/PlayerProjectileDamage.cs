@@ -44,7 +44,7 @@ public class PlayerProjectileDamage : MonoBehaviour
                 collision.GetComponent<EnemyBasic>().TakeDamage(attackDamage);
         }
         animator.SetTrigger("Explode");
-        audioSource.Play();
+        FindObjectOfType<AudioManager>().Play("FireHurt");
 
     }
 }
