@@ -21,6 +21,7 @@ public class OpenDoor : Indicator
     {
         base.Interact();
         open.enabled = true;
+        FindObjectOfType<AudioManager>().Play("OpenDoor");
         Destroy(this.gameObject);
         
         //AudioManager.instance.PlayDoorOpen();

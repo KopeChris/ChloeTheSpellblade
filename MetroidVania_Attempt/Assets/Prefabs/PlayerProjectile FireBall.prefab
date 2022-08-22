@@ -107,6 +107,10 @@ PrefabInstance:
       propertyPath: m_Constraints
       value: 4
       objectReference: {fileID: 0}
+    - target: {fileID: 7906663889129690378, guid: 89c749298a8a8cf45b7c42706622fabb, type: 3}
+      propertyPath: m_Interpolate
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8442064448344489779, guid: 89c749298a8a8cf45b7c42706622fabb, type: 3}
       propertyPath: m_Name
       value: PlayerProjectile FireBall

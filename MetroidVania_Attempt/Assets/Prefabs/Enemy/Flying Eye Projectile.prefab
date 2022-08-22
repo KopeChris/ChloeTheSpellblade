@@ -35,6 +35,14 @@ PrefabInstance:
       propertyPath: m_Controller
       value: 
       objectReference: {fileID: 22100000, guid: 41f67e4976af4c24787efcad3e9e2e1e, type: 2}
+    - target: {fileID: 7084551953325710482, guid: 9c7e6b5218d0d4c49b7798d2342057a6, type: 3}
+      propertyPath: m_Mass
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7084551953325710482, guid: 9c7e6b5218d0d4c49b7798d2342057a6, type: 3}
+      propertyPath: m_Interpolate
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7084551953325710483, guid: 9c7e6b5218d0d4c49b7798d2342057a6, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -81,7 +89,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7084551953325710484, guid: 9c7e6b5218d0d4c49b7798d2342057a6, type: 3}
       propertyPath: m_Radius
-      value: 1.1
+      value: 1.72
       objectReference: {fileID: 0}
     - target: {fileID: 7084551953325710484, guid: 9c7e6b5218d0d4c49b7798d2342057a6, type: 3}
       propertyPath: m_Offset.x
@@ -96,12 +104,20 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 8300000, guid: b20dece57d91ec748819ea838db359c9, type: 3}
     - target: {fileID: 7084551953325710487, guid: 9c7e6b5218d0d4c49b7798d2342057a6, type: 3}
+      propertyPath: forceX
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 7084551953325710487, guid: 9c7e6b5218d0d4c49b7798d2342057a6, type: 3}
       propertyPath: forceY
-      value: 0
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7084551953325710487, guid: 9c7e6b5218d0d4c49b7798d2342057a6, type: 3}
+      propertyPath: forceX2
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 7084551953325710487, guid: 9c7e6b5218d0d4c49b7798d2342057a6, type: 3}
       propertyPath: forceY2
-      value: 8.11
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 7084551953325710487, guid: 9c7e6b5218d0d4c49b7798d2342057a6, type: 3}
       propertyPath: rotationValue
@@ -109,11 +125,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7084551953325710493, guid: 9c7e6b5218d0d4c49b7798d2342057a6, type: 3}
       propertyPath: m_Size.x
-      value: 1
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 7084551953325710493, guid: 9c7e6b5218d0d4c49b7798d2342057a6, type: 3}
       propertyPath: m_Size.y
-      value: 1
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 7084551953325710493, guid: 9c7e6b5218d0d4c49b7798d2342057a6, type: 3}
       propertyPath: m_Material

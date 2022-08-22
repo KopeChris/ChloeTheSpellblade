@@ -199,7 +199,7 @@ public class EnemyBasic : MonoBehaviour
         if(isDead)
         {
             Color opaqueRed = new Color(1, 0, 0, 0f);
-            sprite.color = Color.Lerp(sprite.color, opaqueRed, 0.005f);
+            sprite.color = Color.Lerp(sprite.color, opaqueRed, 0.01f);
         }    
             
 
@@ -228,6 +228,8 @@ public class EnemyBasic : MonoBehaviour
     }
     void Death()
     {
+        #region legacy
+
         //Physics2D.IgnoreCollision(Player.GetComponent<CapsuleCollider2D>(), GetComponent<CapsuleCollider2D>(), true);
         //Physics2D.IgnoreCollision((CapsuleCollider2D)Player.GetComponentInChildren(typeof(CapsuleCollider2D)), GetComponent<CapsuleCollider2D>(), true);
 
@@ -241,10 +243,10 @@ public class EnemyBasic : MonoBehaviour
         }
         */
         //Destroy(GetComponent<EnemyBasic>(),5f);
-
-        Object.Destroy(rb.transform.GetChild(rb.transform.childCount-1).gameObject, 1f);    //destroys collision block
-        Destroy(GetComponent<CapsuleCollider2D>(),1f);
-        Destroy(this.gameObject, 5f);
+        #endregion
+        Object.Destroy(rb.transform.GetChild(rb.transform.childCount-1).gameObject, 0.1f);    //destroys collision block
+        Destroy(GetComponent<CapsuleCollider2D>(),0.1f);
+        Destroy(this.gameObject, 6f);
         FindObjectOfType<AudioManager>().Play("EnemyKill");
 
         rb.gravityScale = 2* rb.gravityScale + 1;
@@ -294,6 +296,7 @@ public class EnemyBasic : MonoBehaviour
 
             StopTime(0.05f);                                                 // hitstop stop time when hit
             CameraShaker.Instance.ShakeOnce((float)damage / 10f, 3f, 0.1f, 0.5f);
+            Player.GetComponent<PlayerBasic>().impulseSource.GenerateImpulseWithForce(2 * (float)damage / maxHealth);
 
             if (currentHealth > 0) { StartCoroutine(FlashWhite());}      
 

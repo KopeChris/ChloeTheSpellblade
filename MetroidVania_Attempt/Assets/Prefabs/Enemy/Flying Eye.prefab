@@ -19,6 +19,14 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1850454574056206318, guid: b8d99bbf1d520e3408dd2d824096421c, type: 3}
+      propertyPath: pushForce
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 1850454574056206318, guid: b8d99bbf1d520e3408dd2d824096421c, type: 3}
+      propertyPath: attackDamage
+      value: 30
+      objectReference: {fileID: 0}
     - target: {fileID: 1850454574056206319, guid: b8d99bbf1d520e3408dd2d824096421c, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.98
@@ -45,7 +53,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1850454574153857958, guid: b8d99bbf1d520e3408dd2d824096421c, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.6599998
+      value: -0.5
       objectReference: {fileID: 0}
     - target: {fileID: 1850454574158897936, guid: b8d99bbf1d520e3408dd2d824096421c, type: 3}
       propertyPath: projectileBallPrefab
@@ -72,12 +80,16 @@ PrefabInstance:
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 1850454574158897938, guid: b8d99bbf1d520e3408dd2d824096421c, type: 3}
+      propertyPath: maxHealth
+      value: 80
+      objectReference: {fileID: 0}
+    - target: {fileID: 1850454574158897938, guid: b8d99bbf1d520e3408dd2d824096421c, type: 3}
       propertyPath: runSource
       value: 
       objectReference: {fileID: 8363279936204114712}
     - target: {fileID: 1850454574158897938, guid: b8d99bbf1d520e3408dd2d824096421c, type: 3}
       propertyPath: attack1Miss
-      value: 0.239
+      value: 0.3
       objectReference: {fileID: 0}
     - target: {fileID: 1850454574158897938, guid: b8d99bbf1d520e3408dd2d824096421c, type: 3}
       propertyPath: audioSource
@@ -85,7 +97,15 @@ PrefabInstance:
       objectReference: {fileID: 6929018981539651873}
     - target: {fileID: 1850454574158897938, guid: b8d99bbf1d520e3408dd2d824096421c, type: 3}
       propertyPath: sightRadius
-      value: 0
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 1850454574158897938, guid: b8d99bbf1d520e3408dd2d824096421c, type: 3}
+      propertyPath: attack1Range
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 1850454574158897938, guid: b8d99bbf1d520e3408dd2d824096421c, type: 3}
+      propertyPath: attack2Range
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 1850454574158897938, guid: b8d99bbf1d520e3408dd2d824096421c, type: 3}
       propertyPath: attack3Range
@@ -93,11 +113,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1850454574158897938, guid: b8d99bbf1d520e3408dd2d824096421c, type: 3}
       propertyPath: attack2Chance
-      value: 0.652
+      value: 0.6
       objectReference: {fileID: 0}
     - target: {fileID: 1850454574158897938, guid: b8d99bbf1d520e3408dd2d824096421c, type: 3}
       propertyPath: attack3Chance
-      value: 0.461
+      value: 0.3
       objectReference: {fileID: 0}
     - target: {fileID: 1850454574158897938, guid: b8d99bbf1d520e3408dd2d824096421c, type: 3}
       propertyPath: detectionRadius
@@ -113,11 +133,11 @@ PrefabInstance:
       objectReference: {fileID: 2941208603208633443}
     - target: {fileID: 1850454574158897939, guid: b8d99bbf1d520e3408dd2d824096421c, type: 3}
       propertyPath: m_LinearDrag
-      value: 0
+      value: 0.1
       objectReference: {fileID: 0}
     - target: {fileID: 1850454574158897939, guid: b8d99bbf1d520e3408dd2d824096421c, type: 3}
       propertyPath: m_Interpolate
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1850454574158897939, guid: b8d99bbf1d520e3408dd2d824096421c, type: 3}
       propertyPath: m_GravityScale
@@ -230,6 +250,14 @@ PrefabInstance:
     - target: {fileID: 1850454574246198355, guid: b8d99bbf1d520e3408dd2d824096421c, type: 3}
       propertyPath: m_Enabled
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1850454574246198355, guid: b8d99bbf1d520e3408dd2d824096421c, type: 3}
+      propertyPath: pushForce
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 1850454574246198355, guid: b8d99bbf1d520e3408dd2d824096421c, type: 3}
+      propertyPath: attackDamage
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 1850454574811373550, guid: b8d99bbf1d520e3408dd2d824096421c, type: 3}
       propertyPath: m_LocalPosition.x
@@ -471,7 +499,7 @@ AudioSource:
   m_GameObject: {fileID: 2941208603059058557}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: 24300002, guid: c4b90489869806643ac24f9b46de8777, type: 2}
   m_audioClip: {fileID: 8300000, guid: fd92f0d84f0b3bc4d84462abbb8066b2, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
@@ -482,10 +510,10 @@ AudioSource:
   SpatializePostEffects: 0
   Priority: 128
   DopplerLevel: 1
-  MinDistance: 1
-  MaxDistance: 500
+  MinDistance: 20
+  MaxDistance: 40
   Pan2D: 0
-  rolloffMode: 0
+  rolloffMode: 1
   BypassEffects: 0
   BypassListenerEffects: 0
   BypassReverbZones: 0
@@ -518,7 +546,7 @@ AudioSource:
     m_Curve:
     - serializedVersion: 3
       time: 0
-      value: 0
+      value: 1
       inSlope: 0
       outSlope: 0
       tangentMode: 0
@@ -852,10 +880,10 @@ AudioSource:
   m_GameObject: {fileID: 2941208604171415304}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 40c405a1145748147b0e33e88d0fc1cb, type: 3}
+  OutputAudioMixerGroup: {fileID: 24300002, guid: c4b90489869806643ac24f9b46de8777, type: 2}
+  m_audioClip: {fileID: 8300000, guid: d6b39073a4ddec34ab813cf0b2504823, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: 0.8
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -863,10 +891,10 @@ AudioSource:
   SpatializePostEffects: 0
   Priority: 128
   DopplerLevel: 1
-  MinDistance: 1
-  MaxDistance: 500
+  MinDistance: 20
+  MaxDistance: 40
   Pan2D: 0
-  rolloffMode: 0
+  rolloffMode: 1
   BypassEffects: 0
   BypassListenerEffects: 0
   BypassReverbZones: 0
@@ -899,7 +927,7 @@ AudioSource:
     m_Curve:
     - serializedVersion: 3
       time: 0
-      value: 0
+      value: 1
       inSlope: 0
       outSlope: 0
       tangentMode: 0

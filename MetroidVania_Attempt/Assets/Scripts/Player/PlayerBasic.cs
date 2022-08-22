@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using EZCameraShake;
 using UnityEngine.SceneManagement;
-
+using Cinemachine;
 using BayatGames.SaveGameFree;
 
 public class PlayerBasic : MonoBehaviour
@@ -112,6 +112,10 @@ public class PlayerBasic : MonoBehaviour
 
     public static AudioSource playerAudioSource;
     public GameObject menu;
+    public GameObject optionsMenu;
+
+    [HideInInspector]
+    public CinemachineImpulseSource impulseSource;
 
     SpriteRenderer sprite;
     public IEnumerator Flash()
@@ -162,12 +166,11 @@ public class PlayerBasic : MonoBehaviour
         playerAudioSource.Stop();
 
         //Invoke("LoadGameFree", 0.02f);
+        impulseSource = GetComponent<CinemachineImpulseSource>();
     }
 
     void Update()
     {
-        
-        
         Input();
        
         /*
@@ -234,9 +237,12 @@ public class PlayerBasic : MonoBehaviour
             Jump();
             jumpBufferCounter=0f;
         }
+
         else if (UnityEngine.Input.GetButtonDown("Jump") && UnityEngine.Input.GetKey(KeyCode.S) && !ignorePlatformsCoroutineIsRunning)
         {
             StartCoroutine("IgnorePlatforms");
+            FindObjectOfType<AudioManager>().Play("Jump");
+
         }
 
         if (UnityEngine.Input.GetKeyDown(KeyCode.O))
@@ -268,6 +274,7 @@ public class PlayerBasic : MonoBehaviour
             animator.Play("Chloe Crouch");
         }
         if (UnityEngine.Input.GetKey(KeyCode.S) == false) {animator.SetBool("stand",true);}
+        
         if (UnityEngine.Input.GetKeyDown(KeyCode.I) && isJumping)   //jump Attack
         {
             canAction = false;
@@ -286,6 +293,7 @@ public class PlayerBasic : MonoBehaviour
             animator.Play("Chloe Heal");
             FindObjectOfType<AudioManager>().Play("Bite");
         }
+
         if (UnityEngine.Input.GetKeyDown(KeyCode.J)) {castBufferCounter = bufferTime;}
         else { castBufferCounter -= Time.deltaTime; }
         if (castBufferCounter>0 && canAction && isGrounded )     //Cast && manaCost<=mana
@@ -307,8 +315,15 @@ public class PlayerBasic : MonoBehaviour
 
         if (UnityEngine.Input.GetKeyDown(KeyCode.Escape))
         {
-            menu.SetActive(!menu.activeSelf);
-            
+            if(menu.activeSelf || optionsMenu.activeSelf)
+            {
+                menu.SetActive(false);
+                optionsMenu.SetActive(false);
+            }
+            else
+            {
+                menu.SetActive(true);
+            }
         }
     }
     
@@ -510,9 +525,15 @@ public class PlayerBasic : MonoBehaviour
             canMove = false;
 
             //AudioManager.instance.PlaySound(AudioManager.instance.playerHurt);
-            
-            CameraShaker.Instance.ShakeOnce((float)damage*20/maxHealth, 4f,0.1f,1f);
+
+            impulseSource.GenerateImpulseWithForce((float)damage * 9 / maxHealth);
+            //CameraShaker.Instance.ShakeOnce((float)damage*20/maxHealth, 4f,0.1f,1f);
             StopTime(0.05f);
+
+            StartCoroutine(Flash());
+            InvincibleFunction(true);
+            Invoke("notInvincible", hurtIseconds);
+            FindObjectOfType<AudioManager>().Play("PlayerHurt");
 
             if (currentHealth >= 0)
             {
@@ -523,19 +544,13 @@ public class PlayerBasic : MonoBehaviour
             if (currentHealth <= 0)     //DEAD  DEATH
             {
                 isDead = true;
+                animator.Play("Death");
                 animator.SetBool("isDead", true);
                 Invoke("LoadGameFree", 5f);
                 FindObjectOfType<AudioManager>().Play("Death");
-                //AudioManager.instance.PlaySound(AudioManager.instance.death);
                 //this.enabled = false;
             }
-
-            StartCoroutine(Flash());
-            InvincibleFunction(true);
-            Invoke("notInvincible", hurtIseconds);
-            FindObjectOfType<AudioManager>().Play("PlayerHurt");
         }
-
     }
    
     public void GetHardStunned()

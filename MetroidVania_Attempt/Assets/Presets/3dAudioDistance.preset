@@ -19,7 +19,7 @@ Preset:
   - target: {fileID: 0}
     propertyPath: OutputAudioMixerGroup
     value: 
-    objectReference: {fileID: 0}
+    objectReference: {fileID: 24300002, guid: c4b90489869806643ac24f9b46de8777, type: 2}
   - target: {fileID: 0}
     propertyPath: m_audioClip
     value: 

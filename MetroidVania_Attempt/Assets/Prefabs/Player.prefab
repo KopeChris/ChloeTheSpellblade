@@ -354,6 +354,7 @@ GameObject:
   - component: {fileID: 1635180678}
   - component: {fileID: 1635180679}
   - component: {fileID: 1635180685}
+  - component: {fileID: 3023213409484462175}
   - component: {fileID: 1635180686}
   - component: {fileID: 3854812311878558853}
   m_Layer: 7
@@ -536,6 +537,7 @@ MonoBehaviour:
   cc: {fileID: 0}
   coyoteTimeCoolDown: 0.1
   bufferTime: 0.2
+  menu: {fileID: 0}
   platformCollider: {fileID: 2922728656533128825}
 --- !u!114 &1635180678
 MonoBehaviour:
@@ -576,6 +578,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   healAmount: 100
   manaRestored: 45
+--- !u!114 &3023213409484462175
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7454119504127863917}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c399c309f728c084c8fd32002e66c31d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioName: 
 --- !u!114 &1635180686
 MonoBehaviour:
   m_ObjectHideFlags: 0

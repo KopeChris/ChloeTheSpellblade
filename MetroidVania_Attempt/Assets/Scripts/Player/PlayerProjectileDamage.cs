@@ -41,7 +41,8 @@ public class PlayerProjectileDamage : MonoBehaviour
 
         if (collision.CompareTag(detectionTag))
         {
-                collision.GetComponent<EnemyBasic>().TakeDamage(attackDamage);
+            collision.GetComponent<EnemyBasic>().TakeDamage(attackDamage);
+            attackDamage = 0;
         }
         animator.SetTrigger("Explode");
         FindObjectOfType<AudioManager>().Play("FireHurt");
