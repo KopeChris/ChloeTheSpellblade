@@ -9,16 +9,18 @@ public class PlayerProjectileDamage : MonoBehaviour
     private string detectionTag = "Enemies";
     Animator animator;
     AudioSource audioSource;
+    Rigidbody2D rb;
 
     private void Start()
     {
         animator = GetComponent<Animator>();
         audioSource= GetComponent<AudioSource>();
+        rb = GetComponent<Rigidbody2D>();
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        #region Comments
+        #region Legacy
         /*
         if(target== LayerMask.NameToLayer("Enemies"))
         {
@@ -47,5 +49,6 @@ public class PlayerProjectileDamage : MonoBehaviour
         animator.SetTrigger("Explode");
         FindObjectOfType<AudioManager>().Play("FireHurt");
 
+        rb.velocity = Vector2.zero;
     }
 }

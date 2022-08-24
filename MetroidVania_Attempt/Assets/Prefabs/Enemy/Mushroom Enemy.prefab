@@ -33,7 +33,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1850454574056206318, guid: b8d99bbf1d520e3408dd2d824096421c, type: 3}
       propertyPath: attackDamage
-      value: 30
+      value: 40
       objectReference: {fileID: 0}
     - target: {fileID: 1850454574056206319, guid: b8d99bbf1d520e3408dd2d824096421c, type: 3}
       propertyPath: m_LocalPosition.x
@@ -89,11 +89,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1850454574158897938, guid: b8d99bbf1d520e3408dd2d824096421c, type: 3}
       propertyPath: attack1Range
-      value: 2.25
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 1850454574158897938, guid: b8d99bbf1d520e3408dd2d824096421c, type: 3}
       propertyPath: attack2Range
-      value: 2.25
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 1850454574158897938, guid: b8d99bbf1d520e3408dd2d824096421c, type: 3}
       propertyPath: attack3Range
@@ -203,6 +203,10 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 750953294, guid: 72da987281993b44ca48d17ee8e30497, type: 3}
+    - target: {fileID: 1850454574176702934, guid: b8d99bbf1d520e3408dd2d824096421c, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 1850454574176702935, guid: b8d99bbf1d520e3408dd2d824096421c, type: 3}
       propertyPath: m_Name
       value: Attack 1 Range
@@ -237,7 +241,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1850454574246198355, guid: b8d99bbf1d520e3408dd2d824096421c, type: 3}
       propertyPath: attackDamage
-      value: 20
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 1850454574811373550, guid: b8d99bbf1d520e3408dd2d824096421c, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 1850454574811373551, guid: b8d99bbf1d520e3408dd2d824096421c, type: 3}
       propertyPath: m_Name
@@ -514,6 +522,21 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &1181910071146900238
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3433733777897537693}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d9b73da65d76100469f12bb76f709212, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  velocityXMultiplier: 2
+  velocityYMultiplier: 0
+  enemyleapDirection: 0
 --- !u!1 &3433733778067344542 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1850454574056206312, guid: b8d99bbf1d520e3408dd2d824096421c, type: 3}

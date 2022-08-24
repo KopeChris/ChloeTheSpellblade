@@ -56,7 +56,7 @@ public class BossDoorStartCinematic : MonoBehaviour
 
             FindObjectOfType<AudioManager>().Play("Gate");
             PlayerBasic.cinematicState = true;      //stops the player movement
-            CameraShaker.Instance.ShakeOnce(100f, 4f, 0.15f, 1.5f);
+            //CameraShaker.Instance.ShakeOnce(100f, 4f, 0.15f, 1.5f);
             Invoke("StartCutScene", 3f);            //moves the camaera to boss
 
             bossSource.Stop();

@@ -8,10 +8,27 @@ public class EnemyUI : MonoBehaviour
     public TextMeshProUGUI textComponent;
     public EnemyBasic enemy;
 
+    public float damage;
+    public float duration;
+    public float countdown;
+
     
     void Update()
     {
-        //textComponent.text = enemy.playerDirectionX.ToString();
-        textComponent.text = " ";
+        //textComponent.text = enemy.playerDirectionX.ToString();   //to show playerdirection
+        //textComponent.text = " ";    // to show nothing
+
+        if(countdown > 0)
+        {
+            textComponent.enabled = true;
+            textComponent.text = damage.ToString();
+            countdown -= Time.deltaTime;
+        }
+        
+        if(countdown <=0)
+        {
+            textComponent.enabled = false;
+            damage = 0;
+        }
     }
 }

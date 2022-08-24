@@ -1,7 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using EZCameraShake;
 using UnityEngine.SceneManagement;
 using Cinemachine;
 using BayatGames.SaveGameFree;
@@ -167,6 +166,16 @@ public class PlayerBasic : MonoBehaviour
 
         //Invoke("LoadGameFree", 0.02f);
         impulseSource = GetComponent<CinemachineImpulseSource>();
+
+        //delete these // and play before release
+        // HasSaved.hasSaved = false;
+        SaveGame.Save<bool>("hasSaved", HasSaved.hasSaved);
+        SaveGame.Save<bool>("hasInteracted", OpenDoor.hasInteracted);
+        if(SaveGame.Load<bool>("hasSaved"))
+        {
+            Invoke("LoadGameFree", 0.02f);
+        }
+        Invoke("SaveGameFree", 0.02f);
     }
 
     void Update()
@@ -638,6 +647,9 @@ public class PlayerBasic : MonoBehaviour
         SaveGame.Save<float>("positionY", transform.position.y);
         SaveGame.Save<float>("positionZ", transform.position.z);
 
+        HasSaved.hasSaved = true;
+        SaveGame.Save<bool>("hasSaved", HasSaved.hasSaved);
+
         LoadGameFreeEnemies();
 
         PlayerPrefs.SetInt(sceneIndexString, SceneManager.GetActiveScene().buildIndex);
@@ -677,6 +689,7 @@ public class PlayerBasic : MonoBehaviour
             door.LoadGameFreeDoor();
         }
     }
+
     #endregion
 
 

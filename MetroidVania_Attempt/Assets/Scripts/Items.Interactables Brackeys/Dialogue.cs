@@ -45,7 +45,7 @@ public class Dialogue : MonoBehaviour
             textComponent.text += c;
             //AudioManager.instance.PlaySound(AudioManager.instance.speech);
             FindObjectOfType<AudioManager>().Play("Speech");
-            yield return new WaitForSeconds((0.27f-0.27f *textSpeed));
+            yield return new WaitForSeconds((0.27f-0.26f *textSpeed));
             // AudioManager.instance.PlayPlayerHurt();      Play sound for each character typed
         }
         //Line Ends

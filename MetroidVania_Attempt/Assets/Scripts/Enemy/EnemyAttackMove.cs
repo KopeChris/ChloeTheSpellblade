@@ -14,11 +14,9 @@ public class EnemyAttackMove : MonoBehaviour
     Rigidbody2D rb;
     EnemyBasic enemy;
 
-    public enum leapDirection // your custom enumeration
-    {
-        Facing,
-        Player,
-    };
+    //custom enumeration
+
+    public enum leapDirection   {Facing, Player};
     public leapDirection enemyleapDirection = leapDirection.Facing;
 
     private void Awake()

@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using BayatGames.SaveGameFree;
 
 public class MainMenu : MonoBehaviour
 {
@@ -17,6 +18,11 @@ public class MainMenu : MonoBehaviour
         SceneManager.LoadScene(1);
 
         //SceneManager.LoadScene(1);
+    }
+    public void DeleteSave()
+    {
+        SaveGame.Clear();
+
     }
 
     public void QuitGame()

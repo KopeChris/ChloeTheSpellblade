@@ -2,9 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
-using EZCameraShake;
 using UnityEngine.Audio;
-using BayatGames.SaveGameFree;
+
 
 
 
@@ -291,12 +290,15 @@ public class EnemyBasic : MonoBehaviour
             currentHealth = Mathf.Clamp(currentHealth, 0, maxHealth);
             healthBar.SetHealth(currentHealth);
 
+            GetComponent<EnemyUI>().damage += damage;
+            GetComponent<EnemyUI>().countdown = GetComponent<EnemyUI>().duration;
+
             FindObjectOfType<AudioManager>().Play("EnemyHurt");
             //CameraShake.shake = true;
 
             StopTime(0.05f);                                                 // hitstop stop time when hit
-            CameraShaker.Instance.ShakeOnce((float)damage / 10f, 3f, 0.1f, 0.5f);
-            Player.GetComponent<PlayerBasic>().impulseSource.GenerateImpulseWithForce(2 * (float)damage / maxHealth);
+            //CameraShaker.Instance.ShakeOnce((float)damage / 10f, 3f, 0.1f, 0.5f);
+            Player.GetComponent<PlayerBasic>().impulseSource.GenerateImpulseWithForce(1.5f * (float)damage / maxHealth);
 
             if (currentHealth > 0) { StartCoroutine(FlashWhite());}      
 

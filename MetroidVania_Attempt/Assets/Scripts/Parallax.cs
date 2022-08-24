@@ -12,6 +12,8 @@ public class Parallax : MonoBehaviour
 
     float extraXDistance = 0;
 
+    public float smoothingX = 1f;
+
     void Start()
     {
         startPosX = transform.position.x;
@@ -24,17 +26,18 @@ public class Parallax : MonoBehaviour
     
     void Update()
     {
+        
+        float temp = ((cam.transform.position.x- camStartPosX) * (1 - parallaxEffect));
+        float xDist = ((cam.transform.position.x - camStartPosX) * parallaxEffect) + extraXDistance;
+        float yDist = ((cam.transform.position.y - camStartPosY) * parallaxEffect)/50;      //0;
+
+        #region legacy
         /*
         if(cam.transform.position.x== startPosX)//only activate if camera is inside // maybe not actually i dont know i'll see tomorow how other games are doing it, plus will i change scenes or not?
         {
 
         }
         */
-        float temp = ((cam.transform.position.x- camStartPosX) * (1 - parallaxEffect));
-        float xDist = ((cam.transform.position.x - camStartPosX) * parallaxEffect) + extraXDistance;
-        float yDist = ((cam.transform.position.y - camStartPosY) * parallaxEffect)/50;      //0;
-
-        #region legacy
         /*
         if(PlayerBasic.positionY> startPosY + height * parallaxEffect) 
         {
@@ -52,19 +55,25 @@ public class Parallax : MonoBehaviour
         }
         */
         #endregion
-
-        transform.position = new Vector3(startPosX + xDist, startPosY + yDist, transform.position.z);
-
-
-        if (temp > (length + extraXDistance))
-        {
-            extraXDistance += length;
-        }
-        else if (temp < (-length + extraXDistance))
-        {
-            extraXDistance -= length;
-        }
         
+        if (temp < (length + extraXDistance) && temp > (-length + extraXDistance))  //move the backgrounds a little
+        {
+            Vector3 backgroundTargetPosX = new Vector3(startPosX + xDist, startPosY + yDist, transform.position.z);
+            transform.position = Vector3.Lerp(transform.position, backgroundTargetPosX, smoothingX * Time.deltaTime);
+
+        }
+
+
+        //move the backgrounds a lot displace them equal to their lenth as to not have to make many backgrounds
+        if (temp >= (length + extraXDistance))
+        {
+            extraXDistance += 2 * length;
+        }
+        else if (temp <= (-length + extraXDistance))
+        {
+            extraXDistance -= 2 * length;
+        }
+
 
     }
 }

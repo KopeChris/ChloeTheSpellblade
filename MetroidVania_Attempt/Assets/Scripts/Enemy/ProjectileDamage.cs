@@ -9,6 +9,8 @@ public class ProjectileDamage : MonoBehaviour
     public int force;
     private string detectionTag = "Player";
     Animator animator;
+    Rigidbody2D rb;
+
 
     public AudioClip explosion;
     AudioSource audioSource;
@@ -17,6 +19,7 @@ public class ProjectileDamage : MonoBehaviour
     {
         animator = GetComponent<Animator>();
         audioSource=GetComponent<AudioSource>();
+        rb = GetComponent<Rigidbody2D>();
     }
 
 
@@ -28,5 +31,7 @@ public class ProjectileDamage : MonoBehaviour
         }
         animator.Play("Explosion");
         audioSource.PlayOneShot(explosion);
+
+        rb.velocity = Vector2.zero;
     }
 }
