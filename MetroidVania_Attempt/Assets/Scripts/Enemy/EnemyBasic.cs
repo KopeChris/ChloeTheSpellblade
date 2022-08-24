@@ -290,8 +290,8 @@ public class EnemyBasic : MonoBehaviour
             currentHealth = Mathf.Clamp(currentHealth, 0, maxHealth);
             healthBar.SetHealth(currentHealth);
 
-            GetComponent<EnemyUI>().damage += damage;
-            GetComponent<EnemyUI>().countdown = GetComponent<EnemyUI>().duration;
+            GetComponentInChildren<EnemyUI>().damage += damage;
+            GetComponentInChildren<EnemyUI>().countdown = GetComponentInChildren<EnemyUI>().duration;
 
             FindObjectOfType<AudioManager>().Play("EnemyHurt");
             //CameraShake.shake = true;

@@ -9,7 +9,7 @@ public class EnemyUI : MonoBehaviour
     public EnemyBasic enemy;
 
     public float damage;
-    public float duration;
+    public float duration = 3f;
     public float countdown;
 
     
@@ -20,6 +20,7 @@ public class EnemyUI : MonoBehaviour
 
         if(countdown > 0)
         {
+            textComponent.color = Color.red;
             textComponent.enabled = true;
             textComponent.text = damage.ToString();
             countdown -= Time.deltaTime;
