@@ -10,6 +10,7 @@ public class EnemyHbBillboard : MonoBehaviour
 
     private void Start()
     {
+        enemy = GetComponentInParent<EnemyBasic>();
 
         if (enemy.facingRight)
         {

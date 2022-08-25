@@ -243,7 +243,8 @@ public class EnemyBasic : MonoBehaviour
         */
         //Destroy(GetComponent<EnemyBasic>(),5f);
         #endregion
-        Object.Destroy(rb.transform.GetChild(rb.transform.childCount-1).gameObject, 0.1f);    //destroys collision block
+        Object.Destroy(rb.transform.GetChild(rb.transform.childCount - 1).gameObject, 0.1f);    //destroys the last child usually the collision blocker
+        Object.Destroy(rb.transform.GetChild(rb.transform.childCount - 2).gameObject, 0.1f);
         Destroy(GetComponent<CapsuleCollider2D>(),0.1f);
         Destroy(this.gameObject, 6f);
         FindObjectOfType<AudioManager>().Play("EnemyKill");

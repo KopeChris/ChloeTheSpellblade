@@ -10,6 +10,6 @@ public class BerryUI : MonoBehaviour
 
     void Update()
     {
-        textComponent.text = player.berries.ToString();
+        textComponent.text = player.berries.ToString() + "/" + player.maxBerries.ToString();
     }
 }
