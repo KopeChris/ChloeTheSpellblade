@@ -67,11 +67,11 @@ public class Parallax : MonoBehaviour
         //move the backgrounds a lot displace them equal to their lenth as to not have to make many backgrounds
         if (temp >= (length + extraXDistance))
         {
-            extraXDistance += 2 * length;
+            extraXDistance += length;
         }
         else if (temp <= (-length + extraXDistance))
         {
-            extraXDistance -= 2 * length;
+            extraXDistance -= length;
         }
 
 
