@@ -6,6 +6,8 @@ using BayatGames.SaveGameFree;
 public class HasSaved : MonoBehaviour
 {
     public static HasSaved instance;
+    public static bool hasSaved;
+
     private void Awake()
     {
         if (instance == null)
@@ -17,8 +19,9 @@ public class HasSaved : MonoBehaviour
         }
         DontDestroyOnLoad(gameObject);
 
-        hasSaved = SaveGame.Load<bool>("hasSaved");
+        if(SaveGame.Exists("hasSaved"))
+        {
+            hasSaved = SaveGame.Load<bool>("hasSaved");
+        }
     }
-
-    public static bool hasSaved;
 }

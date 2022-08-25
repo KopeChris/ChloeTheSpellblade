@@ -132,6 +132,7 @@ public class PlayerBasic : MonoBehaviour
     bool ignorePlatformsCoroutineIsRunning;
     int playerLayer, platformsLayer, enemiesLayer, enemyCollisionBlocker, playerCollisionBlocker, enemyProjectile;
     public GameObject platformCollider;
+
     IEnumerator IgnorePlatforms()
     {
         ignorePlatformsCoroutineIsRunning = true;
@@ -175,7 +176,7 @@ public class PlayerBasic : MonoBehaviour
         {
             Invoke("LoadGameFree", 0.02f);
         }
-        Invoke("SaveGameFree", 0.02f);
+        Invoke("SaveGameFree", 0.03f);
     }
 
     void Update()
@@ -301,6 +302,10 @@ public class PlayerBasic : MonoBehaviour
             canMove = false;
             animator.Play("Chloe Heal");
             FindObjectOfType<AudioManager>().Play("Bite");
+        }
+        else if(healBufferCounter > 0 && canAction && isGrounded && berries <= 0)
+        {
+            FindObjectOfType<AudioManager>().Play("Blip");
         }
 
         if (UnityEngine.Input.GetKeyDown(KeyCode.J)) {castBufferCounter = bufferTime;}

@@ -23,7 +23,6 @@ public class CheckPoint : Indicator
         interactionIndication.SetActive(false); //close the indication forever
         playerBasic.animator.Play("Pray");
 
-
         playerBasic.SaveGameFree();
     }
     
