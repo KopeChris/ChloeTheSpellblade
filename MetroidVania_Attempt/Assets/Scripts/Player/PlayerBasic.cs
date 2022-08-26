@@ -650,6 +650,9 @@ public class PlayerBasic : MonoBehaviour
 
     public void SaveGameFree()
     {
+        currentHealth = maxHealth;
+        berries = maxBerries;
+        mana = maxMana;
         SaveGame.Save<int>("currentHealth", currentHealth);
         SaveGame.Save<int>("maxHealth", maxHealth);
         SaveGame.Save<int>("mana", mana);
@@ -670,6 +673,7 @@ public class PlayerBasic : MonoBehaviour
         PlayerPrefs.SetInt(sceneIndexString, SceneManager.GetActiveScene().buildIndex);
 
         isDead = false;
+        animator.SetBool("isDead", false);
         animator.Play("Chloe_Idle");
     }
 
