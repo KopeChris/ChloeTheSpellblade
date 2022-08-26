@@ -116,6 +116,9 @@ public class PlayerBasic : MonoBehaviour
     [HideInInspector]
     public CinemachineImpulseSource impulseSource;
 
+    [HideInInspector]
+    public bool facingRight = true;
+
     SpriteRenderer sprite;
     public IEnumerator Flash()
     {
@@ -175,6 +178,7 @@ public class PlayerBasic : MonoBehaviour
         if(SaveGame.Load<bool>("hasSaved"))
         {
             Invoke("LoadGameFree", 0.02f);
+            Debug.Log("load game");
         }
         Invoke("SaveGameFree", 0.03f);
     }
@@ -306,6 +310,8 @@ public class PlayerBasic : MonoBehaviour
         else if(healBufferCounter > 0 && canAction && isGrounded && berries <= 0)
         {
             FindObjectOfType<AudioManager>().Play("Blip");
+            GetComponentInChildren<PlayerUI>().textComponent.text = "No berries";
+            GetComponentInChildren<PlayerUI>().countdown = GetComponentInChildren<PlayerUI>().duration;
         }
 
         if (UnityEngine.Input.GetKeyDown(KeyCode.J)) {castBufferCounter = bufferTime;}
@@ -324,6 +330,8 @@ public class PlayerBasic : MonoBehaviour
             {
                 FindObjectOfType<AudioManager>().Play("Blip");
                 // maybe write a text above player saying "Not Enough Mana"
+                GetComponentInChildren<PlayerUI>().textComponent.text = "Not Enough Mana";
+                GetComponentInChildren<PlayerUI>().countdown = GetComponentInChildren<PlayerUI>().duration;
             }
         }
 
@@ -483,9 +491,11 @@ public class PlayerBasic : MonoBehaviour
     private void Flip()
     {
         if(!isRolling && canAction)
-        { 
-        facingDirection *= -1;
-        transform.Rotate(0.0f, 180.0f, 0.0f);
+        {
+            facingDirection *= -1;
+            transform.Rotate(0.0f, 180.0f, 0.0f);
+        
+            facingRight = !facingRight;
         }
     }
 
@@ -560,9 +570,9 @@ public class PlayerBasic : MonoBehaviour
                 isDead = true;
                 animator.Play("Death");
                 animator.SetBool("isDead", true);
-                Invoke("LoadGameFree", 5f);
                 FindObjectOfType<AudioManager>().Play("Death");
-                //this.enabled = false;
+                Invoke("LoadGameFree", 5f);
+                Invoke("SaveGameFree", 5.02f);
             }
         }
     }
@@ -658,20 +668,24 @@ public class PlayerBasic : MonoBehaviour
         LoadGameFreeEnemies();
 
         PlayerPrefs.SetInt(sceneIndexString, SceneManager.GetActiveScene().buildIndex);
+
+        isDead = false;
+        animator.Play("Chloe_Idle");
     }
 
     public void LoadGameFree()
     {
-        maxHealth = SaveGame.Load<int>("maxHealth");
-        currentHealth = SaveGame.Load<int>("maxHealth");
-        maxMana = SaveGame.Load<int>("maxMana");
+        //currentHealth = SaveGame.Load<int>("maxHealth");
+        /*maxHealth = SaveGame.Load<int>("maxHealth");
         mana = SaveGame.Load<int>("maxMana");
-        playerCoin = SaveGame.Load<int>("coin");
-        maxBerries = SaveGame.Load<int>("maxBerries");
+        maxMana = SaveGame.Load<int>("maxMana");
         berries = SaveGame.Load<int>("berries");
+        maxBerries = SaveGame.Load<int>("maxBerries");
+        */
+        playerCoin = SaveGame.Load<int>("coin");
 
         transform.position = new Vector3(SaveGame.Load<float>("positionX"), SaveGame.Load<float>("positionY"), SaveGame.Load<float>("positionZ"));
-        animator.Play("Chloe_Idle");
+        
 
         LoadGameFreeEnemies();
         LoadGameFreeBossDoor();

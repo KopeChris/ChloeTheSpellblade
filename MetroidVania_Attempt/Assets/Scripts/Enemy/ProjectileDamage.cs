@@ -8,6 +8,7 @@ public class ProjectileDamage : MonoBehaviour
     public int attackDamage;
     public int force;
     private string detectionTag = "Player";
+    private string collisionTag = "CollisionBlocker";
     Animator animator;
     Rigidbody2D rb;
 
@@ -29,9 +30,13 @@ public class ProjectileDamage : MonoBehaviour
         {
             collision.GetComponent<PlayerBasic>().TakeDamage(attackDamage,force*(PlayerBasic.positionX-transform.position.x)/Mathf.Abs(PlayerBasic.positionX - transform.position.x));
         }
-        animator.Play("Explosion");
-        audioSource.PlayOneShot(explosion);
 
-        rb.velocity = Vector2.zero;
+        if(!collision.CompareTag(collisionTag))     //igore the outside collision blocker of player
+        {
+            animator.Play("Explosion");
+            audioSource.PlayOneShot(explosion);
+
+            rb.velocity = Vector2.zero;
+        }
     }
 }

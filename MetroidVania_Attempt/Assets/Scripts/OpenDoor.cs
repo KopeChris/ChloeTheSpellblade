@@ -7,7 +7,7 @@ public class OpenDoor : Indicator
 {
     public SpriteRenderer closed;
     public SpriteRenderer open;
-    new BoxCollider2D collider;
+    BoxCollider2D doorCollider;
 
     public static bool hasInteracted;
 
@@ -15,7 +15,7 @@ public class OpenDoor : Indicator
     private void Start()
     {
         open.enabled = false;
-        collider = GetComponent<BoxCollider2D>();
+        doorCollider = GetComponent<BoxCollider2D>();
 
         if (SaveGame.Load<bool>("hasInteracted"))
         {

@@ -19,9 +19,15 @@ public class HasSaved : MonoBehaviour
         }
         DontDestroyOnLoad(gameObject);
 
-        if(SaveGame.Exists("hasSaved"))
+        
+    }
+    private void Update()
+    {
+        if (SaveGame.Exists("hasSaved"))
         {
             hasSaved = SaveGame.Load<bool>("hasSaved");
         }
+        else { hasSaved = false; }
+        Debug.Log(hasSaved);
     }
 }
