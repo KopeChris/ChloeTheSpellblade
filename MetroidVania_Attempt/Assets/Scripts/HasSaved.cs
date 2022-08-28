@@ -28,6 +28,5 @@ public class HasSaved : MonoBehaviour
             hasSaved = SaveGame.Load<bool>("hasSaved");
         }
         else { hasSaved = false; }
-        Debug.Log(hasSaved);
     }
 }

@@ -689,6 +689,7 @@ public class PlayerBasic : MonoBehaviour
         playerCoin = SaveGame.Load<int>("coin");
 
         transform.position = new Vector3(SaveGame.Load<float>("positionX"), SaveGame.Load<float>("positionY"), SaveGame.Load<float>("positionZ"));
+        //transform.position = new Vector3(433.2f, 2.8f, 0);    ekklisaki location
         
 
         LoadGameFreeEnemies();
