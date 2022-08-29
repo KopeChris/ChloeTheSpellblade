@@ -679,13 +679,6 @@ public class PlayerBasic : MonoBehaviour
 
     public void LoadGameFree()
     {
-        //currentHealth = SaveGame.Load<int>("maxHealth");
-        /*maxHealth = SaveGame.Load<int>("maxHealth");
-        mana = SaveGame.Load<int>("maxMana");
-        maxMana = SaveGame.Load<int>("maxMana");
-        berries = SaveGame.Load<int>("berries");
-        maxBerries = SaveGame.Load<int>("maxBerries");
-        */
         playerCoin = SaveGame.Load<int>("coin");
 
         //transform.position = new Vector3(SaveGame.Load<float>("positionX"), SaveGame.Load<float>("positionY"), SaveGame.Load<float>("positionZ"));
