@@ -252,6 +252,13 @@ public class PlayerBasic : MonoBehaviour
             jumpBufferCounter=0f;
         }
 
+        if (rb.velocity.y>1 && UnityEngine.Input.GetButtonUp("Jump") && !UnityEngine.Input.GetKey(KeyCode.S) && canJump && canAction && !isRolling && !ignorePlatformsCoroutineIsRunning)
+        {
+            Jump();
+            rb.velocity = new Vector2(rb.velocity.x, rb.velocity.y / 2);        //slow down the character mid air to make the jump smaller
+            jumpBufferCounter = 0f;
+        }
+
         else if (UnityEngine.Input.GetButtonDown("Jump") && UnityEngine.Input.GetKey(KeyCode.S) && !ignorePlatformsCoroutineIsRunning)
         {
             StartCoroutine("IgnorePlatforms");
