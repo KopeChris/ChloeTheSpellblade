@@ -227,10 +227,10 @@ public class PlayerBasic : MonoBehaviour
 
         //if (Mathf.Abs(rb.velocity.y) >150) { TakeDamage(maxHealth,0); }
 
-        if (rb.velocity.y > -2)             // to make jump feel better and less floaty
+        if (rb.velocity.y > -1)             // to make jump feel better and less floaty
             rb.gravityScale = 10;
         else
-            rb.gravityScale = 12;
+            rb.gravityScale = 14;
     }
     private void Input() 
     {
@@ -252,7 +252,7 @@ public class PlayerBasic : MonoBehaviour
             jumpBufferCounter=0f;
         }
 
-        if (rb.velocity.y>1 && UnityEngine.Input.GetButtonUp("Jump") && !UnityEngine.Input.GetKey(KeyCode.S) && canJump && canAction && !isRolling && !ignorePlatformsCoroutineIsRunning)
+        if (rb.velocity.y>25 && UnityEngine.Input.GetButtonUp("Jump") && !UnityEngine.Input.GetKey(KeyCode.S) && !isRolling && !ignorePlatformsCoroutineIsRunning)
         {
             Jump();
             rb.velocity = new Vector2(rb.velocity.x, rb.velocity.y / 2);        //slow down the character mid air to make the jump smaller
