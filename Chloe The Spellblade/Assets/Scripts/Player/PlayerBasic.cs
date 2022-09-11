@@ -131,9 +131,9 @@ public class PlayerBasic : MonoBehaviour
         }
     }
 
+    int playerLayer, platformsLayer, enemiesLayer, enemyCollisionBlocker, playerCollisionBlocker, enemyProjectile;
     //to jump off platforms
     bool ignorePlatformsCoroutineIsRunning;
-    int playerLayer, platformsLayer, enemiesLayer, enemyCollisionBlocker, playerCollisionBlocker, enemyProjectile;
     public GameObject platformCollider;
 
     IEnumerator IgnorePlatforms()
